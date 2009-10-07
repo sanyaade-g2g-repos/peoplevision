@@ -1,0 +1,35 @@
+<install>
+
+	<version>0.01</version>
+	<author>n3m3da</author>
+	<url>http://www.gamuza.org</url>
+
+	<add>
+
+		<!-- 	=====================================================================	-->
+		<!--	========================== add per project using this addon =========	-->
+		<!-- 	=====================================================================	-->
+
+		<src>
+		
+		    <folder name="addons/ofxSniffer/src">	
+			    <file>../../../addons/ofxSniffer/src/ofxSniffer.h</file>
+			    <file>../../../addons/ofxSniffer/src/ofxSniffer.cpp</file>
+		    </folder>
+		
+	    	</src>
+
+		<include>
+			<path>../../../libs/libpcap/include</path>
+			<path>../../../addons/ofxSniffer/src</path>
+		</include>
+		
+
+		<link>
+			<lib os="linux" compiler="codeblocks, makefile">../../../libs/libpcap/lib/libpcap.a</lib>
+		</link>
+		
+	</add>
+	
+	
+</install>

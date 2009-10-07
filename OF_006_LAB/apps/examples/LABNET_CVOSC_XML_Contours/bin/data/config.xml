@@ -1,0 +1,22 @@
+<listeners>
+    <listener>
+        <id>0</id>
+        <name>LAB_switch_listener</name>
+        <port>2002</port>
+    </listener>
+</listeners>
+<senders>
+    <sender>
+        <id>0</id>
+        <name>cvblobsender</name>
+        <port>10001</port>
+        <host>localhost</host>
+    </sender>
+    <sender>
+        <id>1</id>
+        <name>cvblobsender</name>
+        <port>10002</port>
+        <host>localhost</host>
+    </sender>
+</senders>
+<numCameras>1</numCameras>

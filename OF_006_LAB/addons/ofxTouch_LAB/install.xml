@@ -1,0 +1,56 @@
+<install>
+	
+	<version>0.01</version>
+	<author>stefanix</author>
+	<url>http://nortd.com/touchkit</url>
+	<requires></requires>
+	
+	<add>	
+		<!-- 	=====================================================================	-->
+		<!--	========================== add for the "installation" of OF =========	-->
+		<!-- 	=====================================================================	-->
+	
+		<addons_h>
+		//-------------------------------------------- ofxTouch
+		#ifdef OF_ADDON_USING_OFXTOUCH
+			#include "ofxTouchMain.h"
+		#endif
+		</addons_h>
+		
+		<!-- 	=====================================================================	-->
+		<!--	========================== add per project using this addon =========	-->
+		<!-- 	=====================================================================	-->
+	
+		<src>
+			<folder name="addons/ofxTouch/src">
+				<src>../../../addons/ofxTouch/src/ofxTouchAdaptiveFilter.h</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchApp.h</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchAppRelay.h</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchBlob.h</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchBlobListener.h</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchBlobTracker.h</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchBlobTracker.cpp</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchContourFinder.h</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchContourFinder.cpp</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchFilter.h</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchFinger.h</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchGraphicsWarp.h</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchMain.h</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchSettings.h</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchSettings.cpp</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchTrackedBlob.h</src>
+				<src>../../../addons/ofxTouch/src/ofxTouchVisionWarp.h</src>
+			</folder>
+		</src>
+		
+		<include>
+			<path>../../../addons/ofxTouch/src</path>
+		</include>
+		
+	</add>
+	 
+</install>
+
+
+
+
