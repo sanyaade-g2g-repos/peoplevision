@@ -7,9 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		381AB1DC10166442001B36CF /* ofxCvHaarFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381AB1D610166442001B36CF /* ofxCvHaarFinder.cpp */; };
-		381AB1DD10166442001B36CF /* ofxCvHaarTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381AB1D810166442001B36CF /* ofxCvHaarTracker.cpp */; };
-		381AB1DE10166442001B36CF /* ofxCvHaarTrackerItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 381AB1DA10166442001B36CF /* ofxCvHaarTrackerItem.cpp */; };
+		384DDA2D107D3FE2007A81F3 /* ofxCvHaarFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384DD9ED107D3FE2007A81F3 /* ofxCvHaarFinder.cpp */; };
+		384DDA2E107D3FE2007A81F3 /* ofxCvHaarTracker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384DD9EF107D3FE2007A81F3 /* ofxCvHaarTracker.cpp */; };
+		384DDA2F107D3FE2007A81F3 /* ofxCvHaarTrackerItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 384DD9F1107D3FE2007A81F3 /* ofxCvHaarTrackerItem.cpp */; };
+		384DDA30107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DD9F6107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA31107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DD9F8107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA32107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DD9FA107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA33107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DD9FC107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA34107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DD9FE107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA35107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA00107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA36107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA02107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA37107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA04107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA38107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA06107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA39107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA08107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA3A107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA0A107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA3B107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA0C107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA3C107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA0E107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA3D107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA10107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA3E107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA12107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA3F107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA14107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA40107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA16107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA41107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA18107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA42107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA1A107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */; };
+		384DDA43107D3FE2007A81F3 /* eye_cascade_README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA1B107D3FE2007A81F3 /* eye_cascade_README.txt */; };
+		384DDA44107D3FE2007A81F3 /* frontalEyes35x16.xml in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA1C107D3FE2007A81F3 /* frontalEyes35x16.xml */; };
+		384DDA45107D3FE2007A81F3 /* frontalEyes35x16.zip in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA1D107D3FE2007A81F3 /* frontalEyes35x16.zip */; };
+		384DDA46107D3FE2007A81F3 /* frontalEyes35x16XML.zip in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA1E107D3FE2007A81F3 /* frontalEyes35x16XML.zip */; };
+		384DDA47107D3FE2007A81F3 /* haarcascade_eye.xml in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA1F107D3FE2007A81F3 /* haarcascade_eye.xml */; };
+		384DDA48107D3FE2007A81F3 /* haarcascade_eye_tree_eyeglasses.xml in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA20107D3FE2007A81F3 /* haarcascade_eye_tree_eyeglasses.xml */; };
+		384DDA49107D3FE2007A81F3 /* haarcascade_frontalface_alt.xml in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA21107D3FE2007A81F3 /* haarcascade_frontalface_alt.xml */; };
+		384DDA4A107D3FE2007A81F3 /* haarcascade_frontalface_alt2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA22107D3FE2007A81F3 /* haarcascade_frontalface_alt2.xml */; };
+		384DDA4B107D3FE2007A81F3 /* haarcascade_frontalface_alt_tree.xml in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA23107D3FE2007A81F3 /* haarcascade_frontalface_alt_tree.xml */; };
+		384DDA4C107D3FE2007A81F3 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA24107D3FE2007A81F3 /* haarcascade_frontalface_default.xml */; };
+		384DDA4D107D3FE2007A81F3 /* haarcascade_fullbody.xml in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA25107D3FE2007A81F3 /* haarcascade_fullbody.xml */; };
+		384DDA4E107D3FE2007A81F3 /* haarcascade_lowerbody.xml in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA26107D3FE2007A81F3 /* haarcascade_lowerbody.xml */; };
+		384DDA4F107D3FE2007A81F3 /* haarcascade_profileface.xml in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA27107D3FE2007A81F3 /* haarcascade_profileface.xml */; };
+		384DDA50107D3FE2007A81F3 /* haarcascade_upperbody.xml in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA28107D3FE2007A81F3 /* haarcascade_upperbody.xml */; };
+		384DDA51107D3FE2007A81F3 /* LEye18x12.1.zip in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA29107D3FE2007A81F3 /* LEye18x12.1.zip */; };
+		384DDA52107D3FE2007A81F3 /* ojoD.xml in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA2A107D3FE2007A81F3 /* ojoD.xml */; };
+		384DDA53107D3FE2007A81F3 /* ojoI.xml in Resources */ = {isa = PBXBuildFile; fileRef = 384DDA2B107D3FE2007A81F3 /* ojoI.xml */; };
+		384DDA54107D3FE2007A81F3 /* REye18x12.1.zip in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2C107D3FE2007A81F3 /* REye18x12.1.zip */; };
 		E446644B0F5B1CFD005D0BF0 /* ofAppGlutWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E446641A0F5B1CFD005D0BF0 /* ofAppGlutWindow.cpp */; };
 		E446644C0F5B1CFD005D0BF0 /* ofAppRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E446641C0F5B1CFD005D0BF0 /* ofAppRunner.cpp */; };
 		E446644D0F5B1CFD005D0BF0 /* ofArduino.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44664200F5B1CFD005D0BF0 /* ofArduino.cpp */; };
@@ -61,12 +98,49 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		381AB1D610166442001B36CF /* ofxCvHaarFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCvHaarFinder.cpp; sourceTree = "<group>"; };
-		381AB1D710166442001B36CF /* ofxCvHaarFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCvHaarFinder.h; sourceTree = "<group>"; };
-		381AB1D810166442001B36CF /* ofxCvHaarTracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCvHaarTracker.cpp; sourceTree = "<group>"; };
-		381AB1D910166442001B36CF /* ofxCvHaarTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCvHaarTracker.h; sourceTree = "<group>"; };
-		381AB1DA10166442001B36CF /* ofxCvHaarTrackerItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCvHaarTrackerItem.cpp; sourceTree = "<group>"; };
-		381AB1DB10166442001B36CF /* ofxCvHaarTrackerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCvHaarTrackerItem.h; sourceTree = "<group>"; };
+		384DD9ED107D3FE2007A81F3 /* ofxCvHaarFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCvHaarFinder.cpp; sourceTree = "<group>"; };
+		384DD9EE107D3FE2007A81F3 /* ofxCvHaarFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCvHaarFinder.h; sourceTree = "<group>"; };
+		384DD9EF107D3FE2007A81F3 /* ofxCvHaarTracker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCvHaarTracker.cpp; sourceTree = "<group>"; };
+		384DD9F0107D3FE2007A81F3 /* ofxCvHaarTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCvHaarTracker.h; sourceTree = "<group>"; };
+		384DD9F1107D3FE2007A81F3 /* ofxCvHaarTrackerItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCvHaarTrackerItem.cpp; sourceTree = "<group>"; };
+		384DD9F2107D3FE2007A81F3 /* ofxCvHaarTrackerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCvHaarTrackerItem.h; sourceTree = "<group>"; };
+		384DD9F6107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DD9F8107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DD9FA107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DD9FC107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DD9FE107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA00107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA02107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA04107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA06107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA08107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA0A107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA0C107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA0E107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA10107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA12107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA14107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA16107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA18107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA1A107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AdaBoostCARTHaarClassifier.txt; sourceTree = "<group>"; };
+		384DDA1B107D3FE2007A81F3 /* eye_cascade_README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eye_cascade_README.txt; sourceTree = "<group>"; };
+		384DDA1C107D3FE2007A81F3 /* frontalEyes35x16.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = frontalEyes35x16.xml; sourceTree = "<group>"; };
+		384DDA1D107D3FE2007A81F3 /* frontalEyes35x16.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = frontalEyes35x16.zip; sourceTree = "<group>"; };
+		384DDA1E107D3FE2007A81F3 /* frontalEyes35x16XML.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = frontalEyes35x16XML.zip; sourceTree = "<group>"; };
+		384DDA1F107D3FE2007A81F3 /* haarcascade_eye.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye.xml; sourceTree = "<group>"; };
+		384DDA20107D3FE2007A81F3 /* haarcascade_eye_tree_eyeglasses.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_eye_tree_eyeglasses.xml; sourceTree = "<group>"; };
+		384DDA21107D3FE2007A81F3 /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
+		384DDA22107D3FE2007A81F3 /* haarcascade_frontalface_alt2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt2.xml; sourceTree = "<group>"; };
+		384DDA23107D3FE2007A81F3 /* haarcascade_frontalface_alt_tree.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt_tree.xml; sourceTree = "<group>"; };
+		384DDA24107D3FE2007A81F3 /* haarcascade_frontalface_default.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_default.xml; sourceTree = "<group>"; };
+		384DDA25107D3FE2007A81F3 /* haarcascade_fullbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_fullbody.xml; sourceTree = "<group>"; };
+		384DDA26107D3FE2007A81F3 /* haarcascade_lowerbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_lowerbody.xml; sourceTree = "<group>"; };
+		384DDA27107D3FE2007A81F3 /* haarcascade_profileface.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_profileface.xml; sourceTree = "<group>"; };
+		384DDA28107D3FE2007A81F3 /* haarcascade_upperbody.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_upperbody.xml; sourceTree = "<group>"; };
+		384DDA29107D3FE2007A81F3 /* LEye18x12.1.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = LEye18x12.1.zip; sourceTree = "<group>"; };
+		384DDA2A107D3FE2007A81F3 /* ojoD.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ojoD.xml; sourceTree = "<group>"; };
+		384DDA2B107D3FE2007A81F3 /* ojoI.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ojoI.xml; sourceTree = "<group>"; };
+		384DDA2C107D3FE2007A81F3 /* REye18x12.1.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = REye18x12.1.zip; sourceTree = "<group>"; };
 		E44664190F5B1CFD005D0BF0 /* ofAppBaseWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofAppBaseWindow.h; path = ../../../libs/openFrameworks/app/ofAppBaseWindow.h; sourceTree = SOURCE_ROOT; };
 		E446641A0F5B1CFD005D0BF0 /* ofAppGlutWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofAppGlutWindow.cpp; path = ../../../libs/openFrameworks/app/ofAppGlutWindow.cpp; sourceTree = SOURCE_ROOT; };
 		E446641B0F5B1CFD005D0BF0 /* ofAppGlutWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofAppGlutWindow.h; path = ../../../libs/openFrameworks/app/ofAppGlutWindow.h; sourceTree = SOURCE_ROOT; };
@@ -296,12 +370,234 @@
 				E45BEEA30E8CC911009D7055 /* libPocoUtil.a in Frameworks */,
 				E45BEEA40E8CC911009D7055 /* libPocoXML.a in Frameworks */,
 				E44667530F5B3E04005D0BF0 /* libOpenCV.a in Frameworks */,
+				384DDA45107D3FE2007A81F3 /* frontalEyes35x16.zip in Frameworks */,
+				384DDA46107D3FE2007A81F3 /* frontalEyes35x16XML.zip in Frameworks */,
+				384DDA51107D3FE2007A81F3 /* LEye18x12.1.zip in Frameworks */,
+				384DDA54107D3FE2007A81F3 /* REye18x12.1.zip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		384DD9EC107D3FE2007A81F3 /* ofxCvHaarTracker */ = {
+			isa = PBXGroup;
+			children = (
+				384DD9ED107D3FE2007A81F3 /* ofxCvHaarFinder.cpp */,
+				384DD9EE107D3FE2007A81F3 /* ofxCvHaarFinder.h */,
+				384DD9EF107D3FE2007A81F3 /* ofxCvHaarTracker.cpp */,
+				384DD9F0107D3FE2007A81F3 /* ofxCvHaarTracker.h */,
+				384DD9F1107D3FE2007A81F3 /* ofxCvHaarTrackerItem.cpp */,
+				384DD9F2107D3FE2007A81F3 /* ofxCvHaarTrackerItem.h */,
+				384DD9F3107D3FE2007A81F3 /* xml */,
+			);
+			path = ofxCvHaarTracker;
+			sourceTree = "<group>";
+		};
+		384DD9F3107D3FE2007A81F3 /* xml */ = {
+			isa = PBXGroup;
+			children = (
+				384DD9F4107D3FE2007A81F3 /* frontalEyes35x16 */,
+				384DDA1C107D3FE2007A81F3 /* frontalEyes35x16.xml */,
+				384DDA1D107D3FE2007A81F3 /* frontalEyes35x16.zip */,
+				384DDA1E107D3FE2007A81F3 /* frontalEyes35x16XML.zip */,
+				384DDA1F107D3FE2007A81F3 /* haarcascade_eye.xml */,
+				384DDA20107D3FE2007A81F3 /* haarcascade_eye_tree_eyeglasses.xml */,
+				384DDA21107D3FE2007A81F3 /* haarcascade_frontalface_alt.xml */,
+				384DDA22107D3FE2007A81F3 /* haarcascade_frontalface_alt2.xml */,
+				384DDA23107D3FE2007A81F3 /* haarcascade_frontalface_alt_tree.xml */,
+				384DDA24107D3FE2007A81F3 /* haarcascade_frontalface_default.xml */,
+				384DDA25107D3FE2007A81F3 /* haarcascade_fullbody.xml */,
+				384DDA26107D3FE2007A81F3 /* haarcascade_lowerbody.xml */,
+				384DDA27107D3FE2007A81F3 /* haarcascade_profileface.xml */,
+				384DDA28107D3FE2007A81F3 /* haarcascade_upperbody.xml */,
+				384DDA29107D3FE2007A81F3 /* LEye18x12.1.zip */,
+				384DDA2A107D3FE2007A81F3 /* ojoD.xml */,
+				384DDA2B107D3FE2007A81F3 /* ojoI.xml */,
+				384DDA2C107D3FE2007A81F3 /* REye18x12.1.zip */,
+			);
+			path = xml;
+			sourceTree = "<group>";
+		};
+		384DD9F4107D3FE2007A81F3 /* frontalEyes35x16 */ = {
+			isa = PBXGroup;
+			children = (
+				384DD9F5107D3FE2007A81F3 /* 0 */,
+				384DD9F7107D3FE2007A81F3 /* 1 */,
+				384DD9F9107D3FE2007A81F3 /* 10 */,
+				384DD9FB107D3FE2007A81F3 /* 11 */,
+				384DD9FD107D3FE2007A81F3 /* 12 */,
+				384DD9FF107D3FE2007A81F3 /* 13 */,
+				384DDA01107D3FE2007A81F3 /* 14 */,
+				384DDA03107D3FE2007A81F3 /* 15 */,
+				384DDA05107D3FE2007A81F3 /* 16 */,
+				384DDA07107D3FE2007A81F3 /* 17 */,
+				384DDA09107D3FE2007A81F3 /* 18 */,
+				384DDA0B107D3FE2007A81F3 /* 2 */,
+				384DDA0D107D3FE2007A81F3 /* 3 */,
+				384DDA0F107D3FE2007A81F3 /* 4 */,
+				384DDA11107D3FE2007A81F3 /* 5 */,
+				384DDA13107D3FE2007A81F3 /* 6 */,
+				384DDA15107D3FE2007A81F3 /* 7 */,
+				384DDA17107D3FE2007A81F3 /* 8 */,
+				384DDA19107D3FE2007A81F3 /* 9 */,
+				384DDA1B107D3FE2007A81F3 /* eye_cascade_README.txt */,
+			);
+			path = frontalEyes35x16;
+			sourceTree = "<group>";
+		};
+		384DD9F5107D3FE2007A81F3 /* 0 */ = {
+			isa = PBXGroup;
+			children = (
+				384DD9F6107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 0;
+			sourceTree = "<group>";
+		};
+		384DD9F7107D3FE2007A81F3 /* 1 */ = {
+			isa = PBXGroup;
+			children = (
+				384DD9F8107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 1;
+			sourceTree = "<group>";
+		};
+		384DD9F9107D3FE2007A81F3 /* 10 */ = {
+			isa = PBXGroup;
+			children = (
+				384DD9FA107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 10;
+			sourceTree = "<group>";
+		};
+		384DD9FB107D3FE2007A81F3 /* 11 */ = {
+			isa = PBXGroup;
+			children = (
+				384DD9FC107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 11;
+			sourceTree = "<group>";
+		};
+		384DD9FD107D3FE2007A81F3 /* 12 */ = {
+			isa = PBXGroup;
+			children = (
+				384DD9FE107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 12;
+			sourceTree = "<group>";
+		};
+		384DD9FF107D3FE2007A81F3 /* 13 */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA00107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 13;
+			sourceTree = "<group>";
+		};
+		384DDA01107D3FE2007A81F3 /* 14 */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA02107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 14;
+			sourceTree = "<group>";
+		};
+		384DDA03107D3FE2007A81F3 /* 15 */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA04107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 15;
+			sourceTree = "<group>";
+		};
+		384DDA05107D3FE2007A81F3 /* 16 */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA06107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 16;
+			sourceTree = "<group>";
+		};
+		384DDA07107D3FE2007A81F3 /* 17 */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA08107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 17;
+			sourceTree = "<group>";
+		};
+		384DDA09107D3FE2007A81F3 /* 18 */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA0A107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 18;
+			sourceTree = "<group>";
+		};
+		384DDA0B107D3FE2007A81F3 /* 2 */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA0C107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 2;
+			sourceTree = "<group>";
+		};
+		384DDA0D107D3FE2007A81F3 /* 3 */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA0E107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 3;
+			sourceTree = "<group>";
+		};
+		384DDA0F107D3FE2007A81F3 /* 4 */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA10107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 4;
+			sourceTree = "<group>";
+		};
+		384DDA11107D3FE2007A81F3 /* 5 */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA12107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 5;
+			sourceTree = "<group>";
+		};
+		384DDA13107D3FE2007A81F3 /* 6 */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA14107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 6;
+			sourceTree = "<group>";
+		};
+		384DDA15107D3FE2007A81F3 /* 7 */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA16107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 7;
+			sourceTree = "<group>";
+		};
+		384DDA17107D3FE2007A81F3 /* 8 */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA18107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 8;
+			sourceTree = "<group>";
+		};
+		384DDA19107D3FE2007A81F3 /* 9 */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA1A107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt */,
+			);
+			path = 9;
+			sourceTree = "<group>";
+		};
 		E44664170F5B1CFD005D0BF0 /* openFrameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +716,7 @@
 		E44665C70F5B3E03005D0BF0 /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				384DD9EC107D3FE2007A81F3 /* ofxCvHaarTracker */,
 				E446663B0F5B3E03005D0BF0 /* ofxOpenCv */,
 			);
 			name = addons;
@@ -499,12 +796,6 @@
 		E446667B0F5B3E04005D0BF0 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				381AB1D610166442001B36CF /* ofxCvHaarFinder.cpp */,
-				381AB1D710166442001B36CF /* ofxCvHaarFinder.h */,
-				381AB1D810166442001B36CF /* ofxCvHaarTracker.cpp */,
-				381AB1D910166442001B36CF /* ofxCvHaarTracker.h */,
-				381AB1DA10166442001B36CF /* ofxCvHaarTrackerItem.cpp */,
-				381AB1DB10166442001B36CF /* ofxCvHaarTrackerItem.h */,
 				E446667C0F5B3E04005D0BF0 /* ofxCvBlob.h */,
 				E446667D0F5B3E04005D0BF0 /* ofxCvColorImage.cpp */,
 				E446667E0F5B3E04005D0BF0 /* ofxCvColorImage.h */,
@@ -951,6 +1242,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B6FCAE0C3E899E008CF71C /* openFrameworks-Info.plist in Resources */,
+				384DDA30107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA31107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA32107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA33107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA34107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA35107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA36107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA37107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA38107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA39107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA3A107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA3B107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA3C107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA3D107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA3E107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA3F107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA40107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA41107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA42107D3FE2007A81F3 /* AdaBoostCARTHaarClassifier.txt in Resources */,
+				384DDA43107D3FE2007A81F3 /* eye_cascade_README.txt in Resources */,
+				384DDA44107D3FE2007A81F3 /* frontalEyes35x16.xml in Resources */,
+				384DDA47107D3FE2007A81F3 /* haarcascade_eye.xml in Resources */,
+				384DDA48107D3FE2007A81F3 /* haarcascade_eye_tree_eyeglasses.xml in Resources */,
+				384DDA49107D3FE2007A81F3 /* haarcascade_frontalface_alt.xml in Resources */,
+				384DDA4A107D3FE2007A81F3 /* haarcascade_frontalface_alt2.xml in Resources */,
+				384DDA4B107D3FE2007A81F3 /* haarcascade_frontalface_alt_tree.xml in Resources */,
+				384DDA4C107D3FE2007A81F3 /* haarcascade_frontalface_default.xml in Resources */,
+				384DDA4D107D3FE2007A81F3 /* haarcascade_fullbody.xml in Resources */,
+				384DDA4E107D3FE2007A81F3 /* haarcascade_lowerbody.xml in Resources */,
+				384DDA4F107D3FE2007A81F3 /* haarcascade_profileface.xml in Resources */,
+				384DDA50107D3FE2007A81F3 /* haarcascade_upperbody.xml in Resources */,
+				384DDA52107D3FE2007A81F3 /* ojoD.xml in Resources */,
+				384DDA53107D3FE2007A81F3 /* ojoI.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1003,9 +1327,9 @@
 				E446675A0F5B3E04005D0BF0 /* ofxCvGrayscaleImage.cpp in Sources */,
 				E446675B0F5B3E04005D0BF0 /* ofxCvImage.cpp in Sources */,
 				E446675C0F5B3E04005D0BF0 /* ofxCvShortImage.cpp in Sources */,
-				381AB1DC10166442001B36CF /* ofxCvHaarFinder.cpp in Sources */,
-				381AB1DD10166442001B36CF /* ofxCvHaarTracker.cpp in Sources */,
-				381AB1DE10166442001B36CF /* ofxCvHaarTrackerItem.cpp in Sources */,
+				384DDA2D107D3FE2007A81F3 /* ofxCvHaarFinder.cpp in Sources */,
+				384DDA2E107D3FE2007A81F3 /* ofxCvHaarTracker.cpp in Sources */,
+				384DDA2F107D3FE2007A81F3 /* ofxCvHaarTrackerItem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
