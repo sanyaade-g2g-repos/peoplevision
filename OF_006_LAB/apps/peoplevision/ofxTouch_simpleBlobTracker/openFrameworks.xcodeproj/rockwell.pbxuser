@@ -1,5 +1,25 @@
 // !$*UTF8*$!
 {
+	2E9B2001107D41370017876C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 28";
+		rLen = 266;
+		rLoc = 522;
+		rType = 0;
+		vrLen = 1321;
+		vrLoc = 0;
+	};
+	2E9B20B7107D46210017876C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 30";
+		rLen = 0;
+		rLoc = 668;
+		rType = 0;
+		vrLen = 1321;
+		vrLoc = 0;
+	};
 	2EA15C26107A8618009D5CED /* openFrameworks */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -29,6 +49,7 @@
 		fallbackIsa = XCSourceControlManager;
 		isSCMEnabled = 0;
 		scmConfiguration = {
+			repositoryName = "svn 1";
 		};
 	};
 	2EA15C57107A8621009D5CED /* Code sense */ = {
@@ -44,97 +65,6 @@
 		rType = 0;
 		vrLen = 1292;
 		vrLoc = 0;
-	};
-	2EA15C6A107A8674009D5CED /* ofxTouchAdaptiveFilter.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {439, 1092}}";
-			sepNavSelRange = "{844, 0}";
-			sepNavVisRange = "{659, 340}";
-		};
-	};
-	2EA15C6B107A8674009D5CED /* ofxTouchApp.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1794, 6496}}";
-			sepNavSelRange = "{2894, 0}";
-			sepNavVisRange = "{1916, 1796}";
-		};
-	};
-	2EA15C6C107A8674009D5CED /* ofxTouchAppRelay.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1257, 895}}";
-			sepNavSelRange = "{698, 0}";
-			sepNavVisRange = "{0, 1787}";
-		};
-	};
-	2EA15C6D107A8674009D5CED /* ofxTouchBlob.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1297, 917}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 981}";
-		};
-	};
-	2EA15C6E107A8674009D5CED /* ofxTouchBlobListener.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1297, 917}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 891}";
-		};
-	};
-	2EA15C6F107A8674009D5CED /* ofxTouchBlobTracker.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1257, 5852}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1545}";
-		};
-	};
-	2EA15C70107A8674009D5CED /* ofxTouchBlobTracker.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1257, 1134}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{717, 1251}";
-		};
-	};
-	2EA15C72107A8674009D5CED /* ofxTouchContourFinder.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {510, 840}}";
-			sepNavSelRange = "{655, 23}";
-			sepNavVisRange = "{392, 314}";
-		};
-	};
-	2EA15C73107A8674009D5CED /* ofxTouchFilter.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1257, 895}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 869}";
-		};
-	};
-	2EA15C74107A8674009D5CED /* ofxTouchFinger.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1297, 1008}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{214, 1383}";
-		};
-	};
-	2EA15C77107A8674009D5CED /* ofxTouchSettings.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1257, 7028}}";
-			sepNavSelRange = "{2272, 0}";
-			sepNavVisRange = "{1720, 2083}";
-		};
-	};
-	2EA15C78107A8674009D5CED /* ofxTouchSettings.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1257, 3472}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1788}";
-		};
-	};
-	2EA15C79107A8674009D5CED /* ofxTouchTrackedBlob.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1297, 1246}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{604, 1212}";
-		};
 	};
 	2EA15D37107A8725009D5CED /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -176,26 +106,6 @@
 		vrLen = 591;
 		vrLoc = 0;
 	};
-	2EE16A78107BB4CF00D88865 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
-		name = "testApp.cpp: 27";
-		rLen = 0;
-		rLoc = 520;
-		rType = 0;
-		vrLen = 1296;
-		vrLoc = 0;
-	};
-	2EE16A79107BB4CF00D88865 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
-		name = "testApp.cpp: 28";
-		rLen = 266;
-		rLoc = 522;
-		rType = 0;
-		vrLen = 1296;
-		vrLoc = 0;
-	};
 	E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 2EA15C26107A8618009D5CED /* openFrameworks */;
@@ -213,7 +123,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					1119,
+					1084,
 					20,
 					48,
 					43,
@@ -230,17 +140,17 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 276542657;
-			PBXWorkspaceStateSaveDate = 276542657;
+			PBXPerProjectTemplateStateSaveDate = 276645328;
+			PBXWorkspaceStateSaveDate = 276645328;
 		};
 		perUserProjectItems = {
+			2E9B2001107D41370017876C /* PBXTextBookmark */ = 2E9B2001107D41370017876C /* PBXTextBookmark */;
+			2E9B20B7107D46210017876C /* PBXTextBookmark */ = 2E9B20B7107D46210017876C /* PBXTextBookmark */;
 			2EA15C5A107A8628009D5CED /* PBXTextBookmark */ = 2EA15C5A107A8628009D5CED /* PBXTextBookmark */;
 			2EA15D37107A8725009D5CED /* PBXTextBookmark */ = 2EA15D37107A8725009D5CED /* PBXTextBookmark */;
 			2EA15D39107A8725009D5CED /* PBXTextBookmark */ = 2EA15D39107A8725009D5CED /* PBXTextBookmark */;
 			2EA15DEB107A8F40009D5CED /* PBXTextBookmark */ = 2EA15DEB107A8F40009D5CED /* PBXTextBookmark */;
 			2EA15E80107A9585009D5CED /* PBXTextBookmark */ = 2EA15E80107A9585009D5CED /* PBXTextBookmark */;
-			2EE16A78107BB4CF00D88865 /* PBXTextBookmark */ = 2EE16A78107BB4CF00D88865 /* PBXTextBookmark */;
-			2EE16A79107BB4CF00D88865 /* PBXTextBookmark */ = 2EE16A79107BB4CF00D88865 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 2EA15C56107A8621009D5CED /* Source Control */;
 		userBuildSettings = {
@@ -261,9 +171,9 @@
 	};
 	E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1297, 917}}";
-			sepNavSelRange = "{522, 266}";
-			sepNavVisRange = "{0, 1296}";
+			sepNavIntBoundsRect = "{{0, 0}, {1262, 895}}";
+			sepNavSelRange = "{668, 0}";
+			sepNavVisRange = "{0, 1321}";
 		};
 	};
 	E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {
