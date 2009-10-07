@@ -1,7 +1,6 @@
 #include "testApp.h"
 
 struct find_track_point {
-	
 	find_track_point() : gray(NULL), use_subpix(false) {}
 	
 	virtual ~find_track_point(){
@@ -78,6 +77,7 @@ find_track_point f;
 void testApp::setup(){	 
 	ofBackground(255,255,255);	
 	
+	cout<<"I AM NEW"<<endl;
 	cw = 320; ch = 240;
 	
 	vidGrabber.initGrabber(cw,ch);
