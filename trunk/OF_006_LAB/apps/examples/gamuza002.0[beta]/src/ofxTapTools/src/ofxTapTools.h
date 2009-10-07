@@ -1,0 +1,58 @@
+#ifndef OFX_TAPTOOLS
+#define OFX_TAPTOOLS
+
+//	----------------------------------------------------------------------------------------------------
+
+#include "tt_audio_base.h"
+#include "tt_add.h"
+#include "tt_adsr.h"
+#include "tt_allpass.h"
+#include "tt_audio_signal.h"
+#include "tt_average.h"
+#include "tt_buffer.h"
+#include "tt_buffer_play.h"
+#include "tt_buffer_record.h"
+#include "tt_buffer_window.h"
+#include "tt_clip.h"
+#include "tt_comb.h"
+#include "tt_copy.h"
+#include "tt_crossfade.h"
+#include "tt_dcblock.h"
+#include "tt_degrade.h"
+#include "tt_delay.h"
+#include "tt_downsample.h"
+#include "tt_fivecomb.h"
+#include "tt_gain.h"
+#include "tt_lfo.h"
+#include "tt_limiter.h"
+#include "tt_lowpass_fourpole.h"
+#include "tt_lowpass_onepole.h"
+#include "tt_lowpass_twopole.h"
+#include "tt_mixer_mono.h"
+#include "tt_modulo.h"
+#include "tt_multiply.h"
+#include "tt_multitap.h"
+#include "tt_noise.h"
+#include "tt_offset.h"
+#include "tt_onewrap.h"
+#include "tt_overdrive.h"
+#include "tt_pan.h"
+#include "tt_phasor.h"
+#include "tt_polar.h"
+#include "tt_procrastinate.h"
+#include "tt_pulsesub.h"
+#include "tt_ramp.h"
+#include "tt_rms.h"
+#include "tt_shift.h"
+#include "tt_subtract.h"
+#include "tt_svf.h"
+#include "tt_switch.h"
+#include "tt_upsample.h"
+#include "tt_verb.h"
+#include "tt_wavetable.h"
+#include "tt_zerox.h"
+
+
+#endif
+
+//	----------------------------------------------------------------------------------------------------

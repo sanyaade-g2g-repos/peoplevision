@@ -1,0 +1,13 @@
+<settings>
+    <threshold>32</threshold>
+    <numblobs>1</numblobs>
+    <minblobsize>21</minblobsize>
+    <maxblobsize>193853</maxblobsize>
+    <learnbg>1</learnbg>
+    <flipx>1</flipx>
+    <flipy>1</flipy>
+    <rotate>0</rotate>
+    <cameraWidth>321</cameraWidth>
+    <cameraHeight>240</cameraHeight>
+</settings>
+<sendContours>0</sendContours>

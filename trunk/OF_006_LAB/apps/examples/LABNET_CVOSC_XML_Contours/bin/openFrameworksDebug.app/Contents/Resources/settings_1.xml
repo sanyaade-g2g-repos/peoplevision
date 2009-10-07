@@ -1,0 +1,12 @@
+<settings>
+    <threshold>49</threshold>
+    <numblobs>1</numblobs>
+    <minblobsize>10</minblobsize>
+    <maxblobsize>102400</maxblobsize>
+    <learnbg>1</learnbg>
+    <flipx>0</flipx>
+    <flipy>0</flipy>
+    <rotate>0</rotate>
+    <cameraWidth>640</cameraWidth>
+    <cameraHeight>480</cameraHeight>
+</settings>
