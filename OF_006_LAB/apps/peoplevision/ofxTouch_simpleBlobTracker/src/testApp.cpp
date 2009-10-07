@@ -32,6 +32,7 @@ void testApp::draw() {
         ofCircle( fingers[i].x, fingers[i].y, 0.5*fingers[i].radius );
 	}
         
+	cout<<"I AM NEW"<<endl;
 }
 
 
