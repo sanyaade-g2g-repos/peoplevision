@@ -22,6 +22,7 @@ ofxVideoGrabber::~ofxVideoGrabber(){
 //--------------------------------------------------------------------
 bool ofxVideoGrabber::initGrabber( int _width, int _height, int _format, int _targetFormat, int _frameRate, bool _useTexture, ofxVideoGrabberSDK *sdk, ofxVideoGrabberSettings* _settings)
 {
+	cout<<"TRYING TO INIT GRABBER"<<endl;
     videoGrabber = sdk;
     settings = _settings;
     videoGrabber->bVerbose = bVerbose;
