@@ -1,139 +1,59 @@
 #include "testApp.h"
-#include "ofxIIDCSettings.h"
 
-//--------------------------------------------------------------
-void testApp::setup(){
 
-	camWidth 		= 640;	// try to grab at this size.
-	camHeight 		= 480;
-	appWidth        = ofGetWidth();
-	appHeight       = ofGetHeight();
-	mytimeThen		= 0.0f;
-	myframeRate     = 0.0f;
-	myframes        = 0.0f;
-
-	ofSetVerticalSync(true);
-	ofSetLogLevel(OF_LOG_VERBOSE);
-
-    vidGrabber.setDeviceID(0);
-
-#ifdef USING_OFX_VIDEOGRABBER
-
-    Libdc1394Grabber *sdk = new Libdc1394Grabber;
-	//sdk->setFormat7(VID_FORMAT7_0);
-	sdk->listDevices();
-	sdk->setDiscardFrames(true);
-	sdk->set1394bMode(true);
-	//sdk->setROI(0,0,320,200);
-	//sdk->setDeviceID("b09d01008bc69e:0");
-
-	ofxIIDCSettings *settings = new ofxIIDCSettings;
-	settings->setXMLFilename("mySettingsFile.xml");
-#endif
+void testApp::setup() {	
+	//hook touchapp events
 	
-	vidGrabber.setVerbose(true);
+	ofAddListener( touchHandler.fingerDragged, this, &testApp::fingerDragged);
+	ofAddListener( touchHandler.fingerPressed, this, &testApp::fingerPressed);
+	ofAddListener( touchHandler.fingerReleased, this, &testApp::fingerReleased);
 	
-#ifdef USING_OFX_VIDEOGRABBER
-	
-    bool result = vidGrabber.initGrabber( camWidth, camHeight, VID_FORMAT_YUV422, VID_FORMAT_RGB, 30, true, sdk, settings );
-
-    //bool result = vidGrabber.initGrabber( camWidth, camHeight, VID_FORMAT_YUV422, VID_FORMAT_RGB, 30 );
-	// or like this:
-	//bool result = vidGrabber.initGrabber( camWidth, camHeight, VID_FORMAT_GREYSCALE, VID_FORMAT_GREYSCALE, 30, true, new Libdc1394Grabber);
-	// or like this:
-	//bool result = vidGrabber.initGrabber( camWidth, camHeight, VID_FORMAT_YUV411, VID_FORMAT_RGB, 30, true, new Libdc1394Grabber, new ofxIIDCSettings);
-#else
-	
-	bool result = vidGrabber.initGrabber( camWidth, camHeight );
-
-#endif
-
-	if(result) {
-	    ofLog(OF_LOG_VERBOSE,"Camera successfully initialized.");
-	} else {
-	    ofLog(OF_LOG_FATAL_ERROR,"Camera failed to initialize.");
-	}
-
+	//setSimulationMode( true );  //uncomment this to use mouse simulation
+	//setVideoPlayerMode( true );   //comment this out to run live from cam
+	//setVideoPlayerFile("touchkit-fingers.mov");
+	bDragging = false;
+	cout<<"SET"<<endl;
 }
 
-//--------------------------------------------------------------
+
 void testApp::update(){
-
-	ofBackground(100,100,100);
-
-	vidGrabber.update();
+	ofBackground( 0,0,0 );
+}
 
 
-	if (vidGrabber.isFrameNew()){
-
-        calculateCaptureFramerate();
+void testApp::draw() {
+	ofEnableAlphaBlending();
+	
+	if( bDragging ) {
+		ofFill();
+		bDragging = false;
+	} else {
+		ofNoFill();
 	}
-
-    sprintf(buf,"App framerate : %f",ofGetFrameRate());
-
-}
-
-//--------------------------------------------------------------
-void testApp::draw(){
-	ofSetColor(0xffffff);
-	vidGrabber.draw(appWidth - camWidth,0);
-
-
-    /* Framerate display */
-	ofDrawBitmapString(buf,30,appHeight - 40);
-	ofDrawBitmapString(buf2,30,appHeight - 20);
-}
-
-//--------------------------------------------------------------
-void testApp::calculateCaptureFramerate()
-{
-    mytimeNow = ofGetElapsedTimef();
-    if( (mytimeNow-mytimeThen) > 0.05f || myframes == 0 ) {
-        myfps = myframes / (mytimeNow-mytimeThen);
-        mytimeThen = mytimeNow;
-        myframes = 0;
-        myframeRate = 0.9f * myframeRate + 0.1f * myfps;
-        sprintf(buf2,"Capture framerate : %f",myframeRate);
-    }
-    myframes++;
-}
-
-//--------------------------------------------------------------
-void testApp::keyPressed  (int key){
-
-	if (key == 's' || key == 'S'){
-		vidGrabber.videoSettings();
+	
+	for( int i=0; i<touchHandler.fingers.size(); i++ ) {
+		ofSetColor( 180, 0, 0, 100 );
+		ofCircle( touchHandler.fingers[i].x, touchHandler.fingers[i].y, 2*touchHandler.fingers[i].radius );
+		ofSetColor( 200, 0, 0, 255 );        
+		ofCircle( touchHandler.fingers[i].x, touchHandler.fingers[i].y, 0.5*touchHandler.fingers[i].radius );
 	}
-
+	
+	touchHandler.draw();
 }
 
 
-//--------------------------------------------------------------
-void testApp::keyReleased(int key){
+void testApp::keyPressed( int key ) {}
+void testApp::keyReleased( int key ) {}
 
+void testApp::mouseMoved( int x, int y ) {}	
+void testApp::mouseDragged( int x, int y, int button ) {}
+void testApp::mousePressed( int x, int y, int button ) {}
+void testApp::mouseReleased() {}
+
+void testApp::fingerDragged( ofxTouchFinger & finger ) {
+	bDragging = true;
 }
+void testApp::fingerPressed( ofxTouchFinger & finger ) {}
+void testApp::fingerReleased( ofxTouchFinger & finger ) {}
+	
 
-//--------------------------------------------------------------
-void testApp::mouseMoved(int x, int y ){
-
-}
-
-//--------------------------------------------------------------
-void testApp::mouseDragged(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void testApp::mousePressed(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void testApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void testApp::windowResized(int w, int h){
-
-}
