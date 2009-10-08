@@ -1,12 +1,15 @@
 #include "testApp.h"
 
 
-void testApp::setup() {
-    setSetupMode( true );
-    //setSimulationMode( true );  //uncomment this to use mouse simulation
-    //setVideoPlayerMode( true );   //comment this out to run live from cam
-    //setVideoPlayerFile("touchkit-fingers.mov");
-    bDragging = false;
+void testApp::setup() {	
+	//hook touchapp events
+	
+	ofAddListener( touchHandler.keyPressed, this, &testApp::keyPressed);
+	
+	//setSimulationMode( true );  //uncomment this to use mouse simulation
+	//setVideoPlayerMode( true );   //comment this out to run live from cam
+	//setVideoPlayerFile("touchkit-fingers.mov");
+	bDragging = false;
 }
 
 
@@ -16,23 +19,23 @@ void testApp::update(){
 
 
 void testApp::draw() {
-    ofEnableAlphaBlending();
-    
-    if( bDragging ) {
-        ofFill();
-        bDragging = false;
-    } else {
-        ofNoFill();
-    }
-    
-	for( int i=0; i<fingers.size(); i++ ) {
-        ofSetColor( 180, 0, 0, 100 );
-        ofCircle( fingers[i].x, fingers[i].y, 2*fingers[i].radius );
-        ofSetColor( 200, 0, 0, 255 );        
-        ofCircle( fingers[i].x, fingers[i].y, 0.5*fingers[i].radius );
+	ofEnableAlphaBlending();
+	
+	if( bDragging ) {
+		ofFill();
+		bDragging = false;
+	} else {
+		ofNoFill();
 	}
-        
-	cout<<"I AM NEW"<<endl;
+	
+	for( int i=0; i<touchHandler.fingers.size(); i++ ) {
+		ofSetColor( 180, 0, 0, 100 );
+		ofCircle( touchHandler.fingers[i].x, touchHandler.fingers[i].y, 2*touchHandler.fingers[i].radius );
+		ofSetColor( 200, 0, 0, 255 );        
+		ofCircle( touchHandler.fingers[i].x, touchHandler.fingers[i].y, 0.5*touchHandler.fingers[i].radius );
+	}
+	
+	touchHandler.draw();
 }
 
 
@@ -45,9 +48,9 @@ void testApp::mousePressed( int x, int y, int button ) {}
 void testApp::mouseReleased() {}
 
 void testApp::fingerDragged( const ofxTouchFinger& finger ) {
-    bDragging = true;
+	bDragging = true;
 }
 void testApp::fingerPressed( const ofxTouchFinger& finger ) {}
 void testApp::fingerReleased( const ofxTouchFinger& finger ) {}
-    
+	
 
