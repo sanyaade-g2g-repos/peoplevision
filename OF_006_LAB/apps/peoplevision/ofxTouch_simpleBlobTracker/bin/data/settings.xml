@@ -1,6 +1,9 @@
 <threshold>
     <value>45.000000</value>
 </threshold>
+<maxblobsize>
+    <value>60.000000</value>
+</maxblobsize>
 <graphicsWarp>
     <corner0>
         <x>0.000000</x>

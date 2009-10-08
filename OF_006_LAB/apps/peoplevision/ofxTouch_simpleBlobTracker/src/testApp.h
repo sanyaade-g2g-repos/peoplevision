@@ -1,10 +1,12 @@
-#include "ofxTouchAppRelay.h"
+#include "ofxTouchApp.h"
 #include "ofMain.h"
 
-class testApp : public ofxTouchApp {
+class testApp : public ofBaseApp {
 
   public:
   
+	ofxTouchApp touchHandler;
+	
     bool bDragging;
 
     void setup();
