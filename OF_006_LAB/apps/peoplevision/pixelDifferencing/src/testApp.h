@@ -3,6 +3,7 @@
 
 
 #include "ofMain.h"
+#include "PixelDifferencing.h"
 
 class testApp : public ofBaseApp{
 
