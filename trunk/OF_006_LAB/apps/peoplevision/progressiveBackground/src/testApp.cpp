@@ -26,6 +26,36 @@ void testApp::setup(){
 	//bLearnBakground = true;
 	threshold = 80;
 	fLearnRate = 0.0f;
+	highpassBlur = 0;
+	highpassNoise = 0;
+	highpassAmp = 0;
+	smooth = 0;
+	bAmplify = bSmooth = bHighpass = false;
+	bFindHoles = true;
+	
+	minBlob = 30;
+	maxBlob = 640*480;
+	
+	//set gui
+	//gui.addSlider(string name, int *value, int min, int max);
+	gui.addToggle("learn background", &bLearnBakground);
+	gui.addSlider("threshold", &threshold, 0, 255);
+	gui.addSlider("minimum blob", &minBlob, 0.0f, 640.0f*480.0f/10.0f);
+	gui.addSlider("maximum blob", &maxBlob, 640.0f, 640.0f*480.0f*3);
+	gui.addSlider("bg learn rate", &fLearnRate, 0.0f, 1000.0f);
+	gui.addToggle("smoothing on", &bSmooth);
+	gui.addSlider("smooth", &smooth, 0, 15);
+	
+	gui.addToggle("highpass on", &bHighpass);
+	gui.addSlider("highpass blur", &highpassBlur, 0, 200);
+	gui.addSlider("highpass noise", &highpassNoise, 0, 30);
+	gui.addToggle("amplify on", &bAmplify);
+	gui.addSlider("amplify", &highpassAmp, 0, 200);
+	
+	gui.addToggle("find holes", &bFindHoles);
+	
+	gui.addToggle("track dark blobs", &bTrackDark);
+	gui.loadFromXML();
 }
 
 //--------------------------------------------------------------
@@ -71,13 +101,25 @@ void testApp::update(){
 		
 		grayDiff.flagImageChanged();
 		
+		if(bSmooth){//Smooth
+            grayDiff.blur((smooth * 2) + 1); //needs to be an odd number
+        }
+		
+		if(bHighpass){//HighPass
+			grayDiff.highpass(highpassBlur, highpassNoise);
+        }
+		
+        if(bAmplify){//Amplify
+			grayDiff.amplify(grayDiff, highpassAmp);
+        }
+		
 		grayDiff.threshold(threshold);
 		//grayDiff = grayImage;
 		// find contours which are between the size of 20 pixels and 1/3 the w*h pixels.
 		// also, find holes is set to true so we will get interior contours as well....
-		contourFinder.findContours(grayDiff, 20, (340*240)/3, 10, true);	// find holes
+		contourFinder.findContours(grayDiff, minBlob, maxBlob, 50, bFindHoles);	// find holes
 	}
-	
+		
 	//printf("%f \n", ofGetFrameRate());
 }
 
@@ -115,9 +157,10 @@ void testApp::draw(){
 	
 	ofSetColor(0xffffff);
 	char reportStr[1024];
-	sprintf(reportStr, "bg subtraction and blob detection\npress ' ' to capture bg\nthreshold %i (press: +/-)\nto change bg learn rate press: } or{ \n{ = +, { = -\n num blobs found %i\nlooking for dark blobs? %i\n learning rate = %f", threshold, contourFinder.nBlobs, bTrackDark, fLearnRate);
+	sprintf(reportStr, "bg subtraction and blob detection\npress ' '\n num blobs found %i\n", threshold, contourFinder.nBlobs, bTrackDark, fLearnRate);
 	ofDrawBitmapString(reportStr, 20, 600);
 	
+	gui.draw();
 }
 
 
@@ -144,7 +187,19 @@ void testApp::keyPressed  (int key){
 			if (fLearnRate < 0.0f) fLearnRate = 0.0f;
 			break;
 		case 'd':
-			bTrackDark = !bTrackDark;
+			gui.toggleDraw();
+			break;
+		case 'h':
+			bHighpass = !bHighpass;
+			break;
+		case 'a':
+			bAmplify = !bAmplify;
+			break;
+		case 's':
+			bSmooth = !bSmooth;
+			break;
+		case 'f':
+			ofToggleFullscreen();
 			break;
 	}
 }

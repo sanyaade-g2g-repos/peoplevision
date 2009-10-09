@@ -9,6 +9,8 @@
 
 #include "ofMain.h"
 #include "ofxOpenCv.h"
+#include "ofxSimpleGuiToo.h"
+#include "CPUImageFilter.h"
 
 class testApp : public ofBaseApp{
 	public:
@@ -18,7 +20,6 @@ class testApp : public ofBaseApp{
 		void draw();
 		
 		void keyPressed  (int key);
-		
 		void mouseMoved(int x, int y );
 		void mouseDragged(int x, int y, int button);
 		void mousePressed(int x, int y, int button);
@@ -32,21 +33,34 @@ class testApp : public ofBaseApp{
 	
 		ofxCvColorImage		colorImg;
 	
-		ofxCvGrayscaleImage 	grayImage;
+		ofxCvGrayscaleImage	grayImage;
 	
 		ofxCvGrayscaleImage grayBg;
 		ofxCvGrayscaleImage subtractBg;
-		ofxCvGrayscaleImage grayDiff;
+		CPUImageFilter grayDiff;
 		ofxCvShortImage		floatBgImg;
 	
 		ofxCvContourFinder 	contourFinder;
 	
+		int smooth;
+		int highpassBlur;
+		int highpassNoise;
+		int	highpassAmp;
+	
+		int minBlob;
+		int maxBlob;
+		
+		bool				bFindHoles;
 		int 				threshold;
 		bool				bLearnBakground;
 		bool				bLearnBakgroundProgressive;
 		bool				bTrackDark;
+		bool				bHighpass;
+		bool				bAmplify;
+		bool				bSmooth;
 		float				fLearnRate;
 		float camWidth, camHeight;
+		ofxSimpleGuiToo	gui;
 };
 
 #endif
