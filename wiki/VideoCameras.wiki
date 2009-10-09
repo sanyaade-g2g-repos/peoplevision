@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary This is for talking about camera options and pros and cons
 
 = Introduction =
 
