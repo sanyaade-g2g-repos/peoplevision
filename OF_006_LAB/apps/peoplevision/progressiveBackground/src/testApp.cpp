@@ -4,6 +4,8 @@
 //--------------------------------------------------------------
 void testApp::setup(){
 	
+	ofSetFrameRate(60);
+	
 	camWidth = 640;
 	camHeight = 480;
 	
@@ -17,21 +19,24 @@ void testApp::setup(){
 	
     colorImg.allocate(camWidth, camHeight);
 	grayImage.allocate(camWidth, camHeight);
+	grayLastImage.allocate(camWidth, camHeight);
 	grayBg.allocate(camWidth, camHeight);
 	grayDiff.allocate(camWidth, camHeight);
 	floatBgImg.allocate(camWidth, camHeight);
 	colorSmallImage.allocate( camWidth/2, camHeight/2 );
 	graySmallImage.allocate( camWidth/2, camHeight/2 );
+	opticalFlow.allocate(camWidth, camHeight);
 	
-	bLearnBakgroundProgressive = true;
+	bLearnBackgroundProgressive = true;
 	bTrackDark = false;
-	//bLearnBakground = true;
+	bLearnBackground = true;
 	threshold = 80;
 	fLearnRate = 0.0f;
 	highpassBlur = 0;
 	highpassNoise = 0;
 	highpassAmp = 0;
-	smooth = 0;
+	smooth = 0; 
+	
 	bAmplify = bSmooth = bHighpass = false;
 	bFindHoles = true;
 	
@@ -40,25 +45,30 @@ void testApp::setup(){
 	
 	//set gui
 	//gui.addSlider(string name, int *value, int min, int max);
-	gui.addToggle("learn background", &bLearnBakground);
+	gui.addToggle("learn background", &bLearnBackground);
+	gui.addToggle("smart learn background", &bSmartLearnBackground);
 	gui.addSlider("threshold", &threshold, 0, 255);
 	gui.addSlider("minimum blob", &minBlob, 0.0f, 640.0f*480.0f/10.0f);
 	gui.addSlider("maximum blob", &maxBlob, 640.0f, 640.0f*480.0f*3);
 	gui.addSlider("bg learn rate", &fLearnRate, 0.0f, 1000.0f);
 	gui.addToggle("smoothing on", &bSmooth);
 	gui.addSlider("smooth", &smooth, 0, 15);
-	
 	gui.addToggle("highpass on", &bHighpass);
 	gui.addSlider("highpass blur", &highpassBlur, 0, 200);
 	gui.addSlider("highpass noise", &highpassNoise, 0, 30);
 	gui.addToggle("amplify on", &bAmplify);
 	gui.addSlider("amplify", &highpassAmp, 0, 200);
-	
 	gui.addToggle("find holes", &bFindHoles);
-	
+	gui.addToggle("track optical flow", &bTrackOpticalFlow);
 	gui.addToggle("track dark blobs", &bTrackDark);
 	gui.addToggle("track faces", &bDetectHaar);
+	gui.addSlider("haar threshold add", &haarArea, 0.0f, 100.0f);
+	gui.addSlider("minimum haar checkable blob", &minHaarArea, 0.0f, 640.0f);
+	gui.addSlider("maximum haar checkable blob", &maxHaarArea, 640.0f, 640.0f*480.0f);
+	
 	gui.loadFromXML();
+	
+	bLearnBackground = true;	
 	
 	//set tracker
 	haarFinder.setup( "HS.xml" );
@@ -81,6 +91,8 @@ void testApp::update(){
 	
 	if (bNewFrame){
 		
+		//get pixels
+		
 #ifdef _USE_LIVE_VIDEO
 		colorImg.setFromPixels(vidGrabber.getPixels(), camWidth, camHeight);
 		
@@ -89,13 +101,16 @@ void testApp::update(){
 		
 #else
 		colorImg.setFromPixels(vidPlayer.getPixels(), camWidth, camHeight);
-#endif
-		
+#endif		
         grayImage = colorImg;
-		if (bLearnBakground == true){
+		
+		//learn background (either in reset or additive)
+		
+		if (bLearnBackground == true){
+			cout<<"DO IT"<<endl;
 			floatBgImg = grayImage;		// the = sign copys the pixels from grayImage into grayBg (operator overloading)
-			bLearnBakground = false;
-		} else if (bLearnBakgroundProgressive){
+			bLearnBackground = false;
+		} else if (bLearnBackgroundProgressive){
 			floatBgImg.addWeighted( grayImage, fLearnRate * .0001);
 			//grayBg = floatBgImg;  // not yet implemented
 			cvConvertScale( floatBgImg.getCvImage(), grayBg.getCvImage(), 255.0f/65535.0f, 0 );       
@@ -104,7 +119,11 @@ void testApp::update(){
 		
 		// take the abs value of the difference between background and incoming and then threshold:
 		//grayDiff.absDiff(grayBg, grayImage);
+		
 		grayDiff = grayImage;
+		
+		//get diff of images either as lights or darks
+		
 		if(bTrackDark)
 			cvSub(grayBg.getCvImage(), grayDiff.getCvImage(), grayDiff.getCvImage());
 		else
@@ -112,33 +131,60 @@ void testApp::update(){
 		
 		grayDiff.flagImageChanged();
 		
+		//smoothing
+		
 		if(bSmooth){//Smooth
             grayDiff.blur((smooth * 2) + 1); //needs to be an odd number
         }
+		
+		//highpass filter (see cpuimagefilter class)
 		
 		if(bHighpass){//HighPass
 			grayDiff.highpass(highpassBlur, highpassNoise);
         }
 		
+		//amplify (see cpuimagefilter class)
+		
         if(bAmplify){//Amplify
 			grayDiff.amplify(grayDiff, highpassAmp);
         }
+		
+		//threshold + find blobs
 		
 		grayDiff.threshold(threshold);
 		//grayDiff = grayImage;
 		contourFinder.findContours(grayDiff, minBlob, maxBlob, 50, bFindHoles);
 		
-		//try to find faces?
-		for (int i = 0; i < contourFinder.nBlobs; i++){
-			ofxCvBlob blob = contourFinder.blobs[i];
-			ofRectangle newrect;
-			newrect.x		= blob.boundingRect.x/2.0f - 20.0f;
-			newrect.y		= blob.boundingRect.y/2.0f - 20.0f;
-			newrect.width	= blob.boundingRect.width/2.0f + 40.0f;
-			newrect.height	= blob.boundingRect.height/2.0f + 40.0f;
-			haarTracker.findHaarObjects( graySmallImage, newrect );
+		//detect haar patterns
+		
+		if (bDetectHaar){
+		
+			//try to find faces?
+			for (int i = 0; i < contourFinder.nBlobs; i++){
+				ofxCvBlob blob = contourFinder.blobs[i];
+				ofRectangle newrect;
+				newrect.x		= blob.boundingRect.x/2.0f - haarArea;
+				newrect.y		= blob.boundingRect.y/2.0f - haarArea;
+				newrect.width	= blob.boundingRect.width/2.0f + haarArea*2;
+				newrect.height	= blob.boundingRect.height/2.0f + haarArea*2;
+				
+				if (blob.area > minHaarArea && blob.area < maxHaarArea) haarTracker.findHaarObjects( graySmallImage, newrect );
+			}
 		}
 		
+		//detect optical flow
+		
+		if (bTrackOpticalFlow){
+			opticalFlow.calc(grayLastImage,grayImage,11);
+		}
+		
+		grayLastImage = grayImage;
+		
+		//force learn background if there are > 5 blobs (off by default)
+		
+		if (bSmartLearnBackground == true && contourFinder.nBlobs > 5){
+			bLearnBackground = true;
+		}
 	}
 		
 	//printf("%f \n", ofGetFrameRate());
@@ -152,6 +198,15 @@ void testApp::draw(){
 	colorImg.draw(20,20,320,240);
 	grayDiff.draw(360,20,320,240);
 	grayBg.draw(20,280,320,240);
+	
+	if (bTrackOpticalFlow){
+		ofPushMatrix();
+		ofTranslate(680, 20);
+		ofScale(.5, .5);		
+		opticalFlow.draw();
+		ofPopMatrix();
+	}
+	
 	//grayDiff.draw(360,280,320,240);
 	
 	// then draw the contours:
@@ -166,43 +221,49 @@ void testApp::draw(){
 	
 	// or, instead we can draw each blob individually,
 	// this is how to get access to them:
+	
 	ofPushMatrix();
 	ofTranslate(360,280);
 	ofScale(0.5f,0.5f,0.5f);
+	ofNoFill();
+	
     for (int i = 0; i < contourFinder.nBlobs; i++){
-        contourFinder.blobs[i].draw(0,0);
+		
+		//if haarfinder is looking at these blobs, draw the area it's looking at
+		
+        if (contourFinder.blobs[i].area > minHaarArea && contourFinder.blobs[i].area < maxHaarArea){
+			ofSetColor(0xffffff);
+			ofRect(contourFinder.blobs[i].boundingRect.x - haarArea/2, contourFinder.blobs[i].boundingRect.y - haarArea/2, 
+				   contourFinder.blobs[i].boundingRect.width + haarArea, contourFinder.blobs[i].boundingRect.height + haarArea);
+			ofSetColor(0xffff00);
+			
+		//otherwise just draw a blue square
+        } else {
+			ofSetColor(0x0000ff);
+		}
+		ofRect(contourFinder.blobs[i].boundingRect.x, contourFinder.blobs[i].boundingRect.y, contourFinder.blobs[i].boundingRect.width, contourFinder.blobs[i].boundingRect.height);
     }
+	
+	//loop through + draw where faces are found (pink box)
 	
 	float x, y, w, h;
 	int faceID;
 	float faceMode;
 	
+	ofSetColor( 0xFF00FF );
+	
 	while( haarTracker.hasNextHaarItem() )
 	{
-		cout<<"FACE!"<<endl;
-		
 		faceID		= haarTracker.getHaarItemID();
-		faceMode	= ( faceID % 10 ) / 10.0f;
 		
 		haarTracker.getHaarItemPropertiesEased( &x, &y, &w, &h );
+		
+		//mult by two since haar finder is looking at a 320x240 sample
 		
 		x	*= 2.0f;
 		y	*= 2.0f;
 		w	*= 2.0f;
 		h	*= 2.0f;
-		
-		if( faceMode > 0.66 )
-		{
-			ofSetColor( 0xFF00FF );
-		}
-		else if( faceMode > 0.33 )
-		{
-			//ofSetColor( 0x00FF00 );
-		}
-		else
-		{
-			//ofSetColor( 0x0000FF );
-		}
 		
 		//ofNoFill();
 		ofRect( x, y, w, h );
@@ -224,11 +285,13 @@ void testApp::draw(){
 //--------------------------------------------------------------
 void testApp::keyPressed  (int key){
 	
+	//most of this stuff is done in the gui now
+	
 	switch (key){
 		case ' ':
-			bLearnBakground = true;
+			bLearnBackground = true;
 			break;
-		case '+':
+		/*case '+':
 			threshold ++;
 			if (threshold > 255) threshold = 255;
 			break;
@@ -243,9 +306,11 @@ void testApp::keyPressed  (int key){
 			fLearnRate--;
 			if (fLearnRate < 0.0f) fLearnRate = 0.0f;
 			break;
+		 */
 		case 'd':
 			gui.toggleDraw();
 			break;
+		/*
 		case 'h':
 			bHighpass = !bHighpass;
 			break;
@@ -255,6 +320,7 @@ void testApp::keyPressed  (int key){
 		case 's':
 			bSmooth = !bSmooth;
 			break;
+		 */
 		case 'f':
 			ofToggleFullscreen();
 			break;
