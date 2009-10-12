@@ -33,14 +33,15 @@ class testApp : public ofBaseApp{
 		#endif
 	
 		ofxCvColorImage		colorImg;
-	ofxCvColorImage		colorSmallImage;
+		ofxCvColorImage		colorSmallImage;
 	
 		ofxCvGrayscaleImage	grayImage;
+		ofxCvGrayscaleImage	grayLastImage;
 	
 		ofxCvGrayscaleImage grayBg;
 		ofxCvGrayscaleImage subtractBg;
 		ofxCvGrayscaleImage graySmallImage;
-		CPUImageFilter grayDiff;
+		CPUImageFilter		grayDiff;
 		ofxCvShortImage		floatBgImg;
 	
 		ofxCvContourFinder 	contourFinder;
@@ -53,20 +54,28 @@ class testApp : public ofBaseApp{
 		int minBlob;
 		int maxBlob;
 	
+		float haarArea;
+		float minHaarArea;
+		float maxHaarArea;
+	
 		float fLearnRate;
 		float camWidth, camHeight;
 		
 		bool bFindHoles;
-		bool bLearnBakground;
-		bool bLearnBakgroundProgressive;
+		bool bLearnBackground;
+		bool bSmartLearnBackground;
+		bool bLearnBackgroundProgressive;
 		bool bTrackDark;
 		bool bHighpass;
 		bool bAmplify;
 		bool bSmooth;
 		bool bDetectHaar;
+		bool bTrackOpticalFlow;
 	
 		ofxCvHaarFinder			haarFinder;
 		ofxCvHaarTracker		haarTracker;
+	
+		ofxCvOpticalFlowLK	opticalFlow;
 	
 		ofxSimpleGuiToo	gui;
 };
