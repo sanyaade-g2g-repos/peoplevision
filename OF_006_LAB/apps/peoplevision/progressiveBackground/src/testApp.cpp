@@ -20,6 +20,8 @@ void testApp::setup(){
 	grayBg.allocate(camWidth, camHeight);
 	grayDiff.allocate(camWidth, camHeight);
 	floatBgImg.allocate(camWidth, camHeight);
+	colorSmallImage.allocate( camWidth/2, camHeight/2 );
+	graySmallImage.allocate( camWidth/2, camHeight/2 );
 	
 	bLearnBakgroundProgressive = true;
 	bTrackDark = false;
@@ -55,7 +57,12 @@ void testApp::setup(){
 	gui.addToggle("find holes", &bFindHoles);
 	
 	gui.addToggle("track dark blobs", &bTrackDark);
+	gui.addToggle("track faces", &bDetectHaar);
 	gui.loadFromXML();
+	
+	//set tracker
+	haarFinder.setup( "HS.xml" );
+	haarTracker.setup( &haarFinder );
 }
 
 //--------------------------------------------------------------
@@ -76,6 +83,10 @@ void testApp::update(){
 		
 #ifdef _USE_LIVE_VIDEO
 		colorImg.setFromPixels(vidGrabber.getPixels(), camWidth, camHeight);
+		
+		colorSmallImage.scaleIntoMe( colorImg );
+		graySmallImage	= colorSmallImage;
+		
 #else
 		colorImg.setFromPixels(vidPlayer.getPixels(), camWidth, camHeight);
 #endif
@@ -115,9 +126,19 @@ void testApp::update(){
 		
 		grayDiff.threshold(threshold);
 		//grayDiff = grayImage;
-		// find contours which are between the size of 20 pixels and 1/3 the w*h pixels.
-		// also, find holes is set to true so we will get interior contours as well....
-		contourFinder.findContours(grayDiff, minBlob, maxBlob, 50, bFindHoles);	// find holes
+		contourFinder.findContours(grayDiff, minBlob, maxBlob, 50, bFindHoles);
+		
+		//try to find faces?
+		for (int i = 0; i < contourFinder.nBlobs; i++){
+			ofxCvBlob blob = contourFinder.blobs[i];
+			ofRectangle newrect;
+			newrect.x		= blob.boundingRect.x/2.0f - 20.0f;
+			newrect.y		= blob.boundingRect.y/2.0f - 20.0f;
+			newrect.width	= blob.boundingRect.width/2.0f + 40.0f;
+			newrect.height	= blob.boundingRect.height/2.0f + 40.0f;
+			haarTracker.findHaarObjects( graySmallImage, newrect );
+		}
+		
 	}
 		
 	//printf("%f \n", ofGetFrameRate());
@@ -151,6 +172,42 @@ void testApp::draw(){
     for (int i = 0; i < contourFinder.nBlobs; i++){
         contourFinder.blobs[i].draw(0,0);
     }
+	
+	float x, y, w, h;
+	int faceID;
+	float faceMode;
+	
+	while( haarTracker.hasNextHaarItem() )
+	{
+		cout<<"FACE!"<<endl;
+		
+		faceID		= haarTracker.getHaarItemID();
+		faceMode	= ( faceID % 10 ) / 10.0f;
+		
+		haarTracker.getHaarItemPropertiesEased( &x, &y, &w, &h );
+		
+		x	*= 2.0f;
+		y	*= 2.0f;
+		w	*= 2.0f;
+		h	*= 2.0f;
+		
+		if( faceMode > 0.66 )
+		{
+			ofSetColor( 0xFF00FF );
+		}
+		else if( faceMode > 0.33 )
+		{
+			//ofSetColor( 0x00FF00 );
+		}
+		else
+		{
+			//ofSetColor( 0x0000FF );
+		}
+		
+		//ofNoFill();
+		ofRect( x, y, w, h );
+	}
+	
 	ofPopMatrix();
 	
 	// finally, a report:
