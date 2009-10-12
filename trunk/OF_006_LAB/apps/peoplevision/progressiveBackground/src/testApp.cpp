@@ -5,13 +5,43 @@
 void testApp::setup(){
 	
 	ofSetFrameRate(60);
-	
+	ofSetLogLevel(OF_LOG_VERBOSE);
 	camWidth = 640;
 	camHeight = 480;
 	
 #ifdef _USE_LIVE_VIDEO
+	 
+	#ifdef USING_OFX_VIDEOGRABBER
+		
 	vidGrabber.setVerbose(true);
-	vidGrabber.initGrabber(camWidth, camHeight);
+	vidGrabber.setDeviceID(0);
+	
+	Libdc1394Grabber *sdk = new Libdc1394Grabber;
+	//sdk->setFormat7(VID_FORMAT7_0);
+	sdk->listDevices();
+	sdk->setDiscardFrames(true);
+	//sdk->set1394bMode(true);
+	//sdk->setROI(0,0,320,200);
+	//sdk->setDeviceID("b09d01008bc69e:0");
+
+	ofxIIDCSettings *settings = new ofxIIDCSettings;
+	settings->setXMLFilename("settings.xml");
+		
+	bool result = vidGrabber.initGrabber( camWidth, camHeight, BLOB_TRACKER_VIDEO_FORMAT, BLOB_TRACKER_COLOR_FORMAT, 60, true, sdk, settings );
+	
+	if(result) {
+		ofLog(OF_LOG_VERBOSE,"Camera successfully initialized.");
+	} else {
+		ofLog(OF_LOG_FATAL_ERROR,"Camera failed to initialize.");
+	}				
+	
+	vidGrabber.update();
+	#else
+	vidGrabber.setVerbose(true);
+	vidGrabber.initGrabber(camWidth, camHeight);  
+	vidGrabber.videoSettings();
+	#endif
+	
 #else
 	vidPlayer.loadMovie("fingers.mov");
 	vidPlayer.play();
@@ -73,6 +103,8 @@ void testApp::setup(){
 	//set tracker
 	haarFinder.setup( "HS.xml" );
 	haarTracker.setup( &haarFinder );
+	
+	mode = 0;
 }
 
 //--------------------------------------------------------------
@@ -82,8 +114,19 @@ void testApp::update(){
     bool bNewFrame = false;
 	
 #ifdef _USE_LIVE_VIDEO
+	
+	#ifdef USING_OFX_VIDEOGRABBER
+	vidGrabber.update();
+	#endif
+	
 	vidGrabber.grabFrame();
+	
+	#ifndef USING_OFX_VIDEOGRABBER
+	//there is something wrong with this in ofxVideoGrabber
 	bNewFrame = vidGrabber.isFrameNew();
+	#else
+	bNewFrame = true;
+	#endif
 #else
 	vidPlayer.idleMovie();
 	bNewFrame = vidPlayer.isFrameNew();
@@ -193,92 +236,107 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
 	
-	// draw the incoming, the grayscale, the bg and the thresholded difference
-	ofSetColor(0xffffff);
-	colorImg.draw(20,20,320,240);
-	grayDiff.draw(360,20,320,240);
-	grayBg.draw(20,280,320,240);
-	
-	if (bTrackOpticalFlow){
-		ofPushMatrix();
-		ofTranslate(680, 20);
-		ofScale(.5, .5);		
-		opticalFlow.draw();
-		ofPopMatrix();
-	}
-	
-	//grayDiff.draw(360,280,320,240);
-	
-	// then draw the contours:
-	
-	ofFill();
-	ofSetColor(0x333333);
-	ofRect(360,280,320,240);
-	ofSetColor(0xffffff);
-	
-	// we could draw the whole contour finder
-	//contourFinder.draw(360,540);
-	
-	// or, instead we can draw each blob individually,
-	// this is how to get access to them:
-	
-	ofPushMatrix();
-	ofTranslate(360,280);
-	ofScale(0.5f,0.5f,0.5f);
-	ofNoFill();
-	
-    for (int i = 0; i < contourFinder.nBlobs; i++){
+	if (mode == MODE_NORMAL || mode == MODE_GUI){
 		
-		//if haarfinder is looking at these blobs, draw the area it's looking at
+		// draw the incoming, the grayscale, the bg and the thresholded difference
+		ofSetColor(0xffffff);
+		colorImg.draw(20,20,320,240);
+		grayDiff.draw(360,20,320,240);
+		grayBg.draw(20,280,320,240);
 		
-        if (contourFinder.blobs[i].area > minHaarArea && contourFinder.blobs[i].area < maxHaarArea){
-			ofSetColor(0xffffff);
-			ofRect(contourFinder.blobs[i].boundingRect.x - haarArea/2, contourFinder.blobs[i].boundingRect.y - haarArea/2, 
-				   contourFinder.blobs[i].boundingRect.width + haarArea, contourFinder.blobs[i].boundingRect.height + haarArea);
-			ofSetColor(0xffff00);
-			
-		//otherwise just draw a blue square
-        } else {
-			ofSetColor(0x0000ff);
+		if (bTrackOpticalFlow){
+			ofPushMatrix();
+			ofTranslate(680, 20);
+			ofScale(.5, .5);		
+			opticalFlow.draw();
+			ofPopMatrix();
 		}
-		ofRect(contourFinder.blobs[i].boundingRect.x, contourFinder.blobs[i].boundingRect.y, contourFinder.blobs[i].boundingRect.width, contourFinder.blobs[i].boundingRect.height);
-    }
-	
-	//loop through + draw where faces are found (pink box)
-	
-	float x, y, w, h;
-	int faceID;
-	float faceMode;
-	
-	ofSetColor( 0xFF00FF );
-	
-	while( haarTracker.hasNextHaarItem() )
-	{
-		faceID		= haarTracker.getHaarItemID();
 		
-		haarTracker.getHaarItemPropertiesEased( &x, &y, &w, &h );
+		//grayDiff.draw(360,280,320,240);
 		
-		//mult by two since haar finder is looking at a 320x240 sample
+		// then draw the contours:
 		
-		x	*= 2.0f;
-		y	*= 2.0f;
-		w	*= 2.0f;
-		h	*= 2.0f;
+		ofFill();
+		ofSetColor(0x333333);
+		ofRect(360,280,320,240);
+		ofSetColor(0xffffff);
 		
-		//ofNoFill();
-		ofRect( x, y, w, h );
+		// we could draw the whole contour finder
+		//contourFinder.draw(360,540);
+		
+		// or, instead we can draw each blob individually,
+		// this is how to get access to them:
+		
+		ofPushMatrix();
+		ofTranslate(360,280);
+		ofScale(0.5f,0.5f,0.5f);
+		ofNoFill();
+		
+		for (int i = 0; i < contourFinder.nBlobs; i++){
+			
+			//if haarfinder is looking at these blobs, draw the area it's looking at
+			
+			if (contourFinder.blobs[i].area > minHaarArea && contourFinder.blobs[i].area < maxHaarArea){
+				ofSetColor(0xffffff);
+				ofRect(contourFinder.blobs[i].boundingRect.x - haarArea/2, contourFinder.blobs[i].boundingRect.y - haarArea/2, 
+					   contourFinder.blobs[i].boundingRect.width + haarArea, contourFinder.blobs[i].boundingRect.height + haarArea);
+				ofSetColor(0xffff00);
+				
+			//otherwise just draw a blue square
+			} else {
+				ofSetColor(0x0000ff);
+			}
+			ofRect(contourFinder.blobs[i].boundingRect.x, contourFinder.blobs[i].boundingRect.y, contourFinder.blobs[i].boundingRect.width, contourFinder.blobs[i].boundingRect.height);
+		}
+		
+		//loop through + draw where faces are found (pink box)
+		
+		float x, y, w, h;
+		int faceID;
+		float faceMode;
+		
+		ofSetColor( 0xFF00FF );
+		
+		while( haarTracker.hasNextHaarItem() )
+		{
+			faceID		= haarTracker.getHaarItemID();
+			
+			haarTracker.getHaarItemPropertiesEased( &x, &y, &w, &h );
+			
+			//mult by two since haar finder is looking at a 320x240 sample
+			
+			x	*= 2.0f;
+			y	*= 2.0f;
+			w	*= 2.0f;
+			h	*= 2.0f;
+			
+			//ofNoFill();
+			ofRect( x, y, w, h );
+		}
+		
+		ofPopMatrix();
+		
+		// finally, a report:
+		
+		ofSetColor(0xffffff);
+		char reportStr[1024];
+		sprintf(reportStr, "bg subtraction and blob detection\npress ' '\n num blobs found %i\n", threshold, contourFinder.nBlobs, bTrackDark, fLearnRate);
+		ofDrawBitmapString(reportStr, 20, 600);
+		
+		gui.draw();
+	} else if (mode == MODE_CAMERA_CALIBRATE){
+		vidGrabber.draw(ofGetWidth()- camWidth,0);
+	} else if (mode == MODE_FULLSCREEN){
+		
+		ofSetColor(0xffffff);
+		
+		float ratio = fmax((float)ofGetWidth()/colorImg.width, (float) ofGetHeight()/colorImg.height);
+		//if (mode == MODE_CAMERA_CALIBRATE){	
+			colorImg.draw(0,0,colorImg.width*ratio,colorImg.height*ratio);
+		/*} else {
+			colorImg.draw(0,0,colorImg.width*ratio,colorImg.height*ratio);
+		}*/
 	}
-	
-	ofPopMatrix();
-	
-	// finally, a report:
-	
-	ofSetColor(0xffffff);
-	char reportStr[1024];
-	sprintf(reportStr, "bg subtraction and blob detection\npress ' '\n num blobs found %i\n", threshold, contourFinder.nBlobs, bTrackDark, fLearnRate);
-	ofDrawBitmapString(reportStr, 20, 600);
-	
-	gui.draw();
 }
 
 
@@ -307,8 +365,17 @@ void testApp::keyPressed  (int key){
 			if (fLearnRate < 0.0f) fLearnRate = 0.0f;
 			break;
 		 */
-		case 'd':
-			gui.toggleDraw();
+		case 'm':
+			mode++;
+			if ( mode > 3) mode = 0;
+			if ( mode == MODE_GUI || mode == MODE_CAMERA_CALIBRATE) gui.toggleDraw();
+			if (mode == MODE_CAMERA_CALIBRATE){
+			#ifdef USING_OFX_VIDEOGRABBER
+				//vidGrabber.videoSettings();
+			#else
+				mode = MODE_FULLSCREEN;
+			#endif
+			}
 			break;
 		/*
 		case 'h':

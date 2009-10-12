@@ -13,6 +13,31 @@
 #include "ofxSimpleGuiToo.h"
 #include "CPUImageFilter.h"
 
+#ifdef _USE_LIVE_VIDEO
+
+#define USING_OFX_VIDEOGRABBER
+#define BLOB_TRACKER_VIDEO_FORMAT VID_FORMAT_GREYSCALE
+#define BLOB_TRACKER_COLOR_FORMAT VID_FORMAT_GREYSCALE
+
+#ifdef USING_OFX_VIDEOGRABBER
+	#include "ofxVideoGrabber.h"
+
+	#ifndef BLOB_TRACKER_VIDEO_FORMAT
+	#define BLOB_TRACKER_VIDEO_FORMAT VID_FORMAT_YUV422
+	#endif
+
+	#ifndef BLOB_TRACKER_COLOR_FORMAT
+	#define BLOB_TRACKER_COLOR_FORMAT VID_FORMAT_RGB
+	#endif
+#endif
+
+#endif
+
+#define MODE_NORMAL				0
+#define MODE_GUI				1
+#define MODE_CAMERA_CALIBRATE	2
+#define MODE_FULLSCREEN			3
+
 class testApp : public ofBaseApp{
 	public:
 
@@ -27,13 +52,23 @@ class testApp : public ofBaseApp{
 		void mouseReleased(int x, int y, int button);
 			
 		#ifdef _USE_LIVE_VIDEO
-			ofVideoGrabber 		vidGrabber;
+			#ifdef USING_OFX_VIDEOGRABBER
+				ofxVideoGrabber vidGrabber;
+			#else
+				ofVideoGrabber vidGrabber;
+			#endif
 		#else
 			ofVideoPlayer 		vidPlayer;
 		#endif
 	
-		ofxCvColorImage		colorImg;
-		ofxCvColorImage		colorSmallImage;
+	
+#ifdef USING_OFX_VIDEOGRABBER
+	ofxCvGrayscaleImage		colorImg;
+	ofxCvGrayscaleImage		colorSmallImage;
+#else
+	ofxCvColorImage		colorImg;
+	ofxCvColorImage		colorSmallImage;
+#endif
 	
 		ofxCvGrayscaleImage	grayImage;
 		ofxCvGrayscaleImage	grayLastImage;
@@ -45,6 +80,8 @@ class testApp : public ofBaseApp{
 		ofxCvShortImage		floatBgImg;
 	
 		ofxCvContourFinder 	contourFinder;
+	
+		int mode;
 	
 		int smooth;
 		int highpassBlur;
