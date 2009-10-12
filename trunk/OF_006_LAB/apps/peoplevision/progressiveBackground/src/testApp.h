@@ -9,6 +9,7 @@
 
 #include "ofMain.h"
 #include "ofxOpenCv.h"
+#include "ofxCvHaarTracker.h"
 #include "ofxSimpleGuiToo.h"
 #include "CPUImageFilter.h"
 
@@ -32,11 +33,13 @@ class testApp : public ofBaseApp{
 		#endif
 	
 		ofxCvColorImage		colorImg;
+	ofxCvColorImage		colorSmallImage;
 	
 		ofxCvGrayscaleImage	grayImage;
 	
 		ofxCvGrayscaleImage grayBg;
 		ofxCvGrayscaleImage subtractBg;
+		ofxCvGrayscaleImage graySmallImage;
 		CPUImageFilter grayDiff;
 		ofxCvShortImage		floatBgImg;
 	
@@ -46,20 +49,25 @@ class testApp : public ofBaseApp{
 		int highpassBlur;
 		int highpassNoise;
 		int	highpassAmp;
-	
+		int threshold;	
 		int minBlob;
 		int maxBlob;
-		
-		bool				bFindHoles;
-		int 				threshold;
-		bool				bLearnBakground;
-		bool				bLearnBakgroundProgressive;
-		bool				bTrackDark;
-		bool				bHighpass;
-		bool				bAmplify;
-		bool				bSmooth;
-		float				fLearnRate;
+	
+		float fLearnRate;
 		float camWidth, camHeight;
+		
+		bool bFindHoles;
+		bool bLearnBakground;
+		bool bLearnBakgroundProgressive;
+		bool bTrackDark;
+		bool bHighpass;
+		bool bAmplify;
+		bool bSmooth;
+		bool bDetectHaar;
+	
+		ofxCvHaarFinder			haarFinder;
+		ofxCvHaarTracker		haarTracker;
+	
 		ofxSimpleGuiToo	gui;
 };
 
