@@ -107,6 +107,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E26F28E1084D19900F01426 /* ofxPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxPerson.h; sourceTree = "<group>"; };
 		2E3D3915107FCC0F00C71D2B /* ofxSimpleGuiButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSimpleGuiButton.h; sourceTree = "<group>"; };
 		2E3D3916107FCC0F00C71D2B /* ofxSimpleGuiContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSimpleGuiContent.h; sourceTree = "<group>"; };
 		2E3D3917107FCC0F00C71D2B /* ofxSimpleGuiFPSCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxSimpleGuiFPSCounter.h; sourceTree = "<group>"; };
@@ -1304,11 +1305,12 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				2E3D397F107FCDC700C71D2B /* CPUImageFilter.cpp */,
-				2E3D3980107FCDC700C71D2B /* CPUImageFilter.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* testApp.h */,
 				E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */,
+				2E26F28E1084D19900F01426 /* ofxPerson.h */,
+				2E3D3980107FCDC700C71D2B /* CPUImageFilter.h */,
+				2E3D397F107FCDC700C71D2B /* CPUImageFilter.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;

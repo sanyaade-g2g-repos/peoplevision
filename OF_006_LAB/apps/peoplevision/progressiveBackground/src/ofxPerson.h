@@ -1,44 +1,7 @@
-/*
-*  CPUImageFilter.h
-*  
-*
-*  Created on 2/2/09.
-*  Copyright 2009 NUI Group. All rights reserved.
-*
-*/
-
-
-#ifndef CPUImageFilter_H
-#define CPUImageFilter_H
-
-#include "ofxCvGrayscaleImage.h"
-
-class CPUImageFilter : public ofxCvGrayscaleImage {
-
-  public:
-
-    CPUImageFilter(){};
-
-    void operator = ( unsigned char* _pixels );
-    void operator = ( const ofxCvGrayscaleImage& mom );
-    void operator = ( const ofxCvColorImage& mom );
-    void operator = ( const ofxCvFloatImage& mom );
-
-	//amplifies signal
-	void amplify( CPUImageFilter& mom, float level );
-	//picks out light spots from image
-	void highpass(float blur1, float blur2 );
-};
-
-#endif
-
 /***************************************************************************
- 
- LISCENSE FROM NUI CCV!
- 
  *
- *  ofxNCore.h
- *  NUI Group Community Core Vision
+ *  ofxPerson.h
+ *  Rockwell LAB + IDEO LAB peopleVision project
  * 
  *  Created by NUI Group Dev Team A on 3/1/09.
  *  Copyright 2009 NUI Group/Inc. All rights reserved.       
@@ -66,8 +29,37 @@ class CPUImageFilter : public ofxCvGrayscaleImage {
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  
- * Web: http://nuigroup.com
+ * Web: http://code.google.com/p/peoplevision/
  *
  * (...)
  *
  ***************************************************************************/
+
+#ifndef OFX_PERSON_OBJECT
+#define OFX_PERSON_OBJECT
+
+#include "ofMain.h"
+
+class ofxPerson : public ofRectangle
+{
+	float area;
+	
+	bool hasHaar;
+	float haarX;
+	float haarY;
+	float haarWidth;
+	float haarHeight;
+	
+	bool hasOpticalFlow;
+	ofPoint opticalFlowVelocity;
+
+	ofPoint velocity;
+	
+	ofxPerson(){
+		hasHaar = false;
+		haarX = haarY = haarWidth = haarHeight = 0;
+		hasOpticalFlow = false;
+	};
+}
+
+#endif

@@ -5,7 +5,7 @@
 void testApp::setup(){
 	
 	ofSetFrameRate(60);
-	ofSetLogLevel(OF_LOG_VERBOSE);
+	//ofSetLogLevel(OF_LOG_VERBOSE);
 	camWidth = 640;
 	camHeight = 480;
 	
@@ -49,13 +49,18 @@ void testApp::setup(){
 	
     colorImg.allocate(camWidth, camHeight);
 	grayImage.allocate(camWidth, camHeight);
-	grayLastImage.allocate(camWidth, camHeight);
 	grayBg.allocate(camWidth, camHeight);
 	grayDiff.allocate(camWidth, camHeight);
 	floatBgImg.allocate(camWidth, camHeight);
 	colorSmallImage.allocate( camWidth/2, camHeight/2 );
 	graySmallImage.allocate( camWidth/2, camHeight/2 );
-	opticalFlow.allocate(camWidth, camHeight);
+	
+	grayLastImage.allocate( camWidth/2, camHeight/2 );
+	colorBabyImage.allocate( camWidth/2, camHeight/2 );
+	grayBabyImage.allocate( camWidth/2, camHeight/2 );
+	
+	opticalFlow.allocate( camWidth/2, camHeight/2 );
+	opticalFlow.setCalcStep(5,5);
 	
 	bLearnBackgroundProgressive = true;
 	bTrackDark = false;
@@ -140,7 +145,9 @@ void testApp::update(){
 		colorImg.setFromPixels(vidGrabber.getPixels(), camWidth, camHeight);
 		
 		colorSmallImage.scaleIntoMe( colorImg );
+		colorBabyImage.scaleIntoMe( colorImg );
 		graySmallImage	= colorSmallImage;
+		grayBabyImage	= colorBabyImage;
 		
 #else
 		colorImg.setFromPixels(vidPlayer.getPixels(), camWidth, camHeight);
@@ -218,10 +225,10 @@ void testApp::update(){
 		//detect optical flow
 		
 		if (bTrackOpticalFlow){
-			opticalFlow.calc(grayLastImage,grayImage,11);
+			opticalFlow.calc(grayLastImage,grayBabyImage,11);
 		}
 		
-		grayLastImage = grayImage;
+		grayLastImage = grayBabyImage;
 		
 		//force learn background if there are > 5 blobs (off by default)
 		
@@ -247,7 +254,7 @@ void testApp::draw(){
 		if (bTrackOpticalFlow){
 			ofPushMatrix();
 			ofTranslate(680, 20);
-			ofScale(.5, .5);		
+			//ofScale(2, 2);		
 			opticalFlow.draw();
 			ofPopMatrix();
 		}
