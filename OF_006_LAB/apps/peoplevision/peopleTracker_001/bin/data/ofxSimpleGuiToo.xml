@@ -1,0 +1,92 @@
+<options>
+    <doDraw>1</doDraw>
+    <doAutoSave>1</doAutoSave>
+    <currentPage>1</currentPage>
+</options>
+<controls>
+    <Title_1>
+        <_Settings></_Settings>
+        <name>1: Settings</name>
+        <value>0</value>
+    </Title_1>
+    <Toggle_learn_background>
+        <name>learn background</name>
+        <value>0</value>
+    </Toggle_learn_background>
+    <Toggle_smart_learn_background>
+        <name>smart learn background</name>
+        <value>0</value>
+    </Toggle_smart_learn_background>
+    <SliderInt_threshold>
+        <name>threshold</name>
+        <value>17</value>
+    </SliderInt_threshold>
+    <SliderInt_minimum_blob>
+        <name>minimum blob</name>
+        <value>2304</value>
+    </SliderInt_minimum_blob>
+    <SliderInt_maximum_blob>
+        <name>maximum blob</name>
+        <value>921600</value>
+    </SliderInt_maximum_blob>
+    <SliderFloat_bg_learn_rate>
+        <name>bg learn rate</name>
+        <value>29.166666</value>
+    </SliderFloat_bg_learn_rate>
+    <Toggle_smoothing_on>
+        <name>smoothing on</name>
+        <value>0</value>
+    </Toggle_smoothing_on>
+    <SliderInt_smooth>
+        <name>smooth</name>
+        <value>15</value>
+    </SliderInt_smooth>
+    <Toggle_highpass_on>
+        <name>highpass on</name>
+        <value>1</value>
+    </Toggle_highpass_on>
+    <SliderInt_highpass_blur>
+        <name>highpass blur</name>
+        <value>200</value>
+    </SliderInt_highpass_blur>
+    <SliderInt_highpass_noise>
+        <name>highpass noise</name>
+        <value>30</value>
+    </SliderInt_highpass_noise>
+    <Toggle_amplify_on>
+        <name>amplify on</name>
+        <value>1</value>
+    </Toggle_amplify_on>
+    <SliderInt_amplify>
+        <name>amplify</name>
+        <value>54</value>
+    </SliderInt_amplify>
+    <Toggle_find_holes>
+        <name>find holes</name>
+        <value>0</value>
+    </Toggle_find_holes>
+    <Toggle_track_optical_flow>
+        <name>track optical flow</name>
+        <value>1</value>
+    </Toggle_track_optical_flow>
+    <Toggle_track_dark_blobs>
+        <name>track dark blobs</name>
+        <value>1</value>
+    </Toggle_track_dark_blobs>
+    <Toggle_track_faces>
+        <name>track faces</name>
+        <value>1</value>
+    </Toggle_track_faces>
+    <SliderFloat_haar_threshold_add>
+        <name>haar threshold add</name>
+        <value>30.000002</value>
+    </SliderFloat_haar_threshold_add>
+    <SliderFloat_minimum_haar_checkable_blob>
+        <name>minimum haar checkable blob</name>
+        <value>640.000000</value>
+    </SliderFloat_minimum_haar_checkable_blob>
+    <SliderFloat_maximum_haar_checkable_blob>
+        <name>maximum haar checkable blob</name>
+        <value>36405.332031</value>
+    </SliderFloat_maximum_haar_checkable_blob>
+</controls>
