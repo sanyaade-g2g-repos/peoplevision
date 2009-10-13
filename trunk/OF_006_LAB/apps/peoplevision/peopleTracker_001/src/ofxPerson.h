@@ -42,13 +42,16 @@
 
 class ofxPerson : public ofRectangle
 {
+public: 
 	float area;
 	
 	bool hasHaar;
-	float haarX;
+	ofRectangle haarRect;
+	/*float haarX;
 	float haarY;
 	float haarWidth;
 	float haarHeight;
+	*/
 	
 	bool hasOpticalFlow;
 	ofPoint opticalFlowVelocity;
@@ -57,7 +60,7 @@ class ofxPerson : public ofRectangle
 	
 	ofxPerson(){
 		hasHaar = false;
-		haarX = haarY = haarWidth = haarHeight = 0;
+		haarRect.x = haarRect.y = haarRect.width = haarRect.height = 0;
 		hasOpticalFlow = false;
 	};
 };

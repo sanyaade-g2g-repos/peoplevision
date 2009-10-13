@@ -5,6 +5,9 @@
 
 #include "ofMain.h"
 #include "ofxOpenCv.h"
+
+#define CV_HAAR_FIND_MODE CV_HAAR_FIND_BIGGEST_OBJECT
+
 #include "ofxCvHaarTracker.h"
 #include "ofxSimpleGuiToo.h"
 #include "CPUImageFilter.h"
@@ -20,15 +23,15 @@
 //	use the normal ofVideoGrabber with Win, we'll need to incorporate
 //	utils from CCV for PS3 eye, etc
 
-#define USING_OFX_VIDEOGRABBER
-#define BLOB_TRACKER_VIDEO_FORMAT VID_FORMAT_GREYSCALE
-#define BLOB_TRACKER_COLOR_FORMAT VID_FORMAT_GREYSCALE
+//#define USING_OFX_VIDEOGRABBER
+//#define BLOB_TRACKER_VIDEO_FORMAT VID_FORMAT_GREYSCALE
+//#define BLOB_TRACKER_COLOR_FORMAT VID_FORMAT_GREYSCALE
 
 #ifdef USING_OFX_VIDEOGRABBER
 	#include "ofxVideoGrabber.h"
 
 	#ifndef BLOB_TRACKER_VIDEO_FORMAT
-	#define BLOB_TRACKER_VIDEO_FORMAT VID_FORMAT_YUV422
+	#define BLOB_TRACKER_VIDEO_FORMAT VID_FORMAT_RGB 
 	#endif
 
 	#ifndef BLOB_TRACKER_COLOR_FORMAT
@@ -70,7 +73,8 @@ class testApp : public ofBaseApp{
 	
 	//CV images for detection + processing
 	
-	#if BLOB_TRACKER_COLOR_FORMAT == VID_FORMAT_GREYSCALE
+	
+	#ifdef USING_OFX_VIDEOGRABBER && #if BLOB_TRACKER_COLOR_FORMAT == VID_FORMAT_GREYSCALE
 		
 	// if you're capturing greyscale images from ofxVideoGrabber
 	// you need to only look at greyscale images
@@ -140,6 +144,12 @@ class testApp : public ofBaseApp{
 		bool bSmooth;
 		bool bDetectHaar;
 		bool bTrackOpticalFlow;
+	
+	// people vector
+		
+		vector <ofxPerson> peopleVector;
+
+	//gui
 	
 		ofxSimpleGuiToo	gui;
 };
