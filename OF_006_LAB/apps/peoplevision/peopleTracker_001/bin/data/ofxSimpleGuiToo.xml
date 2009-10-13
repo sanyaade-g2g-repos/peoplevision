@@ -19,11 +19,11 @@
     </Toggle_smart_learn_background>
     <SliderInt_threshold>
         <name>threshold</name>
-        <value>17</value>
+        <value>20</value>
     </SliderInt_threshold>
     <SliderInt_minimum_blob>
         <name>minimum blob</name>
-        <value>2304</value>
+        <value>3200</value>
     </SliderInt_minimum_blob>
     <SliderInt_maximum_blob>
         <name>maximum blob</name>
@@ -31,11 +31,11 @@
     </SliderInt_maximum_blob>
     <SliderFloat_bg_learn_rate>
         <name>bg learn rate</name>
-        <value>29.166666</value>
+        <value>25.000000</value>
     </SliderFloat_bg_learn_rate>
     <Toggle_smoothing_on>
         <name>smoothing on</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_smoothing_on>
     <SliderInt_smooth>
         <name>smooth</name>
@@ -47,19 +47,19 @@
     </Toggle_highpass_on>
     <SliderInt_highpass_blur>
         <name>highpass blur</name>
-        <value>200</value>
+        <value>171</value>
     </SliderInt_highpass_blur>
     <SliderInt_highpass_noise>
         <name>highpass noise</name>
-        <value>30</value>
+        <value>18</value>
     </SliderInt_highpass_noise>
     <Toggle_amplify_on>
         <name>amplify on</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_amplify_on>
     <SliderInt_amplify>
         <name>amplify</name>
-        <value>54</value>
+        <value>200</value>
     </SliderInt_amplify>
     <Toggle_find_holes>
         <name>find holes</name>
@@ -67,7 +67,7 @@
     </Toggle_find_holes>
     <Toggle_track_optical_flow>
         <name>track optical flow</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_track_optical_flow>
     <Toggle_track_dark_blobs>
         <name>track dark blobs</name>
@@ -79,7 +79,7 @@
     </Toggle_track_faces>
     <SliderFloat_haar_threshold_add>
         <name>haar threshold add</name>
-        <value>30.000002</value>
+        <value>159.166672</value>
     </SliderFloat_haar_threshold_add>
     <SliderFloat_minimum_haar_checkable_blob>
         <name>minimum haar checkable blob</name>
@@ -87,6 +87,6 @@
     </SliderFloat_minimum_haar_checkable_blob>
     <SliderFloat_maximum_haar_checkable_blob>
         <name>maximum haar checkable blob</name>
-        <value>36405.332031</value>
+        <value>78557.335938</value>
     </SliderFloat_maximum_haar_checkable_blob>
 </controls>

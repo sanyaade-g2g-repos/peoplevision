@@ -5,6 +5,8 @@
 void testApp::setup(){
 	
 	ofSetFrameRate(60);
+	ofBackground(100, 100, 100);
+	
 	//ofSetLogLevel(OF_LOG_VERBOSE);
 	camWidth = 640;
 	camHeight = 480;
@@ -39,7 +41,6 @@ void testApp::setup(){
 	#else
 	vidGrabber.setVerbose(true);
 	vidGrabber.initGrabber(camWidth, camHeight);  
-	vidGrabber.videoSettings();
 	#endif
 	
 #else
@@ -97,7 +98,7 @@ void testApp::setup(){
 	gui.addToggle("track optical flow", &bTrackOpticalFlow);
 	gui.addToggle("track dark blobs", &bTrackDark);
 	gui.addToggle("track faces", &bDetectHaar);
-	gui.addSlider("haar threshold add", &haarArea, 0.0f, 100.0f);
+	gui.addSlider("haar threshold add", &haarArea, 0.0f, 200.0f);
 	gui.addSlider("minimum haar checkable blob", &minHaarArea, 0.0f, 640.0f);
 	gui.addSlider("maximum haar checkable blob", &maxHaarArea, 640.0f, 640.0f*480.0f);
 	
@@ -114,7 +115,8 @@ void testApp::setup(){
 
 //--------------------------------------------------------------
 void testApp::update(){
-	ofBackground(100,100,100);
+		
+	//check for new frame + do stuff
 	
     bool bNewFrame = false;
 	
@@ -139,7 +141,11 @@ void testApp::update(){
 	
 	if (bNewFrame){
 		
-		//get pixels
+		//clear out vector of people
+		
+		peopleVector.clear();
+		
+	//get pixels
 		
 #ifdef _USE_LIVE_VIDEO
 		colorImg.setFromPixels(vidGrabber.getPixels(), camWidth, camHeight);
@@ -154,7 +160,7 @@ void testApp::update(){
 #endif		
         grayImage = colorImg;
 		
-		//learn background (either in reset or additive)
+	//learn background (either in reset or additive)
 		
 		if (bLearnBackground == true){
 			cout<<"DO IT"<<endl;
@@ -167,12 +173,12 @@ void testApp::update(){
 			grayBg.flagImageChanged();			
 		}
 		
-		// take the abs value of the difference between background and incoming and then threshold:
-		//grayDiff.absDiff(grayBg, grayImage);
+	// take the abs value of the difference between background and incoming and then threshold:
+		//grayDiff.absDiff(grayBg, grayImage);		// normal way blob trackers do it
 		
 		grayDiff = grayImage;
 		
-		//get diff of images either as lights or darks
+	//get diff of images either as lights or darks
 		
 		if(bTrackDark)
 			cvSub(grayBg.getCvImage(), grayDiff.getCvImage(), grayDiff.getCvImage());
@@ -181,19 +187,19 @@ void testApp::update(){
 		
 		grayDiff.flagImageChanged();
 		
-		//smoothing
+	//smoothing
 		
 		if(bSmooth){//Smooth
             grayDiff.blur((smooth * 2) + 1); //needs to be an odd number
         }
 		
-		//highpass filter (see cpuimagefilter class)
+	//highpass filter (see cpuimagefilter class)
 		
 		if(bHighpass){//HighPass
 			grayDiff.highpass(highpassBlur, highpassNoise);
         }
 		
-		//amplify (see cpuimagefilter class)
+	//amplify (see cpuimagefilter class)
 		
         if(bAmplify){//Amplify
 			grayDiff.amplify(grayDiff, highpassAmp);
@@ -202,35 +208,109 @@ void testApp::update(){
 		//threshold + find blobs
 		
 		grayDiff.threshold(threshold);
-		//grayDiff = grayImage;
 		contourFinder.findContours(grayDiff, minBlob, maxBlob, 50, bFindHoles);
 		
-		//detect haar patterns
+	//detect haar patterns
 		
 		if (bDetectHaar){
 		
+			int blobId, oldId;
+			oldId = -1;
+			
 			//try to find faces?
 			for (int i = 0; i < contourFinder.nBlobs; i++){
-				ofxCvBlob blob = contourFinder.blobs[i];
-				ofRectangle newrect;
-				newrect.x		= blob.boundingRect.x/2.0f - haarArea;
-				newrect.y		= blob.boundingRect.y/2.0f - haarArea;
-				newrect.width	= blob.boundingRect.width/2.0f + haarArea*2;
-				newrect.height	= blob.boundingRect.height/2.0f + haarArea*2;
 				
-				if (blob.area > minHaarArea && blob.area < maxHaarArea) haarTracker.findHaarObjects( graySmallImage, newrect );
+				ofxPerson p = ofxPerson();
+				
+				ofxCvBlob blob = contourFinder.blobs[i];
+				
+				p.x			= blob.boundingRect.x;
+				p.y			= blob.boundingRect.y;
+				p.width		= blob.boundingRect.width;
+				p.height	= blob.boundingRect.height;
+				p.area		= blob.area;
+								
+				// this creates an ofRectangle to pass as a ROI to the haartracker
+				// the haarArea var adds to the area you're checking
+				
+				ofRectangle newrect;
+				newrect.x		= fmax(0.0f, (float) blob.boundingRect.x/(grayImage.width/grayBabyImage.width) - haarArea/(grayImage.width/grayBabyImage.width));
+				newrect.y		= fmax(0.0f, (float)blob.boundingRect.y/(grayImage.width/grayBabyImage.width) - haarArea/(grayImage.width/grayBabyImage.width));
+				newrect.width	= fmin((float)blob.boundingRect.width/(grayImage.width/grayBabyImage.width) + haarArea*2/(grayImage.width/grayBabyImage.width), grayBabyImage.width);
+				newrect.height	= fmin((float)blob.boundingRect.height/(grayImage.width/grayBabyImage.width) + haarArea*2/(grayImage.width/grayBabyImage.width),  grayBabyImage.height);
+				
+				if (blob.area > minHaarArea && blob.area < maxHaarArea){
+					haarTracker.findHaarObjects( grayBabyImage, newrect );
+					
+					float x, y, w, h;
+					
+					while( haarTracker.hasNextHaarItem() )
+					{
+						haarTracker.getHaarItemPropertiesEased( &x, &y, &w, &h );
+						
+						blobId = haarTracker.getHaarItemID();
+						
+						if (blobId != oldId){
+							
+							//mult by two since haar finder is looking at a 320x240 sample
+							
+							x	*= (float)(grayImage.width/grayBabyImage.width);
+							y	*= (float)(grayImage.width/grayBabyImage.width);
+							w	*= (float)(grayImage.width/grayBabyImage.width);
+							h	*= (float)(grayImage.width/grayBabyImage.width);
+							
+							p.hasHaar = true;
+							p.haarRect.x = x;
+							p.haarRect.y = y;
+							p.haarRect.width = w;
+							p.haarRect.height = h;
+						}
+						oldId = blobId;
+					}
+					
+					//haarTracker.clearHaarItems();
+				} else {
+					p.hasHaar = false;
+				}
+				
+				peopleVector.push_back(p);
 			}
 		}
 		
-		//detect optical flow
+	//detect optical flow
 		
 		if (bTrackOpticalFlow){
-			opticalFlow.calc(grayLastImage,grayBabyImage,11);
+			opticalFlow.calc(grayLastImage,graySmallImage,11);
 		}
 		
-		grayLastImage = grayBabyImage;
+		//make last image = small gray image for when you look at optical flow
 		
-		//force learn background if there are > 5 blobs (off by default)
+		grayLastImage = graySmallImage;
+		
+	// create people objects
+	// NOTE: THIS SHOULD PROBABLY BE INCORPORATED UP WITH THE HAAR LOOP SO YOU DON'T GO THROUGH
+	// ALL THE BLOBS TWICE...
+		
+		// people are already in vector
+		
+		if (!bDetectHaar){
+			for (int i = 0; i < contourFinder.nBlobs; i++){
+				
+				ofxPerson p = ofxPerson();				
+				ofxCvBlob blob = contourFinder.blobs[i];
+				
+				p.area		= blob.area;
+				p.x			= blob.boundingRect.x;
+				p.y			= blob.boundingRect.y;
+				p.width		= blob.boundingRect.width;
+				p.height	= blob.boundingRect.height;
+				p.hasHaar	= false;
+				
+				peopleVector.push_back(p);
+			}
+		}
+		
+	//force learn background if there are > 5 blobs (off by default)
 		
 		if (bSmartLearnBackground == true && contourFinder.nBlobs > 5){
 			bLearnBackground = true;
@@ -242,7 +322,7 @@ void testApp::update(){
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	
+		
 	if (mode == MODE_NORMAL || mode == MODE_GUI){
 		
 		// draw the incoming, the grayscale, the bg and the thresholded difference
@@ -251,6 +331,8 @@ void testApp::draw(){
 		grayDiff.draw(360,20,320,240);
 		grayBg.draw(20,280,320,240);
 		
+		// draw optical flow
+		
 		if (bTrackOpticalFlow){
 			ofPushMatrix();
 			ofTranslate(680, 20);
@@ -258,27 +340,43 @@ void testApp::draw(){
 			opticalFlow.draw();
 			ofPopMatrix();
 		}
-		
-		//grayDiff.draw(360,280,320,240);
-		
-		// then draw the contours:
+				
+		// draw the contours:
 		
 		ofFill();
 		ofSetColor(0x333333);
 		ofRect(360,280,320,240);
 		ofSetColor(0xffffff);
-		
-		// we could draw the whole contour finder
-		//contourFinder.draw(360,540);
-		
-		// or, instead we can draw each blob individually,
-		// this is how to get access to them:
+
+		//individually draw blobs
 		
 		ofPushMatrix();
-		ofTranslate(360,280);
-		ofScale(0.5f,0.5f,0.5f);
-		ofNoFill();
+			ofTranslate(360,280);
+			ofScale(0.5f,0.5f,0.5f);
+			ofNoFill();
+			
+			for (int i=0; i<peopleVector.size(); i++){
+				//draw blobs				
+				//if haarfinder is looking at these blobs, draw the area it's looking at
+				
+				if (peopleVector[i].area > minHaarArea && peopleVector[i].area < maxHaarArea){
+					ofSetColor(0xffffff);
+					ofRect(peopleVector[i].x - haarArea/2, peopleVector[i].y - haarArea/2, peopleVector[i].width + haarArea, peopleVector[i].height + haarArea);
+					ofSetColor(0xffff00);
+					
+				//otherwise just draw a blue square
+				} else {
+					ofSetColor(0x0000ff);
+				}
+				ofRect(peopleVector[i].x, peopleVector[i].y, peopleVector[i].width, peopleVector[i].height);
+				
+				if (peopleVector[i].hasHaar){
+					ofSetColor( 0xFF00FF );
+					ofRect( peopleVector[i].haarRect.x, peopleVector[i].haarRect.y, peopleVector[i].haarRect.width, peopleVector[i].haarRect.height );
+				}
+			}
 		
+		/*
 		for (int i = 0; i < contourFinder.nBlobs; i++){
 			
 			//if haarfinder is looking at these blobs, draw the area it's looking at
@@ -295,7 +393,6 @@ void testApp::draw(){
 			}
 			ofRect(contourFinder.blobs[i].boundingRect.x, contourFinder.blobs[i].boundingRect.y, contourFinder.blobs[i].boundingRect.width, contourFinder.blobs[i].boundingRect.height);
 		}
-		
 		//loop through + draw where faces are found (pink box)
 		
 		float x, y, w, h;
@@ -320,19 +417,20 @@ void testApp::draw(){
 			//ofNoFill();
 			ofRect( x, y, w, h );
 		}
-		
+		 
+		 */
 		ofPopMatrix();
 		
 		// finally, a report:
 		
-		ofSetColor(0xffffff);
-		char reportStr[1024];
-		sprintf(reportStr, "bg subtraction and blob detection\npress ' '\n num blobs found %i\n", threshold, contourFinder.nBlobs, bTrackDark, fLearnRate);
-		ofDrawBitmapString(reportStr, 20, 600);
-		
+		ofSetColor(0xffffff);		
 		gui.draw();
+		
+// draw ofxVideoGrabber calibration mode
 	} else if (mode == MODE_CAMERA_CALIBRATE){
 		vidGrabber.draw(ofGetWidth()- camWidth,0);
+		
+// fullscreen mode : just draws the main gray image
 	} else if (mode == MODE_FULLSCREEN){
 		
 		ofSetColor(0xffffff);
