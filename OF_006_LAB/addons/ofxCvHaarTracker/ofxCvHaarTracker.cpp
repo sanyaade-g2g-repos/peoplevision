@@ -153,6 +153,64 @@ void ofxCvHaarTracker :: findHaarObjects( ofxCvGrayscaleImage &image, int width,
 	}
 }
 
+
+void ofxCvHaarTracker :: findHaarObjects( ofxCvGrayscaleImage &image, ofRectangle &roi ){
+	haarFinder->findHaarObjects( image, roi );
+	
+	for( int i=0; i<haarFinder->blobs.size(); i++ )
+	{
+		float x		= haarFinder->blobs[i].boundingRect.x;
+		float y		= haarFinder->blobs[i].boundingRect.y;
+		float w		= haarFinder->blobs[i].boundingRect.width;
+		float h		= haarFinder->blobs[i].boundingRect.height;
+		
+		bool isMatch = false;
+		
+		for( int j=0; j<haarItems.size(); j++ )
+		{
+			if( isMatch )
+			{
+				break;
+			}
+			
+			if( !haarItems[ j ].hasBeenMatched() )
+			{
+				isMatch = haarItems[ j ].checkItem( x, y, w, h );
+				
+				if( isMatch )
+				{
+					haarItems[ j ].add( x, y, w, h );
+				}
+			}
+		}
+		
+		if( !isMatch )
+		{
+			haarItems.push_back( ofxCvHaarTrackerItem() );
+			haarItems.back().set( x, y, w, h );
+			haarItems.back().setID( haarItemIDCounter );
+		}
+		
+		++haarItemIDCounter;
+		if( haarItemIDCounter > haarItemIDCounterLimit )
+		{
+			haarItemIDCounter = 10;
+		}
+	}
+	
+	for( int j=0; j<haarItems.size(); j++ )
+	{
+		haarItems[ j ].update();
+		haarItems[ j ].easeItemPosition( 0.7 );
+		haarItems[ j ].easeItemSize( 0.3 );
+		
+		if( haarItems[ j ].isItemIdle() )
+		{
+			haarItems.erase( haarItems.begin() + j );
+		}
+	}
+};
+
 bool ofxCvHaarTracker :: hasNextHaarItem ()
 {
 	bool b;
@@ -203,5 +261,6 @@ void ofxCvHaarTracker :: getHaarItemPropertiesEased( float *x, float *y, float *
 
 void ofxCvHaarTracker :: clearHaarItems ()
 {
+	haarItemIteratorIndex = 0;
 	haarItems.clear();
 }

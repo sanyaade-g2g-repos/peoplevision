@@ -15,6 +15,10 @@ http://www.openframeworks.cc/forum/viewtopic.php?f=10&t=2006
 // http://www.comp.leeds.ac.uk/vision/opencv/opencvref_cv.html#decl_cvHaarDetectObjects
 #define HAAR_DEFAULT_MIN_SIZE 0
 
+#ifndef CV_HAAR_FIND_MODE
+#define CV_HAAR_FIND_MODE CV_HAAR_DO_CANNY_PRUNING
+#endif
+
 class ofxCvHaarFinder {
 public:
 	vector<ofxCvBlob> blobs;
