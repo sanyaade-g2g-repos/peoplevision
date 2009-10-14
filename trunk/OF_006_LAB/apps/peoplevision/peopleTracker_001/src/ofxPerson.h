@@ -63,6 +63,48 @@ public:
 		haarRect.x = haarRect.y = haarRect.width = haarRect.height = 0;
 		hasOpticalFlow = false;
 	};
+	
+	//get scaled points
+	
+	float getScaledX( int scaleWidth){
+		return (float) x*scaleWidth;
+	};
+	
+	float getScaledY( int scaleHeight){
+		return (float) y*scaleHeight;
+	};
+	
+	float getScaledWidth( int scaleWidth){
+		return (float) width*scaleWidth;
+	};
+	
+	float getScaledHeight( int scaleHeight ){
+		return (float) height*scaleHeight;
+	};
+	
+	float getScaledArea( int scaleWidth, int scaleHeight ){
+		return (float) area*( scaleWidth * scaleHeight);
+	};
+	
+	ofRectangle getScaled( int scaleWidth, int scaleHeight){
+		ofRectangle scaled = ofRectangle(x,y,width,height);
+		scaled.x		*= scaleWidth;
+		scaled.y		*= scaleHeight;
+		scaled.width	*= scaleWidth;
+		scaled.height	*= scaleHeight;
+		
+		return scaled;
+	};
+	
+	ofRectangle getScaledHaar( int scaleWidth, int scaleHeight){
+		ofRectangle scaled = ofRectangle(haarRect.x,haarRect.y,haarRect.width,haarRect.height);
+		scaled.x		*= scaleWidth;
+		scaled.y		*= scaleHeight;
+		scaled.width	*= scaleWidth;
+		scaled.height	*= scaleHeight;
+		
+		return scaled;
+	};
 };
 
 #endif

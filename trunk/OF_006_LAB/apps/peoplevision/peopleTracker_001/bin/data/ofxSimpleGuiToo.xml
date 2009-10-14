@@ -19,7 +19,7 @@
     </Toggle_smart_learn_background>
     <SliderInt_threshold>
         <name>threshold</name>
-        <value>20</value>
+        <value>12</value>
     </SliderInt_threshold>
     <SliderInt_minimum_blob>
         <name>minimum blob</name>
@@ -47,11 +47,11 @@
     </Toggle_highpass_on>
     <SliderInt_highpass_blur>
         <name>highpass blur</name>
-        <value>171</value>
+        <value>199</value>
     </SliderInt_highpass_blur>
     <SliderInt_highpass_noise>
         <name>highpass noise</name>
-        <value>18</value>
+        <value>30</value>
     </SliderInt_highpass_noise>
     <Toggle_amplify_on>
         <name>amplify on</name>
@@ -67,7 +67,7 @@
     </Toggle_find_holes>
     <Toggle_track_optical_flow>
         <name>track optical flow</name>
-        <value>0</value>
+        <value>1</value>
     </Toggle_track_optical_flow>
     <Toggle_track_dark_blobs>
         <name>track dark blobs</name>
@@ -75,12 +75,16 @@
     </Toggle_track_dark_blobs>
     <Toggle_track_faces>
         <name>track faces</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_track_faces>
     <SliderFloat_haar_threshold_add>
         <name>haar threshold add</name>
         <value>159.166672</value>
     </SliderFloat_haar_threshold_add>
+    <Toggle_send_haar_center_as_blob_center>
+        <name>send haar center as blob center</name>
+        <value>1</value>
+    </Toggle_send_haar_center_as_blob_center>
     <SliderFloat_minimum_haar_checkable_blob>
         <name>minimum haar checkable blob</name>
         <value>640.000000</value>

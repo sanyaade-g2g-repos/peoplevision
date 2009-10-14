@@ -41,6 +41,10 @@
 
 #endif
 
+// communication
+
+#include "ofxTUIOSender.h"
+
 // display + calibration modes : press 'm' to cycle between them
 
 #define MODE_NORMAL				0
@@ -143,12 +147,17 @@ class testApp : public ofBaseApp{
 		bool bAmplify;
 		bool bSmooth;
 		bool bDetectHaar;
+		bool bUseHaarAsCenter;
 		bool bTrackOpticalFlow;
 	
 	// people vector
 		
 		vector <ofxPerson> peopleVector;
 
+	// communication
+	
+		ofxTUIOSender tuioClient;
+	
 	//gui
 	
 		ofxSimpleGuiToo	gui;
