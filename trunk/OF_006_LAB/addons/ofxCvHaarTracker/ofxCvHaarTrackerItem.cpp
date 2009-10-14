@@ -18,7 +18,7 @@ ofxCvHaarTrackerItem :: ofxCvHaarTrackerItem()
 	
 	isIdle			= false;
 	idleCount		= 0;
-	idleCountLimit	= 10;
+	idleCountLimit	= 20;
 	
 	rectBufferCount	= 0;
 	rectBufferMin	= 7;

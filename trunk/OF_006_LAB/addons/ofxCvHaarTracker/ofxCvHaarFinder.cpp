@@ -134,7 +134,7 @@ int ofxCvHaarFinder::findHaarObjects(ofxCvGrayscaleImage& input,
 		*/
 
 		CvSeq* haarResults = cvHaarDetectObjects(
-				img.getCvImage(), cascade, storage, scaleHaar, neighbors, CV_HAAR_DO_CANNY_PRUNING,
+				img.getCvImage(), cascade, storage, scaleHaar, neighbors, CV_HAAR_FIND_MODE,
 				cvSize(minWidth, minHeight));
 
 		nHaarResults = haarResults->total;

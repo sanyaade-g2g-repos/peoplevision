@@ -27,6 +27,7 @@ public :
 	
 	void		findHaarObjects( ofxCvGrayscaleImage &image );
 	void		findHaarObjects( ofxCvGrayscaleImage &image, int width, int height );
+	void		findHaarObjects( ofxCvGrayscaleImage &image, ofRectangle &roi );
 	bool		hasNextHaarItem();
 	int			getHaarItemID();
 	void		getHaarItemProperties( float *x, float *y, float *w, float *h );
