@@ -99,6 +99,7 @@ void testApp::setup(){
 	gui.addToggle("track dark blobs", &bTrackDark);
 	gui.addToggle("track faces", &bDetectHaar);
 	gui.addSlider("haar threshold add", &haarArea, 0.0f, 200.0f);
+	gui.addToggle("send haar center as blob center", &bUseHaarAsCenter);
 	gui.addSlider("minimum haar checkable blob", &minHaarArea, 0.0f, 640.0f);
 	gui.addSlider("maximum haar checkable blob", &maxHaarArea, 640.0f, 640.0f*480.0f);
 	
@@ -109,6 +110,10 @@ void testApp::setup(){
 	//set tracker
 	haarFinder.setup( "HS.xml" );
 	haarTracker.setup( &haarFinder );
+	
+	// connect TUIO
+	
+	tuioClient.setup("localhost", 3333);
 	
 	mode = 0;
 }
@@ -211,6 +216,7 @@ void testApp::update(){
 		contourFinder.findContours(grayDiff, minBlob, maxBlob, 50, bFindHoles);
 		
 	//detect haar patterns
+	// NOTE: TO AVOID DOUBLE LOOPING THROUGH THE CONTOURS, THIS ALSO POPULATES THE PEOPLE VECTOR
 		
 		if (bDetectHaar){
 		
@@ -224,12 +230,14 @@ void testApp::update(){
 				
 				ofxCvBlob blob = contourFinder.blobs[i];
 				
-				p.x			= blob.boundingRect.x;
-				p.y			= blob.boundingRect.y;
-				p.width		= blob.boundingRect.width;
-				p.height	= blob.boundingRect.height;
-				p.area		= blob.area;
-								
+				p.area		= (float) blob.area / (ofGetWidth()*ofGetHeight());
+				p.x			= (float) blob.boundingRect.x / ofGetWidth();
+				p.y			= (float) blob.boundingRect.y / ofGetHeight();
+				p.width		= (float) blob.boundingRect.width / ofGetWidth();
+				p.height	= (float) blob.boundingRect.height / ofGetHeight();
+				p.velocity.x = (float) opticalFlow.getFlowFromPoint(p.x, p.y)[0] / ofGetWidth();
+				p.velocity.y = (float) opticalFlow.getFlowFromPoint(p.x, p.y)[1] / ofGetHeight();
+				
 				// this creates an ofRectangle to pass as a ROI to the haartracker
 				// the haarArea var adds to the area you're checking
 				
@@ -260,10 +268,10 @@ void testApp::update(){
 							h	*= (float)(grayImage.width/grayBabyImage.width);
 							
 							p.hasHaar = true;
-							p.haarRect.x = x;
-							p.haarRect.y = y;
-							p.haarRect.width = w;
-							p.haarRect.height = h;
+							p.haarRect.x = (float) x / ofGetWidth();
+							p.haarRect.y = (float) y / ofGetHeight();
+							p.haarRect.width = (float) w / ofGetWidth();
+							p.haarRect.height = (float) h / ofGetHeight();
 						}
 						oldId = blobId;
 					}
@@ -299,11 +307,13 @@ void testApp::update(){
 				ofxPerson p = ofxPerson();				
 				ofxCvBlob blob = contourFinder.blobs[i];
 				
-				p.area		= blob.area;
-				p.x			= blob.boundingRect.x;
-				p.y			= blob.boundingRect.y;
-				p.width		= blob.boundingRect.width;
-				p.height	= blob.boundingRect.height;
+				p.area		= (float) blob.area / (ofGetWidth()*ofGetHeight());
+				p.x			= (float) blob.boundingRect.x / ofGetWidth();
+				p.y			= (float) blob.boundingRect.y / ofGetHeight();
+				p.width		= (float) blob.boundingRect.width / ofGetWidth();
+				p.height	= (float) blob.boundingRect.height / ofGetHeight();
+				p.velocity.x = (float) opticalFlow.getFlowFromPoint(p.x, p.y)[0] / ofGetWidth();
+				p.velocity.y = (float) opticalFlow.getFlowFromPoint(p.x, p.y)[1] / ofGetHeight();
 				p.hasHaar	= false;
 				
 				peopleVector.push_back(p);
@@ -315,9 +325,23 @@ void testApp::update(){
 		if (bSmartLearnBackground == true && contourFinder.nBlobs > 5){
 			bLearnBackground = true;
 		}
-	}
 		
-	//printf("%f \n", ofGetFrameRate());
+	}
+	
+	//setup tuio
+	
+	for (int i=0; i<peopleVector.size(); i++){
+		/*
+		 NOT GIVING THE BEST RESULTS... COULD WORK IF WE IMPLEMENTED A SMARTER WAY FOR GETTING THE VECLOCITY FROM THE AREA
+		 if ( peopleVector[i].velocity.x > 0 || peopleVector[i].velocity.y > 0){
+			if (bUseHaarAsCenter && peopleVector[i].hasHaar) tuioClient.cursorDragged( peopleVector[i].haarRect.x, peopleVector[i].haarRect.y, i);
+			else tuioClient.cursorDragged( peopleVector[i].x + peopleVector[i].width/2, peopleVector[i].y + peopleVector[i].height/2, i);
+		} else {*/
+			if (bUseHaarAsCenter && peopleVector[i].hasHaar) tuioClient.cursorDragged( peopleVector[i].haarRect.x + peopleVector[i].haarRect.width/2, peopleVector[i].haarRect.y + peopleVector[i].haarRect.height/2, i);
+			else tuioClient.cursorDragged( peopleVector[i].x + peopleVector[i].width/2, peopleVector[i].y + peopleVector[i].width/2, i);
+		//}
+	}
+	tuioClient.update();
 }
 
 //--------------------------------------------------------------
@@ -359,20 +383,27 @@ void testApp::draw(){
 				//draw blobs				
 				//if haarfinder is looking at these blobs, draw the area it's looking at
 				
-				if (peopleVector[i].area > minHaarArea && peopleVector[i].area < maxHaarArea){
+				ofRectangle drawRect = peopleVector[i].getScaled(ofGetWidth(), ofGetHeight());
+				
+				if (peopleVector[i].getScaledArea(ofGetWidth(), ofGetHeight()) > minHaarArea && peopleVector[i].getScaledArea(ofGetWidth(), ofGetHeight()) < maxHaarArea){
 					ofSetColor(0xffffff);
-					ofRect(peopleVector[i].x - haarArea/2, peopleVector[i].y - haarArea/2, peopleVector[i].width + haarArea, peopleVector[i].height + haarArea);
+					
+					
+					ofRect(drawRect.x - haarArea/2, drawRect.y - haarArea/2, drawRect.width + haarArea, drawRect.height + haarArea);
 					ofSetColor(0xffff00);
 					
 				//otherwise just draw a blue square
 				} else {
 					ofSetColor(0x0000ff);
 				}
-				ofRect(peopleVector[i].x, peopleVector[i].y, peopleVector[i].width, peopleVector[i].height);
+				ofRect(drawRect.x, drawRect.y, drawRect.width, drawRect.height);
 				
 				if (peopleVector[i].hasHaar){
+					
+					ofRectangle haarRect = peopleVector[i].getScaledHaar(ofGetWidth(), ofGetHeight());
+					
 					ofSetColor( 0xFF00FF );
-					ofRect( peopleVector[i].haarRect.x, peopleVector[i].haarRect.y, peopleVector[i].haarRect.width, peopleVector[i].haarRect.height );
+					ofRect( haarRect.x, haarRect.y, haarRect.width, haarRect.height );
 				}
 			}
 		
