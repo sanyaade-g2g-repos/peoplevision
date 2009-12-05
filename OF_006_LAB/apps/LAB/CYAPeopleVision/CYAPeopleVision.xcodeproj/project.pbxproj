@@ -1480,8 +1480,8 @@
 			isa = PBXGroup;
 			children = (
 				E7A3B98210CB186100772CDE /* ofxCYA.h */,
-				E7A3B98310CB186100772CDE /* ofxCYAPeopleTracker.cpp */,
 				E7A3B98410CB186100772CDE /* ofxCYAPeopleTracker.h */,
+				E7A3B98310CB186100772CDE /* ofxCYAPeopleTracker.cpp */,
 				E7A3B98510CB186100772CDE /* ofxCYAPerson.cpp */,
 				E7A3B98610CB186100772CDE /* ofxCYAPerson.h */,
 				E7A3B98710CB186100772CDE /* ofxCYATUIOSender.cpp */,
