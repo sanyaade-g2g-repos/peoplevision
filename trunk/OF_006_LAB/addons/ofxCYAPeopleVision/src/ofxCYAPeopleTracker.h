@@ -159,7 +159,7 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 		bool isTrackingPerson(int pid);
 
 	
-		vector <ofxCYAPerson> trackedPeople;
+		vector<ofxCYAPerson*> trackedPeople;
 		
 		ofxCvGrayscaleImage	grayImage;
 		ofxCvGrayscaleImage	grayLastImage;

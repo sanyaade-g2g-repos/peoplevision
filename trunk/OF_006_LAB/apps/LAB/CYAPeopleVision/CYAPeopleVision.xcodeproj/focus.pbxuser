@@ -1971,11 +1971,46 @@
 		vrLen = 1482;
 		vrLoc = 1096;
 	};
-	E7A3B98D10CB188000772CDE /* CPUImageFilter.cpp */ = {
+	E7A3B98210CB186100772CDE /* ofxCYA.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 514}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 239}";
+		};
+	};
+	E7A3B98310CB186100772CDE /* ofxCYAPeopleTracker.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 7896}}";
+			sepNavSelRange = "{5369, 0}";
+			sepNavVisRange = "{4426, 1139}";
+		};
+	};
+	E7A3B98410CB186100772CDE /* ofxCYAPeopleTracker.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 3038}}";
+			sepNavSelRange = "{5007, 0}";
+			sepNavVisRange = "{2989, 1279}";
+		};
+	};
+	E7A3B98510CB186100772CDE /* ofxCYAPerson.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1030, 1456}}";
 			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{24, 808}";
+		};
+	};
+	E7A3B98D10CB188000772CDE /* CPUImageFilter.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 1302}}";
+			sepNavSelRange = "{112, 0}";
 			sepNavVisRange = "{0, 923}";
+		};
+	};
+	E7A3B98E10CB188000772CDE /* CPUImageFilter.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 1260}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 756}";
 		};
 	};
 	E7A3B99010CB18A300772CDE /* PBXTextBookmark */ = {
