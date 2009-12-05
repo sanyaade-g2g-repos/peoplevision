@@ -17,8 +17,6 @@
 //--------------------------
 // contours and blobs
 #include "ofxCvContourFinder.h"
-#include "ofxCvOpticalFlowBM.h"
-#include "ofxCvOpticalFlowLK.h"
 
 
 #endif
