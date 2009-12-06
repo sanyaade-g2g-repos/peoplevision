@@ -192,10 +192,6 @@ void ofxCYAPeopleTracker::trackPeople()
 		
 		//get the tracked person
 		ofxCYAPerson* p = getTrackedPerson(blob.id);
-//		if(p.shouldRemove){
-//			//this will stop them from being added to the set and therefore removing them
-//			continue;
-//		}
 		
 		//update this person with new blob info
 		p->update(blob, bCentroidDampen);
@@ -245,21 +241,6 @@ void ofxCYAPeopleTracker::trackPeople()
 			}
 		}
 		
-		//communicate tuio changes
-		if(bTuioEnabled){
-			for (int i = 0; i < trackedPeople.size(); i++){
-				ofxCYAPerson* p = trackedPeople[i];
-				if(bUseHaarAsCenter && p->hasHaarRect()){
-					ofPoint tuioCursor = p->getHaarCentroidNormalized(width, height);
-					tuioClient.cursorDragged( tuioCursor.x, tuioCursor.y, p->oid);
-				}
-				else{
-					ofPoint tuioCursor = p->getCentroidNormalized(width, height);
-					tuioClient.cursorDragged( tuioCursor.x, tuioCursor.y, p->oid);
-				}
-			}
-		}
-		
 		if(eventListener != NULL && (p->velocity.x != 0 || p->velocity.y != 0) ){
 			eventListener->personMoved(p->pid);
 		}
@@ -269,6 +250,18 @@ void ofxCYAPeopleTracker::trackPeople()
 	}
 	
 	if(bTuioEnabled){
+		for (int i = 0; i < stillLiving.size(); i++){
+			ofxCYAPerson* p = stillLiving[i];
+			if(bUseHaarAsCenter && p->hasHaarRect()){
+				ofPoint tuioCursor = p->getHaarCentroidNormalized(width, height);
+				tuioClient.cursorDragged( tuioCursor.x, tuioCursor.y, p->oid);
+			}
+			else{
+				ofPoint tuioCursor = p->getCentroidNormalized(width, height);
+				tuioClient.cursorDragged( tuioCursor.x, tuioCursor.y, p->oid);
+			}
+		}
+		
 		tuioClient.update();		
 	}
 	
@@ -312,7 +305,16 @@ void ofxCYAPeopleTracker::blobOff( int x, int y, int id, int order )
 		ofPoint cursor = p->getCentroidNormalized(width, height);
 		tuioClient.cursorReleased(cursor.x, cursor.y, order);	
 	}
-	delete p;
+	
+	//delete the object and remove it from the vector
+	std::vector<ofxCYAPerson*>::iterator it;
+	for(it = trackedPeople.begin(); it != trackedPeople.end(); it++){
+		if((*it)->pid == p->pid){
+			trackedPeople.erase(it);
+			delete p;
+		}
+		break;
+	}
 }
 
 bool ofxCYAPeopleTracker::isTrackingPerson( int pid )
