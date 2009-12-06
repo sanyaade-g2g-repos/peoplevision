@@ -136,8 +136,8 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 		void trackLightBlobs();
 		int getDrawMode();
 
-		ofxCYAPerson personAtIndex(int i);
-		ofxCYAPerson getTrackedPerson(int pid);
+		ofxCYAPerson* personAtIndex(int i);
+		ofxCYAPerson* getTrackedPerson(int pid);
 		int totalPeople();
 	
 	//drawing methods

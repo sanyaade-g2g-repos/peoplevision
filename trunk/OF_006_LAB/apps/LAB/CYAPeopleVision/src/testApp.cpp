@@ -91,7 +91,7 @@ void testApp::update(){
 		
 		//iterate through the people to do interesting things
 		for(int i = 0; i < peopleTracker.totalPeople(); i++){
-			ofxCYAPerson p = peopleTracker.personAtIndex(i);
+			ofxCYAPerson* p = peopleTracker.personAtIndex(i);
 			//now make sweet interactivity with these people!
 		}
 	}
@@ -111,27 +111,27 @@ void testApp::update(){
 void testApp::personEntered( int id )
 {
 	//get the person
-	ofxCYAPerson newPerson = peopleTracker.getTrackedPerson(id);
+	ofxCYAPerson* newPerson = peopleTracker.getTrackedPerson(id);
 	
 	//do something with them
-	printf("person %d of size %f entered!\n", id, newPerson.area);
+	printf("person %d of size %f entered!\n", id, newPerson->area);
 }
 
 void testApp::personMoved( int id )
 {
-	ofxCYAPerson activePerson = peopleTracker.getTrackedPerson(id);
+	ofxCYAPerson* activePerson = peopleTracker.getTrackedPerson(id);
 	
 	//do something with the moving person
-	printf("person %d of moved to (%f,%f)!\n", id, activePerson.boundingRect.x, activePerson.boundingRect.y);
+	printf("person %d of moved to (%f,%f)!\n", id, activePerson->boundingRect.x, activePerson->boundingRect.y);
 }
 
 void testApp::personWillLeave(int id )
 {
 	//get the person who is just disappeared
-	ofxCYAPerson leavingPerson = peopleTracker.getTrackedPerson(id);
+	ofxCYAPerson* leavingPerson = peopleTracker.getTrackedPerson(id);
 	
 	//do something to clean up
-	printf("person %d left after being %d frames in the system\n", id, leavingPerson.age);
+	printf("person %d left after being %d frames in the system\n", id, leavingPerson->age);
 }
 
 //--------------------------------------------------------------

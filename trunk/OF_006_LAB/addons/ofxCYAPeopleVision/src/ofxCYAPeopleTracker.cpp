@@ -178,7 +178,7 @@ void ofxCYAPeopleTracker::trackPeople()
 		opticalFlow.calc(grayLastImage, graySmallImage, 11);
 	}
 	
-	vector <ofxCYAPerson> stillLiving;
+	vector<ofxCYAPerson*> stillLiving;
 	contourFinder.findContours(grayDiff, minBlob*width*height, maxBlob*width*height, 50, bFindHoles);
 	persistentTracker.trackBlobs(contourFinder.blobs);
 	
@@ -191,33 +191,33 @@ void ofxCYAPeopleTracker::trackPeople()
 		}
 		
 		//get the tracked person
-		ofxCYAPerson p = getTrackedPerson(blob.id);
+		ofxCYAPerson* p = getTrackedPerson(blob.id);
 //		if(p.shouldRemove){
 //			//this will stop them from being added to the set and therefore removing them
 //			continue;
 //		}
 		
 		//update this person with new blob info
-		p.update(blob, bCentroidDampen);
+		p->update(blob, bCentroidDampen);
 
 		//sum optical flow for the person
 		if(bTrackOpticalFlow){
-			p.opticalFlowVectorAccumulation = opticalFlow.flowInRegion(p.boundingRect);
+			p->opticalFlowVectorAccumulation = opticalFlow.flowInRegion(p->boundingRect);
 		}
 		
 		//detect haar patterns (faces, eyes, etc)
 		if (bDetectHaar){
 			int blobId, oldId;
 			bool bHaarItemSet = false;
-			if (p.area > minHaarArea && p.area < maxHaarArea){
+			if (p->area > minHaarArea && p->area < maxHaarArea){
 				
 				//find the region of interest, expanded by haarArea.
 				//bound by the frame edge
 				ofRectangle roi;
-				roi.x		= fmax( (p.boundingRect.x - haarArea) * TRACKING_SCALE_FACTOR, 0.0f );
-				roi.y		= fmax( (p.boundingRect.y - haarArea) * TRACKING_SCALE_FACTOR, 0.0f );
-				roi.width	= fmin( (p.boundingRect.width  + haarArea*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.x );
-				roi.height	= fmin( (p.boundingRect.height + haarArea*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.y );	
+				roi.x		= fmax( (p->boundingRect.x - haarArea) * TRACKING_SCALE_FACTOR, 0.0f );
+				roi.y		= fmax( (p->boundingRect.y - haarArea) * TRACKING_SCALE_FACTOR, 0.0f );
+				roi.width	= fmin( (p->boundingRect.width  + haarArea*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.x );
+				roi.height	= fmin( (p->boundingRect.height + haarArea*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.y );	
 				
 				haarTracker.findHaarObjects( grayBabyImage, roi );
 				float x, y, w, h;
@@ -233,7 +233,7 @@ void ofxCYAPeopleTracker::trackPeople()
 						y /= TRACKING_SCALE_FACTOR;
 						w /= TRACKING_SCALE_FACTOR;
 						h /= TRACKING_SCALE_FACTOR;
-						p.setHaarRect(ofRectangle(x, y, w, h));
+						p->setHaarRect(ofRectangle(x, y, w, h));
 						bHaarItemSet = true;
 						break;	//only allow first haar item
 					}
@@ -241,27 +241,27 @@ void ofxCYAPeopleTracker::trackPeople()
 			}
 			//flag that we missed a frame
 			if(!bHaarItemSet){
-				p.noHaarThisFrame();
+				p->noHaarThisFrame();
 			}
 		}
 		
 		//communicate tuio changes
 		if(bTuioEnabled){
 			for (int i = 0; i < trackedPeople.size(); i++){
-				ofxCYAPerson p = trackedPeople[i];
-				if(bUseHaarAsCenter && p.hasHaarRect()){
-					ofPoint tuioCursor = p.getHaarCentroidNormalized(width, height);
-					tuioClient.cursorDragged( tuioCursor.x, tuioCursor.y, p.oid);
+				ofxCYAPerson* p = trackedPeople[i];
+				if(bUseHaarAsCenter && p->hasHaarRect()){
+					ofPoint tuioCursor = p->getHaarCentroidNormalized(width, height);
+					tuioClient.cursorDragged( tuioCursor.x, tuioCursor.y, p->oid);
 				}
 				else{
-					ofPoint tuioCursor = p.getCentroidNormalized(width, height);
-					tuioClient.cursorDragged( tuioCursor.x, tuioCursor.y, p.oid);
+					ofPoint tuioCursor = p->getCentroidNormalized(width, height);
+					tuioClient.cursorDragged( tuioCursor.x, tuioCursor.y, p->oid);
 				}
 			}
 		}
 		
-		if(eventListener != NULL && (p.velocity.x != 0 || p.velocity.y != 0) ){
-			eventListener->personMoved(p.pid);
+		if(eventListener != NULL && (p->velocity.x != 0 || p->velocity.y != 0) ){
+			eventListener->personMoved(p->pid);
 		}
 		
 		//update living set
@@ -282,7 +282,7 @@ void ofxCYAPeopleTracker::trackPeople()
 void ofxCYAPeopleTracker::blobOn( int x, int y, int id, int order )
 {
 	ofxCvTrackedBlob blob = persistentTracker.getById( id );
-	trackedPeople.push_back( ofxCYAPerson(id, order, blob) );
+	trackedPeople.push_back( new ofxCYAPerson(id, order, blob) );
 	if(eventListener != NULL){
 		eventListener->personEntered(id);
 	}
@@ -291,7 +291,7 @@ void ofxCYAPeopleTracker::blobOn( int x, int y, int id, int order )
 	}
 }
 
-void ofxCYAPeopleTracker::blobMoved( int x, int y, int id, int order ){/*notused*/}
+void ofxCYAPeopleTracker::blobMoved( int x, int y, int id, int order ){/*not used*/}
 
 void ofxCYAPeopleTracker::blobOff( int x, int y, int id, int order )
 {
@@ -302,33 +302,33 @@ void ofxCYAPeopleTracker::blobOff( int x, int y, int id, int order )
 	}
 	
 	//flag them for removal
-	ofxCYAPerson p = getTrackedPerson(id);
-//	p.shouldRemove = true;
+	ofxCYAPerson* p = getTrackedPerson(id);
 	
 	//alert the delegate
 	if(eventListener != NULL){
 		eventListener->personWillLeave(id);
 	}
 	if (bTuioEnabled) {
-		ofPoint cursor = p.getCentroidNormalized(width, height);
+		ofPoint cursor = p->getCentroidNormalized(width, height);
 		tuioClient.cursorReleased(cursor.x, cursor.y, order);	
 	}
+	delete p;
 }
 
 bool ofxCYAPeopleTracker::isTrackingPerson( int pid )
 {
     for( int i = 0; i < trackedPeople.size(); i++ ) {
-        if( trackedPeople[i].pid == pid ) {
+        if( trackedPeople[i]->pid == pid ) {
             return true;
         }
     }
 	return false;
 }
 
-ofxCYAPerson ofxCYAPeopleTracker::getTrackedPerson( int pid )
+ofxCYAPerson* ofxCYAPeopleTracker::getTrackedPerson( int pid )
 {
     for( int i = 0; i < trackedPeople.size(); i++ ) {
-        if( trackedPeople[i].pid == pid ) {
+        if( trackedPeople[i]->pid == pid ) {
             return trackedPeople[i];
         }
     }
@@ -384,27 +384,27 @@ void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 							
 							//draw blobs				
 							//if haarfinder is looking at these blobs, draw the area it's looking at
-							ofxCYAPerson p = trackedPeople[i];
+							ofxCYAPerson* p = trackedPeople[i];
 							
 							if(bTrackOpticalFlow){
 								//purple optical flow arrow
 								ofSetColor(0xff00ff);
-								ofLine(p.centroid.x, p.centroid.y, p.centroid.x + p.opticalFlowVectorAccumulation.x, p.centroid.y + p.opticalFlowVectorAccumulation.y);
+								ofLine(p->centroid.x, p->centroid.y, p->centroid.x + p->opticalFlowVectorAccumulation.x, p->centroid.y + p->opticalFlowVectorAccumulation.y);
 							}
 							
 							ofSetColor(0xffffff);							
 							if(bDetectHaar){
 								//draw haar search area expanded 
-								ofRect(p.boundingRect.x - haarArea, 
-									   p.boundingRect.y - haarArea, 
-									   p.boundingRect.width  + haarArea*2, 
-									   p.boundingRect.height + haarArea*2);
+								ofRect(p->boundingRect.x - haarArea, 
+									   p->boundingRect.y - haarArea, 
+									   p->boundingRect.width  + haarArea*2, 
+									   p->boundingRect.height + haarArea*2);
 							}
 							
-							if(p.hasHaarRect()){
+							if(p->hasHaarRect()){
 								//draw the haar rect in green
 								ofSetColor(0x00ff00);
-								ofRect(p.getHaarRect().x, p.getHaarRect().y, p.getHaarRect().width, p.getHaarRect().height);
+								ofRect(p->getHaarRect().x, p->getHaarRect().y, p->getHaarRect().width, p->getHaarRect().height);
 								//haar-detected people get a yellow square
 								ofSetColor(0xffff00);
 							}
@@ -414,17 +414,17 @@ void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 							}
 							
 							//draw person
-							ofRect(p.boundingRect.x, p.boundingRect.y, p.boundingRect.width, p.boundingRect.height);
+							ofRect(p->boundingRect.x, p->boundingRect.y, p->boundingRect.width, p->boundingRect.height);
 							
 							//draw centroid
 							ofSetColor(0xff0000);
-							ofCircle(p.centroid.x, p.centroid.y, 3);
+							ofCircle(p->centroid.x, p->centroid.y, 3);
 														
 							//draw id
 							ofSetColor(0xffffff);
 							char idstr[1024];
-							sprintf(idstr, "pid: %d\noid: %d\nage: %d", p.pid, p.oid, p.age );
-							ofDrawBitmapString(idstr, p.centroid.x+8, p.centroid.y);													
+							sprintf(idstr, "pid: %d\noid: %d\nage: %d", p->pid, p->oid, p->age );
+							ofDrawBitmapString(idstr, p->centroid.x+8, p->centroid.y);													
 						}
 					}ofPopMatrix();	//release video feedback drawing
 				} ofPopMatrix(); //release gui drawing
@@ -450,7 +450,7 @@ void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 /**
  * simple public getter for external classes
  */
-ofxCYAPerson ofxCYAPeopleTracker::personAtIndex(int i)
+ofxCYAPerson* ofxCYAPeopleTracker::personAtIndex(int i)
 {
 	return trackedPeople[i];
 }
