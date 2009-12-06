@@ -75,7 +75,7 @@
     </Toggle_track_dark_blobs>
     <Toggle_track_faces>
         <name>track faces</name>
-        <value>1</value>
+        <value>0</value>
     </Toggle_track_faces>
     <SliderFloat_haar_threshold_add>
         <name>haar threshold add</name>
