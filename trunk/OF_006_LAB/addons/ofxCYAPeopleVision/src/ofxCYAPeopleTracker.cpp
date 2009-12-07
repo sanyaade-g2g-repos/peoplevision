@@ -26,53 +26,8 @@ void ofxCYAPeopleTracker::setup(int w, int h)
 	
 	//set tracker
 	setHaarXMLFile("HS.xml");
-	
-	bLearnBackgroundProgressive = true;
-
-	bTrackDark = true;
-	bLearnBackground = true;
-	threshold = 80;
-	fLearnRate = 0.0f;
-	highpassBlur = 0;
-	highpassNoise = 0;
-	highpassAmp = 0;
-	smooth = 0; 
-	
-	bAmplify = bSmooth = bHighpass = false;
-	bFindHoles = true;
-	bCentroidDampen = true;
-	
-	minBlob = 30;
-	maxBlob = width*height;
-	
-	drawMode = DRAW_MODE_NORMAL;
-	bLearnBackground = true;
-	
-	//set gui
-	//gui.addSlider(string name, int *value, int min, int max);
-	gui.addToggle("learn background", &bLearnBackground);
-	gui.addToggle("smart learn background", &bSmartLearnBackground);
-	gui.addSlider("threshold", &threshold, 0, 255);
-	gui.addSlider("minimum blob", &minBlob, 0.0f, 0.1f);
-	gui.addSlider("maximum blob", &maxBlob, .2f, 1.0f);
-	gui.addSlider("bg learn rate", &fLearnRate, 0.0f, 1000.0f);
-	gui.addToggle("smoothing on", &bSmooth);
-	gui.addSlider("smooth", &smooth, 0, 15);
-	gui.addToggle("highpass on", &bHighpass);
-	gui.addSlider("highpass blur", &highpassBlur, 0, 200);
-	gui.addSlider("highpass noise", &highpassNoise, 0, 30);
-	gui.addToggle("amplify on", &bAmplify);
-	gui.addSlider("amplify", &highpassAmp, 0, 200);
-	gui.addToggle("find holes", &bFindHoles);
-	gui.addToggle("track optical flow", &bTrackOpticalFlow);
-	gui.addToggle("track dark blobs", &bTrackDark);
-	gui.addToggle("track faces", &bDetectHaar);
-	gui.addSlider("haar threshold add", &haarArea, 0.0f, 200.0f);
-	//not sure how to handle 'use haar as center'
-	gui.addToggle("use haar for centroid", &bUseHaarAsCenter);
-	gui.addSlider("minimum haar checkable blob", &minHaarArea, 0.0f, width);
-	gui.addSlider("maximum haar checkable blob", &maxHaarArea, width, width*height);
-	gui.addToggle("center dampen", &bCentroidDampen);
+		
+	p_Settings = ofxCYASettings::getInstance();
 	
 	gui.loadFromXML();	
 	gui.setDraw(true);	
@@ -126,24 +81,24 @@ void ofxCYAPeopleTracker::trackPeople()
 	//-------------------
 	
 	//force learn background if there are > 5 blobs (off by default)
-	if (bSmartLearnBackground == true && contourFinder.nBlobs > 5){
-		bLearnBackground = true;
+	if (p_Settings->bSmartLearnBackground == true && contourFinder.nBlobs > 5){
+		p_Settings->bLearnBackground = true;
 	}
 	//learn background (either in reset or additive)
-	if (bLearnBackground){
+	if (p_Settings->bLearnBackground){
 		cout << "Learning Background" << endl;
 		floatBgImg = grayImage;
-		bLearnBackground = false;
+		p_Settings->bLearnBackground = false;
 	}
-	else if (bLearnBackgroundProgressive){
-		floatBgImg.addWeighted( grayImage, fLearnRate * .0001);
+	else if (p_Settings->bLearnBackgroundProgressive){
+		floatBgImg.addWeighted( grayImage, p_Settings->fLearnRate * .0001);
 		cvConvertScale( floatBgImg.getCvImage(), grayBg.getCvImage(), 255.0f/65535.0f, 0 );       
 		grayBg.flagImageChanged();			
 	}
 	
 	grayDiff = grayImage;
 	
-	if(bTrackDark){
+	if(p_Settings->bTrackDark){
 		cvSub(grayBg.getCvImage(), grayDiff.getCvImage(), grayDiff.getCvImage());
 	}
 	else { 
@@ -154,32 +109,32 @@ void ofxCYAPeopleTracker::trackPeople()
 	//-----------------------
 	// IMAGE TREATMENT
 	//-----------------------
-	if(bSmooth){
-		grayDiff.blur((smooth * 2) + 1); //needs to be an odd number
+	if(p_Settings->bSmooth){
+		grayDiff.blur((p_Settings->smooth * 2) + 1); //needs to be an odd number
 	}
 	
 	//highpass filter (see cpuimagefilter class)	
-	if(bHighpass){
-		grayDiff.highpass(highpassBlur, highpassNoise);
+	if(p_Settings->bHighpass){
+		grayDiff.highpass(p_Settings->highpassBlur, p_Settings->highpassNoise);
 	}
 	
 	//amplify (see cpuimagefilter class)
-	if(bAmplify){
-		grayDiff.amplify(grayDiff, highpassAmp);
+	if(p_Settings->bAmplify){
+		grayDiff.amplify(grayDiff, p_Settings->highpassAmp);
 	}
 	//threshold	
-	grayDiff.threshold(threshold);
+	grayDiff.threshold(p_Settings->threshold);
 	
 	//-----------------------
 	// TRACKING
 	//-----------------------	
 	
-	if (bTrackOpticalFlow){
+	if (p_Settings->bTrackOpticalFlow){
 		opticalFlow.calc(grayLastImage, graySmallImage, 11);
 	}
 	
 	vector<ofxCYAPerson*> stillLiving;
-	contourFinder.findContours(grayDiff, minBlob*width*height, maxBlob*width*height, 50, bFindHoles);
+	contourFinder.findContours(grayDiff, p_Settings->minBlob*width*height, p_Settings->maxBlob*width*height, 50, p_Settings->bFindHoles);
 	persistentTracker.trackBlobs(contourFinder.blobs);
 	
 	for(int i = 0; i < persistentTracker.blobs.size(); i++){
@@ -194,26 +149,26 @@ void ofxCYAPeopleTracker::trackPeople()
 		ofxCYAPerson* p = getTrackedPerson(blob.id);
 		
 		//update this person with new blob info
-		p->update(blob, bCentroidDampen);
+		p->update(blob, p_Settings->bCentroidDampen);
 
 		//sum optical flow for the person
-		if(bTrackOpticalFlow){
+		if(p_Settings->bTrackOpticalFlow){
 			p->opticalFlowVectorAccumulation = opticalFlow.flowInRegion(p->boundingRect);
 		}
 		
 		//detect haar patterns (faces, eyes, etc)
-		if (bDetectHaar){
+		if (p_Settings->bDetectHaar){
 			int blobId, oldId;
 			bool bHaarItemSet = false;
-			if (p->area > minHaarArea && p->area < maxHaarArea){
+			if (p->area > p_Settings->minHaarArea && p->area < p_Settings->maxHaarArea){
 				
 				//find the region of interest, expanded by haarArea.
 				//bound by the frame edge
 				ofRectangle roi;
-				roi.x		= fmax( (p->boundingRect.x - haarArea) * TRACKING_SCALE_FACTOR, 0.0f );
-				roi.y		= fmax( (p->boundingRect.y - haarArea) * TRACKING_SCALE_FACTOR, 0.0f );
-				roi.width	= fmin( (p->boundingRect.width  + haarArea*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.x );
-				roi.height	= fmin( (p->boundingRect.height + haarArea*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.y );	
+				roi.x		= fmax( (p->boundingRect.x - p_Settings->haarArea) * TRACKING_SCALE_FACTOR, 0.0f );
+				roi.y		= fmax( (p->boundingRect.y - p_Settings->haarArea) * TRACKING_SCALE_FACTOR, 0.0f );
+				roi.width	= fmin( (p->boundingRect.width  + p_Settings->haarArea*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.x );
+				roi.height	= fmin( (p->boundingRect.height + p_Settings->haarArea*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.y );	
 				
 				haarTracker.findHaarObjects( grayBabyImage, roi );
 				float x, y, w, h;
@@ -252,7 +207,7 @@ void ofxCYAPeopleTracker::trackPeople()
 	if(bTuioEnabled){
 		for (int i = 0; i < stillLiving.size(); i++){
 			ofxCYAPerson* p = stillLiving[i];
-			if(bUseHaarAsCenter && p->hasHaarRect()){
+			if(p_Settings->bUseHaarAsCenter && p->hasHaarRect()){
 				ofPoint tuioCursor = p->getHaarCentroidNormalized(width, height);
 				tuioClient.cursorDragged( tuioCursor.x, tuioCursor.y, p->oid);
 			}
@@ -374,7 +329,7 @@ void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 						ofSetColor(0xffffff);
 						
 						ofNoFill();
-						if (bTrackOpticalFlow){
+						if (p_Settings->bTrackOpticalFlow){
 							ofSetColor(0x888888);
 							opticalFlow.draw(width*TRACKING_SCALE_FACTOR, height*TRACKING_SCALE_FACTOR);
 						}					
@@ -388,19 +343,19 @@ void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 							//if haarfinder is looking at these blobs, draw the area it's looking at
 							ofxCYAPerson* p = trackedPeople[i];
 							
-							if(bTrackOpticalFlow){
+							if(p_Settings->bTrackOpticalFlow){
 								//purple optical flow arrow
 								ofSetColor(0xff00ff);
 								ofLine(p->centroid.x, p->centroid.y, p->centroid.x + p->opticalFlowVectorAccumulation.x, p->centroid.y + p->opticalFlowVectorAccumulation.y);
 							}
 							
 							ofSetColor(0xffffff);							
-							if(bDetectHaar){
+							if(p_Settings->bDetectHaar){
 								//draw haar search area expanded 
-								ofRect(p->boundingRect.x - haarArea, 
-									   p->boundingRect.y - haarArea, 
-									   p->boundingRect.width  + haarArea*2, 
-									   p->boundingRect.height + haarArea*2);
+								ofRect(p->boundingRect.x - p_Settings->haarArea, 
+									   p->boundingRect.y - p_Settings->haarArea, 
+									   p->boundingRect.width  + p_Settings->haarArea*2, 
+									   p->boundingRect.height + p_Settings->haarArea*2);
 							}
 							
 							if(p->hasHaarRect()){
@@ -464,122 +419,122 @@ int ofxCYAPeopleTracker::totalPeople()
 
 void ofxCYAPeopleTracker::enableHaarFeatures(bool doHaar)
 {
-	bDetectHaar = doHaar;
+	p_Settings->bDetectHaar = doHaar;
 }
 
 void ofxCYAPeopleTracker::enableOpticalFlow(bool doOpticalFlow)
 {
-	bTrackOpticalFlow = doOpticalFlow;
+	p_Settings->bTrackOpticalFlow = doOpticalFlow;
 }
 
 #pragma mark background management
 void ofxCYAPeopleTracker::relearnBackground()
 {
-	bLearnBackground = true;
+	p_Settings->bLearnBackground = true;
 }
 
 void ofxCYAPeopleTracker::enableBackgroundRelearnSmart(bool doSmartLearn)//auto-relearns if there are too many blobs in the scene
 {
-	bSmartLearnBackground = doSmartLearn;
+	p_Settings->bSmartLearnBackground = doSmartLearn;
 }
 
 void ofxCYAPeopleTracker::enableBackgroundReleaernProgressive(bool doProgressive) //relearns over time using progessive frame averagering
 {
-	bLearnBackgroundProgressive = doProgressive;
+	p_Settings->bLearnBackgroundProgressive = doProgressive;
 }
 
 void ofxCYAPeopleTracker::setRelearnRate(float relearnRate)
 {
-	fLearnRate = relearnRate;
+	p_Settings->fLearnRate = relearnRate;
 }
 
 
 #pragma mark image control
 void ofxCYAPeopleTracker::setThreshold(float thresholdAmount)
 {
-	threshold = thresholdAmount;
+	p_Settings->threshold = thresholdAmount;
 }
 
 void ofxCYAPeopleTracker::setMinBlobSize(float minBlobSize)
 {
-	minBlob = minBlobSize; 
+	p_Settings->minBlob = minBlobSize; 
 }
 
 void ofxCYAPeopleTracker::setMaxBlobSize(float maxBlobSize)
 {
-	maxBlob = maxBlobSize;
+	p_Settings->maxBlob = maxBlobSize;
 }
 
 void ofxCYAPeopleTracker::enableSmooth(bool doSmooth)
 {
-	bSmooth = doSmooth;
+	p_Settings->bSmooth = doSmooth;
 }
 
 void ofxCYAPeopleTracker::setSmoothAmount(int smoothAmount)
 {
-	smooth = smoothAmount;
+	p_Settings->smooth = smoothAmount;
 }
 
 void ofxCYAPeopleTracker::enableHighpass(bool doHighpass)
 {
-	bHighpass = doHighpass;
+	p_Settings->bHighpass = doHighpass;
 }
 
 void ofxCYAPeopleTracker::setHighpassBlurAmount(int highpassBlurAmount)
 {
-	highpassBlur = highpassBlurAmount;
+	p_Settings->highpassBlur = highpassBlurAmount;
 }
 
 void ofxCYAPeopleTracker::setHighpassNoiseAmount(int highpassNoiseAmount)
 {
-	highpassNoise = highpassNoiseAmount;
+	p_Settings->highpassNoise = highpassNoiseAmount;
 }
 
 void ofxCYAPeopleTracker::enableAmplify(bool doAmp)
 {
-	bAmplify = doAmp;
+	p_Settings->bAmplify = doAmp;
 }
 
 void ofxCYAPeopleTracker::setAmplifyAmount(int amplifyAmount)
 {
-	highpassAmp = amplifyAmount;
+	p_Settings->highpassAmp = amplifyAmount;
 }
 
 #pragma mark filter controls
 //haar
 void ofxCYAPeopleTracker::setHaarExpandArea(float haarExpandAmount) //makes the haar rect +area bigger
 {
-	haarArea = haarExpandAmount;
+	p_Settings->haarArea = haarExpandAmount;
 }
 
 void ofxCYAPeopleTracker::setMinHaarArea(float minArea)
 {
-	minHaarArea = minArea;
+	p_Settings->minHaarArea = minArea;
 }
 void ofxCYAPeopleTracker::setMaxHaarArea(float maxArea)
 {
-	maxHaarArea = maxArea;
+	p_Settings->maxHaarArea = maxArea;
 }
 
 void ofxCYAPeopleTracker::useHaarAsCentroid(bool useHaarCenter)
 {
-	bUseHaarAsCenter = useHaarCenter;
+	p_Settings->bUseHaarAsCenter = useHaarCenter;
 }
 
 //blobs
 void ofxCYAPeopleTracker::enableFindHoles(bool findHoles)
 {
-	bFindHoles = findHoles;
+	p_Settings->bFindHoles = findHoles;
 }
 
 void ofxCYAPeopleTracker::trackDarkBlobs()
 {
-	bTrackDark = true;
+	p_Settings->bTrackDark = true;
 }
 
 void ofxCYAPeopleTracker::trackLightBlobs()
 {
-	bTrackDark = false;	
+	p_Settings->bTrackDark = false;	
 }
 
 void ofxCYAPeopleTracker::setDrawMode(int mode)

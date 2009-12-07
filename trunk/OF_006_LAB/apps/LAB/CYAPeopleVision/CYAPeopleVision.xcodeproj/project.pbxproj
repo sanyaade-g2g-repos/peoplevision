@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		207C995E10CDBA8600DF3E8E /* ofxCYASettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 207C995D10CDBA8600DF3E8E /* ofxCYASettings.cpp */; };
+		207C996110CDBAA500DF3E8E /* ofxCYAGuiManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 207C996010CDBAA500DF3E8E /* ofxCYAGuiManager.cpp */; };
 		2E288AE31084E1570055BF2C /* ofxControlPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E288AB01084E1570055BF2C /* ofxControlPanel.cpp */; };
 		2E288AE41084E1570055BF2C /* Libdc1394Grabber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E288AB41084E1570055BF2C /* Libdc1394Grabber.cpp */; };
 		2E288AE51084E1570055BF2C /* Libdc1394GrabberFeatureHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E288AB61084E1570055BF2C /* Libdc1394GrabberFeatureHelper.cpp */; };
@@ -114,6 +116,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		207C995C10CDBA8600DF3E8E /* ofxCYASettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCYASettings.h; sourceTree = "<group>"; };
+		207C995D10CDBA8600DF3E8E /* ofxCYASettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCYASettings.cpp; sourceTree = "<group>"; };
+		207C995F10CDBAA500DF3E8E /* ofxCYAGuiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxCYAGuiManager.h; sourceTree = "<group>"; };
+		207C996010CDBAA500DF3E8E /* ofxCYAGuiManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxCYAGuiManager.cpp; sourceTree = "<group>"; };
 		2E288A9E1084E1570055BF2C /* guiBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guiBaseObject.h; sourceTree = "<group>"; };
 		2E288A9F1084E1570055BF2C /* guiCallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guiCallbacks.h; sourceTree = "<group>"; };
 		2E288AA01084E1570055BF2C /* guiColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = guiColor.h; sourceTree = "<group>"; };
@@ -1486,6 +1492,10 @@
 				E7A3B98510CB186100772CDE /* ofxCYAPerson.cpp */,
 				E7A3B98810CB186100772CDE /* ofxCYATUIOSender.h */,
 				E7A3B98710CB186100772CDE /* ofxCYATUIOSender.cpp */,
+				207C995C10CDBA8600DF3E8E /* ofxCYASettings.h */,
+				207C995D10CDBA8600DF3E8E /* ofxCYASettings.cpp */,
+				207C995F10CDBAA500DF3E8E /* ofxCYAGuiManager.h */,
+				207C996010CDBAA500DF3E8E /* ofxCYAGuiManager.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -1638,6 +1648,8 @@
 				E7A3B98B10CB186100772CDE /* ofxCYAPerson.cpp in Sources */,
 				E7A3B98C10CB186100772CDE /* ofxCYATUIOSender.cpp in Sources */,
 				E7A3B98F10CB188000772CDE /* CPUImageFilter.cpp in Sources */,
+				207C995E10CDBA8600DF3E8E /* ofxCYASettings.cpp in Sources */,
+				207C996110CDBAA500DF3E8E /* ofxCYAGuiManager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
