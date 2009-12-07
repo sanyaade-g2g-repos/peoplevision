@@ -60,7 +60,8 @@
 
 //dependent libraries
 #include "ofxCvHaarTracker.h"
-#include "ofxSimpleGuiToo.h"
+#include "ofxCYASettings.h"
+#include "ofxCYAGuiManager.h"
 #include "ofxCYATUIOSender.h"
 #include "ofxCvBlobTracker.h"
 
@@ -183,23 +184,11 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 		
 		//filter variables
 		
-		float fLearnRate;
+		//float fLearnRate;
 		float width, height;
-		
-		int smooth;
-		int highpassBlur;
-		int highpassNoise;
-		int	highpassAmp;
-		int threshold;	
-		
-		float minBlob;
-		float maxBlob;
 		
 		// haar
 
-		float haarArea;
-		float minHaarArea;
-		float maxHaarArea;
 		ofxCvHaarFinder	 haarFinder;
 		ofxCvHaarTracker haarTracker;
 		
@@ -208,19 +197,7 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 		ofxCvOpticalFlowLK	opticalFlow;
 		
 		// switches for filters
-		
-		bool bFindHoles;
-		bool bLearnBackground;
-		bool bSmartLearnBackground;
-		bool bLearnBackgroundProgressive;
-		bool bHighpass;
-		bool bAmplify;
-		bool bSmooth;
-		bool bDetectHaar;
-		bool bUseHaarAsCenter;
-		bool bTrackOpticalFlow;
-		bool bTrackDark;
-		bool bCentroidDampen;
+		ofxCYASettings *p_Settings;
 	
 		// communication
 		
@@ -229,7 +206,7 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 		ofxPersonListener* eventListener;
 		
 		//gui
-		
-		ofxSimpleGuiToo	gui;	
+
+		ofxCYAGuiManager gui;
 };
 #endif
