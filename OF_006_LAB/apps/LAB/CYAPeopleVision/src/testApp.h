@@ -2,7 +2,7 @@
 #ifndef _TEST_APP
 #define _TEST_APP
 
-//#define _USE_LIVE_VIDEO
+#define _USE_LIVE_VIDEO
 
 #include "ofMain.h"
 #include "ofxCYA.h"
@@ -22,7 +22,7 @@
 //#define BLOB_TRACKER_COLOR_FORMAT VID_FORMAT_GREYSCALE
 
 	#ifdef USING_OFX_VIDEOGRABBER
-		#include "ofxVideoGrabber.h"
+	//	#include "ofxVideoGrabber.h"
 
 		#ifndef BLOB_TRACKER_VIDEO_FORMAT
 		#define BLOB_TRACKER_VIDEO_FORMAT VID_FORMAT_RGB 

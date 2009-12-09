@@ -17,15 +17,132 @@
 	207C995F10CDBAA500DF3E8E /* ofxCYAGuiManager.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1030, 728}}";
-			sepNavSelRange = "{263, 0}";
-			sepNavVisRange = "{221, 827}";
+			sepNavSelRange = "{990, 0}";
+			sepNavVisRange = "{192, 818}";
 		};
 	};
 	207C996010CDBAA500DF3E8E /* ofxCYAGuiManager.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1030, 2884}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 2814}}";
 			sepNavSelRange = "{849, 0}";
-			sepNavVisRange = "{0, 1048}";
+			sepNavVisRange = "{0, 1170}";
+		};
+	};
+	2E288ADA1084E1570055BF2C /* ofxIIDCSettings.cpp */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = ofxIIDCSettings.cpp;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/ofxIIDCSettings.cpp";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 3206}}";
+			sepNavSelRange = "{1949, 104}";
+			sepNavVisRange = "{29, 762}";
+		};
+	};
+	2E288ADB1084E1570055BF2C /* ofxIIDCSettings.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ofxIIDCSettings.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/ofxIIDCSettings.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 537}}";
+			sepNavSelRange = "{489, 53}";
+			sepNavVisRange = "{0, 555}";
+		};
+	};
+	2E288ADC1084E1570055BF2C /* ofxVideoGrabber.cpp */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = ofxVideoGrabber.cpp;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/ofxVideoGrabber.cpp";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1128, 2492}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{404, 1671}";
+		};
+	};
+	2E288ADD1084E1570055BF2C /* ofxVideoGrabber.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ofxVideoGrabber.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/ofxVideoGrabber.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 1022}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{705, 951}";
+		};
+	};
+	2E288ADE1084E1570055BF2C /* ofxVideoGrabberFeature.cpp */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = ofxVideoGrabberFeature.cpp;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/ofxVideoGrabberFeature.cpp";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 3038}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{1922, 713}";
+		};
+	};
+	2E288ADF1084E1570055BF2C /* ofxVideoGrabberFeature.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ofxVideoGrabberFeature.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/ofxVideoGrabberFeature.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 2100}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 806}";
+		};
+	};
+	2E288AE01084E1570055BF2C /* ofxVideoGrabberSDK.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ofxVideoGrabberSDK.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/ofxVideoGrabberSDK.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 742}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{108, 1336}";
+		};
+	};
+	2E288AE11084E1570055BF2C /* ofxVideoGrabberSettings.cpp */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = ofxVideoGrabberSettings.cpp;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/ofxVideoGrabberSettings.cpp";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 896}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1052}";
+		};
+	};
+	2E288AE21084E1570055BF2C /* ofxVideoGrabberSettings.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ofxVideoGrabberSettings.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/ofxVideoGrabberSettings.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 537}}";
+			sepNavSelRange = "{764, 5}";
+			sepNavVisRange = "{0, 907}";
 		};
 	};
 	2E3D396B107FCD8900C71D2B /* ofxMSAInteractiveObject.cpp */ = {
@@ -513,6 +630,92 @@
 			E7A1C24F10CF7EA9003746C9 /* PBXTextBookmark */ = E7A1C24F10CF7EA9003746C9 /* PBXTextBookmark */;
 			E7A1C25110CF7EB6003746C9 /* PBXTextBookmark */ = E7A1C25110CF7EB6003746C9 /* PBXTextBookmark */;
 			E7A1C25310CF7EC0003746C9 /* PBXTextBookmark */ = E7A1C25310CF7EC0003746C9 /* PBXTextBookmark */;
+			E7A1C25C10D058DA003746C9 /* PBXTextBookmark */ = E7A1C25C10D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C25D10D058DA003746C9 /* PBXTextBookmark */ = E7A1C25D10D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C25E10D058DA003746C9 /* PBXTextBookmark */ = E7A1C25E10D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C25F10D058DA003746C9 /* PBXTextBookmark */ = E7A1C25F10D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C26010D058DA003746C9 /* PBXTextBookmark */ = E7A1C26010D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C26110D058DA003746C9 /* PBXTextBookmark */ = E7A1C26110D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C26210D058DA003746C9 /* PBXTextBookmark */ = E7A1C26210D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C26310D058DA003746C9 /* PBXTextBookmark */ = E7A1C26310D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C26410D058DA003746C9 /* PBXTextBookmark */ = E7A1C26410D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C26510D058DA003746C9 /* PBXTextBookmark */ = E7A1C26510D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C26610D058DA003746C9 /* PBXTextBookmark */ = E7A1C26610D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C26710D058DA003746C9 /* PBXTextBookmark */ = E7A1C26710D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C26810D058DA003746C9 /* PBXTextBookmark */ = E7A1C26810D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C26910D058DA003746C9 /* PBXTextBookmark */ = E7A1C26910D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C26A10D058DA003746C9 /* PBXTextBookmark */ = E7A1C26A10D058DA003746C9 /* PBXTextBookmark */;
+			E7A1C29D10D06C41003746C9 /* PBXTextBookmark */ = E7A1C29D10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C29E10D06C41003746C9 /* PBXTextBookmark */ = E7A1C29E10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C29F10D06C41003746C9 /* PBXTextBookmark */ = E7A1C29F10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2A010D06C41003746C9 /* PBXTextBookmark */ = E7A1C2A010D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2A110D06C41003746C9 /* PBXTextBookmark */ = E7A1C2A110D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2A210D06C41003746C9 /* PBXTextBookmark */ = E7A1C2A210D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2A310D06C41003746C9 /* PBXTextBookmark */ = E7A1C2A310D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2A410D06C41003746C9 /* PBXTextBookmark */ = E7A1C2A410D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2A510D06C41003746C9 /* PBXTextBookmark */ = E7A1C2A510D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2A610D06C41003746C9 /* PBXTextBookmark */ = E7A1C2A610D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2A710D06C41003746C9 /* PBXTextBookmark */ = E7A1C2A710D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2A810D06C41003746C9 /* PBXTextBookmark */ = E7A1C2A810D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2A910D06C41003746C9 /* PBXTextBookmark */ = E7A1C2A910D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2AA10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2AA10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2AB10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2AB10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2AC10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2AC10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2AD10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2AD10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2AE10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2AE10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2AF10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2AF10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2B010D06C41003746C9 /* PBXTextBookmark */ = E7A1C2B010D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2B110D06C41003746C9 /* PBXTextBookmark */ = E7A1C2B110D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2B210D06C41003746C9 /* PBXTextBookmark */ = E7A1C2B210D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2B310D06C41003746C9 /* PBXTextBookmark */ = E7A1C2B310D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2B410D06C41003746C9 /* PBXTextBookmark */ = E7A1C2B410D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2B510D06C41003746C9 /* PBXTextBookmark */ = E7A1C2B510D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2B610D06C41003746C9 /* PBXTextBookmark */ = E7A1C2B610D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2B710D06C41003746C9 /* PBXTextBookmark */ = E7A1C2B710D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2B810D06C41003746C9 /* PBXTextBookmark */ = E7A1C2B810D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2B910D06C41003746C9 /* PBXTextBookmark */ = E7A1C2B910D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2BA10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2BA10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2BB10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2BB10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2BC10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2BC10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2BD10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2BD10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2BE10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2BE10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2BF10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2BF10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2C010D06C41003746C9 /* PBXTextBookmark */ = E7A1C2C010D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2C110D06C41003746C9 /* PBXTextBookmark */ = E7A1C2C110D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2C210D06C41003746C9 /* PBXTextBookmark */ = E7A1C2C210D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2C310D06C41003746C9 /* PBXTextBookmark */ = E7A1C2C310D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2C410D06C41003746C9 /* PBXTextBookmark */ = E7A1C2C410D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2C510D06C41003746C9 /* PBXTextBookmark */ = E7A1C2C510D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2C610D06C41003746C9 /* PBXTextBookmark */ = E7A1C2C610D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2C710D06C41003746C9 /* PBXTextBookmark */ = E7A1C2C710D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2C810D06C41003746C9 /* PBXTextBookmark */ = E7A1C2C810D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2C910D06C41003746C9 /* PBXTextBookmark */ = E7A1C2C910D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2CA10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2CA10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2CB10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2CB10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2CC10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2CC10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2CD10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2CD10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2CE10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2CE10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2CF10D06C41003746C9 /* PBXTextBookmark */ = E7A1C2CF10D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2D010D06C41003746C9 /* PBXTextBookmark */ = E7A1C2D010D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2D110D06C41003746C9 /* PBXTextBookmark */ = E7A1C2D110D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2D210D06C41003746C9 /* PBXTextBookmark */ = E7A1C2D210D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2D310D06C41003746C9 /* PBXTextBookmark */ = E7A1C2D310D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2D410D06C41003746C9 /* PBXTextBookmark */ = E7A1C2D410D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2D510D06C41003746C9 /* PBXTextBookmark */ = E7A1C2D510D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2D610D06C41003746C9 /* PBXTextBookmark */ = E7A1C2D610D06C41003746C9 /* PBXTextBookmark */;
+			E7A1C2F110D06D0B003746C9 /* PBXTextBookmark */ = E7A1C2F110D06D0B003746C9 /* PBXTextBookmark */;
+			E7A1C2F210D06D0B003746C9 /* PBXTextBookmark */ = E7A1C2F210D06D0B003746C9 /* PBXTextBookmark */;
+			E7A1C2F310D06D0B003746C9 /* PBXTextBookmark */ = E7A1C2F310D06D0B003746C9 /* PBXTextBookmark */;
+			E7A1C2F410D06D0B003746C9 /* PBXTextBookmark */ = E7A1C2F410D06D0B003746C9 /* PBXTextBookmark */;
+			E7A1C2F510D06D0B003746C9 /* PBXTextBookmark */ = E7A1C2F510D06D0B003746C9 /* PBXTextBookmark */;
+			E7A1C2F610D06D0B003746C9 /* PBXTextBookmark */ = E7A1C2F610D06D0B003746C9 /* PBXTextBookmark */;
+			E7A1C2F710D06D0B003746C9 /* PBXTextBookmark */ = E7A1C2F710D06D0B003746C9 /* PBXTextBookmark */;
+			E7A1C2F810D06D0B003746C9 /* PBXTextBookmark */ = E7A1C2F810D06D0B003746C9 /* PBXTextBookmark */;
+			E7A1C2F910D06D0B003746C9 /* PBXTextBookmark */ = E7A1C2F910D06D0B003746C9 /* PBXTextBookmark */;
+			E7A1C2FA10D06D0B003746C9 /* PBXTextBookmark */ = E7A1C2FA10D06D0B003746C9 /* PBXTextBookmark */;
+			E7A1C2FB10D06D0B003746C9 /* PBXTextBookmark */ = E7A1C2FB10D06D0B003746C9 /* PBXTextBookmark */;
+			E7A1C2FC10D06D0B003746C9 /* PBXTextBookmark */ = E7A1C2FC10D06D0B003746C9 /* PBXTextBookmark */;
+			E7A1C2FD10D06D0B003746C9 /* PBXTextBookmark */ = E7A1C2FD10D06D0B003746C9 /* PBXTextBookmark */;
 			E7A3B91110CB11AD00772CDE = E7A3B91110CB11AD00772CDE /* PlistBookmark */;
 			E7A3B99110CB18A300772CDE = E7A3B99110CB18A300772CDE /* PBXTextBookmark */;
 			E7A3B99210CB18A300772CDE = E7A3B99210CB18A300772CDE /* PBXTextBookmark */;
@@ -580,14 +783,14 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1030, 2576}}";
 			sepNavSelRange = "{1140, 0}";
-			sepNavVisRange = "{826, 1005}";
+			sepNavVisRange = "{22, 988}";
 		};
 	};
 	E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1030, 1176}}";
-			sepNavSelRange = "{40, 0}";
-			sepNavVisRange = "{0, 916}";
+			sepNavSelRange = "{639, 0}";
+			sepNavVisRange = "{0, 985}";
 		};
 	};
 	E4B6FCAD0C3E899E008CF71C /* CYAPeopleVision-Info.plist */ = {
@@ -665,6 +868,12 @@
 		vrLoc = 5588;
 	};
 	E7A1BFF810CF4BF6003746C9 /* guiTypeMultiToggle.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = guiTypeMultiToggle.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxControlPanel/guiTypeMultiToggle.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1030, 1358}}";
 			sepNavSelRange = "{1552, 6}";
@@ -672,6 +881,12 @@
 		};
 	};
 	E7A1BFFF10CF4BF6003746C9 /* ofxControlPanel.cpp */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = ofxControlPanel.cpp;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxControlPanel/ofxControlPanel.cpp";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1030, 10892}}";
 			sepNavSelRange = "{3227, 92}";
@@ -679,6 +894,12 @@
 		};
 	};
 	E7A1C00010CF4BF6003746C9 /* ofxControlPanel.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ofxControlPanel.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxControlPanel/ofxControlPanel.h";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1030, 1890}}";
 			sepNavSelRange = "{580, 45}";
@@ -3564,7 +3785,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 5";
 		rLen = 0;
-		rLoc = 40;
+		rLoc = 38;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -3574,7 +3795,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 5";
 		rLen = 0;
-		rLoc = 40;
+		rLoc = 38;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -3604,7 +3825,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 5";
 		rLen = 0;
-		rLoc = 40;
+		rLoc = 38;
 		rType = 0;
 		vrLen = 916;
 		vrLoc = 0;
@@ -4159,6 +4380,1043 @@
 		vrLen = 1048;
 		vrLoc = 0;
 	};
+	E7A1C25C10D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 207C996010CDBAA500DF3E8E /* ofxCYAGuiManager.cpp */;
+		name = "ofxCYAGuiManager.cpp: 30";
+		rLen = 0;
+		rLoc = 849;
+		rType = 0;
+		vrLen = 2012;
+		vrLoc = 939;
+	};
+	E7A1C25D10D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A3B98710CB186100772CDE /* ofxCYATUIOSender.cpp */;
+		name = "ofxCYATUIOSender.cpp: 20";
+		rLen = 0;
+		rLoc = 471;
+		rType = 0;
+		vrLen = 1193;
+		vrLoc = 195;
+	};
+	E7A1C25E10D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A3B98510CB186100772CDE /* ofxCYAPerson.cpp */;
+		name = "ofxCYAPerson.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 738;
+		vrLoc = 703;
+	};
+	E7A1C25F10D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A3B98310CB186100772CDE /* ofxCYAPeopleTracker.cpp */;
+		name = "ofxCYAPeopleTracker.cpp: 208";
+		rLen = 0;
+		rLoc = 6515;
+		rType = 0;
+		vrLen = 1141;
+		vrLoc = 2801;
+	};
+	E7A1C26010D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADA1084E1570055BF2C /* ofxIIDCSettings.cpp */;
+		name = "ofxIIDCSettings.cpp: 42";
+		rLen = 15;
+		rLoc = 855;
+		rType = 0;
+		vrLen = 790;
+		vrLoc = 0;
+	};
+	E7A1C26110D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
+		name = "testApp.h: 24";
+		rLen = 0;
+		rLoc = 639;
+		rType = 0;
+		vrLen = 1003;
+		vrLoc = 0;
+	};
+	E7A1C26210D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: ISO C++ forbids declaration of 'ParameterCallback' with no type";
+		fRef = 2E288ADB1084E1570055BF2C /* ofxIIDCSettings.h */;
+		rLen = 1;
+		rLoc = 20;
+		rType = 1;
+	};
+	E7A1C26310D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 207C996010CDBAA500DF3E8E /* ofxCYAGuiManager.cpp */;
+		name = "ofxCYAGuiManager.cpp: 30";
+		rLen = 0;
+		rLoc = 849;
+		rType = 0;
+		vrLen = 2012;
+		vrLoc = 939;
+	};
+	E7A1C26410D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A3B98710CB186100772CDE /* ofxCYATUIOSender.cpp */;
+		name = "ofxCYATUIOSender.cpp: 20";
+		rLen = 0;
+		rLoc = 471;
+		rType = 0;
+		vrLen = 1193;
+		vrLoc = 195;
+	};
+	E7A1C26510D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A3B98510CB186100772CDE /* ofxCYAPerson.cpp */;
+		name = "ofxCYAPerson.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 738;
+		vrLoc = 703;
+	};
+	E7A1C26610D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A3B98310CB186100772CDE /* ofxCYAPeopleTracker.cpp */;
+		name = "ofxCYAPeopleTracker.cpp: 208";
+		rLen = 0;
+		rLoc = 6515;
+		rType = 0;
+		vrLen = 1141;
+		vrLoc = 2801;
+	};
+	E7A1C26710D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADB1084E1570055BF2C /* ofxIIDCSettings.h */;
+		name = "ofxIIDCSettings.h: 21";
+		rLen = 17;
+		rLoc = 497;
+		rType = 0;
+		vrLen = 555;
+		vrLoc = 0;
+	};
+	E7A1C26810D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADA1084E1570055BF2C /* ofxIIDCSettings.cpp */;
+		name = "ofxIIDCSettings.cpp: 42";
+		rLen = 15;
+		rLoc = 855;
+		rType = 0;
+		vrLen = 790;
+		vrLoc = 0;
+	};
+	E7A1C26910D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
+		name = "testApp.h: 24";
+		rLen = 0;
+		rLoc = 639;
+		rType = 0;
+		vrLen = 1003;
+		vrLoc = 0;
+	};
+	E7A1C26A10D058DA003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADB1084E1570055BF2C /* ofxIIDCSettings.h */;
+		name = "ofxIIDCSettings.h: 21";
+		rLen = 53;
+		rLoc = 489;
+		rType = 0;
+		vrLen = 555;
+		vrLoc = 0;
+	};
+	E7A1C26C10D05AE9003746C9 /* guiBaseObject.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = guiBaseObject.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/GUI/guiBaseObject.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 5194}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{4059, 1154}";
+		};
+	};
+	E7A1C26D10D05AE9003746C9 /* guiCallbacks.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = guiCallbacks.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/GUI/guiCallbacks.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 602}}";
+			sepNavSelRange = "{479, 96}";
+			sepNavVisRange = "{189, 842}";
+		};
+	};
+	E7A1C27910D05AE9003746C9 /* guiTypeText.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = guiTypeText.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/GUI/guiTypeText.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 533}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 232}";
+		};
+	};
+	E7A1C27A10D05AE9003746C9 /* guiTypeTextDropDown.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = guiTypeTextDropDown.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/GUI/guiTypeTextDropDown.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 2422}}";
+			sepNavSelRange = "{2290, 7}";
+			sepNavVisRange = "{1167, 1072}";
+		};
+	};
+	E7A1C27B10D05AE9003746C9 /* guiTypeToggle.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = guiTypeToggle.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/GUI/guiTypeToggle.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 1092}}";
+			sepNavSelRange = "{514, 17}";
+			sepNavVisRange = "{384, 906}";
+		};
+	};
+	E7A1C27C10D05AE9003746C9 /* guiValue.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = guiValue.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/GUI/guiValue.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 2338}}";
+			sepNavSelRange = "{102, 0}";
+			sepNavVisRange = "{0, 1061}";
+		};
+	};
+	E7A1C27E10D05AE9003746C9 /* ofxControlPanel.cpp */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = ofxControlPanel.cpp;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/GUI/ofxControlPanel.cpp";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1284, 11956}}";
+			sepNavSelRange = "{5872, 11}";
+			sepNavVisRange = "{5257, 1002}";
+		};
+	};
+	E7A1C27F10D05AE9003746C9 /* ofxControlPanel.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ofxControlPanel.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxVideoGrabber/GUI/ofxControlPanel.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1206, 1498}}";
+			sepNavSelRange = "{1508, 12}";
+			sepNavVisRange = "{1102, 2289}";
+		};
+	};
+	E7A1C28410D067C3003746C9 /* guiBaseObject.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = guiBaseObject.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxCYAPeopleVision/src/ofxCYAControlPanel/guiBaseObject.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 4872}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1004}";
+		};
+	};
+	E7A1C29010D067C3003746C9 /* guiTypeSlider.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = guiTypeSlider.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxCYAPeopleVision/src/ofxCYAControlPanel/guiTypeSlider.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 868}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1204}";
+		};
+	};
+	E7A1C29410D067C3003746C9 /* guiXmlValue.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = guiXmlValue.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxCYAPeopleVision/src/ofxCYAControlPanel/guiXmlValue.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 2324}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1083}";
+		};
+	};
+	E7A1C29510D067C3003746C9 /* ofxCYAControlPanel.cpp */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = ofxCYAControlPanel.cpp;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxCYAPeopleVision/src/ofxCYAControlPanel/ofxCYAControlPanel.cpp";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1206, 10794}}";
+			sepNavSelRange = "{20190, 0}";
+			sepNavVisRange = "{19744, 1158}";
+		};
+	};
+	E7A1C29610D067C3003746C9 /* ofxCYAControlPanel.h */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = ofxCYAControlPanel.h;
+		path = "/Users/focus/Documents/XCode Projects/peoplevision/trunk/OF_006_LAB/addons/ofxCYAPeopleVision/src/ofxCYAControlPanel/ofxCYAControlPanel.h";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 2044}}";
+			sepNavSelRange = "{684, 0}";
+			sepNavVisRange = "{213, 1076}";
+		};
+	};
+	E7A1C29D10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27910D05AE9003746C9 /* guiTypeText.h */;
+		name = "guiTypeText.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 232;
+		vrLoc = 0;
+	};
+	E7A1C29E10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27F10D05AE9003746C9 /* ofxControlPanel.h */;
+		name = "ofxControlPanel.h: 46";
+		rLen = 12;
+		rLoc = 1508;
+		rType = 0;
+		vrLen = 2289;
+		vrLoc = 1102;
+	};
+	E7A1C29F10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27B10D05AE9003746C9 /* guiTypeToggle.h */;
+		name = "guiTypeToggle.h: 22";
+		rLen = 17;
+		rLoc = 514;
+		rType = 0;
+		vrLen = 906;
+		vrLoc = 384;
+	};
+	E7A1C2A010D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADB1084E1570055BF2C /* ofxIIDCSettings.h */;
+		name = "ofxIIDCSettings.h: 11";
+		rLen = 0;
+		rLoc = 222;
+		rType = 0;
+		vrLen = 555;
+		vrLoc = 0;
+	};
+	E7A1C2A110D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C26D10D05AE9003746C9 /* guiCallbacks.h */;
+		name = "guiCallbacks.h: 22";
+		rLen = 96;
+		rLoc = 479;
+		rType = 0;
+		vrLen = 842;
+		vrLoc = 189;
+	};
+	E7A1C2A210D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27A10D05AE9003746C9 /* guiTypeTextDropDown.h */;
+		name = "guiTypeTextDropDown.h: 74";
+		rLen = 7;
+		rLoc = 2290;
+		rType = 0;
+		vrLen = 1072;
+		vrLoc = 1167;
+	};
+	E7A1C2A310D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27E10D05AE9003746C9 /* ofxControlPanel.cpp */;
+		name = "ofxControlPanel.cpp: 203";
+		rLen = 11;
+		rLoc = 5872;
+		rType = 0;
+		vrLen = 866;
+		vrLoc = 5322;
+	};
+	E7A1C2A410D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288AE11084E1570055BF2C /* ofxVideoGrabberSettings.cpp */;
+		name = "ofxVideoGrabberSettings.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1052;
+		vrLoc = 0;
+	};
+	E7A1C2A510D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288AE21084E1570055BF2C /* ofxVideoGrabberSettings.h */;
+		name = "ofxVideoGrabberSettings.h: 27";
+		rLen = 5;
+		rLoc = 764;
+		rType = 0;
+		vrLen = 907;
+		vrLoc = 0;
+	};
+	E7A1C2A610D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288AE01084E1570055BF2C /* ofxVideoGrabberSDK.h */;
+		name = "ofxVideoGrabberSDK.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1336;
+		vrLoc = 108;
+	};
+	E7A1C2A710D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADF1084E1570055BF2C /* ofxVideoGrabberFeature.h */;
+		name = "ofxVideoGrabberFeature.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 0;
+	};
+	E7A1C2A810D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADE1084E1570055BF2C /* ofxVideoGrabberFeature.cpp */;
+		name = "ofxVideoGrabberFeature.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 713;
+		vrLoc = 1922;
+	};
+	E7A1C2A910D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADD1084E1570055BF2C /* ofxVideoGrabber.h */;
+		name = "ofxVideoGrabber.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 951;
+		vrLoc = 705;
+	};
+	E7A1C2AA10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADC1084E1570055BF2C /* ofxVideoGrabber.cpp */;
+		name = "ofxVideoGrabber.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1671;
+		vrLoc = 404;
+	};
+	E7A1C2AB10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C26C10D05AE9003746C9 /* guiBaseObject.h */;
+		name = "guiBaseObject.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1154;
+		vrLoc = 4059;
+	};
+	E7A1C2AC10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C28410D067C3003746C9 /* guiBaseObject.h */;
+		name = "guiBaseObject.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1004;
+		vrLoc = 0;
+	};
+	E7A1C2AD10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C29010D067C3003746C9 /* guiTypeSlider.h */;
+		name = "guiTypeSlider.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1204;
+		vrLoc = 0;
+	};
+	E7A1C2AE10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C29410D067C3003746C9 /* guiXmlValue.h */;
+		name = "guiXmlValue.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1083;
+		vrLoc = 0;
+	};
+	E7A1C2AF10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C29510D067C3003746C9 /* ofxCYAControlPanel.cpp */;
+		name = "ofxCYAControlPanel.cpp: 658";
+		rLen = 0;
+		rLoc = 20190;
+		rType = 0;
+		vrLen = 1158;
+		vrLoc = 19744;
+	};
+	E7A1C2B010D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 207C995F10CDBAA500DF3E8E /* ofxCYAGuiManager.h */;
+		name = "ofxCYAGuiManager.h: 49";
+		rLen = 0;
+		rLoc = 990;
+		rType = 0;
+		vrLen = 813;
+		vrLoc = 244;
+	};
+	E7A1C2B110D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C29610D067C3003746C9 /* ofxCYAControlPanel.h */;
+		name = "ofxCYAControlPanel.h: 34";
+		rLen = 0;
+		rLoc = 684;
+		rType = 0;
+		vrLen = 1076;
+		vrLoc = 213;
+	};
+	E7A1C2B210D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: redefinition of 'class guiValue'";
+		fRef = E7A1C27C10D05AE9003746C9 /* guiValue.h */;
+		rLen = 1;
+		rLoc = 4;
+		rType = 1;
+	};
+	E7A1C2B310D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADB1084E1570055BF2C /* ofxIIDCSettings.h */;
+		name = "ofxIIDCSettings.h: 17";
+		rLen = 0;
+		rLoc = 370;
+		rType = 0;
+		vrLen = 555;
+		vrLoc = 0;
+	};
+	E7A1C2B410D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27F10D05AE9003746C9 /* ofxControlPanel.h */;
+		name = "ofxControlPanel.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2426;
+		vrLoc = 615;
+	};
+	E7A1C2B510D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27F10D05AE9003746C9 /* ofxControlPanel.h */;
+		name = "ofxControlPanel.h: 46";
+		rLen = 12;
+		rLoc = 1508;
+		rType = 0;
+		vrLen = 2426;
+		vrLoc = 615;
+	};
+	E7A1C2B610D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27F10D05AE9003746C9 /* ofxControlPanel.h */;
+		name = "ofxControlPanel.h: 46";
+		rLen = 12;
+		rLoc = 1508;
+		rType = 0;
+		vrLen = 2426;
+		vrLoc = 615;
+	};
+	E7A1C2B710D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27910D05AE9003746C9 /* guiTypeText.h */;
+		name = "guiTypeText.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 232;
+		vrLoc = 0;
+	};
+	E7A1C2B810D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C26C10D05AE9003746C9 /* guiBaseObject.h */;
+		name = "guiBaseObject.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1067;
+		vrLoc = 0;
+	};
+	E7A1C2B910D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C26D10D05AE9003746C9 /* guiCallbacks.h */;
+		name = "guiCallbacks.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1042;
+		vrLoc = 50;
+	};
+	E7A1C2BA10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27F10D05AE9003746C9 /* ofxControlPanel.h */;
+		name = "ofxControlPanel.h: 46";
+		rLen = 12;
+		rLoc = 1508;
+		rType = 0;
+		vrLen = 2289;
+		vrLoc = 1102;
+	};
+	E7A1C2BB10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27B10D05AE9003746C9 /* guiTypeToggle.h */;
+		name = "guiTypeToggle.h: 22";
+		rLen = 17;
+		rLoc = 514;
+		rType = 0;
+		vrLen = 906;
+		vrLoc = 384;
+	};
+	E7A1C2BC10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADB1084E1570055BF2C /* ofxIIDCSettings.h */;
+		name = "ofxIIDCSettings.h: 11";
+		rLen = 0;
+		rLoc = 222;
+		rType = 0;
+		vrLen = 555;
+		vrLoc = 0;
+	};
+	E7A1C2BD10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27E10D05AE9003746C9 /* ofxControlPanel.cpp */;
+		name = "ofxControlPanel.cpp: 203";
+		rLen = 11;
+		rLoc = 5872;
+		rType = 0;
+		vrLen = 866;
+		vrLoc = 5322;
+	};
+	E7A1C2BE10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADE1084E1570055BF2C /* ofxVideoGrabberFeature.cpp */;
+		name = "ofxVideoGrabberFeature.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 540;
+		vrLoc = 0;
+	};
+	E7A1C2BF10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADD1084E1570055BF2C /* ofxVideoGrabber.h */;
+		name = "ofxVideoGrabber.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 952;
+		vrLoc = 705;
+	};
+	E7A1C2C010D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288AE01084E1570055BF2C /* ofxVideoGrabberSDK.h */;
+		name = "ofxVideoGrabberSDK.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1325;
+		vrLoc = 0;
+	};
+	E7A1C2C110D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADF1084E1570055BF2C /* ofxVideoGrabberFeature.h */;
+		name = "ofxVideoGrabberFeature.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 0;
+	};
+	E7A1C2C210D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288AE21084E1570055BF2C /* ofxVideoGrabberSettings.h */;
+		name = "ofxVideoGrabberSettings.h: 26";
+		rLen = 0;
+		rLoc = 739;
+		rType = 0;
+		vrLen = 907;
+		vrLoc = 0;
+	};
+	E7A1C2C310D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288AE11084E1570055BF2C /* ofxVideoGrabberSettings.cpp */;
+		name = "ofxVideoGrabberSettings.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1052;
+		vrLoc = 0;
+	};
+	E7A1C2C410D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288AE21084E1570055BF2C /* ofxVideoGrabberSettings.h */;
+		name = "ofxVideoGrabberSettings.h: 27";
+		rLen = 5;
+		rLoc = 764;
+		rType = 0;
+		vrLen = 907;
+		vrLoc = 0;
+	};
+	E7A1C2C510D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288AE01084E1570055BF2C /* ofxVideoGrabberSDK.h */;
+		name = "ofxVideoGrabberSDK.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1336;
+		vrLoc = 108;
+	};
+	E7A1C2C610D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADF1084E1570055BF2C /* ofxVideoGrabberFeature.h */;
+		name = "ofxVideoGrabberFeature.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 806;
+		vrLoc = 0;
+	};
+	E7A1C2C710D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADE1084E1570055BF2C /* ofxVideoGrabberFeature.cpp */;
+		name = "ofxVideoGrabberFeature.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 713;
+		vrLoc = 1922;
+	};
+	E7A1C2C810D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADD1084E1570055BF2C /* ofxVideoGrabber.h */;
+		name = "ofxVideoGrabber.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 951;
+		vrLoc = 705;
+	};
+	E7A1C2C910D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADC1084E1570055BF2C /* ofxVideoGrabber.cpp */;
+		name = "ofxVideoGrabber.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1671;
+		vrLoc = 404;
+	};
+	E7A1C2CA10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C26C10D05AE9003746C9 /* guiBaseObject.h */;
+		name = "guiBaseObject.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1067;
+		vrLoc = 0;
+	};
+	E7A1C2CB10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C26C10D05AE9003746C9 /* guiBaseObject.h */;
+		name = "guiBaseObject.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1067;
+		vrLoc = 0;
+	};
+	E7A1C2CC10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C26C10D05AE9003746C9 /* guiBaseObject.h */;
+		name = "guiBaseObject.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1154;
+		vrLoc = 4059;
+	};
+	E7A1C2CD10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C28410D067C3003746C9 /* guiBaseObject.h */;
+		name = "guiBaseObject.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1004;
+		vrLoc = 0;
+	};
+	E7A1C2CE10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C29010D067C3003746C9 /* guiTypeSlider.h */;
+		name = "guiTypeSlider.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1204;
+		vrLoc = 0;
+	};
+	E7A1C2CF10D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C29410D067C3003746C9 /* guiXmlValue.h */;
+		name = "guiXmlValue.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1083;
+		vrLoc = 0;
+	};
+	E7A1C2D010D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C29510D067C3003746C9 /* ofxCYAControlPanel.cpp */;
+		name = "ofxCYAControlPanel.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 989;
+		vrLoc = 0;
+	};
+	E7A1C2D110D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C29610D067C3003746C9 /* ofxCYAControlPanel.h */;
+		name = "ofxCYAControlPanel.h: 29";
+		rLen = 0;
+		rLoc = 592;
+		rType = 0;
+		vrLen = 1049;
+		vrLoc = 235;
+	};
+	E7A1C2D210D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C29510D067C3003746C9 /* ofxCYAControlPanel.cpp */;
+		name = "ofxCYAControlPanel.cpp: 658";
+		rLen = 0;
+		rLoc = 20190;
+		rType = 0;
+		vrLen = 1158;
+		vrLoc = 19744;
+	};
+	E7A1C2D310D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C29610D067C3003746C9 /* ofxCYAControlPanel.h */;
+		name = "ofxCYAControlPanel.h: 28";
+		rLen = 0;
+		rLoc = 579;
+		rType = 0;
+		vrLen = 1070;
+		vrLoc = 213;
+	};
+	E7A1C2D410D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 207C995F10CDBAA500DF3E8E /* ofxCYAGuiManager.h */;
+		name = "ofxCYAGuiManager.h: 49";
+		rLen = 0;
+		rLoc = 990;
+		rType = 0;
+		vrLen = 813;
+		vrLoc = 244;
+	};
+	E7A1C2D510D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C29610D067C3003746C9 /* ofxCYAControlPanel.h */;
+		name = "ofxCYAControlPanel.h: 34";
+		rLen = 0;
+		rLoc = 684;
+		rType = 0;
+		vrLen = 1076;
+		vrLoc = 213;
+	};
+	E7A1C2D610D06C41003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27C10D05AE9003746C9 /* guiValue.h */;
+		name = "guiValue.h: 5";
+		rLen = 17;
+		rLoc = 38;
+		rType = 0;
+		vrLen = 1061;
+		vrLoc = 0;
+	};
+	E7A1C2E910D06CE6003746C9 /* ofxControlPanel.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 10682}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 983}";
+		};
+	};
+	E7A1C2EA10D06CE6003746C9 /* ofxControlPanel.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1030, 1848}}";
+			sepNavSelRange = "{624, 0}";
+			sepNavVisRange = "{410, 1391}";
+		};
+	};
+	E7A1C2F110D06D0B003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27C10D05AE9003746C9 /* guiValue.h */;
+		name = "guiValue.h: 10";
+		rLen = 0;
+		rLoc = 102;
+		rType = 0;
+		vrLen = 1061;
+		vrLoc = 0;
+	};
+	E7A1C2F210D06D0B003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 207C996010CDBAA500DF3E8E /* ofxCYAGuiManager.cpp */;
+		name = "ofxCYAGuiManager.cpp: 30";
+		rLen = 0;
+		rLoc = 849;
+		rType = 0;
+		vrLen = 1170;
+		vrLoc = 0;
+	};
+	E7A1C2F310D06D0B003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADA1084E1570055BF2C /* ofxIIDCSettings.cpp */;
+		name = "ofxIIDCSettings.cpp: 169";
+		rLen = 99;
+		rLoc = 5478;
+		rType = 0;
+		vrLen = 1106;
+		vrLoc = 4958;
+	};
+	E7A1C2F410D06D0B003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 207C995F10CDBAA500DF3E8E /* ofxCYAGuiManager.h */;
+		name = "ofxCYAGuiManager.h: 49";
+		rLen = 0;
+		rLoc = 990;
+		rType = 0;
+		vrLen = 818;
+		vrLoc = 192;
+	};
+	E7A1C2F510D06D0B003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: ISO C++ forbids declaration of 'ParameterCallback' with no type";
+		fRef = 2E288ADB1084E1570055BF2C /* ofxIIDCSettings.h */;
+		rLen = 1;
+		rLoc = 20;
+		rType = 1;
+	};
+	E7A1C2F610D06D0B003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27C10D05AE9003746C9 /* guiValue.h */;
+		name = "guiValue.h: 10";
+		rLen = 0;
+		rLoc = 102;
+		rType = 0;
+		vrLen = 1061;
+		vrLoc = 0;
+	};
+	E7A1C2F710D06D0B003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E7A1C27C10D05AE9003746C9 /* guiValue.h */;
+		name = "guiValue.h: 10";
+		rLen = 0;
+		rLoc = 102;
+		rType = 0;
+		vrLen = 1061;
+		vrLoc = 0;
+	};
+	E7A1C2F810D06D0B003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 207C996010CDBAA500DF3E8E /* ofxCYAGuiManager.cpp */;
+		name = "ofxCYAGuiManager.cpp: 30";
+		rLen = 0;
+		rLoc = 849;
+		rType = 0;
+		vrLen = 1170;
+		vrLoc = 0;
+	};
+	E7A1C2F910D06D0B003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 207C995F10CDBAA500DF3E8E /* ofxCYAGuiManager.h */;
+		name = "ofxCYAGuiManager.h: 26";
+		rLen = 0;
+		rLoc = 369;
+		rType = 0;
+		vrLen = 727;
+		vrLoc = 46;
+	};
+	E7A1C2FA10D06D0B003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADB1084E1570055BF2C /* ofxIIDCSettings.h */;
+		name = "ofxIIDCSettings.h: 21";
+		rLen = 53;
+		rLoc = 489;
+		rType = 0;
+		vrLen = 555;
+		vrLoc = 0;
+	};
+	E7A1C2FB10D06D0B003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADA1084E1570055BF2C /* ofxIIDCSettings.cpp */;
+		name = "ofxIIDCSettings.cpp: 169";
+		rLen = 99;
+		rLoc = 5478;
+		rType = 0;
+		vrLen = 1106;
+		vrLoc = 4958;
+	};
+	E7A1C2FC10D06D0B003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 207C995F10CDBAA500DF3E8E /* ofxCYAGuiManager.h */;
+		name = "ofxCYAGuiManager.h: 49";
+		rLen = 0;
+		rLoc = 990;
+		rType = 0;
+		vrLen = 818;
+		vrLoc = 192;
+	};
+	E7A1C2FD10D06D0B003746C9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2E288ADB1084E1570055BF2C /* ofxIIDCSettings.h */;
+		name = "ofxIIDCSettings.h: 21";
+		rLen = 53;
+		rLoc = 489;
+		rType = 0;
+		vrLen = 555;
+		vrLoc = 0;
+	};
 	E7A3B91110CB11AD00772CDE /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = E4B6FCAD0C3E899E008CF71C /* CYAPeopleVision-Info.plist */;
@@ -4221,9 +5479,9 @@
 	};
 	E7A3B98310CB186100772CDE /* ofxCYAPeopleTracker.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1030, 7672}}";
-			sepNavSelRange = "{6515, 0}";
-			sepNavVisRange = "{3680, 1489}";
+			sepNavIntBoundsRect = "{{0, 0}, {1379, 7840}}";
+			sepNavSelRange = "{2645, 0}";
+			sepNavVisRange = "{2350, 602}";
 		};
 	};
 	E7A3B98410CB186100772CDE /* ofxCYAPeopleTracker.h */ = {
@@ -4251,7 +5509,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1030, 1274}}";
 			sepNavSelRange = "{471, 0}";
-			sepNavVisRange = "{400, 1169}";
+			sepNavVisRange = "{195, 1193}";
 		};
 	};
 	E7A3B98810CB186100772CDE /* ofxCYATUIOSender.h */ = {
@@ -4465,7 +5723,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 9";
 		rLen = 0;
-		rLoc = 105;
+		rLoc = 103;
 		rType = 0;
 		vrLen = 842;
 		vrLoc = 1047;
@@ -4649,7 +5907,7 @@
 		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
 		name = "testApp.h: 5";
 		rLen = 0;
-		rLoc = 40;
+		rLoc = 38;
 		rType = 0;
 		vrLen = 906;
 		vrLoc = 0;
