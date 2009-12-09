@@ -44,7 +44,7 @@ void testApp::setup(){
 	#endif
 	
 #else
-	vidPlayer.loadMovie("ghetto_facetest_480.mov");
+	vidPlayer.loadMovie("jim_face_tests.mov");
 	vidPlayer.play();
 #endif
     
@@ -55,6 +55,10 @@ void testApp::setup(){
 	//listen to any events from people entering or exiting
 	peopleTracker.setListener( this );
 	
+	peopleTracker.addSlider("custom INTEGER", &itestValue, 0, ofGetWidth());
+	peopleTracker.addSlider("custom FLOAT", &ftestValue, 0, ofGetHeight());
+	peopleTracker.addToggle("custom BOOL", &btestValue);
+
 }
 
 //--------------------------------------------------------------
@@ -137,6 +141,10 @@ void testApp::personWillLeave(int id )
 //--------------------------------------------------------------
 void testApp::draw(){
 	peopleTracker.draw();
+	
+	if(btestValue){
+		ofCircle(itestValue, ftestValue, 30);
+	}
 }
 
 

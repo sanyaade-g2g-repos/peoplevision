@@ -44,10 +44,8 @@ class guiTextBase{
         virtual float getTextHeight(){
             float textHeight = 0;
 
-            if(bRealFont)
-                textHeight = ourFont->stringHeight(textString);
-            else
-                textHeight = fontSize + fontSize * numNewLines;
+            if(bRealFont)textHeight = ourFont->stringHeight(textString);
+            else  textHeight = fontSize + fontSize * numNewLines;
 
             return textHeight;
         }
@@ -56,10 +54,8 @@ class guiTextBase{
         virtual float getTextSingleLineHeight(){
             float textHeight = 0;
 
-            if(bRealFont)
-                textHeight = ourFont->stringHeight("A");
-            else
-                textHeight = fontSize;
+            if(bRealFont)textHeight = ourFont->stringHeight("A");
+            else  textHeight = fontSize;
 
             return textHeight;
         }
@@ -69,7 +65,7 @@ class guiTextBase{
             textString = textStr;
 
             numNewLines = 0;
-            for(unsigned int i = 0; i < textString.size(); i++){
+            for(int i = 0; i < textString.size(); i++){
                 if( textString[i] == '\n' )numNewLines++;
             }
 
@@ -81,9 +77,7 @@ class guiTextBase{
             if(bRealFont){
                 ourFont->drawString(textString, x, y);
             }
-            else {
-                ofDrawBitmapString(textString, x, y);
-            }
+            else ofDrawBitmapString(textString, x, y);
         }
 
         //--------------------------------------------
@@ -102,7 +96,7 @@ class guiTextBase{
             if(bRealFont)textHeight = ourFont->stringHeight(textToRender);
             else{
                 int numLines = 0;
-                for(unsigned int i = 0; i < textToRender.size(); i++){
+                for(int i = 0; i < textToRender.size(); i++){
                     if( textToRender[i] == '\n' )numLines++;
                 }
                 textHeight = fontSize + fontSize * numLines;

@@ -10,11 +10,16 @@
 #include "ofMain.h"
 #include <iostream>
 
+enum {
+	TRACK_DARK, TRACK_LIGHT, TRACK_ABSOLUTE
+};
+
 class ofxCYASettings {
 public:
 	static ofxCYASettings* getInstance();
 	void method();
 	~ofxCYASettings() {
+		delete single;
 		instanceFlag = false;
 	}
 	
@@ -22,7 +27,8 @@ public:
 	bool bLearnBackground;
 	bool bSmartLearnBackground;
 	bool bLearnBackgroundProgressive;
-	bool bTrackDark;
+	//bool bTrackDark;
+	int trackType;
 	bool bHighpass;
 	bool bAmplify;
 	bool bSmooth;
@@ -35,8 +41,8 @@ public:
 	int highpassNoise;
 	int	highpassAmp;
 	int threshold;	
-	int minBlob;
-	int maxBlob;
+	float minBlob;
+	float maxBlob;
 	float fLearnRate;
 	float haarArea;
 	float minHaarArea;

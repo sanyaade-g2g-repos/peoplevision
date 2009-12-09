@@ -29,8 +29,8 @@ void ofxCYAPeopleTracker::setup(int w, int h)
 		
 	p_Settings = ofxCYASettings::getInstance();
 	
-	gui.loadFromXML();	
-	gui.setDraw(true);	
+	//gui.loadFromXML();	
+	//gui.setDraw(true);	
 	
     persistentTracker.setListener( this );
 }
@@ -81,9 +81,12 @@ void ofxCYAPeopleTracker::trackPeople()
 	//-------------------
 	
 	//force learn background if there are > 5 blobs (off by default)
-	if (p_Settings->bSmartLearnBackground == true && contourFinder.nBlobs > 5){
-		p_Settings->bLearnBackground = true;
-	}
+	//JG Disabling this feature for now, 
+	//I think it's a great ideas but it needs to be better described and "5" needs to be customizable
+//	if (p_Settings->bSmartLearnBackground == true && contourFinder.nBlobs > 5){
+//		p_Settings->bLearnBackground = true;
+//	}
+	
 	//learn background (either in reset or additive)
 	if (p_Settings->bLearnBackground){
 		cout << "Learning Background" << endl;
@@ -96,15 +99,20 @@ void ofxCYAPeopleTracker::trackPeople()
 		grayBg.flagImageChanged();			
 	}
 	
-	grayDiff = grayImage;
-	
-	if(p_Settings->bTrackDark){
-		cvSub(grayBg.getCvImage(), grayDiff.getCvImage(), grayDiff.getCvImage());
+	printf("track type %d from (%d,%d,%d)\n", p_Settings->trackType, TRACK_ABSOLUTE, TRACK_DARK, TRACK_LIGHT);
+	if(p_Settings->trackType == TRACK_ABSOLUTE){
+		grayDiff.absDiff(grayBg, grayImage);
 	}
-	else { 
-		cvSub(grayDiff.getCvImage(), grayBg.getCvImage(), grayDiff.getCvImage());
+	else{
+		grayDiff = grayImage;
+		if(p_Settings->trackType == TRACK_DARK){
+			cvSub(grayBg.getCvImage(), grayDiff.getCvImage(), grayDiff.getCvImage());
+		}
+		else if(p_Settings->trackType == TRACK_LIGHT){ 
+			cvSub(grayDiff.getCvImage(), grayBg.getCvImage(), grayDiff.getCvImage());
+		}
+		grayDiff.flagImageChanged();
 	}
-	grayDiff.flagImageChanged();
 	
 	//-----------------------
 	// IMAGE TREATMENT
@@ -133,7 +141,6 @@ void ofxCYAPeopleTracker::trackPeople()
 		opticalFlow.calc(grayLastImage, graySmallImage, 11);
 	}
 	
-	vector<ofxCYAPerson*> stillLiving;
 	contourFinder.findContours(grayDiff, p_Settings->minBlob*width*height, p_Settings->maxBlob*width*height, 50, p_Settings->bFindHoles);
 	persistentTracker.trackBlobs(contourFinder.blobs);
 	
@@ -198,15 +205,12 @@ void ofxCYAPeopleTracker::trackPeople()
 		
 		if(eventListener != NULL && (p->velocity.x != 0 || p->velocity.y != 0) ){
 			eventListener->personMoved(p->pid);
-		}
-		
-		//update living set
-		stillLiving.push_back( p );		
+		}		
 	}
 	
 	if(bTuioEnabled){
-		for (int i = 0; i < stillLiving.size(); i++){
-			ofxCYAPerson* p = stillLiving[i];
+		for (int i = 0; i < trackedPeople.size(); i++){
+			ofxCYAPerson* p = trackedPeople[i];
 			if(p_Settings->bUseHaarAsCenter && p->hasHaarRect()){
 				ofPoint tuioCursor = p->getHaarCentroidNormalized(width, height);
 				tuioClient.cursorDragged( tuioCursor.x, tuioCursor.y, p->oid);
@@ -220,8 +224,6 @@ void ofxCYAPeopleTracker::trackPeople()
 		tuioClient.update();		
 	}
 	
-	//make this the updated set
-	trackedPeople = stillLiving;
 	//store the old image
 	grayLastImage = graySmallImage;	
 }
@@ -267,8 +269,8 @@ void ofxCYAPeopleTracker::blobOff( int x, int y, int id, int order )
 		if((*it)->pid == p->pid){
 			trackedPeople.erase(it);
 			delete p;
+			break;
 		}
-		break;
 	}
 }
 
@@ -304,102 +306,118 @@ void ofxCYAPeopleTracker::draw(int x, int y)
 
 void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 {
-	ofPushMatrix();{
-		ofTranslate(x, y, 0);
-		switch (mode) {
-			case DRAW_MODE_GUI:
-				gui.draw();
-			case DRAW_MODE_NORMAL:
-				ofPushMatrix();{
-					//translate to make room for the gui
-					ofTranslate(500, 75, 0);
-					// draw the incoming, the grayscale, the bg and the thresholded difference
-					ofSetColor(0xffffff);
-					grayImage.draw(20,20,320,240);
-					grayDiff.draw(360,20,320,240);
-					grayBg.draw(20,280,320,240);
-										
-					//individually draw blobs and report findings
-					ofPushMatrix();{
-						ofTranslate(360,280);
-						
-						ofFill();
-						ofSetColor(0x333333);
-						ofRect(0,0,320,240);
-						ofSetColor(0xffffff);
-						
-						ofNoFill();
-						if (p_Settings->bTrackOpticalFlow){
-							ofSetColor(0x888888);
-							opticalFlow.draw(width*TRACKING_SCALE_FACTOR, height*TRACKING_SCALE_FACTOR);
-						}					
-						
-						ofScale(TRACKING_SCALE_FACTOR, TRACKING_SCALE_FACTOR);
-						contourFinder.draw();
-					
-						for (int i=0; i < trackedPeople.size(); i++){
-							
-							//draw blobs				
-							//if haarfinder is looking at these blobs, draw the area it's looking at
-							ofxCYAPerson* p = trackedPeople[i];
-							
-							if(p_Settings->bTrackOpticalFlow){
-								//purple optical flow arrow
-								ofSetColor(0xff00ff);
-								ofLine(p->centroid.x, p->centroid.y, p->centroid.x + p->opticalFlowVectorAccumulation.x, p->centroid.y + p->opticalFlowVectorAccumulation.y);
-							}
-							
-							ofSetColor(0xffffff);							
-							if(p_Settings->bDetectHaar){
-								//draw haar search area expanded 
-								ofRect(p->boundingRect.x - p_Settings->haarArea, 
-									   p->boundingRect.y - p_Settings->haarArea, 
-									   p->boundingRect.width  + p_Settings->haarArea*2, 
-									   p->boundingRect.height + p_Settings->haarArea*2);
-							}
-							
-							if(p->hasHaarRect()){
-								//draw the haar rect in green
-								ofSetColor(0x00ff00);
-								ofRect(p->getHaarRect().x, p->getHaarRect().y, p->getHaarRect().width, p->getHaarRect().height);
-								//haar-detected people get a yellow square
-								ofSetColor(0xffff00);
-							}
-							else {
-								//no haar gets a blue square
-								ofSetColor(0x0000ff);
-							}
-							
-							//draw person
-							ofRect(p->boundingRect.x, p->boundingRect.y, p->boundingRect.width, p->boundingRect.height);
-							
-							//draw centroid
-							ofSetColor(0xff0000);
-							ofCircle(p->centroid.x, p->centroid.y, 3);
-														
-							//draw id
-							ofSetColor(0xffffff);
-							char idstr[1024];
-							sprintf(idstr, "pid: %d\noid: %d\nage: %d", p->pid, p->oid, p->age );
-							ofDrawBitmapString(idstr, p->centroid.x+8, p->centroid.y);													
-						}
-					}ofPopMatrix();	//release video feedback drawing
-				} ofPopMatrix(); //release gui drawing
-				break;
-			case DRAW_MODE_CAMERA_CALIBRATE:
-				//TODO implement calibration mode
-				//vidGrabber.draw(ofGetWidth()- camWidth,0);			
-				break;
-			case DRAW_MODE_FULLSCREEN:
+
+//		mode = DRAW_MODE_NORMAL;
+//		switch (mode) {
+//			case DRAW_MODE_GUI:
+////				gui.draw();
+		ofPushMatrix();{
+			ofTranslate(x, y, 0);
+			//translate to make room for the gui
+			ofTranslate(320, 0, 0);
+			// draw the incoming, the grayscale, the bg and the thresholded difference
+			ofSetColor(0xffffff);
+			grayImage.draw(20,20,320,240);
+			grayDiff.draw(360,20,320,240);
+			grayBg.draw(20,280,320,240);
+								
+			//individually draw blobs and report findings
+			ofPushMatrix();{
+				ofTranslate(360,280);
+				
+				ofFill();
+				ofSetColor(0x333333);
+				ofRect(0,0,320,240);
 				ofSetColor(0xffffff);
-				grayImage.draw(0,0,ofGetWidth(),ofGetHeight());
-		
-				break;
-			default:
-				printf("undefined draw mode: %d", mode);
-				break;
-		}
-	}ofPopMatrix();
+				
+				ofNoFill();
+				if (p_Settings->bTrackOpticalFlow){
+					ofSetColor(0x888888);
+					opticalFlow.draw(width*TRACKING_SCALE_FACTOR, height*TRACKING_SCALE_FACTOR);
+				}					
+				
+				ofScale(TRACKING_SCALE_FACTOR, TRACKING_SCALE_FACTOR);
+				contourFinder.draw();
+			
+				for (int i=0; i < trackedPeople.size(); i++){
+					
+					//draw blobs				
+					//if haarfinder is looking at these blobs, draw the area it's looking at
+					ofxCYAPerson* p = trackedPeople[i];
+					
+					if(p_Settings->bTrackOpticalFlow){
+						//purple optical flow arrow
+						ofSetColor(0xff00ff);
+						ofLine(p->centroid.x, p->centroid.y, p->centroid.x + p->opticalFlowVectorAccumulation.x, p->centroid.y + p->opticalFlowVectorAccumulation.y);
+					}
+					
+					ofSetColor(0xffffff);							
+					if(p_Settings->bDetectHaar){
+						//draw haar search area expanded 
+						ofRect(p->boundingRect.x - p_Settings->haarArea, 
+							   p->boundingRect.y - p_Settings->haarArea, 
+							   p->boundingRect.width  + p_Settings->haarArea*2, 
+							   p->boundingRect.height + p_Settings->haarArea*2);
+					}
+					
+					if(p->hasHaarRect()){
+						//draw the haar rect in green
+						ofSetColor(0x00ff00);
+						ofRect(p->getHaarRect().x, p->getHaarRect().y, p->getHaarRect().width, p->getHaarRect().height);
+						//haar-detected people get a yellow square
+						ofSetColor(0xffff00);
+					}
+					else {
+						//no haar gets a blue square
+						ofSetColor(0x0000ff);
+					}
+					
+					//draw person
+					ofRect(p->boundingRect.x, p->boundingRect.y, p->boundingRect.width, p->boundingRect.height);
+					
+					//draw centroid
+					ofSetColor(0xff0000);
+					ofCircle(p->centroid.x, p->centroid.y, 3);
+												
+					//draw id
+					ofSetColor(0xffffff);
+					char idstr[1024];
+					sprintf(idstr, "pid: %d\noid: %d\nage: %d", p->pid, p->oid, p->age );
+					ofDrawBitmapString(idstr, p->centroid.x+8, p->centroid.y);													
+				}
+			}ofPopMatrix();	//release video feedback drawing
+			
+//			break;
+//			case DRAW_MODE_CAMERA_CALIBRATE:
+//				//TODO implement calibration mode
+//				//vidGrabber.draw(ofGetWidth()- camWidth,0);			
+//				break;
+//			case DRAW_MODE_FULLSCREEN:
+//				ofSetColor(0xffffff);
+//				grayImage.draw(0,0,ofGetWidth(),ofGetHeight());
+//		
+//				break;
+//			default:
+//				printf("undefined draw mode: %d\n", mode);
+//				break;
+		}ofPopMatrix();
+}
+
+#pragma mark gui extension
+void ofxCYAPeopleTracker::addSlider(string name, int* value, int min, int max)
+{
+	//forward to the gui manager
+	gui.addSlider(name, value, min, max);
+}
+
+void ofxCYAPeopleTracker::addSlider(string name, float* value, float min, float max)
+{
+	gui.addSlider(name, value, min, max);	
+}
+
+void ofxCYAPeopleTracker::addToggle(string name, bool* value)
+{
+	gui.addToggle(name, value);	
 }
 
 #pragma mark accessors
@@ -529,12 +547,12 @@ void ofxCYAPeopleTracker::enableFindHoles(bool findHoles)
 
 void ofxCYAPeopleTracker::trackDarkBlobs()
 {
-	p_Settings->bTrackDark = true;
+	p_Settings->trackType = TRACK_DARK;
 }
 
 void ofxCYAPeopleTracker::trackLightBlobs()
 {
-	p_Settings->bTrackDark = false;	
+	p_Settings->trackType = TRACK_LIGHT;	
 }
 
 void ofxCYAPeopleTracker::setDrawMode(int mode)

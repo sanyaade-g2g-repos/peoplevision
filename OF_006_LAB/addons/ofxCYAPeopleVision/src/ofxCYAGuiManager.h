@@ -7,13 +7,46 @@
  *
  */
 
-#include "ofxSimpleGuiToo.h"
+//#include "ofxSimpleGuiToo.h"
+#include "ofxControlPanel.h"
 
-class ofxCYAGuiManager : public ofxSimpleGuiToo {
+typedef struct  {	
+	int type;
+	string key;
 	
-public:
+	float* f;
+	int* i;	
+	bool* b;
+	
+} ofxCYAGUICustomParam;
+
+class ofxCYAGuiManager {
+	
+  public:
 	ofxCYAGuiManager();
-	ofxSimpleGuiToo	gui;
-	void draw();
+	//ofxSimpleGuiToo	gui;
 	
+	bool enableGui;
+	
+	void update(ofEventArgs &e);
+	void draw(ofEventArgs &e);
+	
+	//forwarded events
+	void mousePressed(ofMouseEventArgs &e);	
+	void mouseDragged(ofMouseEventArgs &e);	
+	void mouseReleased(ofMouseEventArgs &e);
+	
+	void keyPressed(ofKeyEventArgs &e);
+	void keyReleased(ofKeyEventArgs &e);
+	
+	void addSlider(string name, int* value, int min, int max);
+	void addSlider(string name, float* value, float min, float max);
+	void addToggle(string name, bool* value);
+	
+
+  protected:
+	//a little goofy way to keep track of custom params. works but i'm open to suggestions
+	ofxControlPanel panel;
+	vector<ofxCYAGUICustomParam> params;
+
 };

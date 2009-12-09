@@ -22,7 +22,7 @@ ofxCYASettings* ofxCYASettings::getInstance()
 		single->bTrackOpticalFlow = true;
 		
 		single->bLearnBackgroundProgressive = true;
-		single->bTrackDark = false;
+		single->trackType = TRACK_LIGHT;
 		single->bLearnBackground = true;
 		
 		single->threshold = 80;
@@ -34,18 +34,14 @@ ofxCYASettings* ofxCYASettings::getInstance()
 		single->bAmplify = single->bSmooth = single->bHighpass = false;
 		single->bFindHoles = true;
 		
-		single->minBlob = 30;
-		single->maxBlob = 640*480;
+		single->minBlob = 0.001;
+		single->maxBlob = .05;
 		
 		single->bLearnBackground = true;	
-		single->bCentroidDampen = true;
-		
-        return single;
+		single->bCentroidDampen = true;		
     }
-    else
-    {
-        return single;
-    }
+	return single;
+	
 }
 
 void ofxCYASettings::method()
