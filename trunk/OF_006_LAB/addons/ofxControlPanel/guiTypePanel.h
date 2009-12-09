@@ -59,25 +59,24 @@ class guiTypePanel : public guiBaseObject{
             if(readOnly)return false;
             if( x >= hitArea.x && x <= hitArea.x + hitArea.width && y >= hitArea.y && y <= hitArea.y + hitArea.height){
                 state = SG_STATE_SELECTED;
-
+                
 				float xx = x - boundingBox.x;
                 float yy = y - boundingBox.y;
-
+				
 				if( xx  > lockRect.x && xx < lockRect.x + lockRect.width && yy > lockRect.y && yy < lockRect.y + lockRect.height ){
                     locked = !locked;
-                }
-
+                } 
+					
                 setSelected();
                 updateGui(x, y, true, isRelative);
-
+				
                 if( !locked ){
 
                     float offsetX = x - hitArea.x;
                     float offsetY = y - hitArea.y;
 
-                    for(unsigned int i = 0; i < children.size(); i++){
-                        bool result = children[i]->checkHit(offsetX, offsetY, isRelative);
-                        if(result) break;
+                    for(int i = 0; i < children.size(); i++){
+                        children[i]->checkHit(offsetX, offsetY, isRelative);
                     }
                 }
                 return true;
@@ -102,7 +101,7 @@ class guiTypePanel : public guiBaseObject{
 
                 if( !locked ){
 
-                    for(unsigned int i = 0; i < children.size(); i++){
+                    for(int i = 0; i < children.size(); i++){
                         children[i]->updateGui(offsetX, offsetY, firstHit, isRelative);
                     }
 
@@ -122,11 +121,11 @@ class guiTypePanel : public guiBaseObject{
             lockRect.width      = LOCK_WIDTH + LOCK_BORDER * 2;
             lockRect.height     = LOCK_HEIGHT + LOCK_BORDER * 2;
 
-            for(unsigned int i = 0; i < children.size(); i++){
+            for(int i = 0; i < children.size(); i++){
                 children[i]->update();
             }
 
-            for(unsigned int i = 0; i < whichColumn.size(); i++){
+            for(int i = 0; i < whichColumn.size(); i++){
                 if( children[i]->boundingBox.x != columns[whichColumn[i]].x ){
                     float amntToShiftX = columns[whichColumn[i]].x - children[i]->boundingBox.x;
 
@@ -153,7 +152,7 @@ class guiTypePanel : public guiBaseObject{
                 float amnt = checkWidth - columns[col].width;
                 columns[col].width += amnt;
 
-                for(unsigned int i = col+1; i < columns.size(); i++){
+                for(int i = col+1; i < columns.size(); i++){
                     columns[i].x += amnt;
                 }
             }
@@ -237,7 +236,7 @@ class guiTypePanel : public guiBaseObject{
 
                 glPushMatrix();
                     glTranslatef(hitArea.x, hitArea.y, 0);
-                        for(unsigned int i = 0; i < children.size(); i++){
+                        for(int i = 0; i < children.size(); i++){
                             children[i]->render();
                         }
                 glPopMatrix();

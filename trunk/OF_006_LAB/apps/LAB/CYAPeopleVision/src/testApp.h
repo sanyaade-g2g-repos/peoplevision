@@ -2,7 +2,7 @@
 #ifndef _TEST_APP
 #define _TEST_APP
 
-#define _USE_LIVE_VIDEO
+//#define _USE_LIVE_VIDEO
 
 #include "ofMain.h"
 #include "ofxCYA.h"
@@ -62,6 +62,9 @@ class testApp : public ofBaseApp, public ofxPersonListener{
 			ofVideoPlayer 		vidPlayer;
 		#endif
 	
+		int itestValue;
+		float ftestValue;
+		bool btestValue;
 	
 		ofxCYAPeopleTracker peopleTracker;
 	#ifdef USING_OFX_VIDEOGRABBER && #if BLOB_TRACKER_COLOR_FORMAT == VID_FORMAT_GREYSCALE

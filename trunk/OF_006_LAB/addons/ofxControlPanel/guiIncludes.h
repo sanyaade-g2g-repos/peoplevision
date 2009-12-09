@@ -9,9 +9,6 @@
 //interface
 #include "guiTypePanel.h"
 
-//callbacks
-#include "guiCallbacks.h"
-
 //elements
 #include "guiTypeText.h"
 #include "guiTypeToggle.h"
@@ -19,8 +16,7 @@
 #include "guiTypeSlider.h"
 #include "guiType2DSlider.h"
 #include "guiTypeDrawable.h"
-#include "guiTypeButtonSlider.h"
-#include "guiTypeTextDropDown.h"
+#include "guiTypeLogger.h"
+#include "guiTypeFileLister.h"
 #include "guiTypeCustom.h"
 #include "guiCustomImpl.h"
-

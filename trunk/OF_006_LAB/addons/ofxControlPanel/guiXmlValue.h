@@ -1,6 +1,5 @@
 #pragma once
 
-#include "ofMain.h"
 
 class guiValue{
 
@@ -49,7 +48,7 @@ class guiValue{
         }
 
        //------------------------------------------------
-        bool setValue(float val, unsigned int which = 0){
+        bool setValue(float val, int which = 0){
             if(which >= 0 && which < value.size() ){
 
                 if( max[which] - min[which] == 0 ) return false;
@@ -71,7 +70,7 @@ class guiValue{
         }
 
         //------------------------------------------------
-        bool setValueAsPct(float percent, unsigned int which = 0){
+        bool setValueAsPct(float percent, int which = 0){
             if(which >= 0 && which < value.size() ){
 
                 if( max[which] - min[which] == 0 ) return false;
@@ -91,7 +90,7 @@ class guiValue{
         }
 
        //------------------------------------------------
-        float getValueF(unsigned int which = 0){
+        float getValueF(int which = 0){
             if(which >= 0 && which < value.size() ){
                 return value[which];
             }
@@ -99,7 +98,7 @@ class guiValue{
         }
 
        //------------------------------------------------
-        float getValueI(unsigned int which = 0){
+        float getValueI(int which = 0){
             if(which >= 0 && which < valueI.size() ){
                 return valueI[which];
             }
@@ -107,7 +106,7 @@ class guiValue{
         }
 
        //------------------------------------------------
-        float getValueB(unsigned int which = 0){
+        float getValueB(int which = 0){
             if(which >= 0 && which < valueB.size() ){
                 return valueB[which];
             }
@@ -115,7 +114,7 @@ class guiValue{
         }
 
         //------------------------------------------------
-        float getMin(unsigned int which = 0){
+        float getMin(int which = 0){
             if(which >= 0 && which < min.size() ){
                 return min[which];
             }
@@ -123,7 +122,7 @@ class guiValue{
         }
 
         //------------------------------------------------
-        float getMax(unsigned int which = 0){
+        float getMax(int which = 0){
             if(which >= 0 && which < max.size() ){
                 return max[which];
             }
@@ -131,7 +130,7 @@ class guiValue{
         }
 
         //------------------------------------------------
-        float getPct(unsigned int which = 0){
+        float getPct(int which = 0){
             if(which >= 0 && which < pct.size() ){
                 return pct[which];
             }
@@ -140,7 +139,7 @@ class guiValue{
 
         //------------------------------------------------
         int getNumValues(){
-            return (int) value.size();
+            return value.size();
         }
 
     protected:

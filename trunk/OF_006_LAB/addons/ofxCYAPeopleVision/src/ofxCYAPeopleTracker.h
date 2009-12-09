@@ -141,6 +141,11 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 		ofxCYAPerson* getTrackedPerson(int pid);
 		int totalPeople();
 	
+		//GUI extension
+		void addSlider(string name, int* value, int min, int max);
+		void addSlider(string name, float* value, float min, float max);
+		void addToggle(string name, bool* value);
+	
 	//drawing methods
 	
 		void setDrawMode(int mode);

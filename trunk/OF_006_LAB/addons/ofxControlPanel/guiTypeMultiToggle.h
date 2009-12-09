@@ -6,12 +6,12 @@
 #include "simpleColor.h"
 #include "guiValue.h"
 
+#define boxSpacing		2
+#define boxSize			14
 
 class guiTypeMultiToggle : public guiBaseObject{
 
     public:
-        static const int boxSpacing = 2;
-        static const int boxSize = 14;
 
         //------------------------------------------------
         void setup(string multiToggleName, int defaultBox, vector <string> boxNames){
@@ -20,7 +20,7 @@ class guiTypeMultiToggle : public guiBaseObject{
             name = multiToggleName;
 
             float lineHeight = 0;
-            for(unsigned int i = 0; i < bNames .size(); i++){
+            for(int i = 0; i < bNames .size(); i++){
                 float lineWidth = boxSpacing + boxSize + displayText.stringWidth(bNames[i]);
 
                 if( lineWidth > hitArea.width ){
@@ -38,14 +38,6 @@ class guiTypeMultiToggle : public guiBaseObject{
 
         }
 
-        //-----------------------------------------------
-        virtual void updateValue()
-        {
-            if(parameterCallback != NULL) {
-                parameterCallback->Execute(-1, -1, value.getValueI(), callback_id);
-            }
-        }
-
         //-----------------------------------------------.
         void updateGui(float x, float y, bool firstHit, bool isRelative){
             if(!firstHit)return;
@@ -54,16 +46,12 @@ class guiTypeMultiToggle : public guiBaseObject{
                 float relX = x - hitArea.x;
                 float relY = y - hitArea.y;
 
-                for(unsigned int i = 0; i < bNames.size(); i++){
+                for(int i = 0; i < bNames.size(); i++){
                     ofRectangle tmpRect(0, i * (boxSize+boxSpacing), boxSize, boxSize);
                     if( isInsideRect(relX, relY, tmpRect) ){
                         value.setValue(i, 0);
                         break;
                     }
-                }
-
-                if(parameterCallback != NULL) {
-                    parameterCallback->Execute(-1, -1, value.getValueI(), callback_id);
                 }
             }
 
@@ -80,7 +68,7 @@ class guiTypeMultiToggle : public guiBaseObject{
                 glColor4fv(bgColor.getColorF());
                 ofRect(hitArea.x, hitArea.y, hitArea.width, hitArea.height);
 
-                for(unsigned int i = 0; i < bNames.size(); i++){
+                for(int i = 0; i < bNames.size(); i++){
                     float bx = hitArea.x + 0;
                     float by = hitArea.y + i * (boxSize+boxSpacing);
 
