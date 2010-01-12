@@ -18,9 +18,17 @@ ofxCYAPerson::ofxCYAPerson(int pid, int oid, ofxCvBlob blob)
   haarRect(ofRectangle(0,0,0,0)),
   opticalFlowVectorAccumulation(ofPoint(0,0)),
   centroid(blob.centroid),
-  framesWithoutHaar(0)
+  framesWithoutHaar(0),
+  customAttributes(NULL)
 {
 	update(blob, false);
+}
+
+ofxCYAPerson::~ofxCYAPerson()
+{
+	if(customAttributes != NULL){
+		free(customAttributes);
+	}
 }
 
 void ofxCYAPerson::update(ofxCvBlob blob, bool dampen)

@@ -2,7 +2,7 @@
 #ifndef _TEST_APP
 #define _TEST_APP
 
-#define _USE_LIVE_VIDEO
+//#define _USE_LIVE_VIDEO
 
 #include "ofMain.h"
 #include "ofxCYA.h"
@@ -48,9 +48,11 @@ class testApp : public ofBaseApp, public ofxPersonListener{
 		void mousePressed(int x, int y, int button);
 		void mouseReleased(int x, int y, int button);
 			
-		void personEntered( int id );
-		void personMoved( int id );
-		void personWillLeave(int id );
+	void personEntered( ofxCYAPerson* newPerson, ofxCYAScene* scene );
+	void personMoved( ofxCYAPerson* activePerson, ofxCYAScene* scene );
+	void personWillLeave( ofxCYAPerson* leavingPerson, ofxCYAScene* scene );
+	void personUpdated( ofxCYAPerson* updatedPerson, ofxCYAScene* scene );
+	
 	
 		#ifdef _USE_LIVE_VIDEO
 			#ifdef USING_OFX_VIDEOGRABBER

@@ -90,8 +90,7 @@ void ofxCYAPeopleTracker::trackPeople()
 	//learn background (either in reset or additive)
 	if (p_Settings->bLearnBackground){
 		cout << "Learning Background" << endl;
-		floatBgImg = grayImage;
-		p_Settings->bLearnBackground = false;
+		grayBg = grayImage;
 	}
 	else if (p_Settings->bLearnBackgroundProgressive){
 		floatBgImg.addWeighted( grayImage, p_Settings->fLearnRate * .0001);
@@ -99,17 +98,19 @@ void ofxCYAPeopleTracker::trackPeople()
 		grayBg.flagImageChanged();			
 	}
 	
-	printf("track type %d from (%d,%d,%d)\n", p_Settings->trackType, TRACK_ABSOLUTE, TRACK_DARK, TRACK_LIGHT);
+	//printf("track type %d from (%d,%d,%d)\n", p_Settings->trackType, TRACK_ABSOLUTE, TRACK_DARK, TRACK_LIGHT);
 	if(p_Settings->trackType == TRACK_ABSOLUTE){
 		grayDiff.absDiff(grayBg, grayImage);
 	}
 	else{
 		grayDiff = grayImage;
-		if(p_Settings->trackType == TRACK_DARK){
+		if(p_Settings->trackType == TRACK_LIGHT){
+			//grayDiff = grayBg - grayImage;
 			cvSub(grayBg.getCvImage(), grayDiff.getCvImage(), grayDiff.getCvImage());
 		}
 		else if(p_Settings->trackType == TRACK_LIGHT){ 
 			cvSub(grayDiff.getCvImage(), grayBg.getCvImage(), grayDiff.getCvImage());
+			//grayDiff = grayImage - grayBg;
 		}
 		grayDiff.flagImageChanged();
 	}
@@ -136,7 +137,6 @@ void ofxCYAPeopleTracker::trackPeople()
 	//-----------------------
 	// TRACKING
 	//-----------------------	
-	
 	if (p_Settings->bTrackOpticalFlow){
 		opticalFlow.calc(grayLastImage, graySmallImage, 11);
 	}
@@ -144,16 +144,19 @@ void ofxCYAPeopleTracker::trackPeople()
 	contourFinder.findContours(grayDiff, p_Settings->minBlob*width*height, p_Settings->maxBlob*width*height, 50, p_Settings->bFindHoles);
 	persistentTracker.trackBlobs(contourFinder.blobs);
 	
+	scene.averageMotion = opticalFlow.flowInRegion(0,0,width,height);
+	scene.percentCovered = 0; 
+	
 	for(int i = 0; i < persistentTracker.blobs.size(); i++){
 		ofxCvTrackedBlob blob = persistentTracker.blobs[i];
+		ofxCYAPerson* p = getTrackedPerson(blob.id);
 		//somehow we are not tracking this person, safeguard (shouldn't happen)
-		if(!isTrackingPerson(blob.id)){
+		if(NULL == p){
 			printf("ofxPerson::warning. encountered persistent blob without a person behind them\n");
 			continue;
 		}
 		
-		//get the tracked person
-		ofxCYAPerson* p = getTrackedPerson(blob.id);
+		scene.percentCovered += blob.area;
 		
 		//update this person with new blob info
 		p->update(blob, p_Settings->bCentroidDampen);
@@ -203,10 +206,16 @@ void ofxCYAPeopleTracker::trackPeople()
 			}
 		}
 		
-		if(eventListener != NULL && (p->velocity.x != 0 || p->velocity.y != 0) ){
-			eventListener->personMoved(p->pid);
-		}		
+		if(eventListener != NULL){
+			if( p->velocity.x != 0 || p->velocity.y != 0){
+				eventListener->personMoved(p, &scene);
+			}
+			eventListener->personUpdated(p, &scene);
+		}
 	}
+	
+	//normalize it
+	scene.percentCovered /= width*height;
 	
 	if(bTuioEnabled){
 		for (int i = 0; i < trackedPeople.size(); i++){
@@ -232,9 +241,10 @@ void ofxCYAPeopleTracker::trackPeople()
 void ofxCYAPeopleTracker::blobOn( int x, int y, int id, int order )
 {
 	ofxCvTrackedBlob blob = persistentTracker.getById( id );
-	trackedPeople.push_back( new ofxCYAPerson(id, order, blob) );
+	ofxCYAPerson* newPerson = new ofxCYAPerson(id, order, blob);
+	trackedPeople.push_back( newPerson );
 	if(eventListener != NULL){
-		eventListener->personEntered(id);
+		eventListener->personEntered(newPerson, &scene);
 	}
 	if(bTuioEnabled){
 		tuioClient.cursorPressed(1.0*x/width, 1.0*y/height, order);
@@ -245,18 +255,16 @@ void ofxCYAPeopleTracker::blobMoved( int x, int y, int id, int order ){/*not use
 
 void ofxCYAPeopleTracker::blobOff( int x, int y, int id, int order )
 {
+	ofxCYAPerson* p = getTrackedPerson(id);
 	//ensure we are tracking
-	if(!isTrackingPerson(id)){
+	if(NULL == p){
 		printf("ofxPerson::warning. encountered persistent blob without a person behind them\n");		
 		return;
 	}
 	
-	//flag them for removal
-	ofxCYAPerson* p = getTrackedPerson(id);
-	
 	//alert the delegate
 	if(eventListener != NULL){
-		eventListener->personWillLeave(id);
+		eventListener->personWillLeave(p, &scene);
 	}
 	if (bTuioEnabled) {
 		ofPoint cursor = p->getCentroidNormalized(width, height);
@@ -274,15 +282,15 @@ void ofxCYAPeopleTracker::blobOff( int x, int y, int id, int order )
 	}
 }
 
-bool ofxCYAPeopleTracker::isTrackingPerson( int pid )
-{
-    for( int i = 0; i < trackedPeople.size(); i++ ) {
-        if( trackedPeople[i]->pid == pid ) {
-            return true;
-        }
-    }
-	return false;
-}
+//bool ofxCYAPeopleTracker::isTrackingPerson( int pid )
+//{
+//    for( int i = 0; i < trackedPeople.size(); i++ ) {
+//        if( trackedPeople[i]->pid == pid ) {
+//            return true;
+//        }
+//    }
+//	return false;
+//}
 
 ofxCYAPerson* ofxCYAPeopleTracker::getTrackedPerson( int pid )
 {
@@ -291,6 +299,7 @@ ofxCYAPerson* ofxCYAPeopleTracker::getTrackedPerson( int pid )
             return trackedPeople[i];
         }
     }
+	return NULL;
 }
 
 #pragma mark Draw

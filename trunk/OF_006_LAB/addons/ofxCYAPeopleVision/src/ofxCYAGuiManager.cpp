@@ -145,11 +145,10 @@ void ofxCYAGuiManager::update(ofEventArgs &e)
 	p_Settings->bAmplify = panel.getValueB("USE_AMPLIFICATION");
 	p_Settings->highpassAmp = panel.getValueI("AMPLIFICATION_AMOUNT");
 	
-	//TODO optionally disable people
-	//panel.addToggle("track people", "TRACK_PEOPLE", false);
-	if(!p_Settings->bLearnBackground){ // a little weird b/c it's a one-shot toggle
-		p_Settings->bLearnBackground = panel.getValueB("LEARN_BACKGROUND");
+	if(p_Settings->bLearnBackground){ 
+		panel.setValueB("LEARN_BACKGROUND", false);
 	}
+	p_Settings->bLearnBackground = panel.getValueB("LEARN_BACKGROUND");
 	//panel.setValueB("LEARN_BACKGROUND", p_Settings->bLearnBackground);
 	//JG 12/8/09 GUI-REDUX Removing this feature
 	//gui.addToggle("smart learn background", &p_Settings->bSmartLearnBackground);
