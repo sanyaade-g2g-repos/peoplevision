@@ -1,0 +1,99 @@
+<BRIGHTNESS>
+    <val_0>95.544441</val_0>
+</BRIGHTNESS>
+<EXPOSURE>
+    <val_0>36.027779</val_0>
+</EXPOSURE>
+<GAMMA>
+    <val_0>0.000000</val_0>
+</GAMMA>
+<SHUTTER>
+    <val_0>501.555542</val_0>
+</SHUTTER>
+<GAIN>
+    <val_0>35.000000</val_0>
+</GAIN>
+<BRIGHTNESS_MODE>
+    <val_0>0.000000</val_0>
+</BRIGHTNESS_MODE>
+<EXPOSURE_MODE>
+    <val_0>0.000000</val_0>
+</EXPOSURE_MODE>
+<GAMMA_MODE>
+    <val_0>0.000000</val_0>
+</GAMMA_MODE>
+<SHUTTER_MODE>
+    <val_0>0.000000</val_0>
+</SHUTTER_MODE>
+<GAIN_MODE>
+    <val_0>1.000000</val_0>
+</GAIN_MODE>
+<THRESHOLD>
+    <val_0>19.833334</val_0>
+</THRESHOLD>
+<USE_SMOOTHING>
+    <val_0>1.000000</val_0>
+</USE_SMOOTHING>
+<SMOOTH_AMOUNT>
+    <val_0>1.666667</val_0>
+</SMOOTH_AMOUNT>
+<USE_HIGHPASS>
+    <val_0>0.000000</val_0>
+</USE_HIGHPASS>
+<HIGHPASS_BLUR>
+    <val_0>200.000000</val_0>
+</HIGHPASS_BLUR>
+<HIGHPASS_NOISE>
+    <val_0>14.855556</val_0>
+</HIGHPASS_NOISE>
+<USE_AMPLIFICATION>
+    <val_0>1.000000</val_0>
+</USE_AMPLIFICATION>
+<AMPLIFICATION_AMOUNT>
+    <val_0>4.316667</val_0>
+</AMPLIFICATION_AMOUNT>
+<LEARN_BACKGROUND>
+    <val_0>0.000000</val_0>
+</LEARN_BACKGROUND>
+<MIN_BLOB>
+    <val_0>0.010000</val_0>
+</MIN_BLOB>
+<MAX_BLOB>
+    <val_0>0.500000</val_0>
+</MAX_BLOB>
+<RELEARN>
+    <val_0>0.000000</val_0>
+</RELEARN>
+<RELEARN_BACKGROUND>
+    <val_0>0.100000</val_0>
+</RELEARN_BACKGROUND>
+<FIND_HOLES>
+    <val_0>0.000000</val_0>
+</FIND_HOLES>
+<SENSE_OPTICAL_FLOW>
+    <val_0>1.000000</val_0>
+</SENSE_OPTICAL_FLOW>
+<BLOB_TYPE>
+    <val_0>0.000000</val_0>
+</BLOB_TYPE>
+<SENSE_HAAR>
+    <val_0>0.000000</val_0>
+</SENSE_HAAR>
+<HAAR_PADDING>
+    <val_0>0.000000</val_0>
+</HAAR_PADDING>
+<MIN_HAAR>
+    <val_0>0.055650</val_0>
+</MIN_HAAR>
+<MAX_HAAR>
+    <val_0>0.500000</val_0>
+</MAX_HAAR>
+<CUSTOM>
+    <val_0>-1582185984.000000</val_0>
+</CUSTOM>
+<USTOM>
+    <val_0>-0.000000</val_0>
+</USTOM>
+<STOM>
+    <val_0>211.000000</val_0>
+</STOM>
