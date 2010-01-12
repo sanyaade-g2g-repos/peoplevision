@@ -64,6 +64,7 @@
 #include "ofxCYAGuiManager.h"
 #include "ofxCYATUIOSender.h"
 #include "ofxCvBlobTracker.h"
+#include "ofxCYAScene.h"
 
 #define DRAW_MODE_NORMAL				0
 #define DRAW_MODE_GUI					1
@@ -74,11 +75,13 @@
 class ofxPersonListener {
 public:
 	//called when the person enters the system
-    virtual void personEntered( int id ) = 0;
+    virtual void personEntered( ofxCYAPerson* person, ofxCYAScene* scene ) = 0;
 	//called each time the centroid moves (a lot)
-	virtual void personMoved( int id ) = 0;
+	virtual void personMoved( ofxCYAPerson* person, ofxCYAScene* scene ) = 0;
 	//called one frame before the person is removed from the list to let you clean up
-    virtual void personWillLeave(int id ) = 0;
+    virtual void personWillLeave( ofxCYAPerson* person, ofxCYAScene* scene ) = 0;
+	//called every frame no matter what.
+	virtual void personUpdated(ofxCYAPerson* person, ofxCYAScene* scene) = 0;
 };
 
 class ofxCYAPeopleTracker : public ofxCvBlobListener {
@@ -166,7 +169,8 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 
 	
 		vector<ofxCYAPerson*> trackedPeople;
-		
+		ofxCYAScene scene;
+	
 		ofxCvGrayscaleImage	grayImage;
 		ofxCvGrayscaleImage	grayLastImage;
 		

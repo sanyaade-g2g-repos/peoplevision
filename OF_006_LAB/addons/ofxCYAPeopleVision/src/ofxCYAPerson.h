@@ -54,9 +54,10 @@ class ofxCYAPerson
 {
 	public: 
 		ofxCYAPerson(int pid, int oid, ofxCvBlob blob);
-	
+		~ofxCYAPerson();
 		void update(ofxCvBlob blob, bool dampen);
 
+		//this can be a pointer to whatever you want to store in this person
 		void* customAttributes;
 	
 		void setHaarRect(ofRectangle _haarRect);
@@ -80,8 +81,6 @@ class ofxCYAPerson
 		ofRectangle getBoundingRectNormalized(float videoWidth, float videoHeight);
 		ofPoint getCentroidNormalized(float videoWidth, float videoHeight);
 		ofPoint getHaarCentroidNormalized(float videoWidth, float videoHeight);
-	
-		//bool shouldRemove; //used by by peopletracker for management
 	
 	protected:
 		

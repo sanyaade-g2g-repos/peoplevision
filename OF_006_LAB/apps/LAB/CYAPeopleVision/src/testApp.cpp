@@ -1,5 +1,15 @@
 #include "testApp.h"
 
+class CYAPersonAttributes {
+  public:
+	CYAPersonAttributes(){
+		height = 0;
+		hasBeard = false;
+	}
+
+	float height;
+	bool hasBeard;
+};
 
 //--------------------------------------------------------------
 void testApp::setup(){
@@ -44,7 +54,7 @@ void testApp::setup(){
 	#endif
 	
 #else
-	vidPlayer.loadMovie("jim_face_tests.mov");
+	vidPlayer.loadMovie("hand_tracking_test.mov");
 	vidPlayer.play();
 #endif
     
@@ -101,41 +111,34 @@ void testApp::update(){
 	}
 }
 
-//void testApp:updatePerson(ofxPerson p, ofxScene s){
-//	//check person's contour
-//	(MyCustomAttributes*) attr = p.customAttrubtes;
-//	
-//	if(){
-//
-//		p.istall = true;
-//	}
-//}
-
 //delegate methods for people entering and exiting
-void testApp::personEntered( int id )
+void testApp::personEntered( ofxCYAPerson* newPerson, ofxCYAScene* scene )
 {
-	//get the person
-	ofxCYAPerson* newPerson = peopleTracker.getTrackedPerson(id);
+	newPerson->customAttributes = new CYAPersonAttributes();
 	
 	//do something with them
-	printf("person %d of size %f entered!\n", id, newPerson->area);
+	printf("person %d of size %f entered!\n", newPerson->pid, newPerson->area);
 }
 
-void testApp::personMoved( int id )
+void testApp::personMoved( ofxCYAPerson* activePerson, ofxCYAScene* scene )
 {
-	ofxCYAPerson* activePerson = peopleTracker.getTrackedPerson(id);
 	
 	//do something with the moving person
-	printf("person %d of moved to (%f,%f)!\n", id, activePerson->boundingRect.x, activePerson->boundingRect.y);
+	printf("person %d of moved to (%f,%f)!\n", activePerson->pid, activePerson->boundingRect.x, activePerson->boundingRect.y);
 }
 
-void testApp::personWillLeave(int id )
+void testApp::personWillLeave( ofxCYAPerson* leavingPerson, ofxCYAScene* scene )
 {
-	//get the person who is just disappeared
-	ofxCYAPerson* leavingPerson = peopleTracker.getTrackedPerson(id);
-	
 	//do something to clean up
-	printf("person %d left after being %d frames in the system\n", id, leavingPerson->age);
+	printf("person %d left after being %d frames in the system\n", leavingPerson->pid, leavingPerson->age);
+}
+
+void testApp::personUpdated( ofxCYAPerson* updatedPerson, ofxCYAScene* scene )
+{
+	CYAPersonAttributes* attrbs = (CYAPersonAttributes*)updatedPerson->customAttributes;
+	attrbs->hasBeard = true;
+	
+	printf("updated %d person\n", updatedPerson->pid);
 }
 
 //--------------------------------------------------------------
