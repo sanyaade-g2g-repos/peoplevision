@@ -46,6 +46,12 @@ class guiValue{
             //update our pct
             updatePct(value.size()-1);
         }
+	
+		//BR ADDED STRING VALUE
+		//------------------------------------------------
+		void addValueS(string val){
+			valueS.push_back(val);
+		}
 
        //------------------------------------------------
         bool setValue(float val, int which = 0){
@@ -68,6 +74,16 @@ class guiValue{
             }
             return false;
         }
+		
+		//------------------------------------------------
+		bool setValue(string val, int which = 0){
+			if(which >= 0 && which < value.size() ){
+				
+				valueS[which] = val;
+				return true;
+			}
+			return false;
+		}
 
         //------------------------------------------------
         bool setValueAsPct(float percent, int which = 0){
@@ -112,6 +128,14 @@ class guiValue{
             }
             return false;
         }
+		
+		//------------------------------------------------
+		string getValueS(int which = 0){
+			if(which >= 0 && which < valueB.size() ){
+				return valueS[which];
+			}
+			return "";
+		}
 
         //------------------------------------------------
         float getMin(int which = 0){
@@ -153,7 +177,8 @@ class guiValue{
         //--------------
         vector <float> value;
         vector <float> valueI;
-        vector <float> valueB;
+		vector <float> valueB;
+		vector <string> valueS;
 
         vector <float> min;
         vector <float> max;

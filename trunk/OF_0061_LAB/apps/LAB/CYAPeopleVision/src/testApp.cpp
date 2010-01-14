@@ -36,7 +36,7 @@ void testApp::setup(){
 	//sdk->setDeviceID("b09d01008bc69e:0");
 
 	ofxIIDCSettings *settings = new ofxIIDCSettings;
-	settings->setXMLFilename("settings.xml");
+	settings->setXMLFilename(ofToDataPath("settings.xml", true));
 		
 	bool result = vidGrabber.initGrabber( camWidth, camHeight, BLOB_TRACKER_VIDEO_FORMAT, BLOB_TRACKER_COLOR_FORMAT, 60, true, sdk, settings );
 	
@@ -60,7 +60,7 @@ void testApp::setup(){
 	colorImg.allocate(camWidth, camHeight);
 	peopleTracker.setup(camWidth, camHeight);
 	//send tuio events
-	peopleTracker.setupTuio("localhost", 3333);
+	//peopleTracker.setupTuio("localhost", 3333);
 	//listen to any events from people entering or exiting
 	peopleTracker.setListener( this );
 	

@@ -84,6 +84,8 @@ class ofxControlPanel: public guiBaseObject{
         void mousePressed(float x, float y, int button);
         void mouseDragged(float x, float y, int button);
         void mouseReleased();
+		void keyPressed(int key);
+		void keyReleased(int key);
 
         void updateBoundingBox();
         void update();
