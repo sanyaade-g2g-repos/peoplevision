@@ -10,10 +10,12 @@ class guiTypeText : public guiBaseObject, public guiTextBase{
 
     public:
 		
+	
 		//------------------------------------------------
-		void setup(string toggleName, bool defaultVal){
-			value.addValue( (int)defaultVal, 0, 1);
-			name = toggleName;
+		void setup(string textName, string defaultVal, int width, int height){
+			value.addValueS( (string)defaultVal);
+			name = textName;
+			setDimensions(width, height);
 		}
 		
 		//-----------------------------------------------.
@@ -21,16 +23,32 @@ class guiTypeText : public guiBaseObject, public guiTextBase{
 			if(!firstHit)return;
 			
 			if( state == SG_STATE_SELECTED){
-				if( value.getValueI() == 0 ){
-					value.setValue(1, 0);
+				
+			}
+		}
+	
+		void keyPressed(int key){
+			string newValue = "";
+			newValue += value.getValueS();
+			if ( bTextEnterMode ){
+				if (key == OF_KEY_BACKSPACE){
+					if (newValue.size() > 0) {
+						newValue.erase(newValue.size()-1);
+					}
+				} else if ( key == OF_KEY_RETURN ){
+					bTextEnterMode = false;
+					setNormal();					
 				} else {
-					value.setValue(0, 0);
+					newValue += key;
 				}
 			}
+			bool set = value.setValueS( newValue );
+			cout<<"SET? "<<set<<endl;
 		}
 		
 		//-----------------------------------------------.
 		void render(){
+			string newValue = value.getValueS();
 			ofPushStyle();
 			glPushMatrix();
 			guiBaseObject::renderText();
@@ -45,17 +63,23 @@ class guiTypeText : public guiBaseObject, public guiTextBase{
 			glColor4fv(outlineColor.getColorF());
 			ofRect(hitArea.x, hitArea.y, hitArea.width, hitArea.height);
 			
-			if( value.getValueI() == 1){
-				ofFill();
-			}else{
-				ofNoFill();
-			}
+			ofFill();
+			glColor4fv(outlineColor.getColorF());
+			ofDrawBitmapString(newValue, hitArea.x, hitArea.y+hitArea.height*3/4);
+			ofNoFill();
 			
 			glColor4fv(fgColor.getColorF());
 			ofRect(hitArea.x+3, hitArea.y+3, -6 + hitArea.width, -6 + hitArea.height);
 			
 			glPopMatrix();
 			ofPopStyle();
+		}
+		
+		virtual void release(){
+			if (!bTextEnterMode){
+				state = SG_STATE_NORMAL;
+				setNormal();
+			}
 		}
 
 

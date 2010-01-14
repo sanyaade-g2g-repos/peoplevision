@@ -9,7 +9,7 @@
 class guiTextBase{
 
     public:
-
+		
         //-------------------------------------------
         guiTextBase(){
             textString = "";

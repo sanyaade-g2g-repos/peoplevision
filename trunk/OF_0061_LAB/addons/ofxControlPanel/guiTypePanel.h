@@ -83,6 +83,16 @@ class guiTypePanel : public guiBaseObject{
             }
             return false;
         }
+	
+	
+		//-----------------------------------------------.
+		virtual void keyPressed(int key){
+			if( !locked ){
+				for(int i = 0; i < children.size(); i++){
+					if (children[i]->state == SG_STATE_SELECTED) children[i]->keyPressed(key);
+				}
+			}
+		}
 
         //-----------------------------------------------.
         void updateGui(float x, float y, bool firstHit, bool isRelative){

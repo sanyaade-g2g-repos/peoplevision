@@ -22,6 +22,7 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	ofAddListener(ofEvents.mousePressed, this, &ofxCYAGuiManager::mousePressed);
 	ofAddListener(ofEvents.mouseDragged, this, &ofxCYAGuiManager::mouseDragged);
 	ofAddListener(ofEvents.mouseReleased, this, &ofxCYAGuiManager::mouseReleased);
+	ofAddListener(ofEvents.keyPressed, this, &ofxCYAGuiManager::keyPressed);
 	
 	enableGui = true;
 	//ofxCYASettings *p_Settings;
@@ -77,6 +78,7 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	panel.setWhichColumn(0);
 	panel.addToggle("send OSC", "SEND_OSC", false);
 	panel.addToggle("send TUIO", "SEND_TUIO", false);
+	panel.addTextField("osc host", "OSC_HOST", "localhost", 200, 20);
 	
 	//panel.addT
 	
