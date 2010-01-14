@@ -75,7 +75,8 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	//JG TODO: Optionally change config file through the UI
 	//this would be a big help for setting up multiple install sites and having those setting
 	//included in repositories
-	panel.loadSettings("settings/settings.xml");
+	//BR : NEED TO TEST THE TODATAPATH STUFF... HAD SOME WEIRDNESS IN 0061
+	panel.loadSettings(ofToDataPath("data/settings/settings.xml", true));
 
 }
 
@@ -171,6 +172,16 @@ void ofxCYAGuiManager::update(ofEventArgs &e)
 	p_Settings->minHaarArea = panel.getValueF("MIN_HAAR");
 	p_Settings->maxHaarArea = panel.getValueF("MAX_HAAR");
 	
+	//BR UPDATE GUI QUADS HERE
+	// because this returns a pointer to the actual points that get updated,
+	// you store it in an array so it doesn't get updated when it draws
+	ofPoint * scaledPoints = quadGui.getScaledQuadPoints(640,480);
+	for (int i=0; i<4; i++){
+		p_Settings->quadWarpScaled[i] = scaledPoints[i];
+	}
+	//calculate the openCV matrix for our coordWarping
+	//quadGui.calculateMatrix(p_Settings->quadWarpScaled, p_Settings->quadWarpOriginal);
+	
 	//modify custom parameters
 	vector<ofxCYAGUICustomParam>::iterator it;
 	for(it = params.begin(); it != params.end(); it++){
@@ -192,10 +203,47 @@ void ofxCYAGuiManager::update(ofEventArgs &e)
 	}
 }
 
+//BR: Added some messiness here to setup, draw, and update the gui quad...
+
+void ofxCYAGuiManager::setupQuadGui ( int cameraWidth, int cameraHeight )
+{
+	ofxCYASettings *p_Settings;
+	p_Settings = ofxCYASettings::getInstance();
+	
+	// give the gui quad a starting setting
+	
+	ofPoint quadSrc[4];
+	quadSrc[0].set(0, 0);
+	quadSrc[1].set(cameraWidth, 0);
+	quadSrc[2].set(cameraWidth, cameraHeight);
+	quadSrc[3].set(0, cameraHeight);
+	quadGui.setQuadPoints(quadSrc);
+	
+	// give the gui quad a default setting
+	p_Settings->quadWarpOriginal[0].set(0, 0);
+	p_Settings->quadWarpOriginal[1].set(cameraWidth, 0);
+	p_Settings->quadWarpOriginal[2].set(cameraWidth, cameraHeight);
+	p_Settings->quadWarpOriginal[3].set(0, cameraHeight);
+	
+	//BR TO DO: add this into the normal settings file
+	quadGui.readFromFile("guiquad-settings.xml");	
+	quadGui.width = cameraWidth;
+	quadGui.height = cameraHeight;
+	quadGui.scale = 0.5f;
+	quadGui.x = 335;
+	quadGui.y = 15;
+		
+	quadGuiSetup = true;
+};
+
 //forward to gui
 void ofxCYAGuiManager::mousePressed(ofMouseEventArgs &e)
 {
 	if(enableGui) panel.mousePressed(e.x, e.y, e.button);
+	if(quadGuiSetup){
+		ofxCYASettings *p_Settings;
+		p_Settings = ofxCYASettings::getInstance();
+	}
 }
 
 void ofxCYAGuiManager::mouseDragged(ofMouseEventArgs &e)

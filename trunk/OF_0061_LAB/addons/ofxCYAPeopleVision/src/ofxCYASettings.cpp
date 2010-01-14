@@ -19,7 +19,7 @@ ofxCYASettings* ofxCYASettings::getInstance()
         single = new ofxCYASettings();
         instanceFlag = true;
 		single->bLearnBackground = false;
-		single->bTrackOpticalFlow = true;
+		single->bTrackOpticalFlow = false;
 		
 		single->bLearnBackgroundProgressive = true;
 		single->trackType = TRACK_LIGHT;

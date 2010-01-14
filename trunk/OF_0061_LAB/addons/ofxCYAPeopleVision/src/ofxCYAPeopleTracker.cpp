@@ -8,10 +8,14 @@
 #pragma mark Setup
 void ofxCYAPeopleTracker::setup(int w, int h)
 {
+	ofSetLogLevel(OF_LOG_VERBOSE);
+	ofSetDataPathRoot("data");
+	
 	width  = w;
 	height = h;
-	
+		
 	grayImage.allocate(width, height);
+	grayImageWarped.allocate(width, height);
 	grayBg.allocate(width, height);
 	grayDiff.allocate(width, height);
 	floatBgImg.allocate(width, height);
@@ -23,22 +27,24 @@ void ofxCYAPeopleTracker::setup(int w, int h)
 	//set up optical flow
 	opticalFlow.allocate( width*TRACKING_SCALE_FACTOR, height*TRACKING_SCALE_FACTOR );
 	opticalFlow.setCalcStep(5,5);
+	grayLastImage = graySmallImage;
 	
 	//set tracker
-	ofSetDataPathRoot("data");
 	setHaarXMLFile(ofToDataPath("data/HS.xml", true));
-		
+	
 	p_Settings = ofxCYASettings::getInstance();
 	
 	//gui.loadFromXML();	
 	//gui.setDraw(true);	
+		
+	//setup gui quad in manager
+	gui.setupQuadGui( 640, 480 );
 	
     persistentTracker.setListener( this );
 }
 
 void ofxCYAPeopleTracker::setHaarXMLFile(string haarFile)
 {
-	cout<<haarFile<<endl;
 	haarFinder.setup(haarFile);
 	haarTracker.setup(&haarFinder);
 
@@ -75,8 +81,16 @@ void ofxCYAPeopleTracker::update(ofxCvGrayscaleImage image)
  */
 void ofxCYAPeopleTracker::trackPeople()
 {
-	graySmallImage.scaleIntoMe(grayImage);
-	grayBabyImage.scaleIntoMe(grayImage);
+	
+	//-------------------
+	//QUAD WARPING
+	//-------------------
+		
+	//warp background
+	grayImageWarped.warpIntoMe(grayImage, p_Settings->quadWarpScaled, p_Settings->quadWarpOriginal);
+	
+	graySmallImage.scaleIntoMe(grayImageWarped);
+	grayBabyImage.scaleIntoMe(grayImageWarped);
 	
 	//-------------------
 	//BACKGROUND
@@ -87,32 +101,33 @@ void ofxCYAPeopleTracker::trackPeople()
 	//I think it's a great ideas but it needs to be better described and "5" needs to be customizable
 //	if (p_Settings->bSmartLearnBackground == true && contourFinder.nBlobs > 5){
 //		p_Settings->bLearnBackground = true;
-//	}
+	//	}
 	
 	//learn background (either in reset or additive)
 	if (p_Settings->bLearnBackground){
 		cout << "Learning Background" << endl;
-		grayBg = grayImage;
+		grayBg = grayImageWarped;
 	}
 	else if (p_Settings->bLearnBackgroundProgressive){
-		floatBgImg.addWeighted( grayImage, p_Settings->fLearnRate * .0001);
+		floatBgImg.addWeighted( grayImageWarped, p_Settings->fLearnRate * .0001);
 		cvConvertScale( floatBgImg.getCvImage(), grayBg.getCvImage(), 255.0f/65535.0f, 0 );       
 		grayBg.flagImageChanged();			
 	}
 	
 	//printf("track type %d from (%d,%d,%d)\n", p_Settings->trackType, TRACK_ABSOLUTE, TRACK_DARK, TRACK_LIGHT);
 	if(p_Settings->trackType == TRACK_ABSOLUTE){
-		grayDiff.absDiff(grayBg, grayImage);
+		cout << "graydiff.."<<endl;
+		grayDiff.absDiff(grayBg, grayImageWarped);
 	}
 	else{
-		grayDiff = grayImage;
+		grayDiff = grayImageWarped;
 		if(p_Settings->trackType == TRACK_LIGHT){
-			//grayDiff = grayBg - grayImage;
+			//grayDiff = grayBg - grayImageWarped;
 			cvSub(grayBg.getCvImage(), grayDiff.getCvImage(), grayDiff.getCvImage());
 		}
 		else if(p_Settings->trackType == TRACK_LIGHT){ 
 			cvSub(grayDiff.getCvImage(), grayBg.getCvImage(), grayDiff.getCvImage());
-			//grayDiff = grayImage - grayBg;
+			//grayDiff = grayImageWarped - grayBg;
 		}
 		grayDiff.flagImageChanged();
 	}
@@ -236,7 +251,7 @@ void ofxCYAPeopleTracker::trackPeople()
 	}
 	
 	//store the old image
-	grayLastImage = graySmallImage;	
+	grayLastImage = graySmallImage;
 }
 
 #pragma mark Person Management
@@ -328,13 +343,15 @@ void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 			ofTranslate(320, 0, 0);
 			// draw the incoming, the grayscale, the bg and the thresholded difference
 			ofSetColor(0xffffff);
-			grayImage.draw(20,20,320,240);
-			grayDiff.draw(360,20,320,240);
-			grayBg.draw(20,280,320,240);
-								
+			grayImage.draw(15,15,320,240);
+			grayImageWarped.draw(345,15,320,240);
+			//grayDiff.draw(360,20,320,240);
+			grayDiff.draw(15,265,320,240);
+			grayBg.draw(345,265,320,240);
+														
 			//individually draw blobs and report findings
 			ofPushMatrix();{
-				ofTranslate(360,280);
+				ofTranslate(15,515);
 				
 				ofFill();
 				ofSetColor(0x333333);
@@ -342,6 +359,7 @@ void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 				ofSetColor(0xffffff);
 				
 				ofNoFill();
+				
 				if (p_Settings->bTrackOpticalFlow){
 					ofSetColor(0x888888);
 					opticalFlow.draw(width*TRACKING_SCALE_FACTOR, height*TRACKING_SCALE_FACTOR);
@@ -405,13 +423,16 @@ void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 //				break;
 //			case DRAW_MODE_FULLSCREEN:
 //				ofSetColor(0xffffff);
-//				grayImage.draw(0,0,ofGetWidth(),ofGetHeight());
+//				grayImageWarped.draw(0,0,ofGetWidth(),ofGetHeight());
 //		
 //				break;
 //			default:
 //				printf("undefined draw mode: %d\n", mode);
 //				break;
 		}ofPopMatrix();
+	
+	//draw gui outside of translate matrix
+	gui.drawQuadGui();
 }
 
 #pragma mark gui extension

@@ -49,6 +49,9 @@ public:
 	float maxHaarArea;
 	bool bCentroidDampen;
 	
+	ofPoint quadWarpScaled[4];
+	ofPoint quadWarpOriginal[4];
+	
 private:
 	static bool instanceFlag;
 	static ofxCYASettings *single;
