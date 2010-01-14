@@ -10,6 +10,9 @@
 //#include "ofxSimpleGuiToo.h"
 #include "ofxControlPanel.h"
 
+// maybe there's a simpler way to integrate this?
+#include "ofxCvCoordWarpingGui.h"
+
 typedef struct  {	
 	int type;
 	string key;
@@ -26,7 +29,11 @@ class ofxCYAGuiManager {
 	ofxCYAGuiManager();
 	//ofxSimpleGuiToo	gui;
 	
-	bool enableGui;
+	bool enableGui;	
+	void setupQuadGui ( int cameraWidth, int cameraHeight );
+	void drawQuadGui(){
+		quadGui.draw();
+	};
 	
 	void update(ofEventArgs &e);
 	void draw(ofEventArgs &e);
@@ -48,5 +55,9 @@ class ofxCYAGuiManager {
 	//a little goofy way to keep track of custom params. works but i'm open to suggestions
 	ofxControlPanel panel;
 	vector<ofxCYAGUICustomParam> params;
-
+	
+	//an even goofier way to easily add the quad qui
+	bool quadGuiSetup;
+	ofxCvCoordWarpingGui quadGui;
+	
 };

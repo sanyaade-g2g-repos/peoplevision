@@ -49,9 +49,17 @@ void CPUImageFilter::operator = ( const ofxCvGrayscaleImage& _mom ) {
     if(this != &_mom) {  //check for self-assignment
         // cast non-const,  no worries, we will reverse any chages
         ofxCvGrayscaleImage& mom = const_cast<ofxCvGrayscaleImage&>(_mom); 
-            
-        if( matchingROI(getROI(), mom.getROI()) ) {
+		
+		ofRectangle iRoi = (*this).getIntersectionROI( (*this).getROI(), mom.getROI() );
+		
+		if( iRoi.width > 0 && iRoi.height > 0 ) {
+        //if( pushSetBothToTheirIntersectionROI(*this,mom) ) {
+			mom.setROI(iRoi);
+			(*this).setROI(iRoi);
             cvCopy( mom.getCvImage(), cvImage, 0 );
+			mom.resetROI(); //restore prevoius ROI
+			(*this).resetROI();	//restore prevoius ROI
+			
             //popROI();       //restore prevoius ROI
             //mom.popROI();   //restore prevoius ROI              
             flagImageChanged();
@@ -67,10 +75,16 @@ void CPUImageFilter::operator = ( const ofxCvGrayscaleImage& _mom ) {
 void CPUImageFilter::operator = ( const ofxCvColorImage& _mom ) {
     // cast non-const,  no worries, we will reverse any chages
     ofxCvColorImage& mom = const_cast<ofxCvColorImage&>(_mom); 
-	if( matchingROI(getROI(), mom.getROI()) ) {
+	
+	ofRectangle iRoi = (*this).getIntersectionROI( (*this).getROI(), mom.getROI() );
+	
+	if( iRoi.width > 0 && iRoi.height > 0 ) {
+        //if( pushSetBothToTheirIntersectionROI(*this,mom) ) {
+		mom.setROI(iRoi);
+		(*this).setROI(iRoi);
 		cvCvtColor( mom.getCvImage(), cvImage, CV_RGB2GRAY );
-        //popROI();       //restore prevoius ROI
-        //mom.popROI();   //restore prevoius ROI         
+		mom.resetROI(); //restore prevoius ROI
+		(*this).resetROI();	//restore prevoius ROI    
         flagImageChanged();
 	} else {
         ofLog(OF_LOG_ERROR, "in =, ROI mismatch");
@@ -81,11 +95,18 @@ void CPUImageFilter::operator = ( const ofxCvColorImage& _mom ) {
 void CPUImageFilter::operator = ( const ofxCvFloatImage& _mom ) {
     // cast non-const,  no worries, we will reverse any chages
     ofxCvFloatImage& mom = const_cast<ofxCvFloatImage&>(_mom); 
-	if( matchingROI(getROI(), mom.getROI()) ) {
+	
+	ofRectangle iRoi = (*this).getIntersectionROI( (*this).getROI(), mom.getROI() );
+	
+	if( iRoi.width > 0 && iRoi.height > 0 ) {
+        //if( pushSetBothToTheirIntersectionROI(*this,mom) ) {
+		mom.setROI(iRoi);
+		(*this).setROI(iRoi);
+		
 		//cvConvertScale( mom.getCvImage(), cvImage, 1.0f, 0);
         cvConvert( mom.getCvImage(), cvImage );
-        //popROI();       //restore prevoius ROI
-        //mom.popROI();   //restore prevoius ROI          
+		mom.resetROI(); //restore prevoius ROI
+		(*this).resetROI();	//restore prevoius ROI          
         flagImageChanged();
 	} else {
         ofLog(OF_LOG_ERROR, "in =, ROI mismatch");

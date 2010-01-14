@@ -2,8 +2,8 @@
  *
  *  ofxPerson.h
  *  Rockwell LAB + IDEO LAB peopleVision project
- * 
- *  Created by NUI Group Dev Team A on 3/1/09.
+ *
+ *  Based on code created by NUI Group Dev Team A on 3/1/09.
  *  Copyright 2009 NUI Group/Inc. All rights reserved.       
  *  Version : 1.20
  *
@@ -54,6 +54,7 @@
 #include "ofxOpenCv.h"
 #include "CPUImageFilter.h"
 #include "ofxCvOpticalFlowLK.h"
+//#include "ofxCvCoordWarping.h"
 
 //haar setting
 #define CV_HAAR_FIND_MODE CV_HAAR_FIND_BIGGEST_OBJECT
@@ -172,6 +173,7 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 		ofxCYAScene scene;
 	
 		ofxCvGrayscaleImage	grayImage;
+		ofxCvGrayscaleImage	grayImageWarped;
 		ofxCvGrayscaleImage	grayLastImage;
 		
 		ofxCvGrayscaleImage grayBg;
@@ -185,6 +187,10 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 		CPUImageFilter		grayDiff;
 		ofxCvShortImage		floatBgImg;
 		
+		//coord warping for cropping the camera image
+	
+		//ofxCvCoordWarping coordWarp;
+	
 		// blob tracking things
 		
 		ofxCvContourFinder 	contourFinder;

@@ -47,6 +47,7 @@ void ofxCvOpticalFlowLK::calc( ofxCvGrayscaleImage & pastImage,
 					   int size
 					   )
 {
+	//cout<<"CALC-ING FLOW"<<endl;
 	cvCalcOpticalFlowLK( pastImage.getCvImage(), currentImage.getCvImage(),
 		cvSize( size, size), vel_x, vel_y );
 }
