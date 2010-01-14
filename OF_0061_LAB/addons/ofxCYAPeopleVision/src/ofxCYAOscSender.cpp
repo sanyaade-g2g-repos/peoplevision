@@ -24,3 +24,78 @@
 
 #include "ofxCYAOSCSender.h"
 
+/***************************************************************
+ CONSTRUCTOR + SETUP
+ ***************************************************************/
+
+ofxCYAOscSender::ofxCYAOscSender(){};
+
+ofxCYAOscSender::ofxCYAOscSender(string _ip, int _port){
+	setupSender(_ip, _port);
+};
+
+void ofxCYAOscSender::setupSender(string _ip, int _port){
+	ip = oldip = _ip;
+	port = oldport = _port;
+	
+	stringstream message;
+	message<<"SETTING UP SENDER @ "<<ip<<":"<<port;
+	ofLog(OF_LOG_VERBOSE, message.str());
+	
+	setup(ip, port);
+};
+
+/***************************************************************
+ UPDATE
+ ***************************************************************/
+
+void ofxCYAOscSender::update(){
+	if (strcmp(oldip.c_str(), ip.c_str()) != 0 || oldport != port){
+		oldip = ip;
+		oldport = port;
+		reroute(ip, port);				
+	}
+}
+
+/***************************************************************
+ SEND
+ ***************************************************************/
+
+void ofxCYAOscSender::send ( ofxCYAPerson * p, ofPoint centroid ){
+	ofxOscBundle b;
+	
+	stringstream address;
+	address<<"cya/person/"<<p->oid;
+	
+	ofxOscMessage m;
+	m.setAddress(address.str());
+	m.addIntArg(p->pid);
+	m.addIntArg(p->age);
+	m.addFloatArg(centroid.x);
+	m.addFloatArg(centroid.y);
+	m.addFloatArg(p->velocity.x);
+	m.addFloatArg(p->velocity.y);
+	m.addFloatArg(p->boundingRect.x);
+	m.addFloatArg(p->boundingRect.y);
+	m.addFloatArg(p->boundingRect.width);
+	m.addFloatArg(p->boundingRect.height);
+	
+	send(m);
+};
+
+void ofxCYAOscSender::send ( ofxOscMessage m ){
+	sendMessage(m);
+};
+
+/***************************************************************
+ REROUTE
+ ***************************************************************/	
+
+void ofxCYAOscSender::reroute(string _ip, int _port){
+	stringstream portstream;
+	portstream<<_port;
+	ofLog(OF_LOG_VERBOSE, "ofxCYAOscSender: REROUTING TO "+ip+", "+portstream.str());
+	ip = _ip;
+	port = _port;
+	setup(ip, port);
+};

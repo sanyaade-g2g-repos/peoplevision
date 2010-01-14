@@ -48,6 +48,12 @@ public:
 	float minHaarArea;
 	float maxHaarArea;
 	bool bCentroidDampen;
+	bool sendOsc;
+	bool sendTuio;
+	string oscHost;
+	int oscPort;
+	string tuioHost;
+	int tuioPort;
 	
 	ofPoint quadWarpScaled[4];
 	ofPoint quadWarpOriginal[4];

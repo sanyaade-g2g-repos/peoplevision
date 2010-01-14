@@ -9,7 +9,7 @@
 void ofxCYAPeopleTracker::setup(int w, int h)
 {
 	ofSetLogLevel(OF_LOG_VERBOSE);
-	ofSetDataPathRoot("data");
+	ofSetDataPathRoot("data/");
 	
 	width  = w;
 	height = h;
@@ -30,7 +30,7 @@ void ofxCYAPeopleTracker::setup(int w, int h)
 	grayLastImage = graySmallImage;
 	
 	//set tracker
-	setHaarXMLFile(ofToDataPath("data/HS.xml", true));
+	setHaarXMLFile("HS.xml");
 	
 	p_Settings = ofxCYASettings::getInstance();
 	
@@ -52,7 +52,18 @@ void ofxCYAPeopleTracker::setHaarXMLFile(string haarFile)
 void ofxCYAPeopleTracker::setupTuio(string ip, int port)
 {
 	bTuioEnabled = true;
+	p_Settings->oscPort = port;
+	p_Settings->oscHost = ip;
 	tuioClient.setup(ip, port);
+}
+
+void ofxCYAPeopleTracker::setupOsc(string ip, int port)
+{
+	cout<<"SEND OSC"<<endl;
+	bOscEnabled = true;
+	p_Settings->oscPort = port;
+	p_Settings->oscHost = ip;
+	oscClient.setupSender(ip, port);
 }
 
 void ofxCYAPeopleTracker::setListener(ofxPersonListener* listener)
@@ -65,12 +76,24 @@ void ofxCYAPeopleTracker::update(ofxCvColorImage image)
 {
 	grayImage = image;
 	trackPeople();
+	
+	if (p_Settings->sendOsc && !bOscEnabled) setupOsc(p_Settings->oscHost, p_Settings->oscPort);
+	else if (!p_Settings->sendOsc) bOscEnabled = false;
+	
+	if (p_Settings->sendTuio && !bTuioEnabled) setupTuio(p_Settings->tuioHost, p_Settings->tuioPort);
+	else if (!p_Settings->sendTuio) bTuioEnabled = false;
 }
 
 void ofxCYAPeopleTracker::update(ofxCvGrayscaleImage image)
 {
 	grayImage = image;
 	trackPeople();
+	
+	if (p_Settings->sendOsc && !bOscEnabled) setupOsc(p_Settings->oscHost, p_Settings->oscPort);
+	else if (!p_Settings->sendOsc) bOscEnabled = false;
+	
+	if (p_Settings->sendTuio && !bTuioEnabled) setupTuio(p_Settings->tuioHost, p_Settings->tuioPort);
+	else if (!p_Settings->sendTuio) bTuioEnabled = false;
 }
 
 /**
@@ -249,6 +272,24 @@ void ofxCYAPeopleTracker::trackPeople()
 		
 		tuioClient.update();		
 	}
+	
+	if (bOscEnabled){
+		for (int i = 0; i < trackedPeople.size(); i++){
+			ofxCYAPerson* p = trackedPeople[i];
+			if(p_Settings->bUseHaarAsCenter && p->hasHaarRect()){
+				ofPoint centroid = p->getHaarCentroidNormalized(width, height);
+				oscClient.send(p, centroid);
+			}
+			else{
+				ofPoint centroid = p->getCentroidNormalized(width, height);
+				oscClient.send(p, centroid);
+			}
+		}
+		
+		oscClient.ip = p_Settings->oscHost;
+		oscClient.port = p_Settings->oscPort;
+		oscClient.update();
+	};
 	
 	//store the old image
 	grayLastImage = graySmallImage;

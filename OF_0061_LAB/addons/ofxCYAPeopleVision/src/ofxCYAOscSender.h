@@ -32,68 +32,15 @@ class ofxCYAOscSender : public ofxOscSender
 	public :
 	
 	//"old" variables are to check for reroute
-	string	host, oldhost, dupHost;
-	int		port, oldport, dupPort, myId;
+	string	ip, oldip;
+	int		port, oldport;
 	
-	//vector <ofxECSVariable *> variablePointers;
-	
-	/***************************************************************
-		CONSTRUCTOR + SETUP
-	***************************************************************/
-	
-	ofxCYAOscSender(string _host, int _port){
-		setupSender(_host, _port);
-	};
-	
-	void setupSender(string _host, int _port){
-		host = oldhost = _host;
-		port = oldport = _port;
-		
-		stringstream message;
-		message<<"SETTING UP SENDER @ "<<host<<":"<<port;
-		ofLog(OF_LOG_VERBOSE, message.str());
-				
-		setup(host, port);
-	};
-	
-	/***************************************************************
-		UPDATE
-	***************************************************************/
-	
-	void update(){
-		if (strcmp(oldhost.c_str(), host.c_str()) != 0 || oldport != port){
-			oldhost = host;
-			oldport = port;
-			reroute(host, port);				
-		}
-	}
-	
-	/***************************************************************
-		SEND
-	***************************************************************/
-		
-	void send ( ofxCYAPerson * p ){
-		ofxOscBundle b;
-		
-		ofxOscMessage m;
-		m.setAddress("cya/person");
-	};
-	
-	void send ( ofxOscMessage m ){
-		sendMessage(m);
-	};
-	
-	/***************************************************************
-		REROUTE
-	***************************************************************/	
-	
-	void reroute(string _host, int _port){
-		stringstream portstream;
-		portstream<<_port;
-		ofLog(OF_LOG_VERBOSE, "ofxCYAOscSender: REROUTING TO "+host+", "+portstream.str());
-		host = _host;
-		port = _port;
-		setup(host, port);
-	};
+	ofxCYAOscSender();
+	ofxCYAOscSender(string _ip, int _port);
+	void setupSender(string _ip, int _port);	
+	void update();		
+	void send ( ofxCYAPerson * p, ofPoint centroid );	
+	void send ( ofxOscMessage m );
+	void reroute(string _ip, int _port);
 
 };

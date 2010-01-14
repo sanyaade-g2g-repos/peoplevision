@@ -39,6 +39,12 @@ ofxCYASettings* ofxCYASettings::getInstance()
 		
 		single->bLearnBackground = true;	
 		single->bCentroidDampen = true;		
+		
+		single->oscHost = "localhost";
+		single->oscPort = 12000;
+		
+		single->tuioHost = "localhost";
+		single->tuioPort = 3333;
     }
 	return single;
 	

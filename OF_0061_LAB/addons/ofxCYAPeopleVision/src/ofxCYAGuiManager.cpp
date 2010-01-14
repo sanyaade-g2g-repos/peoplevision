@@ -30,6 +30,7 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	panel.setup("CYA:PeopleVision", 20, 20, 300, 700);
 	panel.addPanel("image adjustment", 1, false);
 	panel.addPanel("sensing", 1, false);
+	panel.addPanel("communication", 1, false);
 	panel.addPanel("custom", 1, false);
 	
 	panel.setWhichPanel("image adjustment");
@@ -57,7 +58,7 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	panel.addSlider("background relearn rate", "RELEARN_BACKGROUND", .1f, 0.0f, 1000.0f, false);
 	panel.addToggle("find holes", "FIND_HOLES", false);
 	panel.addToggle("sense optical flow", "SENSE_OPTICAL_FLOW", true);
-	
+		
 	vector<string> multi;
 	multi.push_back("light on dark");
 	multi.push_back("dark on light");
@@ -72,11 +73,18 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	panel.addSlider("min. checkable haar size (%)", "MIN_HAAR", .1f, 0.0001f, 1.0f, false);
 	panel.addSlider("max. checkable haar size (%)", "MAX_HAAR", .5f, 0.0001f, 1.0f, false);
 	
+	panel.setWhichPanel("communication");
+	panel.setWhichColumn(0);
+	panel.addToggle("send OSC", "SEND_OSC", false);
+	panel.addToggle("send TUIO", "SEND_TUIO", false);
+	
+	//panel.addT
+	
 	//JG TODO: Optionally change config file through the UI
 	//this would be a big help for setting up multiple install sites and having those setting
 	//included in repositories
 	//BR : NEED TO TEST THE TODATAPATH STUFF... HAD SOME WEIRDNESS IN 0061
-	panel.loadSettings(ofToDataPath("data/settings/settings.xml", true));
+	panel.loadSettings("settings/settings.xml");
 
 }
 
@@ -172,6 +180,10 @@ void ofxCYAGuiManager::update(ofEventArgs &e)
 	p_Settings->minHaarArea = panel.getValueF("MIN_HAAR");
 	p_Settings->maxHaarArea = panel.getValueF("MAX_HAAR");
 	
+	//update osc stuff
+	p_Settings->sendOsc = panel.getValueB("SEND_OSC");
+	p_Settings->sendTuio = panel.getValueB("SEND_TUIO");
+	
 	//BR UPDATE GUI QUADS HERE
 	// because this returns a pointer to the actual points that get updated,
 	// you store it in an array so it doesn't get updated when it draws
@@ -256,8 +268,19 @@ void ofxCYAGuiManager::mouseReleased(ofMouseEventArgs &e)
 	if(enableGui) panel.mouseReleased();
 }
 
+void ofxCYAGuiManager::keyPressed(ofKeyEventArgs &e)
+{
+	if(enableGui) panel.keyPressed(e.key);
+};
+
+void ofxCYAGuiManager::keyReleased(ofKeyEventArgs &e)
+{
+	if(enableGui) panel.keyReleased(e.key);
+};
+
 void ofxCYAGuiManager::draw(ofEventArgs &e) {
 	if(enableGui) panel.draw();
 }
+
 //JG TODO ADD EVENT UNREGISTER FO CLEAN UP
 

@@ -64,6 +64,7 @@
 #include "ofxCYASettings.h"
 #include "ofxCYAGuiManager.h"
 #include "ofxCYATUIOSender.h"
+#include "ofxCYAOscSender.h"
 #include "ofxCvBlobTracker.h"
 #include "ofxCYAScene.h"
 
@@ -96,6 +97,7 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 		//communication
 		
 		void setupTuio(string ip, int port);
+		void setupOsc(string ip, int port);
 		void setListener(ofxPersonListener* delegate);
 	
 		//tracking metrics
@@ -219,6 +221,8 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 		ofxCYATUIOSender tuioClient;
 		bool bTuioEnabled;
 		ofxPersonListener* eventListener;
+		ofxCYAOscSender oscClient;
+		bool bOscEnabled;
 		
 		//gui
 
