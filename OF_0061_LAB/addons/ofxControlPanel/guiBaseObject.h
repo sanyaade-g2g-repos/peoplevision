@@ -24,6 +24,7 @@ class guiBaseObject{
             bShowText   = true;
             locked      = false;
             dataType    = SG_TYPE_FLOAT;
+			bTextEnterMode = false;
 
             numDecimalPlaces    = 2;
             storedTextWidth     = 0;
@@ -59,6 +60,7 @@ class guiBaseObject{
             if(readOnly)return false;
             if( isInsideRect(x, y, hitArea) ){
                 state = SG_STATE_SELECTED;
+				bTextEnterMode = true;
                 setSelected();
                 updateGui(x, y, true, isRelative);
 
@@ -72,6 +74,13 @@ class guiBaseObject{
             }
             return false;
         }
+	
+		
+		//should be called on keypressed
+		//-------------------------------------------
+		virtual void keyPressed(int key){
+			//do stuff
+		}
 
         //this is the equivilant of mouse moved if the gui element has been selected
         //this is empty as it really should be specified by
@@ -332,6 +341,7 @@ class guiBaseObject{
         bool bShowText;
         bool readOnly;
         int  state;
-        int  dataType;
+		int  dataType;
+		bool bTextEnterMode;
 };
 

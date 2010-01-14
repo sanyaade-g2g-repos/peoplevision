@@ -76,8 +76,8 @@ class guiValue{
         }
 		
 		//------------------------------------------------
-		bool setValue(string val, int which = 0){
-			if(which >= 0 && which < value.size() ){
+		bool setValueS(string val, int which = 0){
+			if(which >= 0 && which < valueS.size() ){
 				
 				valueS[which] = val;
 				return true;
@@ -131,7 +131,7 @@ class guiValue{
 		
 		//------------------------------------------------
 		string getValueS(int which = 0){
-			if(which >= 0 && which < valueB.size() ){
+			if(which >= 0 && which < valueS.size() ){
 				return valueS[which];
 			}
 			return "";

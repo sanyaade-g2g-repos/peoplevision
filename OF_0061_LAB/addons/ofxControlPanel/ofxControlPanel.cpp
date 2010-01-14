@@ -299,6 +299,23 @@ guiTypeFileLister * ofxControlPanel::addFileLister(string name, simpleFileLister
     return listerType;
 }
 
+//---------------------------------------------
+guiTypeText * ofxControlPanel::addTextField(string name, string xmlName, string defaultValue, int drawW, int drawH){
+	if( currentPanel < 0 || currentPanel >= panels.size() )return NULL;
+    guiTypeText * guiTextField = new guiTypeText();
+	
+    guiTextField->setup(name, defaultValue, drawW, drawH);
+    panels[currentPanel]->addElement(guiTextField);
+	
+    guiObjects.push_back(guiTextField);
+	
+    if( bUseTTFFont ){
+        //guiTextField->setFont(&guiTTFFont);
+    }
+	
+    return guiTextField;
+};
+
 // ############################################################## //
 // ##
 // ##       get and set values
@@ -624,7 +641,9 @@ void ofxControlPanel::mouseReleased(){
 //-------------------------------
 void ofxControlPanel::keyPressed(int key)
 {
-	
+	for(int i = 0; i < panels.size(); i++){
+		if( i == selectedPanel )panels[i]->keyPressed(key);
+	}
 };
 
 //-------------------------------

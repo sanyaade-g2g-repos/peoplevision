@@ -60,7 +60,8 @@ class ofxControlPanel: public guiBaseObject{
         guiTypeCustom * addCustomRect(string name, guiCustomImpl * customPtr, int drawW, int drawH);
         guiTypeLogger * addLogger(string name, simpleLogger * logger, int drawW, int drawH);
         guiTypeFileLister * addFileLister(string name, simpleFileLister * lister, int drawW, int drawH);
-
+		guiTypeText * addTextField(string name, string xmlName, string defaultValue, int drawW, int drawH);
+	
         void setValueB(string xmlName, bool value,  int whichParam = 0);
         void setValueI(string xmlName, int value,  int whichParam = 0);
         void setValueF(string xmlName, float value,  int whichParam = 0);
