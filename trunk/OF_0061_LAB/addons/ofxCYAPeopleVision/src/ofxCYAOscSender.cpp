@@ -75,16 +75,34 @@ void ofxCYAOscSender::send ( ofxCYAPerson * p, ofPoint centroid ){
 	m.addFloatArg(centroid.y);
 	m.addFloatArg(p->velocity.x);
 	m.addFloatArg(p->velocity.y);
-	m.addFloatArg(p->boundingRect.x);
-	m.addFloatArg(p->boundingRect.y);
-	m.addFloatArg(p->boundingRect.width);
-	m.addFloatArg(p->boundingRect.height);
+	
+	ofRectangle boundingRect = p->getBoundingRectNormalized(640,480);
+	
+	m.addFloatArg(boundingRect.x);
+	m.addFloatArg(boundingRect.y);
+	m.addFloatArg(boundingRect.width);
+	m.addFloatArg(boundingRect.height);
 	
 	send(m);
 };
 
 void ofxCYAOscSender::send ( ofxOscMessage m ){
 	sendMessage(m);
+};
+
+void ofxCYAOscSender::kill ( ofxCYAPerson * p )
+{
+	ofxOscBundle b;
+	
+	stringstream address;
+	address<<"cya/kill/"<<p->oid;
+	
+	ofxOscMessage m;
+	m.setAddress(address.str());
+	m.addIntArg(p->pid);
+	
+	send(m);
+	
 };
 
 /***************************************************************

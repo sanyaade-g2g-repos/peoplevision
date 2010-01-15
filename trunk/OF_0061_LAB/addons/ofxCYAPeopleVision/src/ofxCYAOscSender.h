@@ -56,6 +56,7 @@ class ofxCYAOscSender : public ofxOscSender
 	void update();		
 	void send ( ofxCYAPerson * p, ofPoint centroid );	
 	void send ( ofxOscMessage m );
+	void kill ( ofxCYAPerson * p );
 	void reroute(string _ip, int _port);
 
 };
