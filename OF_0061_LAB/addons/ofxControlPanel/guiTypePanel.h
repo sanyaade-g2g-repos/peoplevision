@@ -74,7 +74,14 @@ class guiTypePanel : public guiBaseObject{
 
                     float offsetX = x - hitArea.x;
                     float offsetY = y - hitArea.y;
-
+					
+					cout<<"SETTING ENTER FALSE"<<endl;
+					
+                    for(int i = 0; i < children.size(); i++){
+						children[i]->bTextEnterMode = false;
+						children[i]->release();
+					}
+					
                     for(int i = 0; i < children.size(); i++){
                         children[i]->checkHit(offsetX, offsetY, isRelative);
                     }

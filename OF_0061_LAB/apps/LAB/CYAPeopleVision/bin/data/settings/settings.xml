@@ -11,7 +11,7 @@
     <val_0>1.000000</val_0>
 </USE_HIGHPASS>
 <HIGHPASS_BLUR>
-    <val_0>79.494446</val_0>
+    <val_0>1.000000</val_0>
 </HIGHPASS_BLUR>
 <HIGHPASS_NOISE>
     <val_0>1.000000</val_0>
@@ -61,9 +61,21 @@
 <SEND_OSC>
     <val_0>1.000000</val_0>
 </SEND_OSC>
+<OSC_HOST>
+    <val_0>0.000000</val_0>
+</OSC_HOST>
+<OSC_PORT>
+    <val_0>0.000000</val_0>
+</OSC_PORT>
 <SEND_TUIO>
     <val_0>0.000000</val_0>
 </SEND_TUIO>
+<TUIO_HOST>
+    <val_0>0.000000</val_0>
+</TUIO_HOST>
+<TUIO_PORT>
+    <val_0>0.000000</val_0>
+</TUIO_PORT>
 <CUSTOM>
     <val_0>5439571.000000</val_0>
 </CUSTOM>

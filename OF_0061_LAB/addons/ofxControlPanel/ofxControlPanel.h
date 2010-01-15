@@ -67,7 +67,8 @@ class ofxControlPanel: public guiBaseObject{
         void setValueF(string xmlName, float value,  int whichParam = 0);
         bool getValueB(string xmlName, int whichParam = 0);
         float getValueF(string xmlName, int whichParam = 0);
-        int getValueI(string xmlName, int whichParam = 0);
+		int getValueI(string xmlName, int whichParam = 0);
+		string getValueS(string xmlName, int whichParam = 0, string defaultString = "");
 
         void setIncrementSave(string incrmentalFileBaseName);
         void disableIncrementSave();
