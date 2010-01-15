@@ -333,6 +333,14 @@ void ofxCYAPeopleTracker::blobOff( int x, int y, int id, int order )
 	std::vector<ofxCYAPerson*>::iterator it;
 	for(it = trackedPeople.begin(); it != trackedPeople.end(); it++){
 		if((*it)->pid == p->pid){
+			
+			//send osc kill message if enabled
+			if (bOscEnabled){
+				ofxCYAPerson* p = (*it);
+				oscClient.kill(p);
+				cout<<"KILL "<<p->pid<<endl;
+			};
+			
 			trackedPeople.erase(it);
 			delete p;
 			break;
