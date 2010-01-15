@@ -20,6 +20,21 @@
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  
+ OSC Message is structured like this:
+ 
+ address: cya/person/ + ordered id (i.e. cya/person/0)
+ 
+ argument 1: pid; 
+ argument 2: age; 
+ argument 3: centroid.x; 
+ argument 4: centroid.y; 
+ argument 5: velocity.x; 
+ argument 6: velocity.y; 
+ argument 7: boundingRect.x; 
+ argument 8: boundingRect.y; 
+ argument 9: boundingRect.width; 
+ argument 10: boundingRect.height; 
+ 
  ***********************************************************************/
 
 #pragma once

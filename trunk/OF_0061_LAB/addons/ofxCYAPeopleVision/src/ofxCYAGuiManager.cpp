@@ -77,8 +77,11 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	panel.setWhichPanel("communication");
 	panel.setWhichColumn(0);
 	panel.addToggle("send OSC", "SEND_OSC", false);
-	panel.addToggle("send TUIO", "SEND_TUIO", false);
 	panel.addTextField("osc host", "OSC_HOST", "localhost", 200, 20);
+	panel.addTextField("osc port", "OSC_PORT", "12000", 200, 20);
+	panel.addToggle("send TUIO", "SEND_TUIO", false);
+	panel.addTextField("tuio host", "TUIO_HOST", "localhost", 200, 20);
+	panel.addTextField("tuio port", "TUIO_PORT", "3333", 200, 20);
 	
 	//panel.addT
 	
@@ -185,6 +188,10 @@ void ofxCYAGuiManager::update(ofEventArgs &e)
 	//update osc stuff
 	p_Settings->sendOsc = panel.getValueB("SEND_OSC");
 	p_Settings->sendTuio = panel.getValueB("SEND_TUIO");
+	p_Settings->oscHost = panel.getValueS("OSC_HOST", 0, "localhost");
+	p_Settings->oscPort = (int) atoi(panel.getValueS("OSC_PORT", 0, "12000").c_str());
+	p_Settings->tuioHost = panel.getValueS("TUIO_HOST", 0, "localhost");
+	p_Settings->tuioPort = (int) atoi(panel.getValueS("TUIO_PORT", 0, "3333").c_str());
 	
 	//BR UPDATE GUI QUADS HERE
 	// because this returns a pointer to the actual points that get updated,

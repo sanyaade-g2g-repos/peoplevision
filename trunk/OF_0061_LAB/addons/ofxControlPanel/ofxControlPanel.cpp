@@ -304,10 +304,14 @@ guiTypeText * ofxControlPanel::addTextField(string name, string xmlName, string 
 	if( currentPanel < 0 || currentPanel >= panels.size() )return NULL;
     guiTypeText * guiTextField = new guiTypeText();
 	
-    guiTextField->setup(name, defaultValue, drawW, drawH);
+    guiTextField->setup(name, defaultValue);
+    guiTextField->xmlName = xmlName;
+    guiTextField->setDimensions(drawW, drawH);
+    guiTextField->setTypeString();
     panels[currentPanel]->addElement(guiTextField);
 	
     guiObjects.push_back(guiTextField);
+    xmlObjects.push_back( xmlAssociation(guiTextField, xmlName, 1) );
 	
     if( bUseTTFFont ){
         //guiTextField->setFont(&guiTTFFont);
@@ -370,6 +374,19 @@ bool ofxControlPanel::getValueB(string xmlName, int whichParam){
     }
     ofLog(OF_LOG_WARNING, "ofxControlPanel - paramater requested %s doesn't exist - returning 0", xmlName.c_str());
     return 0;
+}
+
+//---------------------------------------------
+string ofxControlPanel::getValueS(string xmlName, int whichParam, string defaultString){
+    for(int i = 0; i < xmlObjects.size(); i++){
+        if( xmlObjects[i].guiObj != NULL && xmlName == xmlObjects[i].xmlName ){
+            if( whichParam >= 0 && whichParam < xmlObjects[i].numParams ){
+                return xmlObjects[i].guiObj->value.getValueS(whichParam);
+            }
+        }
+    }
+    ofLog(OF_LOG_WARNING, "ofxControlPanel - paramater requested %s doesn't exist - returning default value", xmlName.c_str());
+    return defaultString;
 }
 
 //---------------------------------------------

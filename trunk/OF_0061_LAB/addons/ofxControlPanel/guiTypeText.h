@@ -12,10 +12,10 @@ class guiTypeText : public guiBaseObject, public guiTextBase{
 		
 	
 		//------------------------------------------------
-		void setup(string textName, string defaultVal, int width, int height){
+		void setup(string textName, string defaultVal){
 			value.addValueS( (string)defaultVal);
 			name = textName;
-			setDimensions(width, height);
+			setDimensions(200, 20);
 		}
 		
 		//-----------------------------------------------.
@@ -25,6 +25,7 @@ class guiTypeText : public guiBaseObject, public guiTextBase{
 			if( state == SG_STATE_SELECTED){
 				
 			}
+			updateText();
 		}
 	
 		void keyPressed(int key){
@@ -43,7 +44,6 @@ class guiTypeText : public guiBaseObject, public guiTextBase{
 				}
 			}
 			bool set = value.setValueS( newValue );
-			cout<<"SET? "<<set<<endl;
 		}
 		
 		//-----------------------------------------------.

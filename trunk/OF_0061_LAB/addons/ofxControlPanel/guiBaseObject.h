@@ -11,6 +11,7 @@
 #define SG_TYPE_FLOAT 0
 #define SG_TYPE_INT 1
 #define SG_TYPE_BOOL 2
+#define SG_TYPE_STRING 3
 
 static bool isInsideRect(float x, float y, ofRectangle rect){
     return ( x >= rect.x && x <= rect.x + rect.width && y >= rect.y && y <= rect.y + rect.height );
@@ -60,7 +61,7 @@ class guiBaseObject{
             if(readOnly)return false;
             if( isInsideRect(x, y, hitArea) ){
                 state = SG_STATE_SELECTED;
-				bTextEnterMode = true;
+				if (dataType == SG_TYPE_STRING) bTextEnterMode = true;
                 setSelected();
                 updateGui(x, y, true, isRelative);
 
@@ -72,6 +73,8 @@ class guiBaseObject{
                 }
                 return true;
             }
+			
+			if (dataType == SG_TYPE_STRING) bTextEnterMode = true;
             return false;
         }
 	
@@ -139,6 +142,12 @@ class guiBaseObject{
             dataType = SG_TYPE_BOOL;
         }
 
+		//-----------------------------------------------
+		virtual void setTypeString(){
+			dataType = SG_TYPE_STRING;
+		}
+	
+	
         //-----------------------------------------------
         virtual void setPosition(float x, float y){
             boundingBox.x = x;
@@ -216,6 +225,7 @@ class guiBaseObject{
                     drawStr += " "+ofToString(value.getValueF(i), numDecimalPlaces);
                 }else if( dataType == SG_TYPE_INT ) drawStr += " "+ofToString(value.getValueI(i), 0);
                 else if( dataType == SG_TYPE_BOOL ) drawStr += " "+ofToString(value.getValueB(i), 0);
+                else if( dataType == SG_TYPE_STRING ) drawStr += " "+value.getValueS(i);
             }
 
 
