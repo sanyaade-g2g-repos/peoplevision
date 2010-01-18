@@ -61,11 +61,11 @@ void ofxCYAOscSender::update(){
  SEND
  ***************************************************************/
 
-void ofxCYAOscSender::send ( ofxCYAPerson * p, ofPoint centroid ){
+void ofxCYAOscSender::personEntered ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight ){
 	ofxOscBundle b;
 	
 	stringstream address;
-	address<<"cya/person/"<<p->oid;
+	address<<"cya/personEntered/"<<p->oid;
 	
 	ofxOscMessage m;
 	m.setAddress(address.str());
@@ -76,7 +76,7 @@ void ofxCYAOscSender::send ( ofxCYAPerson * p, ofPoint centroid ){
 	m.addFloatArg(p->velocity.x);
 	m.addFloatArg(p->velocity.y);
 	
-	ofRectangle boundingRect = p->getBoundingRectNormalized(640,480);
+	ofRectangle boundingRect = p->getBoundingRectNormalized(cameraWidth,cameraHeight);
 	
 	m.addFloatArg(boundingRect.x);
 	m.addFloatArg(boundingRect.y);
@@ -86,16 +86,62 @@ void ofxCYAOscSender::send ( ofxCYAPerson * p, ofPoint centroid ){
 	send(m);
 };
 
-void ofxCYAOscSender::send ( ofxOscMessage m ){
-	sendMessage(m);
+void ofxCYAOscSender::personMoved ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight ){
+	ofxOscBundle b;
+	
+	stringstream address;
+	address<<"cya/personMoved/"<<p->oid;
+	
+	ofxOscMessage m;
+	m.setAddress(address.str());
+	m.addIntArg(p->pid);
+	m.addIntArg(p->age);
+	m.addFloatArg(centroid.x);
+	m.addFloatArg(centroid.y);
+	m.addFloatArg(p->velocity.x);
+	m.addFloatArg(p->velocity.y);
+	
+	ofRectangle boundingRect = p->getBoundingRectNormalized(cameraWidth,cameraHeight);
+	
+	m.addFloatArg(boundingRect.x);
+	m.addFloatArg(boundingRect.y);
+	m.addFloatArg(boundingRect.width);
+	m.addFloatArg(boundingRect.height);
+	
+	send(m);
 };
 
-void ofxCYAOscSender::kill ( ofxCYAPerson * p )
+void ofxCYAOscSender::personUpdated ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight ){
+	ofxOscBundle b;
+	
+	stringstream address;
+	address<<"cya/personUpdated/"<<p->oid;
+	
+	ofxOscMessage m;
+	m.setAddress(address.str());
+	m.addIntArg(p->pid);
+	m.addIntArg(p->age);
+	m.addFloatArg(centroid.x);
+	m.addFloatArg(centroid.y);
+	m.addFloatArg(p->velocity.x);
+	m.addFloatArg(p->velocity.y);
+	
+	ofRectangle boundingRect = p->getBoundingRectNormalized(cameraWidth,cameraHeight);
+	
+	m.addFloatArg(boundingRect.x);
+	m.addFloatArg(boundingRect.y);
+	m.addFloatArg(boundingRect.width);
+	m.addFloatArg(boundingRect.height);
+	
+	send(m);
+};
+
+void ofxCYAOscSender::personWillLeave ( ofxCYAPerson * p )
 {
 	ofxOscBundle b;
 	
 	stringstream address;
-	address<<"cya/kill/"<<p->oid;
+	address<<"cya/personWillLeave/"<<p->oid;
 	
 	ofxOscMessage m;
 	m.setAddress(address.str());
@@ -103,6 +149,10 @@ void ofxCYAOscSender::kill ( ofxCYAPerson * p )
 	
 	send(m);
 	
+};
+
+void ofxCYAOscSender::send ( ofxOscMessage m ){
+	sendMessage(m);
 };
 
 /***************************************************************

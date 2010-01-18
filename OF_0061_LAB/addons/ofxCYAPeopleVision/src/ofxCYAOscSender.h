@@ -54,9 +54,11 @@ class ofxCYAOscSender : public ofxOscSender
 	ofxCYAOscSender(string _ip, int _port);
 	void setupSender(string _ip, int _port);	
 	void update();		
-	void send ( ofxCYAPerson * p, ofPoint centroid );	
+	void personEntered ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight );	
+	void personMoved ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight );	
+	void personUpdated ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight );	
+	void personWillLeave ( ofxCYAPerson * p );	
 	void send ( ofxOscMessage m );
-	void kill ( ofxCYAPerson * p );
 	void reroute(string _ip, int _port);
 
 };

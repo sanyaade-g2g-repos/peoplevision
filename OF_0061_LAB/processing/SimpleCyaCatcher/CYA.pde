@@ -51,10 +51,21 @@ class CYA
 	void oscEvent(OscMessage theOscMessage)
 	{
 		//adding or updating a person
-		if (theOscMessage.addrPattern().contains("cya/person/"))
-		{
-			boolean found = false;
-									
+		if (theOscMessage.addrPattern().contains("cya/personEntered/"))
+		{				
+			CYAPerson p = new CYAPerson();
+			p.id = theOscMessage.get(0).intValue();
+			p.age = theOscMessage.get(1).intValue();
+			p.centroid.x = theOscMessage.get(2).floatValue();
+			p.centroid.y = theOscMessage.get(3).floatValue();
+			p.velocity.x = theOscMessage.get(4).floatValue();
+			p.velocity.y = theOscMessage.get(5).floatValue();
+			p.boundingRect.x = theOscMessage.get(6).floatValue();
+			p.boundingRect.y = theOscMessage.get(7).floatValue();
+			p.boundingRect.width = theOscMessage.get(8).floatValue();
+			p.boundingRect.height = theOscMessage.get(9).floatValue();
+			people.add(p);
+		} else if (theOscMessage.addrPattern().contains("cya/personMoved/")){
 			CYAPerson p = new CYAPerson();
 			p.id = theOscMessage.get(0).intValue();
 			p.age = theOscMessage.get(1).intValue();
@@ -72,17 +83,12 @@ class CYA
 				CYAPerson checkPerson = (CYAPerson) people.get(i);
 				if (checkPerson.id == p.id){
 					people.set(i, p);
-					found = true;
 					break;
 				}
 			}
-			
-			if (!found){
-				people.add(p);
-			}
-		}
+		}	
 		//killing an object
-		else if (theOscMessage.addrPattern().contains("cya/kill"))
+		else if (theOscMessage.addrPattern().contains("cya/personWillLeave"))
 		{
 			CYAPerson p = new CYAPerson();
 			p.id = theOscMessage.get(0).intValue();
