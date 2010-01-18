@@ -278,11 +278,11 @@ void ofxCYAPeopleTracker::trackPeople()
 			ofxCYAPerson* p = trackedPeople[i];
 			if(p_Settings->bUseHaarAsCenter && p->hasHaarRect()){
 				ofPoint centroid = p->getHaarCentroidNormalized(width, height);
-				oscClient.send(p, centroid);
+				oscClient.personMoved(p, centroid, width, height);
 			}
 			else{
 				ofPoint centroid = p->getCentroidNormalized(width, height);
-				oscClient.send(p, centroid);
+				oscClient.personMoved(p, centroid, width, height);
 			}
 		}
 		
@@ -306,6 +306,10 @@ void ofxCYAPeopleTracker::blobOn( int x, int y, int id, int order )
 	}
 	if(bTuioEnabled){
 		tuioClient.cursorPressed(1.0*x/width, 1.0*y/height, order);
+	}
+	if(bOscEnabled){
+		ofPoint centroid = newPerson->getCentroidNormalized(width, height);
+		oscClient.personEntered(newPerson, centroid, width, height);
 	}
 }
 
@@ -337,7 +341,7 @@ void ofxCYAPeopleTracker::blobOff( int x, int y, int id, int order )
 			//send osc kill message if enabled
 			if (bOscEnabled){
 				ofxCYAPerson* p = (*it);
-				oscClient.kill(p);
+				oscClient.personWillLeave(p);
 				cout<<"KILL "<<p->pid<<endl;
 			};
 			
