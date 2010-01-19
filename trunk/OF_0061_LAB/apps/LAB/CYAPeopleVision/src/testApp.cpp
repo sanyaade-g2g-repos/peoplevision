@@ -16,6 +16,7 @@ void testApp::setup(){
 	
 	ofSetFrameRate(60);
 	ofBackground(100, 100, 100);
+	//ofSetDataPathRoot("../data/");
 	
 	camWidth = 640;
 	camHeight = 480;
@@ -44,7 +45,7 @@ void testApp::setup(){
 		ofLog(OF_LOG_VERBOSE,"Camera successfully initialized.");
 	} else {
 		ofLog(OF_LOG_FATAL_ERROR,"Camera failed to initialize.");
-	}				
+	}
 	
 	vidGrabber.update();
 	#else

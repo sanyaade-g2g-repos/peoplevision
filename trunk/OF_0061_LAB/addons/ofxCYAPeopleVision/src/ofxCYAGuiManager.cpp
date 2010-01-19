@@ -15,6 +15,7 @@ enum{
 };
 
 ofxCYAGuiManager::ofxCYAGuiManager() {
+	ofSetDataPathRoot("data/");
 	//JG TODO add drawing event
 	ofAddListener(ofEvents.update, this, &ofxCYAGuiManager::update);
 	ofAddListener(ofEvents.draw, this, &ofxCYAGuiManager::draw);
@@ -88,9 +89,7 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	//JG TODO: Optionally change config file through the UI
 	//this would be a big help for setting up multiple install sites and having those setting
 	//included in repositories
-	//BR : NEED TO TEST THE TODATAPATH STUFF... HAD SOME WEIRDNESS IN 0061
-	panel.loadSettings("settings/settings.xml");
-
+	panel.loadSettings(ofToDataPath("settings/settings.xml"));
 }
 
 void ofxCYAGuiManager::addSlider(string name, int* value, int min, int max)
