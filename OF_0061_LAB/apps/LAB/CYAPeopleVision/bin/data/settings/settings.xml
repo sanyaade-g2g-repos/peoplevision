@@ -11,7 +11,7 @@
     <val_0>1.000000</val_0>
 </USE_HIGHPASS>
 <HIGHPASS_BLUR>
-    <val_0>1.000000</val_0>
+    <val_0>112.661110</val_0>
 </HIGHPASS_BLUR>
 <HIGHPASS_NOISE>
     <val_0>1.000000</val_0>
@@ -77,11 +77,11 @@
     <val_0>0.000000</val_0>
 </TUIO_PORT>
 <CUSTOM>
-    <val_0>5439571.000000</val_0>
+    <val_0>1280.000000</val_0>
 </CUSTOM>
 <USTOM>
-    <val_0>0.000000</val_0>
+    <val_0>768.000000</val_0>
 </USTOM>
 <STOM>
-    <val_0>115.000000</val_0>
+    <val_0>0.000000</val_0>
 </STOM>

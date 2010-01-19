@@ -8,12 +8,12 @@
 #pragma mark Setup
 void ofxCYAPeopleTracker::setup(int w, int h)
 {
-	ofSetLogLevel(OF_LOG_VERBOSE);
 	ofSetDataPathRoot("data/");
+	ofSetLogLevel(OF_LOG_VERBOSE);
 	
 	width  = w;
 	height = h;
-		
+	
 	grayImage.allocate(width, height);
 	grayImageWarped.allocate(width, height);
 	grayBg.allocate(width, height);
@@ -31,7 +31,7 @@ void ofxCYAPeopleTracker::setup(int w, int h)
 	
 	//set tracker
 	setHaarXMLFile("HS.xml");
-	
+	bOscEnabled = bTuioEnabled = false;
 	p_Settings = ofxCYASettings::getInstance();
 	
 	//gui.loadFromXML();	
