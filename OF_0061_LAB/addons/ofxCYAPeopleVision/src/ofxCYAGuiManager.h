@@ -31,9 +31,8 @@ class ofxCYAGuiManager {
 	
 	bool enableGui;	
 	void setupQuadGui ( int cameraWidth, int cameraHeight );
-	void drawQuadGui(){
-		quadGui.draw();
-	};
+	void drawQuadGui();
+	void drawQuadGui( int x, int y, int width, int height );
 	
 	void update(ofEventArgs &e);
 	void draw(ofEventArgs &e);

@@ -62,13 +62,8 @@ void ofxCYAOscSender::update(){
  ***************************************************************/
 
 void ofxCYAOscSender::personEntered ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight ){
-	ofxOscBundle b;
-	
-	stringstream address;
-	address<<"cya/personEntered/"<<p->oid;
-	
 	ofxOscMessage m;
-	m.setAddress(address.str());
+	m.setAddress("cya/personEntered/");
 	m.addIntArg(p->pid);
 	m.addIntArg(p->age);
 	m.addFloatArg(centroid.x);
@@ -87,13 +82,8 @@ void ofxCYAOscSender::personEntered ( ofxCYAPerson * p, ofPoint centroid, int ca
 };
 
 void ofxCYAOscSender::personMoved ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight ){
-	ofxOscBundle b;
-	
-	stringstream address;
-	address<<"cya/personMoved/"<<p->oid;
-	
 	ofxOscMessage m;
-	m.setAddress(address.str());
+	m.setAddress("cya/personMoved/");
 	m.addIntArg(p->pid);
 	m.addIntArg(p->age);
 	m.addFloatArg(centroid.x);
@@ -112,13 +102,8 @@ void ofxCYAOscSender::personMoved ( ofxCYAPerson * p, ofPoint centroid, int came
 };
 
 void ofxCYAOscSender::personUpdated ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight ){
-	ofxOscBundle b;
-	
-	stringstream address;
-	address<<"cya/personUpdated/"<<p->oid;
-	
 	ofxOscMessage m;
-	m.setAddress(address.str());
+	m.setAddress("cya/personUpdated/");
 	m.addIntArg(p->pid);
 	m.addIntArg(p->age);
 	m.addFloatArg(centroid.x);
@@ -136,16 +121,24 @@ void ofxCYAOscSender::personUpdated ( ofxCYAPerson * p, ofPoint centroid, int ca
 	send(m);
 };
 
-void ofxCYAOscSender::personWillLeave ( ofxCYAPerson * p )
+void ofxCYAOscSender::personWillLeave ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight )
 {
 	ofxOscBundle b;
-	
-	stringstream address;
-	address<<"cya/personWillLeave/"<<p->oid;
-	
 	ofxOscMessage m;
-	m.setAddress(address.str());
+	m.setAddress("cya/personWillLeave/");
 	m.addIntArg(p->pid);
+	m.addIntArg(p->age);
+	m.addFloatArg(centroid.x);
+	m.addFloatArg(centroid.y);
+	m.addFloatArg(p->velocity.x);
+	m.addFloatArg(p->velocity.y);
+	
+	ofRectangle boundingRect = p->getBoundingRectNormalized(cameraWidth,cameraHeight);
+	
+	m.addFloatArg(boundingRect.x);
+	m.addFloatArg(boundingRect.y);
+	m.addFloatArg(boundingRect.width);
+	m.addFloatArg(boundingRect.height);
 	
 	send(m);
 	

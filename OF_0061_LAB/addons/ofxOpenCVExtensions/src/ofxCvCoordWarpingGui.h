@@ -37,9 +37,7 @@ class ofxCvCoordWarpingGui : public ofxMSAInteractiveObject {
 	
 public:
 	ofxCvCoordWarpingGui();
-	
-	float scale;
-	
+		
 	void setup(string _quadName);
 	void readFromFile(string filePath);
 	void loadSettings();
@@ -63,12 +61,15 @@ public:
 	void draw(float x, float y, float width, float height);
 	void draw();
 	
-	//BR: Added MSAInteractiveObject stuff to simplify
+	//Added MSAInteractiveObject stuff to simplify
 	void onPress(int x, int y, int button);
 	void onDragOver(int x, int y, int button);
 	void onDragOutside(int x, int y, int button);
 	void onRelease(int x, int y, int button);
 	void onReleaseOutside(int x, int y, int button);
+	
+	//added scaling
+	void setScale( float scaleX, float scaleY );
 	
 protected:
 	ofxXmlSettings	xml;
@@ -76,6 +77,7 @@ protected:
 	ofPoint srcScaled[4];
 	ofPoint returnScaled[4];
 	string quadName;
+	ofPoint scale;
 	int selected;
 };
 

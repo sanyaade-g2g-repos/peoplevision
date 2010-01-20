@@ -332,19 +332,17 @@ void ofxCYAPeopleTracker::blobOff( int x, int y, int id, int order )
 		ofPoint cursor = p->getCentroidNormalized(width, height);
 		tuioClient.cursorReleased(cursor.x, cursor.y, order);	
 	}
+	//send osc kill message if enabled
+	if (bOscEnabled){
+		ofPoint centroid = p->getCentroidNormalized(width, height);
+		oscClient.personWillLeave(p, centroid, width, height);
+	};
 	
 	//delete the object and remove it from the vector
 	std::vector<ofxCYAPerson*>::iterator it;
 	for(it = trackedPeople.begin(); it != trackedPeople.end(); it++){
 		if((*it)->pid == p->pid){
-			
-			//send osc kill message if enabled
-			if (bOscEnabled){
-				ofxCYAPerson* p = (*it);
-				oscClient.personWillLeave(p);
-				cout<<"KILL "<<p->pid<<endl;
-			};
-			
+						
 			trackedPeople.erase(it);
 			delete p;
 			break;
@@ -390,21 +388,32 @@ void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 //		switch (mode) {
 //			case DRAW_MODE_GUI:
 ////				gui.draw();
+	
+		ofPoint drawSpacing;
+		drawSpacing.x = 10;
+		drawSpacing.y = 10;
+	
 		ofPushMatrix();{
 			ofTranslate(x, y, 0);
 			//translate to make room for the gui
-			ofTranslate(320, 0, 0);
+			ofTranslate(350, 15, 0);
 			// draw the incoming, the grayscale, the bg and the thresholded difference
 			ofSetColor(0xffffff);
-			grayImage.draw(15,15,320,240);
-			grayImageWarped.draw(345,15,320,240);
-			//grayDiff.draw(360,20,320,240);
-			grayDiff.draw(15,265,320,240);
-			grayBg.draw(345,265,320,240);
+			
+			//camera image
+			grayImage.draw(0,0,320,240);			
+			ofDrawBitmapString("camera image", 5, 235);			
+			grayImageWarped.draw(320 + drawSpacing.x , 0,320,240);			
+			ofDrawBitmapString("warped image", 320 + drawSpacing.x + 5, 235 );
+			
+			grayDiff.draw(0, 240+drawSpacing.y, 320,240);			
+			ofDrawBitmapString("difference image", 5, 480+drawSpacing.y - 5);
+			grayBg.draw(320 + drawSpacing.x, 240+drawSpacing.y,320,240);
+			ofDrawBitmapString("captured background", 320 + drawSpacing.x + 5, 480+drawSpacing.y - 5 );
 														
 			//individually draw blobs and report findings
 			ofPushMatrix();{
-				ofTranslate(15,515);
+				ofTranslate(0,240*2 + drawSpacing.y*2);
 				
 				ofFill();
 				ofSetColor(0x333333);
@@ -418,8 +427,9 @@ void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 					opticalFlow.draw(width*TRACKING_SCALE_FACTOR, height*TRACKING_SCALE_FACTOR);
 				}					
 				
+				ofPushMatrix();
 				ofScale(TRACKING_SCALE_FACTOR, TRACKING_SCALE_FACTOR);
-				contourFinder.draw();
+				contourFinder.draw(  );
 			
 				for (int i=0; i < trackedPeople.size(); i++){
 					
@@ -467,6 +477,9 @@ void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 					sprintf(idstr, "pid: %d\noid: %d\nage: %d", p->pid, p->oid, p->age );
 					ofDrawBitmapString(idstr, p->centroid.x+8, p->centroid.y);													
 				}
+				ofPopMatrix();
+				ofSetColor(0xffffff);				
+				ofDrawBitmapString("blobs and optical flow", 5, 235 );
 			}ofPopMatrix();	//release video feedback drawing
 			
 //			break;
@@ -485,7 +498,7 @@ void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 		}ofPopMatrix();
 	
 	//draw gui outside of translate matrix
-	gui.drawQuadGui();
+	gui.drawQuadGui( 350, 15, 320, 240);
 }
 
 #pragma mark gui extension
