@@ -28,7 +28,7 @@
 ofxCvCoordWarpingGui::ofxCvCoordWarpingGui(){
 	selected = -1;
 	quadName = "QUAD_";
-	scale = 1.0f;
+	scale.x = scale.y = 1.0f;
 	enableMouseEvents();
 }
 
@@ -258,22 +258,22 @@ void ofxCvCoordWarpingGui::draw(float passedX, float passedY, float scaleWidth, 
 void ofxCvCoordWarpingGui::draw(){
 	
 	//default to a think yellow line
-	draw(x, y, width*scale, height*scale, 255, 255, 0, 1);
+	draw(x, y, width*scale.x, height*scale.y, 255, 255, 0, 1);
 }
 
 //----------------------------------------------------
 void ofxCvCoordWarpingGui::onPress(int mouseX, int mouseY, int button){
-	selectPoint(mouseX, mouseY, x, y, width*scale, height*scale, 20);
+	selectPoint(mouseX, mouseY, x, y, width*scale.y, height*scale.y, 20);
 }
 
 //----------------------------------------------------
 void ofxCvCoordWarpingGui::onDragOutside(int mouseX, int mouseY, int button){
-	updatePoint(mouseX, mouseY, x, y, width*scale, height*scale);
+	updatePoint(mouseX, mouseY, x, y, width*scale.x, height*scale.y);
 }
 
 //----------------------------------------------------
 void ofxCvCoordWarpingGui::onDragOver(int mouseX, int mouseY, int button){
-	updatePoint(mouseX, mouseY, x, y, width*scale, height*scale);
+	updatePoint(mouseX, mouseY, x, y, width*scale.x, height*scale.y);
 }
 
 //----------------------------------------------------
@@ -284,4 +284,10 @@ void ofxCvCoordWarpingGui::onRelease(int mouseX, int mouseY, int button){
 void ofxCvCoordWarpingGui::onReleaseOutside(int mouseX, int mouseY, int button){
 	saveToFile("guiquad-settings.xml");
 }
+
+//----------------------------------------------------
+void ofxCvCoordWarpingGui::setScale( float scaleX, float scaleY ){
+	scale.x = scaleX;
+	scale.y = scaleY;
+};
 

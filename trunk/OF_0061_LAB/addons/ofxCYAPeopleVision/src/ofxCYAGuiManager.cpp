@@ -30,6 +30,15 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	//p_Settings = ofxCYASettings::getInstance();
 
 	panel.setup("CYA:PeopleVision", 20, 20, 300, 700);
+	panel.setDraggable(false);
+	
+	//panel layout
+	
+	panel.setPosition(15, 15);
+	panel.setDimensions(320, ofGetHeight()-46);
+	
+	//add params to panel
+	
 	panel.addPanel("image adjustment", 1, false);
 	panel.addPanel("sensing", 1, false);
 	panel.addPanel("communication", 1, false);
@@ -249,11 +258,19 @@ void ofxCYAGuiManager::setupQuadGui ( int cameraWidth, int cameraHeight )
 	quadGui.readFromFile("guiquad-settings.xml");	
 	quadGui.width = cameraWidth;
 	quadGui.height = cameraHeight;
-	quadGui.scale = 0.5f;
-	quadGui.x = 335;
-	quadGui.y = 15;
 		
 	quadGuiSetup = true;
+};
+
+void ofxCYAGuiManager::drawQuadGui(){
+	quadGui.draw();
+};
+
+void ofxCYAGuiManager::drawQuadGui( int x, int y, int width, int height ){
+	quadGui.x = x;
+	quadGui.y = y;
+	quadGui.setScale((float) width/quadGui.width, (float) height/quadGui.height );
+	drawQuadGui();
 };
 
 //forward to gui

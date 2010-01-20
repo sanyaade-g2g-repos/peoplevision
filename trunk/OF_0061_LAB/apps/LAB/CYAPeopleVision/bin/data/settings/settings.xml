@@ -20,7 +20,7 @@
     <val_0>0.000000</val_0>
 </USE_AMPLIFICATION>
 <AMPLIFICATION_AMOUNT>
-    <val_0>1.000000</val_0>
+    <val_0>111.555557</val_0>
 </AMPLIFICATION_AMOUNT>
 <LEARN_BACKGROUND>
     <val_0>0.000000</val_0>
@@ -44,7 +44,7 @@
     <val_0>1.000000</val_0>
 </SENSE_OPTICAL_FLOW>
 <BLOB_TYPE>
-    <val_0>0.000000</val_0>
+    <val_0>1.000000</val_0>
 </BLOB_TYPE>
 <SENSE_HAAR>
     <val_0>0.000000</val_0>
@@ -77,11 +77,11 @@
     <val_0>0.000000</val_0>
 </TUIO_PORT>
 <CUSTOM>
-    <val_0>1280.000000</val_0>
+    <val_0>5439571.000000</val_0>
 </CUSTOM>
 <USTOM>
-    <val_0>768.000000</val_0>
+    <val_0>0.000000</val_0>
 </USTOM>
 <STOM>
-    <val_0>0.000000</val_0>
+    <val_0>115.000000</val_0>
 </STOM>
