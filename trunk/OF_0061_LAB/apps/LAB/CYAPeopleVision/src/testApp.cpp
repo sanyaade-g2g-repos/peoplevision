@@ -16,8 +16,8 @@ void testApp::setup(){
 	
 	ofSetFrameRate(60);
 	ofBackground(100, 100, 100);
-	ofSetDataPathRoot("../data/");
-	
+	//ofSetDataPathRoot("data/");
+
 	camWidth = 640;
 	camHeight = 480;
 	
@@ -54,7 +54,7 @@ void testApp::setup(){
 	#endif
 	
 #else
-	vidPlayer.loadMovie("hand_tracking_test.mov");
+	vidPlayer.loadMovie("testmovie/testmovie1.mov");
 	vidPlayer.play();
 #endif
     
