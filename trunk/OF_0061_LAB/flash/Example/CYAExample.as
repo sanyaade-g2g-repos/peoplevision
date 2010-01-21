@@ -3,6 +3,7 @@ package
 	import flash.events.*;
 	import flash.display.MovieClip;
 	import flash.display.Stage;
+	import flash.text.TextField;
 	import flash.utils.setTimeout;
 	
 	//import the lab CYA files
@@ -16,6 +17,8 @@ package
 		public var stageHeight:Number;		
 		public var customPeople:Array;
 		
+		public var currentColor:uint = 0;
+		
 		public function CYAExample()
 		{
 			super();
@@ -23,9 +26,11 @@ package
 			// store variables of stage width + height
 			// CYA sends out coordinates from 0 - 1, so you need to scale them to
 			// the size that you want (usually the stage width + height)
+			// - for this app, there is a MC on the stage called activeArea_mc that
+			// 	 we're using for the active area
 			
-			stageWidth = stage.stageWidth;
-			stageHeight = stage.stageHeight;
+			stageWidth = activeArea_mc.width; //stage.stageWidth;
+			stageHeight = activeArea_mc.height; //stage.stageHeight;
 			
 			// build array of your custom people objects
 			customPeople = [];
@@ -56,6 +61,8 @@ package
 			//	 connect (host, port)
 			
 			cyaServer.connect();
+												
+			numberOfPeople_mc.number_txt.text = String(customPeople.length);
 		}
 		
 		/************************************************************************
@@ -90,12 +97,21 @@ package
 			public function personEntered( e:CYAEvent ):void {
 				// create a new custom person + pass it the person parameter of the CYAEvent
 				var newCustomPerson:CustomPerson = new CustomPerson( e.person );
+				newCustomPerson.setBackground(currentColor);
+				currentColor++;
+				if (currentColor > 20) currentColor = 0;
+				
 				addChild(newCustomPerson);
 				customPeople.push( newCustomPerson );
+				
+				personEntered_mc.gotoAndPlay("active");
+				numberOfPeople_mc.number_txt.text = customPeople.length;
 			};
 
 			public function personMoved( e:CYAEvent ):void {
-				//don't do anything; we are listening for the person's update in the CustomPerson class
+				//don't do any updating; we are listening for the person's update in the CustomPerson class
+				personUpdated_mc.gotoAndPlay("active");
+				numberOfPeople_mc.number_txt.text = customPeople.length;
 			};
 
 			public function personLeft( e:CYAEvent ):void {
@@ -105,9 +121,11 @@ package
 						var oldCustomPerson = customPeople[i];
 						removeChild(oldCustomPerson);
 						customPeople.splice( i, 1 );
-						return;
+						break;
 					}
 				}
+				personLeft_mc.gotoAndPlay("active");
+				numberOfPeople_mc.number_txt.text = customPeople.length;
 			};
 	}
 }
