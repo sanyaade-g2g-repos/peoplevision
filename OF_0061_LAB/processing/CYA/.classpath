@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/rockwell/Documents/Processing/src/core.jar"/>
+	<classpathentry kind="lib" path="/Users/rockwell/Documents/Processing/libraries/CYA/src/oscP5/oscP5.jar" sourcepath="/Users/rockwell/Documents/workspace/CYA/src/oscp5/oscP5.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
