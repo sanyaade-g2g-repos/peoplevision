@@ -45,9 +45,9 @@ public:
 	float minBlob;
 	float maxBlob;
 	float fLearnRate;
-	float haarArea;
-	float minHaarArea;
-	float maxHaarArea;
+	float haarAreaPadding;
+//	float minHaarArea;
+//	float maxHaarArea;
 	bool bCentroidDampen;
 	bool sendOsc;
 	bool sendTuio;

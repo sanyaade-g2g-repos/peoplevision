@@ -89,8 +89,9 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	
 	//JG GUI-REDUX: removing this feature
 	//gui.addToggle("send haar center as blob center", &p_Settings->bUseHaarAsCenter);
-	panel.addSlider("min. checkable haar size (%)", "MIN_HAAR", .1f, 0.0001f, 1.0f, false);
-	panel.addSlider("max. checkable haar size (%)", "MAX_HAAR", .5f, 0.0001f, 1.0f, false);
+	//JG 1/21/10 disabled this feature to simplify the interface
+//	panel.addSlider("min. checkable haar size (%)", "MIN_HAAR", .1f, 0.0001f, 1.0f, false);
+//	panel.addSlider("max. checkable haar size (%)", "MAX_HAAR", .5f, 0.0001f, 1.0f, false);
 	
 	panel.setWhichPanel("communication");
 	panel.setWhichColumn(0);
@@ -197,11 +198,12 @@ void ofxCYAGuiManager::update(ofEventArgs &e)
 	if(haarFiles->getSelectedName() != ""){
 		p_Settings->haarFile = haarFiles->getSelectedName();
 	}
-	p_Settings->haarArea = panel.getValueF("HAAR_PADDING");
+	p_Settings->haarAreaPadding = panel.getValueF("HAAR_PADDING");
 	//JG GUI-REDUX: removing this feature
 	//gui.addToggle("send haar center as blob center", &p_Settings->bUseHaarAsCenter);
-	p_Settings->minHaarArea = panel.getValueF("MIN_HAAR");
-	p_Settings->maxHaarArea = panel.getValueF("MAX_HAAR");
+	//JG 1/21/10 disabled this feature to simplify the interface
+//	p_Settings->minHaarArea = panel.getValueF("MIN_HAAR");
+//	p_Settings->maxHaarArea = panel.getValueF("MAX_HAAR");
 	
 	//update osc stuff
 	p_Settings->sendOsc = panel.getValueB("SEND_OSC");

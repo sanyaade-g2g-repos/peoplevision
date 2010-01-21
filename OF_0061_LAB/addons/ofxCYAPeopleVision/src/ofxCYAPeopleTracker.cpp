@@ -236,10 +236,10 @@ void ofxCYAPeopleTracker::trackPeople()
 			//find the region of interest, expanded by haarArea.
 			//bound by the frame edge
 			ofRectangle roi;
-			roi.x		= fmax( (p->boundingRect.x - p_Settings->haarArea) * TRACKING_SCALE_FACTOR, 0.0f );
-			roi.y		= fmax( (p->boundingRect.y - p_Settings->haarArea) * TRACKING_SCALE_FACTOR, 0.0f );
-			roi.width	= fmin( (p->boundingRect.width  + p_Settings->haarArea*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.x );
-			roi.height	= fmin( (p->boundingRect.height + p_Settings->haarArea*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.y );	
+			roi.x		= fmax( (p->boundingRect.x - p_Settings->haarAreaPadding) * TRACKING_SCALE_FACTOR, 0.0f );
+			roi.y		= fmax( (p->boundingRect.y - p_Settings->haarAreaPadding) * TRACKING_SCALE_FACTOR, 0.0f );
+			roi.width	= fmin( (p->boundingRect.width  + p_Settings->haarAreaPadding*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.x );
+			roi.height	= fmin( (p->boundingRect.height + p_Settings->haarAreaPadding*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.y );	
 			
 			for(int i = 0; i < haarRects.size(); i++) {
 				ofRectangle haarRect = haarRects[i]; 
@@ -457,10 +457,10 @@ void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 				ofSetColor(0xffffff);							
 				if(p_Settings->bDetectHaar){
 					//draw haar search area expanded 
-					ofRect(p->boundingRect.x - p_Settings->haarArea, 
-						   p->boundingRect.y - p_Settings->haarArea, 
-						   p->boundingRect.width  + p_Settings->haarArea*2, 
-						   p->boundingRect.height + p_Settings->haarArea*2);
+					ofRect(p->boundingRect.x - p_Settings->haarAreaPadding, 
+						   p->boundingRect.y - p_Settings->haarAreaPadding, 
+						   p->boundingRect.width  + p_Settings->haarAreaPadding*2, 
+						   p->boundingRect.height + p_Settings->haarAreaPadding*2);
 				}
 				
 				if(p->hasHaarRect()){
@@ -622,17 +622,18 @@ void ofxCYAPeopleTracker::setAmplifyAmount(int amplifyAmount)
 //haar
 void ofxCYAPeopleTracker::setHaarExpandArea(float haarExpandAmount) //makes the haar rect +area bigger
 {
-	p_Settings->haarArea = haarExpandAmount;
+	p_Settings->haarAreaPadding = haarExpandAmount;
 }
 
-void ofxCYAPeopleTracker::setMinHaarArea(float minArea)
-{
-	p_Settings->minHaarArea = minArea;
-}
-void ofxCYAPeopleTracker::setMaxHaarArea(float maxArea)
-{
-	p_Settings->maxHaarArea = maxArea;
-}
+//JG 1/21/10 disabled this feature to simplify the interface
+//void ofxCYAPeopleTracker::setMinHaarArea(float minArea)
+//{
+//	p_Settings->minHaarArea = minArea;
+//}
+//void ofxCYAPeopleTracker::setMaxHaarArea(float maxArea)
+//{
+//	p_Settings->maxHaarArea = maxArea;
+//}
 
 void ofxCYAPeopleTracker::useHaarAsCentroid(bool useHaarCenter)
 {

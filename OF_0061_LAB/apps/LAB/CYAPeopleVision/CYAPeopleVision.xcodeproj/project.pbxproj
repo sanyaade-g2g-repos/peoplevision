@@ -372,10 +372,10 @@
 		2E2B84D410FCC4D9002EB043 /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				2E2B85EA10FCC585002EB043 /* ofxDirList */,
 				2E2B84D510FCC51C002EB043 /* ofxControlPanel */,
 				2E2B84EC10FCC51C002EB043 /* ofxCvHaarTracker */,
 				2E2B852D10FCC51C002EB043 /* ofxCYAPeopleVision */,
-				2E2B85EA10FCC585002EB043 /* ofxDirList */,
 				2E2B853D10FCC51C002EB043 /* ofxMSAInteractiveObject */,
 				2E2B868F10FCC9B9002EB043 /* ofxNetwork */,
 				2E2B86FD10FCCD8C002EB043 /* ofxOpenCv */,
@@ -445,20 +445,9 @@
 			isa = PBXGroup;
 			children = (
 				2E2B853010FCC51C002EB043 /* ofxCYA.h */,
-				2E2B853210FCC51C002EB043 /* ofxCYAGuiManager.h */,
-				2E2B853110FCC51C002EB043 /* ofxCYAGuiManager.cpp */,
-				2E2B853410FCC51C002EB043 /* ofxCYAPeopleTracker.h */,
-				2E2B853310FCC51C002EB043 /* ofxCYAPeopleTracker.cpp */,
-				2E2B853610FCC51C002EB043 /* ofxCYAPerson.h */,
-				2E2B853510FCC51C002EB043 /* ofxCYAPerson.cpp */,
-				2E2B853810FCC51C002EB043 /* ofxCYAScene.h */,
-				2E2B853710FCC51C002EB043 /* ofxCYAScene.cpp */,
-				2E2B853A10FCC51C002EB043 /* ofxCYASettings.h */,
-				2E2B853910FCC51C002EB043 /* ofxCYASettings.cpp */,
-				2E2B853C10FCC51C002EB043 /* ofxCYATUIOSender.h */,
-				2E2B853B10FCC51C002EB043 /* ofxCYATUIOSender.cpp */,
-				2E739FAD10FFBF2300299078 /* ofxCYAOscSender.h */,
-				2E739FAC10FFBF2300299078 /* ofxCYAOscSender.cpp */,
+				E7E94FD91108F4DF002AD86E /* model */,
+				E7E94FDA1108F4E9002AD86E /* settings */,
+				E7E94FDB1108F4EF002AD86E /* communication */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -1182,6 +1171,41 @@
 			name = osx;
 			path = ../../../libs/FreeImage/lib/osx;
 			sourceTree = SOURCE_ROOT;
+		};
+		E7E94FD91108F4DF002AD86E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2E2B853410FCC51C002EB043 /* ofxCYAPeopleTracker.h */,
+				2E2B853310FCC51C002EB043 /* ofxCYAPeopleTracker.cpp */,
+				2E2B853610FCC51C002EB043 /* ofxCYAPerson.h */,
+				2E2B853510FCC51C002EB043 /* ofxCYAPerson.cpp */,
+				2E2B853810FCC51C002EB043 /* ofxCYAScene.h */,
+				2E2B853710FCC51C002EB043 /* ofxCYAScene.cpp */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		E7E94FDA1108F4E9002AD86E /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				2E2B853210FCC51C002EB043 /* ofxCYAGuiManager.h */,
+				2E2B853110FCC51C002EB043 /* ofxCYAGuiManager.cpp */,
+				2E2B853A10FCC51C002EB043 /* ofxCYASettings.h */,
+				2E2B853910FCC51C002EB043 /* ofxCYASettings.cpp */,
+			);
+			name = settings;
+			sourceTree = "<group>";
+		};
+		E7E94FDB1108F4EF002AD86E /* communication */ = {
+			isa = PBXGroup;
+			children = (
+				2E2B853C10FCC51C002EB043 /* ofxCYATUIOSender.h */,
+				2E2B853B10FCC51C002EB043 /* ofxCYATUIOSender.cpp */,
+				2E739FAD10FFBF2300299078 /* ofxCYAOscSender.h */,
+				2E739FAC10FFBF2300299078 /* ofxCYAOscSender.cpp */,
+			);
+			name = communication;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
