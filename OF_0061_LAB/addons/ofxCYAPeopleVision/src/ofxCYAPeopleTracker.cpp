@@ -30,7 +30,6 @@ void ofxCYAPeopleTracker::setup(int w, int h)
 	grayLastImage = graySmallImage;
 	
 	//set tracker
-	setHaarXMLFile("HS.xml");
 	bOscEnabled = bTuioEnabled = false;
 	p_Settings = ofxCYASettings::getInstance();
 	
@@ -45,8 +44,13 @@ void ofxCYAPeopleTracker::setup(int w, int h)
 
 void ofxCYAPeopleTracker::setHaarXMLFile(string haarFile)
 {
-	haarFinder.setup(haarFile);
-	haarTracker.setup(&haarFinder);
+	haarFile = "haar/" + haarFile;
+	//check if haar file has changed
+	if(haarFinder.getHaarFile() != haarFile){
+		cout << "changing haar file to " << haarFile << endl;
+		haarFinder.setup(haarFile);
+		haarTracker.setup(&haarFinder);
+	}
 
 }
 void ofxCYAPeopleTracker::setupTuio(string ip, int port)
@@ -75,25 +79,31 @@ void ofxCYAPeopleTracker::setListener(ofxPersonListener* listener)
 void ofxCYAPeopleTracker::update(ofxCvColorImage image)
 {
 	grayImage = image;
+	updateSettings();
 	trackPeople();
 	
-	if (p_Settings->sendOsc && !bOscEnabled) setupOsc(p_Settings->oscHost, p_Settings->oscPort);
-	else if (!p_Settings->sendOsc) bOscEnabled = false;
-	
-	if (p_Settings->sendTuio && !bTuioEnabled) setupTuio(p_Settings->tuioHost, p_Settings->tuioPort);
-	else if (!p_Settings->sendTuio) bTuioEnabled = false;
 }
 
 void ofxCYAPeopleTracker::update(ofxCvGrayscaleImage image)
 {
 	grayImage = image;
-	trackPeople();
 	
+	updateSettings();
+	trackPeople();
+}
+
+void ofxCYAPeopleTracker::updateSettings()
+{
+	setHaarXMLFile(p_Settings->haarFile);
+
+	//check to enable OSC
 	if (p_Settings->sendOsc && !bOscEnabled) setupOsc(p_Settings->oscHost, p_Settings->oscPort);
 	else if (!p_Settings->sendOsc) bOscEnabled = false;
 	
+	//check to enable TUIO
 	if (p_Settings->sendTuio && !bTuioEnabled) setupTuio(p_Settings->tuioHost, p_Settings->tuioPort);
 	else if (!p_Settings->sendTuio) bTuioEnabled = false;
+	
 }
 
 /**
@@ -121,7 +131,7 @@ void ofxCYAPeopleTracker::trackPeople()
 	
 	//force learn background if there are > 5 blobs (off by default)
 	//JG Disabling this feature for now, 
-	//I think it's a great ideas but it needs to be better described and "5" needs to be customizable
+	//I think it's a great idea but it needs to be better described and "5" needs to be customizable
 //	if (p_Settings->bSmartLearnBackground == true && contourFinder.nBlobs > 5){
 //		p_Settings->bLearnBackground = true;
 	//	}
@@ -549,10 +559,11 @@ void ofxCYAPeopleTracker::relearnBackground()
 	p_Settings->bLearnBackground = true;
 }
 
-void ofxCYAPeopleTracker::enableBackgroundRelearnSmart(bool doSmartLearn)//auto-relearns if there are too many blobs in the scene
-{
-	p_Settings->bSmartLearnBackground = doSmartLearn;
-}
+//JG Disabled this feature
+//void ofxCYAPeopleTracker::enableBackgroundRelearnSmart(bool doSmartLearn)//auto-relearns if there are too many blobs in the scene
+//{
+//	p_Settings->bSmartLearnBackground = doSmartLearn;
+//}
 
 void ofxCYAPeopleTracker::enableBackgroundReleaernProgressive(bool doProgressive) //relearns over time using progessive frame averagering
 {

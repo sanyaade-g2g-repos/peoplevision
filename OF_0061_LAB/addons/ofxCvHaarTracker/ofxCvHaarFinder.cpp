@@ -49,6 +49,9 @@ void ofxCvHaarFinder::setup(string haarFile) {
 		printf("Could not load Haar cascade: %s\n", haarFile.c_str());
 }
 
+string ofxCvHaarFinder::getHaarFile() {
+	return haarFile;
+}
 
 float ofxCvHaarFinder::getWidth() {
 	return img.width;

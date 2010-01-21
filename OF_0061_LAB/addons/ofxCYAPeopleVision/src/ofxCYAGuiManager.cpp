@@ -40,6 +40,7 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	//add params to panel
 	
 	panel.addPanel("image adjustment", 1, false);
+	panel.addPanel("blob tracking", 1, false);
 	panel.addPanel("sensing", 1, false);
 	panel.addPanel("communication", 1, false);
 	panel.addPanel("custom", 1, false);
@@ -56,7 +57,7 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	panel.addToggle("use amplification", "USE_AMPLIFICATION", false);
 	panel.addSlider("amplification amount", "AMPLIFICATION_AMOUNT", 1, 1, 200, true);
 	
-	panel.setWhichPanel("sensing");
+	panel.setWhichPanel("blob tracking");
 	panel.setWhichColumn(0);
 	//TODO optionally disable people
 	//panel.addToggle("track people", "TRACK_PEOPLE", false);
@@ -68,17 +69,24 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	panel.addToggle("use progressive relearn", "RELEARN", false);
 	panel.addSlider("background relearn rate", "RELEARN_BACKGROUND", .1f, 0.0f, 1000.0f, false);
 	panel.addToggle("find holes", "FIND_HOLES", false);
-	panel.addToggle("sense optical flow", "SENSE_OPTICAL_FLOW", true);
 		
 	vector<string> multi;
 	multi.push_back("light on dark");
 	multi.push_back("dark on light");
 	multi.push_back("absolute difference");
 	panel.addMultiToggle("blob type", "BLOB_TYPE", 0, multi);
+	
+	panel.setWhichPanel("sensing");
+	panel.setWhichColumn(0);
+	panel.addToggle("sense optical flow", "SENSE_OPTICAL_FLOW", true);
 	panel.addToggle("sense haar features (e.g. faces)", "SENSE_HAAR", false);
-	//JG 12/8/09 GUI REDUXTODO Add a default set of HAAR files as a multi
-	//vector<string> haaFiles; ...
+	
+	haarFiles = new simpleFileLister();
+	cout << "haar files found " << haarFiles->listDir("haar") << endl;
+	panel.addFileLister("feature file", haarFiles, 240, 100);
+	
 	panel.addSlider("haar ROI padding", "HAAR_PADDING", 0.0f, 0.0f, 200.0f, false);
+	
 	//JG GUI-REDUX: removing this feature
 	//gui.addToggle("send haar center as blob center", &p_Settings->bUseHaarAsCenter);
 	panel.addSlider("min. checkable haar size (%)", "MIN_HAAR", .1f, 0.0001f, 1.0f, false);
@@ -185,8 +193,10 @@ void ofxCYAGuiManager::update(ofEventArgs &e)
 	p_Settings->trackType = panel.getValueI("BLOB_TYPE");
 	p_Settings->bDetectHaar = panel.getValueB("SENSE_HAAR");
 
-	//JG 12/8/09 GUI REDUXTODO Add a default set of HAAR files as a multi
-	//vector<string> haaFiles; ...
+
+	if(haarFiles->getSelectedName() != ""){
+		p_Settings->haarFile = haarFiles->getSelectedName();
+	}
 	p_Settings->haarArea = panel.getValueF("HAAR_PADDING");
 	//JG GUI-REDUX: removing this feature
 	//gui.addToggle("send haar center as blob center", &p_Settings->bUseHaarAsCenter);
