@@ -54,7 +54,7 @@ void testApp::setup(){
 	#endif
 	
 #else
-	vidPlayer.loadMovie("testmovie/testmovie1.mov");
+	vidPlayer.loadMovie("testmovie/testmovie2.mov");
 	vidPlayer.play();
 #endif
     

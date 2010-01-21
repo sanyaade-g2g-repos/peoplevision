@@ -425,8 +425,8 @@
 				2E2B84EE10FCC51C002EB043 /* ofxCvHaarFinder.h */,
 				2E2B84EF10FCC51C002EB043 /* ofxCvHaarTracker.cpp */,
 				2E2B84F010FCC51C002EB043 /* ofxCvHaarTracker.h */,
-				2E2B84F110FCC51C002EB043 /* ofxCvHaarTrackerItem.cpp */,
 				2E2B84F210FCC51C002EB043 /* ofxCvHaarTrackerItem.h */,
+				2E2B84F110FCC51C002EB043 /* ofxCvHaarTrackerItem.cpp */,
 			);
 			name = ofxCvHaarTracker;
 			path = ../../../addons/ofxCvHaarTracker;

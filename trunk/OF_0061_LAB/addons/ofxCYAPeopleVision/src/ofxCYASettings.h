@@ -25,30 +25,36 @@ public:
 	
 	string haarFile;
 
-	// tracking vars
-	bool bLearnBackground;
-//	bool bSmartLearnBackground; //jg disabled this feature
-	bool bLearnBackgroundProgressive;
-	int trackType;
-	bool bHighpass;
-	bool bAmplify;
-	bool bSmooth;
-	bool bDetectHaar;
-	bool bUseHaarAsCenter;
-	bool bTrackOpticalFlow;
-	bool bFindHoles;
+	// image vars
 	int smooth;
 	int highpassBlur;
 	int highpassNoise;
 	int	highpassAmp;
 	int threshold;	
+	bool bHighpass;
+	bool bAmplify;
+	bool bSmooth;
+	bool bLearnBackground;
+	
+	// tracking vars
+	bool bLearnBackgroundProgressive;
+	float fLearnRate;
+	int trackType;
+	bool bFindHoles;
 	float minBlob;
 	float maxBlob;
-	float fLearnRate;
+	bool bCentroidDampen;
+	
+	//sensing vars
+	bool bTrackOpticalFlow;
+	float minOpticalFlow;
+	float maxOpticalFlow;
+	bool bDetectHaar;
 	float haarAreaPadding;
 //	float minHaarArea;
 //	float maxHaarArea;
-	bool bCentroidDampen;
+	
+	// communication vars
 	bool sendOsc;
 	bool sendTuio;
 	string oscHost;

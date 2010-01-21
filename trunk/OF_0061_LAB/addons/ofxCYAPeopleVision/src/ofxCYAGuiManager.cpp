@@ -78,13 +78,17 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	
 	panel.setWhichPanel("sensing");
 	panel.setWhichColumn(0);
+	
+	//optical flow
 	panel.addToggle("sense optical flow", "SENSE_OPTICAL_FLOW", true);
+	panel.addSlider("min optical flow", "MIN_OPTICAL_FLOW", 0, 0, 200, false);
+	panel.addSlider("max optical flow", "MAX_OPTICAL_FLOW", 10, 1, 200, false);
+	
+	// haar
 	panel.addToggle("sense haar features (e.g. faces)", "SENSE_HAAR", false);
-	
 	haarFiles = new simpleFileLister();
-	cout << "haar files found " << haarFiles->listDir("haar") << endl;
+//	cout << "haar files found " << haarFiles->listDir("haar") << endl;
 	panel.addFileLister("feature file", haarFiles, 240, 100);
-	
 	panel.addSlider("haar ROI padding", "HAAR_PADDING", 0.0f, 0.0f, 200.0f, false);
 	
 	//JG GUI-REDUX: removing this feature
@@ -101,9 +105,7 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	panel.addToggle("send TUIO", "SEND_TUIO", false);
 	panel.addTextField("tuio host", "TUIO_HOST", "localhost", 200, 20);
 	panel.addTextField("tuio port", "TUIO_PORT", "3333", 200, 20);
-	
-	//panel.addT
-	
+		
 	//JG TODO: Optionally change config file through the UI
 	//this would be a big help for setting up multiple install sites and having those setting
 	//included in repositories
@@ -189,8 +191,10 @@ void ofxCYAGuiManager::update(ofEventArgs &e)
 	p_Settings->fLearnRate = panel.getValueB("RELEARN_BACKGROUND");
 	p_Settings->bFindHoles = panel.getValueB("FIND_HOLES");
 	p_Settings->bTrackOpticalFlow = panel.getValueB("SENSE_OPTICAL_FLOW");
+	
 	//JG 12/8/09 GUI-REDUX:
-	//TODO Add Optical flow MIN/MAX vector filtering - super useful for noisey scenes
+	p_Settings->minOpticalFlow = panel.getValueF("MIN_OPTICAL_FLOW");
+	p_Settings->maxOpticalFlow = panel.getValueF("MAX_OPTICAL_FLOW");
 	p_Settings->trackType = panel.getValueI("BLOB_TYPE");
 	p_Settings->bDetectHaar = panel.getValueB("SENSE_HAAR");
 

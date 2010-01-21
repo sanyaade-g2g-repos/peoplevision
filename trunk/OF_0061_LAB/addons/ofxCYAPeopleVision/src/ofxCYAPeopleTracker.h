@@ -133,8 +133,8 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 		//haar
 		void setHaarXMLFile(string haarFile);
 		void setHaarExpandArea(float haarExpandAmount); //makes the haar rect +area bigger
-		void setMinHaarArea(float minArea);
-		void setMaxHaarArea(float maxArea);
+//		void setMinHaarArea(float minArea);
+//		void setMaxHaarArea(float maxArea);
 		void useHaarAsCentroid(bool useHaarCenter);
 	
 		//blobs

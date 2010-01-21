@@ -36,6 +36,10 @@ public:
 	ofPoint flowAtPoint(int x, int y);
 	ofPoint flowInRegion(int x, int y, int w, int h);
 	ofPoint flowInRegion(ofRectangle roi);
+	
+	//Used to filter noisey or erroneous vectors
+	float minVector;
+	float maxVector;
 
 private:
 

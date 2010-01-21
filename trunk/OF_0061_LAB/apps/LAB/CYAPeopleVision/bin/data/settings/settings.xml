@@ -1,5 +1,5 @@
 <THRESHOLD>
-    <val_0>40.000000</val_0>
+    <val_0>22.666668</val_0>
 </THRESHOLD>
 <USE_SMOOTHING>
     <val_0>0.000000</val_0>
@@ -8,10 +8,10 @@
     <val_0>0.000000</val_0>
 </SMOOTH_AMOUNT>
 <USE_HIGHPASS>
-    <val_0>1.000000</val_0>
+    <val_0>0.000000</val_0>
 </USE_HIGHPASS>
 <HIGHPASS_BLUR>
-    <val_0>112.661110</val_0>
+    <val_0>24.216667</val_0>
 </HIGHPASS_BLUR>
 <HIGHPASS_NOISE>
     <val_0>1.000000</val_0>
@@ -44,13 +44,13 @@
     <val_0>1.000000</val_0>
 </SENSE_OPTICAL_FLOW>
 <BLOB_TYPE>
-    <val_0>1.000000</val_0>
+    <val_0>0.000000</val_0>
 </BLOB_TYPE>
 <SENSE_HAAR>
-    <val_0>0.000000</val_0>
+    <val_0>1.000000</val_0>
 </SENSE_HAAR>
 <HAAR_PADDING>
-    <val_0>0.000000</val_0>
+    <val_0>28.888889</val_0>
 </HAAR_PADDING>
 <MIN_HAAR>
     <val_0>0.100000</val_0>
@@ -77,11 +77,11 @@
     <val_0>0.000000</val_0>
 </TUIO_PORT>
 <CUSTOM>
-    <val_0>5439571.000000</val_0>
+    <val_0>0.000000</val_0>
 </CUSTOM>
 <USTOM>
     <val_0>0.000000</val_0>
 </USTOM>
 <STOM>
-    <val_0>115.000000</val_0>
+    <val_0>0.000000</val_0>
 </STOM>
