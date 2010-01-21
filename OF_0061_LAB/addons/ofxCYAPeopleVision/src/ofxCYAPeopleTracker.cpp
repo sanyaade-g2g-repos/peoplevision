@@ -63,7 +63,7 @@ void ofxCYAPeopleTracker::setupTuio(string ip, int port)
 
 void ofxCYAPeopleTracker::setupOsc(string ip, int port)
 {
-	cout<<"SEND OSC"<<endl;
+	cout << "SEND OSC" << endl;
 	bOscEnabled = true;
 	p_Settings->oscPort = port;
 	p_Settings->oscHost = ip;
@@ -149,7 +149,7 @@ void ofxCYAPeopleTracker::trackPeople()
 	
 	//printf("track type %d from (%d,%d,%d)\n", p_Settings->trackType, TRACK_ABSOLUTE, TRACK_DARK, TRACK_LIGHT);
 	if(p_Settings->trackType == TRACK_ABSOLUTE){
-		cout << "graydiff.."<<endl;
+		cout << "graydiff.." << endl;
 		grayDiff.absDiff(grayBg, grayImageWarped);
 	}
 	else{
@@ -187,9 +187,22 @@ void ofxCYAPeopleTracker::trackPeople()
 	//-----------------------
 	// TRACKING
 	//-----------------------	
+	//find the optical flow
 	if (p_Settings->bTrackOpticalFlow){
 		opticalFlow.calc(grayLastImage, graySmallImage, 11);
 	}
+	
+	//accumulate and store all found haar features.
+	vector<ofRectangle> haarRects;
+	if(p_Settings->bDetectHaar){
+		haarTracker.findHaarObjects( grayBabyImage );
+		float x, y, w, h;
+		while(haarTracker.hasNextHaarItem()){
+			haarTracker.getHaarItemPropertiesEased( &x, &y, &w, &h );
+			haarRects.push_back( ofRectangle(x,y,w,h) );
+		}
+	}
+	cout << "found " << haarRects.size() << " haar items this frame" << endl;
 	
 	contourFinder.findContours(grayDiff, p_Settings->minBlob*width*height, p_Settings->maxBlob*width*height, 50, p_Settings->bFindHoles);
 	persistentTracker.trackBlobs(contourFinder.blobs);
@@ -218,38 +231,39 @@ void ofxCYAPeopleTracker::trackPeople()
 		
 		//detect haar patterns (faces, eyes, etc)
 		if (p_Settings->bDetectHaar){
-			int blobId, oldId;
 			bool bHaarItemSet = false;
-			if (p->area > p_Settings->minHaarArea && p->area < p_Settings->maxHaarArea){
 				
-				//find the region of interest, expanded by haarArea.
-				//bound by the frame edge
-				ofRectangle roi;
-				roi.x		= fmax( (p->boundingRect.x - p_Settings->haarArea) * TRACKING_SCALE_FACTOR, 0.0f );
-				roi.y		= fmax( (p->boundingRect.y - p_Settings->haarArea) * TRACKING_SCALE_FACTOR, 0.0f );
-				roi.width	= fmin( (p->boundingRect.width  + p_Settings->haarArea*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.x );
-				roi.height	= fmin( (p->boundingRect.height + p_Settings->haarArea*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.y );	
-				
-				haarTracker.findHaarObjects( grayBabyImage, roi );
-				float x, y, w, h;
-				while( haarTracker.hasNextHaarItem() ) {
-					blobId = haarTracker.getHaarItemID();
-					haarTracker.getHaarItemPropertiesEased( &x, &y, &w, &h );
-					//strange bug where features in external ROI's are being detected. 
-					//tried to call clearHaarItems() between blobs but this causes no detections at all
-					//work around for now is ensure the rectangle is contained in the ROI
-					if(roi.x < x && roi.y < y && roi.width > w && roi.height > h){
-						//mult by two since haar finder is looking at a 320x240 sample
-						x /= TRACKING_SCALE_FACTOR;
-						y /= TRACKING_SCALE_FACTOR;
-						w /= TRACKING_SCALE_FACTOR;
-						h /= TRACKING_SCALE_FACTOR;
-						p->setHaarRect(ofRectangle(x, y, w, h));
-						bHaarItemSet = true;
-						break;	//only allow first haar item
-					}
+			//find the region of interest, expanded by haarArea.
+			//bound by the frame edge
+			ofRectangle roi;
+			roi.x		= fmax( (p->boundingRect.x - p_Settings->haarArea) * TRACKING_SCALE_FACTOR, 0.0f );
+			roi.y		= fmax( (p->boundingRect.y - p_Settings->haarArea) * TRACKING_SCALE_FACTOR, 0.0f );
+			roi.width	= fmin( (p->boundingRect.width  + p_Settings->haarArea*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.x );
+			roi.height	= fmin( (p->boundingRect.height + p_Settings->haarArea*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.y );	
+			
+			for(int i = 0; i < haarRects.size(); i++) {
+				ofRectangle haarRect = haarRects[i]; 
+				if(roi.x < haarRect.x && roi.y < haarRect.y && roi.width > haarRect.width && roi.height > haarRect.height){
+					//mult by two since haar finder is looking at a 320x240 sample
+					haarRect.x		/= TRACKING_SCALE_FACTOR;
+					haarRect.y		/= TRACKING_SCALE_FACTOR;
+					haarRect.width	/= TRACKING_SCALE_FACTOR;
+					haarRect.height /= TRACKING_SCALE_FACTOR;
+					p->setHaarRect(haarRect);
+					bHaarItemSet = true;
+					break;	//only allow first haar item
 				}
 			}
+//			haarTracker.findHaarObjects( grayBabyImage, roi );
+
+//			while( haarTracker.hasNextHaarItem() ) {
+//				blobId = haarTracker.getHaarItemID();
+//				haarTracker.getHaarItemPropertiesEased( &x, &y, &w, &h );
+				//strange bug where features in external ROI's are being detected. 
+				//tried to call clearHaarItems() between blobs but this causes no detections at all
+				//work around for now is ensure the rectangle is contained in the ROI
+//			}
+			
 			//flag that we missed a frame
 			if(!bHaarItemSet){
 				p->noHaarThisFrame();
@@ -352,23 +366,12 @@ void ofxCYAPeopleTracker::blobOff( int x, int y, int id, int order )
 	std::vector<ofxCYAPerson*>::iterator it;
 	for(it = trackedPeople.begin(); it != trackedPeople.end(); it++){
 		if((*it)->pid == p->pid){
-						
 			trackedPeople.erase(it);
 			delete p;
 			break;
 		}
 	}
 }
-
-//bool ofxCYAPeopleTracker::isTrackingPerson( int pid )
-//{
-//    for( int i = 0; i < trackedPeople.size(); i++ ) {
-//        if( trackedPeople[i]->pid == pid ) {
-//            return true;
-//        }
-//    }
-//	return false;
-//}
 
 ofxCYAPerson* ofxCYAPeopleTracker::getTrackedPerson( int pid )
 {
@@ -394,118 +397,106 @@ void ofxCYAPeopleTracker::draw(int x, int y)
 void ofxCYAPeopleTracker::draw(int x, int y, int mode)
 {
 
-//		mode = DRAW_MODE_NORMAL;
-//		switch (mode) {
-//			case DRAW_MODE_GUI:
-////				gui.draw();
-	
-		ofPoint drawSpacing;
-		drawSpacing.x = 10;
-		drawSpacing.y = 10;
-	
+	ofPoint drawSpacing;
+	drawSpacing.x = 10;
+	drawSpacing.y = 10;
+
+	ofPushMatrix();{
+		ofTranslate(x, y, 0);
+		//translate to make room for the gui
+		ofTranslate(350, 15, 0);
+		// draw the incoming, the grayscale, the bg and the thresholded difference
+		ofSetColor(0xffffff);
+		
+		//camera image
+		grayImage.draw(0,0,320,240);			
+		ofDrawBitmapString("camera image", 5, 235);			
+		grayImageWarped.draw(320 + drawSpacing.x , 0,320,240);			
+		ofDrawBitmapString("warped image", 320 + drawSpacing.x + 5, 235 );
+		
+		grayDiff.draw(0, 240+drawSpacing.y, 320,240);			
+		ofDrawBitmapString("difference image", 5, 480+drawSpacing.y - 5);
+		grayBg.draw(320 + drawSpacing.x, 240+drawSpacing.y,320,240);
+		ofDrawBitmapString("captured background", 320 + drawSpacing.x + 5, 480+drawSpacing.y - 5 );
+													
+		//individually draw blobs and report findings
 		ofPushMatrix();{
-			ofTranslate(x, y, 0);
-			//translate to make room for the gui
-			ofTranslate(350, 15, 0);
-			// draw the incoming, the grayscale, the bg and the thresholded difference
+			ofTranslate(0,240*2 + drawSpacing.y*2);
+			
+			ofFill();
+			ofSetColor(0x333333);
+			ofRect(0,0,320,240);
 			ofSetColor(0xffffff);
 			
-			//camera image
-			grayImage.draw(0,0,320,240);			
-			ofDrawBitmapString("camera image", 5, 235);			
-			grayImageWarped.draw(320 + drawSpacing.x , 0,320,240);			
-			ofDrawBitmapString("warped image", 320 + drawSpacing.x + 5, 235 );
+			ofNoFill();
 			
-			grayDiff.draw(0, 240+drawSpacing.y, 320,240);			
-			ofDrawBitmapString("difference image", 5, 480+drawSpacing.y - 5);
-			grayBg.draw(320 + drawSpacing.x, 240+drawSpacing.y,320,240);
-			ofDrawBitmapString("captured background", 320 + drawSpacing.x + 5, 480+drawSpacing.y - 5 );
-														
-			//individually draw blobs and report findings
-			ofPushMatrix();{
-				ofTranslate(0,240*2 + drawSpacing.y*2);
-				
-				ofFill();
-				ofSetColor(0x333333);
-				ofRect(0,0,320,240);
-				ofSetColor(0xffffff);
-				
-				ofNoFill();
-				
-				if (p_Settings->bTrackOpticalFlow){
-					ofSetColor(0x888888);
-					opticalFlow.draw(width*TRACKING_SCALE_FACTOR, height*TRACKING_SCALE_FACTOR);
-				}					
-				
-				ofPushMatrix();
-				ofScale(TRACKING_SCALE_FACTOR, TRACKING_SCALE_FACTOR);
-				contourFinder.draw(  );
+			if (p_Settings->bTrackOpticalFlow){
+				ofSetColor(0x888888);
+				opticalFlow.draw(width*TRACKING_SCALE_FACTOR, height*TRACKING_SCALE_FACTOR);
+			}					
 			
-				for (int i=0; i < trackedPeople.size(); i++){
-					
-					//draw blobs				
-					//if haarfinder is looking at these blobs, draw the area it's looking at
-					ofxCYAPerson* p = trackedPeople[i];
-					
-					if(p_Settings->bTrackOpticalFlow){
-						//purple optical flow arrow
-						ofSetColor(0xff00ff);
-						ofLine(p->centroid.x, p->centroid.y, p->centroid.x + p->opticalFlowVectorAccumulation.x, p->centroid.y + p->opticalFlowVectorAccumulation.y);
-					}
-					
-					ofSetColor(0xffffff);							
-					if(p_Settings->bDetectHaar){
-						//draw haar search area expanded 
-						ofRect(p->boundingRect.x - p_Settings->haarArea, 
-							   p->boundingRect.y - p_Settings->haarArea, 
-							   p->boundingRect.width  + p_Settings->haarArea*2, 
-							   p->boundingRect.height + p_Settings->haarArea*2);
-					}
-					
-					if(p->hasHaarRect()){
-						//draw the haar rect in green
-						ofSetColor(0x00ff00);
-						ofRect(p->getHaarRect().x, p->getHaarRect().y, p->getHaarRect().width, p->getHaarRect().height);
-						//haar-detected people get a yellow square
-						ofSetColor(0xffff00);
-					}
-					else {
-						//no haar gets a blue square
-						ofSetColor(0x0000ff);
-					}
-					
-					//draw person
-					ofRect(p->boundingRect.x, p->boundingRect.y, p->boundingRect.width, p->boundingRect.height);
-					
-					//draw centroid
-					ofSetColor(0xff0000);
-					ofCircle(p->centroid.x, p->centroid.y, 3);
-												
-					//draw id
-					ofSetColor(0xffffff);
-					char idstr[1024];
-					sprintf(idstr, "pid: %d\noid: %d\nage: %d", p->pid, p->oid, p->age );
-					ofDrawBitmapString(idstr, p->centroid.x+8, p->centroid.y);													
+			ofPushMatrix();
+			ofScale(TRACKING_SCALE_FACTOR, TRACKING_SCALE_FACTOR);
+			contourFinder.draw(  );
+		
+			for (int i=0; i < trackedPeople.size(); i++){
+				
+				//draw blobs				
+				//if haarfinder is looking at these blobs, draw the area it's looking at
+				ofxCYAPerson* p = trackedPeople[i];
+				
+				if(p_Settings->bTrackOpticalFlow){
+					//purple optical flow arrow
+					ofSetColor(0xff00ff);
+					ofLine(p->centroid.x, 
+						   p->centroid.y, 
+						   p->centroid.x + p->opticalFlowVectorAccumulation.x, 
+						   p->centroid.y + p->opticalFlowVectorAccumulation.y);
 				}
-				ofPopMatrix();
-				ofSetColor(0xffffff);				
-				ofDrawBitmapString("blobs and optical flow", 5, 235 );
-			}ofPopMatrix();	//release video feedback drawing
-			
-//			break;
-//			case DRAW_MODE_CAMERA_CALIBRATE:
-//				//TODO implement calibration mode
-//				//vidGrabber.draw(ofGetWidth()- camWidth,0);			
-//				break;
-//			case DRAW_MODE_FULLSCREEN:
-//				ofSetColor(0xffffff);
-//				grayImageWarped.draw(0,0,ofGetWidth(),ofGetHeight());
-//		
-//				break;
-//			default:
-//				printf("undefined draw mode: %d\n", mode);
-//				break;
-		}ofPopMatrix();
+				
+				ofSetColor(0xffffff);							
+				if(p_Settings->bDetectHaar){
+					//draw haar search area expanded 
+					ofRect(p->boundingRect.x - p_Settings->haarArea, 
+						   p->boundingRect.y - p_Settings->haarArea, 
+						   p->boundingRect.width  + p_Settings->haarArea*2, 
+						   p->boundingRect.height + p_Settings->haarArea*2);
+				}
+				
+				if(p->hasHaarRect()){
+					//draw the haar rect in green
+					ofSetColor(0x00ff00);
+					ofRect(p->getHaarRect().x, p->getHaarRect().y, p->getHaarRect().width, p->getHaarRect().height);
+					//haar-detected people get a yellow square
+					ofSetColor(0xffff00);
+				}
+				else {
+					//no haar gets a blue square
+					ofSetColor(0x0000ff);
+				}
+				
+				//draw person
+				ofRect(p->boundingRect.x, p->boundingRect.y, p->boundingRect.width, p->boundingRect.height);
+				
+				//draw centroid
+				ofSetColor(0xff0000);
+				ofCircle(p->centroid.x, p->centroid.y, 3);
+											
+				//draw id
+				ofSetColor(0xffffff);
+				char idstr[1024];
+				sprintf(idstr, "pid: %d\noid: %d\nage: %d", p->pid, p->oid, p->age );
+				ofDrawBitmapString(idstr, p->centroid.x+8, p->centroid.y);													
+			}
+			ofPopMatrix();
+			ofSetColor(0xffffff);				
+			ofDrawBitmapString("blobs and optical flow", 5, 235 );
+		}ofPopMatrix();	//release video feedback drawing
+	}ofPopMatrix();
+	
+	char frmrate[1024];
+	sprintf(frmrate, "ofFrameRate: %f", ofGetFrameRate() );
+	ofDrawBitmapString(frmrate, 680, 520);													
 	
 	//draw gui outside of translate matrix
 	gui.drawQuadGui( 350, 15, 320, 240);

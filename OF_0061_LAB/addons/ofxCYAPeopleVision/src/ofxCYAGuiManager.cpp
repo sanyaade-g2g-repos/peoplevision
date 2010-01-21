@@ -64,8 +64,8 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	panel.addToggle("learn background", "LEARN_BACKGROUND", false);
 	//JG 12/8/09 GUI-REDUX Removing this feature
 	//gui.addToggle("smart learn background", &p_Settings->bSmartLearnBackground);
-	panel.addSlider("minimum blob (screen %)", "MIN_BLOB", .01f, 0.0001f, 1.0, false);
-	panel.addSlider("maximum blob (screen %)", "MAX_BLOB", .5f, 0.0001f, 1.0, false);
+	panel.addSlider("minimum blob (screen %)", "MIN_BLOB", .01f, 0.01f, 1.0, false);
+	panel.addSlider("maximum blob (screen %)", "MAX_BLOB", .5f, 0.01f, 1.0, false);
 	panel.addToggle("use progressive relearn", "RELEARN", false);
 	panel.addSlider("background relearn rate", "RELEARN_BACKGROUND", .1f, 0.0f, 1000.0f, false);
 	panel.addToggle("find holes", "FIND_HOLES", false);

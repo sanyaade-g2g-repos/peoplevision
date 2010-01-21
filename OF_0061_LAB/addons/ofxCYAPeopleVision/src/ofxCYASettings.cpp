@@ -37,7 +37,7 @@ ofxCYASettings* ofxCYASettings::getInstance()
 		single->minBlob = 0.001;
 		single->maxBlob = .05;
 		
-		single->haarFile = "haar/HS.xml";
+		single->haarFile = "HS.xml";
 		
 		single->bLearnBackground = true;	
 		single->bCentroidDampen = true;		
