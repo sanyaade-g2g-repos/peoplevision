@@ -168,6 +168,7 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 	protected:
 	
 		void trackPeople();
+		void updateSettings();
 		bool isTrackingPerson(int pid);
 
 	

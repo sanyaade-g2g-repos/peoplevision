@@ -59,4 +59,5 @@ class ofxCYAGuiManager {
 	bool quadGuiSetup;
 	ofxCvCoordWarpingGui quadGui;
 	
+	simpleFileLister* haarFiles;
 };

@@ -445,20 +445,20 @@
 			isa = PBXGroup;
 			children = (
 				2E2B853010FCC51C002EB043 /* ofxCYA.h */,
-				2E2B853110FCC51C002EB043 /* ofxCYAGuiManager.cpp */,
 				2E2B853210FCC51C002EB043 /* ofxCYAGuiManager.h */,
-				2E2B853310FCC51C002EB043 /* ofxCYAPeopleTracker.cpp */,
+				2E2B853110FCC51C002EB043 /* ofxCYAGuiManager.cpp */,
 				2E2B853410FCC51C002EB043 /* ofxCYAPeopleTracker.h */,
-				2E2B853510FCC51C002EB043 /* ofxCYAPerson.cpp */,
+				2E2B853310FCC51C002EB043 /* ofxCYAPeopleTracker.cpp */,
 				2E2B853610FCC51C002EB043 /* ofxCYAPerson.h */,
-				2E2B853710FCC51C002EB043 /* ofxCYAScene.cpp */,
+				2E2B853510FCC51C002EB043 /* ofxCYAPerson.cpp */,
 				2E2B853810FCC51C002EB043 /* ofxCYAScene.h */,
-				2E2B853910FCC51C002EB043 /* ofxCYASettings.cpp */,
+				2E2B853710FCC51C002EB043 /* ofxCYAScene.cpp */,
 				2E2B853A10FCC51C002EB043 /* ofxCYASettings.h */,
-				2E2B853B10FCC51C002EB043 /* ofxCYATUIOSender.cpp */,
+				2E2B853910FCC51C002EB043 /* ofxCYASettings.cpp */,
 				2E2B853C10FCC51C002EB043 /* ofxCYATUIOSender.h */,
-				2E739FAC10FFBF2300299078 /* ofxCYAOscSender.cpp */,
+				2E2B853B10FCC51C002EB043 /* ofxCYATUIOSender.cpp */,
 				2E739FAD10FFBF2300299078 /* ofxCYAOscSender.h */,
+				2E739FAC10FFBF2300299078 /* ofxCYAOscSender.cpp */,
 			);
 			path = src;
 			sourceTree = "<group>";

@@ -23,11 +23,12 @@ public:
 		instanceFlag = false;
 	}
 	
+	string haarFile;
+
 	// tracking vars
 	bool bLearnBackground;
-	bool bSmartLearnBackground;
+//	bool bSmartLearnBackground; //jg disabled this feature
 	bool bLearnBackgroundProgressive;
-	//bool bTrackDark;
 	int trackType;
 	bool bHighpass;
 	bool bAmplify;
@@ -59,6 +60,7 @@ public:
 	ofPoint quadWarpOriginal[4];
 	
 private:
+	
 	static bool instanceFlag;
 	static ofxCYASettings *single;
 	ofxCYASettings() {

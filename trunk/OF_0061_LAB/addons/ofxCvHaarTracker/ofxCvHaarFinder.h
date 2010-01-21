@@ -37,6 +37,7 @@ public:
 		int minWidth = HAAR_DEFAULT_MIN_SIZE, int minHeight = HAAR_DEFAULT_MIN_SIZE);
 
 	void setup(string haarFile);
+	string getHaarFile();
 	bool ready();
 	void setScaleHaar(float scaleHaar);
 	void setNeighbors(unsigned neighbors);

@@ -16,7 +16,7 @@ void testApp::setup(){
 	
 	ofSetFrameRate(60);
 	ofBackground(100, 100, 100);
-	//ofSetDataPathRoot("../data/");
+	ofSetDataPathRoot("../data/");
 	
 	camWidth = 640;
 	camHeight = 480;

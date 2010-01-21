@@ -37,6 +37,8 @@ ofxCYASettings* ofxCYASettings::getInstance()
 		single->minBlob = 0.001;
 		single->maxBlob = .05;
 		
+		single->haarFile = "haar/HS.xml";
+		
 		single->bLearnBackground = true;	
 		single->bCentroidDampen = true;		
 		
@@ -45,14 +47,10 @@ ofxCYASettings* ofxCYASettings::getInstance()
 		
 		single->tuioHost = "localhost";
 		single->tuioPort = 3333;
+		
+
     }
 	return single;
 	
 }
-
-void ofxCYASettings::method()
-{
-    cout << "Method of the singleton class" << endl;
-}
-
 
