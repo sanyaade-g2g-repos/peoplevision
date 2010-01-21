@@ -1,2 +1,0 @@
-/Users/rockwell/Documents/CYA/OF_0061_LAB/apps/LAB/CYAPeopleVision/../../../addons/ofxCYAPeopleVision/src/ofxCYAOscSender.cpp:124: error: prototype for 'void ofxCYAOscSender::personWillLeave(ofxCYAPerson*, ofPoint, int, int)' does not match any in class 'ofxCYAOscSender'
-/Users/rockwell/Documents/CYA/OF_0061_LAB/apps/LAB/CYAPeopleVision/../../../addons/ofxCYAPeopleVision/src/ofxCYAOSCSender.h:60: error: candidate is: void ofxCYAOscSender::personWillLeave(ofxCYAPerson*)
