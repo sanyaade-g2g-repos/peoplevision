@@ -62,10 +62,12 @@ void ofxCvOpticalFlowLK::draw(void){
 	for ( y = 0; y < captureHeight; y+=captureRowsStep ){
 		for ( x = 0; x < captureWidth; x+=captureColsStep ){
 
-			dx = (int)cvGetReal2D( vel_x, y, x );
-			dy = (int)cvGetReal2D( vel_y, y, x );
+//			dx = (int)cvGetReal2D( vel_x, y, x );
+//			dy = (int)cvGetReal2D( vel_y, y, x );
 
-			ofLine(x,y,x+dx,y+dy);
+			//drawing reflects clamped values
+			ofPoint vec = flowAtPoint(x, y);
+			ofLine(x,y,x+vec.x,y+vec.y);
 
 		}
 	}
@@ -85,10 +87,11 @@ void ofxCvOpticalFlowLK::draw(int width, int height){
 	for ( y = 0; y < captureHeight; y+=captureRowsStep ){
 		for ( x = 0; x < captureWidth; x+=captureColsStep ){
 			
-			dx = (int)cvGetReal2D( vel_x, y, x );
-			dy = (int)cvGetReal2D( vel_y, y, x );
-			
-			ofLine(x*scalex,y*scaley,(x+dx)*scalex,(y+dy)*scaley);
+//			dx = (int)cvGetReal2D( vel_x, y, x );
+//			dy = (int)cvGetReal2D( vel_y, y, x );
+//			
+			ofPoint vec = flowAtPoint(x, y);
+			ofLine(x,y,x+vec.x,y+vec.y);
 			
 		}
 	}
@@ -98,9 +101,18 @@ void ofxCvOpticalFlowLK::draw(int width, int height){
 ofPoint ofxCvOpticalFlowLK::flowAtPoint(int x, int y){
 	if(x >= captureWidth || x < 0 || y >= captureHeight || y < 0){
 		return 0.0f;
-	}	
+	}
 	float fdx = cvGetReal2D( vel_x, y, x );
 	float fdy = cvGetReal2D( vel_y, y, x );
+	float mag2 = fdx*fdx + fdy*fdy;
+	if(  mag2 > maxVector*maxVector){
+		//return a normalized vector of the magnitude size
+		return ofPoint(fdx,fdy)/mag2 * maxVector;
+	}
+	if( mag2 < minVector*minVector){
+		//threhsold to 0
+		return ofPoint(0,0);
+	}
 	return ofPoint(fdx, fdy);
 }
 

@@ -193,16 +193,16 @@ void ofxCYAPeopleTracker::trackPeople()
 	}
 	
 	//accumulate and store all found haar features.
-	vector<ofRectangle> haarRects;
-	if(p_Settings->bDetectHaar){
-		haarTracker.findHaarObjects( grayBabyImage );
-		float x, y, w, h;
-		while(haarTracker.hasNextHaarItem()){
-			haarTracker.getHaarItemPropertiesEased( &x, &y, &w, &h );
-			haarRects.push_back( ofRectangle(x,y,w,h) );
-		}
-	}
-	cout << "found " << haarRects.size() << " haar items this frame" << endl;
+//	vector<ofRectangle> haarRects;
+//	if(p_Settings->bDetectHaar){
+//		haarTracker.findHaarObjects( grayBabyImage );
+//		float x, y, w, h;
+//		while(haarTracker.hasNextHaarItem()){
+//			haarTracker.getHaarItemPropertiesEased( &x, &y, &w, &h );
+//			haarRects.push_back( ofRectangle(x,y,w,h) );
+//		}
+//	}
+//	cout << "found " << haarRects.size() << " haar items this frame" << endl;
 	
 	contourFinder.findContours(grayDiff, p_Settings->minBlob*width*height, p_Settings->maxBlob*width*height, 50, p_Settings->bFindHoles);
 	persistentTracker.trackBlobs(contourFinder.blobs);
@@ -226,6 +226,8 @@ void ofxCYAPeopleTracker::trackPeople()
 
 		//sum optical flow for the person
 		if(p_Settings->bTrackOpticalFlow){
+			opticalFlow.maxVector = p_Settings->maxOpticalFlow;
+			opticalFlow.minVector = p_Settings->minOpticalFlow;
 			p->opticalFlowVectorAccumulation = opticalFlow.flowInRegion(p->boundingRect);
 		}
 		
@@ -241,31 +243,20 @@ void ofxCYAPeopleTracker::trackPeople()
 			roi.width	= fmin( (p->boundingRect.width  + p_Settings->haarAreaPadding*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.x );
 			roi.height	= fmin( (p->boundingRect.height + p_Settings->haarAreaPadding*2) * TRACKING_SCALE_FACTOR, grayBabyImage.width - roi.y );	
 			
-			for(int i = 0; i < haarRects.size(); i++) {
-				ofRectangle haarRect = haarRects[i]; 
-				if(roi.x < haarRect.x && roi.y < haarRect.y && roi.width > haarRect.width && roi.height > haarRect.height){
-					//mult by two since haar finder is looking at a 320x240 sample
-					haarRect.x		/= TRACKING_SCALE_FACTOR;
-					haarRect.y		/= TRACKING_SCALE_FACTOR;
-					haarRect.width	/= TRACKING_SCALE_FACTOR;
-					haarRect.height /= TRACKING_SCALE_FACTOR;
-					p->setHaarRect(haarRect);
-					bHaarItemSet = true;
-					break;	//only allow first haar item
-				}
-			}
-//			haarTracker.findHaarObjects( grayBabyImage, roi );
-
-//			while( haarTracker.hasNextHaarItem() ) {
-//				blobId = haarTracker.getHaarItemID();
-//				haarTracker.getHaarItemPropertiesEased( &x, &y, &w, &h );
-				//strange bug where features in external ROI's are being detected. 
-				//tried to call clearHaarItems() between blobs but this causes no detections at all
-				//work around for now is ensure the rectangle is contained in the ROI
-//			}
+			//cout << "ROI is " << roi.x << "  " << roi.y << " " << roi.width << "  " << roi.height << endl;
 			
-			//flag that we missed a frame
-			if(!bHaarItemSet){
+			grayBabyImage.setROI(roi.x, roi.y, roi.width, roi.height);
+			int numFound = haarFinder.findHaarObjects(grayBabyImage, roi);
+			cout << "found " << numFound << " for this object" << endl;
+			if(numFound > 0) {
+				ofRectangle haarRect = haarFinder.blobs[0].boundingRect;
+				haarRect.x /= TRACKING_SCALE_FACTOR;
+				haarRect.y /= TRACKING_SCALE_FACTOR;
+				haarRect.width /= TRACKING_SCALE_FACTOR;
+				haarRect.height /= TRACKING_SCALE_FACTOR;
+				p->setHaarRect(haarRect);
+			}
+			else {
 				p->noHaarThisFrame();
 			}
 		}
@@ -284,14 +275,14 @@ void ofxCYAPeopleTracker::trackPeople()
 	if(bTuioEnabled){
 		for (int i = 0; i < trackedPeople.size(); i++){
 			ofxCYAPerson* p = trackedPeople[i];
-			if(p_Settings->bUseHaarAsCenter && p->hasHaarRect()){
-				ofPoint tuioCursor = p->getHaarCentroidNormalized(width, height);
-				tuioClient.cursorDragged( tuioCursor.x, tuioCursor.y, p->oid);
-			}
-			else{
-				ofPoint tuioCursor = p->getCentroidNormalized(width, height);
-				tuioClient.cursorDragged( tuioCursor.x, tuioCursor.y, p->oid);
-			}
+//			if(p_Settings->bUseHaarAsCenter && p->hasHaarRect()){
+//				ofPoint tuioCursor = p->getHaarCentroidNormalized(width, height);
+//				tuioClient.cursorDragged( tuioCursor.x, tuioCursor.y, p->oid);
+//			}
+//			else{
+			ofPoint tuioCursor = p->getCentroidNormalized(width, height);
+			tuioClient.cursorDragged( tuioCursor.x, tuioCursor.y, p->oid);
+//			}
 		}
 		
 		tuioClient.update();		
@@ -300,14 +291,14 @@ void ofxCYAPeopleTracker::trackPeople()
 	if (bOscEnabled){
 		for (int i = 0; i < trackedPeople.size(); i++){
 			ofxCYAPerson* p = trackedPeople[i];
-			if(p_Settings->bUseHaarAsCenter && p->hasHaarRect()){
-				ofPoint centroid = p->getHaarCentroidNormalized(width, height);
-				oscClient.personMoved(p, centroid, width, height);
-			}
-			else{
-				ofPoint centroid = p->getCentroidNormalized(width, height);
-				oscClient.personMoved(p, centroid, width, height);
-			}
+//			if(p_Settings->bUseHaarAsCenter && p->hasHaarRect()){
+//				ofPoint centroid = p->getHaarCentroidNormalized(width, height);
+//				oscClient.personMoved(p, centroid, width, height);
+//			}
+//			else{
+			ofPoint centroid = p->getCentroidNormalized(width, height);
+			oscClient.personMoved(p, centroid, width, height);
+//			}
 		}
 		
 		oscClient.ip = p_Settings->oscHost;
@@ -635,10 +626,10 @@ void ofxCYAPeopleTracker::setHaarExpandArea(float haarExpandAmount) //makes the 
 //	p_Settings->maxHaarArea = maxArea;
 //}
 
-void ofxCYAPeopleTracker::useHaarAsCentroid(bool useHaarCenter)
-{
-	p_Settings->bUseHaarAsCenter = useHaarCenter;
-}
+//void ofxCYAPeopleTracker::useHaarAsCentroid(bool useHaarCenter)
+//{
+//	p_Settings->bUseHaarAsCenter = useHaarCenter;
+//}
 
 //blobs
 void ofxCYAPeopleTracker::enableFindHoles(bool findHoles)

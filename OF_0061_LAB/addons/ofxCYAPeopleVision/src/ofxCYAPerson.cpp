@@ -71,6 +71,10 @@ bool ofxCYAPerson::hasHaarRect()
 
 void ofxCYAPerson::noHaarThisFrame()
 {
+	//temp remove keep haar
+	hasHaar = false;
+	return;
+	
 	//if we had a haar but it vanished move it by the movement of the blob
 	if(framesWithoutHaar++ > MAX_HAAR_GHOSTFRAMES){
 		hasHaar = false;
