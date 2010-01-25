@@ -61,7 +61,7 @@ void ofxCYAOscSender::update(){
  SEND
  ***************************************************************/
 
-void ofxCYAOscSender::personEntered ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight ){
+void ofxCYAOscSender::personEntered ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight, bool bSendContours ){
 	ofxOscMessage m;
 	m.setAddress("cya/personEntered/");
 	m.addIntArg(p->pid);
@@ -78,16 +78,18 @@ void ofxCYAOscSender::personEntered ( ofxCYAPerson * p, ofPoint centroid, int ca
 	m.addFloatArg(boundingRect.width);
 	m.addFloatArg(boundingRect.height);
 	
-	//any args after 9 will be contours
-	for (int i=0; i<p->simpleContour.size(); i++){
-		m.addFloatArg(p->simpleContour[i].x);
-		m.addFloatArg(p->simpleContour[i].y);
-	};
+	if (bSendContours){
+		//any args after 9 will be contours
+		for (int i=0; i<p->simpleContour.size(); i++){
+			m.addFloatArg(p->simpleContour[i].x);
+			m.addFloatArg(p->simpleContour[i].y);
+		};
+	}
 	
 	send(m);
 };
 
-void ofxCYAOscSender::personMoved ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight ){
+void ofxCYAOscSender::personMoved ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight, bool bSendContours ){
 	ofxOscMessage m;
 	m.setAddress("cya/personMoved/");
 	m.addIntArg(p->pid);
@@ -104,16 +106,18 @@ void ofxCYAOscSender::personMoved ( ofxCYAPerson * p, ofPoint centroid, int came
 	m.addFloatArg(boundingRect.width);
 	m.addFloatArg(boundingRect.height);
 	
-	//any args after 9 will be contours
-	for (int i=0; i<p->simpleContour.size(); i++){
-		m.addFloatArg(p->simpleContour[i].x);
-		m.addFloatArg(p->simpleContour[i].y);
-	};
+	if (bSendContours){
+		//any args after 9 will be contours
+		for (int i=0; i<p->simpleContour.size(); i++){
+			m.addFloatArg(p->simpleContour[i].x);
+			m.addFloatArg(p->simpleContour[i].y);
+		};
+	}
 	
 	send(m);
 };
 
-void ofxCYAOscSender::personUpdated ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight ){
+void ofxCYAOscSender::personUpdated ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight, bool bSendContours ){
 	ofxOscMessage m;
 	m.setAddress("cya/personUpdated/");
 	m.addIntArg(p->pid);
@@ -130,16 +134,18 @@ void ofxCYAOscSender::personUpdated ( ofxCYAPerson * p, ofPoint centroid, int ca
 	m.addFloatArg(boundingRect.width);
 	m.addFloatArg(boundingRect.height);
 		
-	//any args after 9 will be contours
-	for (int i=0; i<p->simpleContour.size(); i++){
-		m.addFloatArg(p->simpleContour[i].x);
-		m.addFloatArg(p->simpleContour[i].y);
-	};
+	if (bSendContours){
+		//any args after 9 will be contours
+		for (int i=0; i<p->simpleContour.size(); i++){
+			m.addFloatArg(p->simpleContour[i].x);
+			m.addFloatArg(p->simpleContour[i].y);
+		};
+	}
 	
 	send(m);
 };
 
-void ofxCYAOscSender::personWillLeave ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight )
+void ofxCYAOscSender::personWillLeave ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight, bool bSendContours )
 {
 	ofxOscBundle b;
 	ofxOscMessage m;
@@ -158,11 +164,13 @@ void ofxCYAOscSender::personWillLeave ( ofxCYAPerson * p, ofPoint centroid, int 
 	m.addFloatArg(boundingRect.width);
 	m.addFloatArg(boundingRect.height);
 	
-	//any args after 9 will be contours
-	for (int i=0; i<p->simpleContour.size(); i++){
-		m.addFloatArg(p->simpleContour[i].x);
-		m.addFloatArg(p->simpleContour[i].y);
-	};
+	if (bSendContours){
+		//any args after 9 will be contours
+		for (int i=0; i<p->simpleContour.size(); i++){
+			m.addFloatArg(p->simpleContour[i].x);
+			m.addFloatArg(p->simpleContour[i].y);
+		};
+	}
 	
 	send(m);
 	

@@ -306,7 +306,7 @@ void ofxCYAPeopleTracker::trackPeople()
 //			}
 //			else{
 			ofPoint centroid = p->getCentroidNormalized(width, height);
-			oscClient.personMoved(p, centroid, width, height);
+			oscClient.personMoved(p, centroid, width, height, p_Settings->sendOscContours);
 //			}
 		}
 		
@@ -333,7 +333,7 @@ void ofxCYAPeopleTracker::blobOn( int x, int y, int id, int order )
 	}
 	if(bOscEnabled){
 		ofPoint centroid = newPerson->getCentroidNormalized(width, height);
-		oscClient.personEntered(newPerson, centroid, width, height);
+		oscClient.personEntered(newPerson, centroid, width, height, p_Settings->sendOscContours);
 	}
 }
 
@@ -359,7 +359,7 @@ void ofxCYAPeopleTracker::blobOff( int x, int y, int id, int order )
 	//send osc kill message if enabled
 	if (bOscEnabled){
 		ofPoint centroid = p->getCentroidNormalized(width, height);
-		oscClient.personWillLeave(p, centroid, width, height);
+		oscClient.personWillLeave(p, centroid, width, height, p_Settings->sendOscContours);
 	};
 	
 	//delete the object and remove it from the vector

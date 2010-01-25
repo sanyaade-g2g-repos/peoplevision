@@ -105,6 +105,7 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	panel.addToggle("send TUIO", "SEND_TUIO", false);
 	panel.addTextField("tuio host", "TUIO_HOST", "localhost", 200, 20);
 	panel.addTextField("tuio port", "TUIO_PORT", "3333", 200, 20);
+	panel.addToggle("send contours", "SEND_OSC_CONTOURS", false);
 		
 	//JG TODO: Optionally change config file through the UI
 	//this would be a big help for setting up multiple install sites and having those setting
@@ -216,6 +217,7 @@ void ofxCYAGuiManager::update(ofEventArgs &e)
 	p_Settings->oscPort = (int) atoi(panel.getValueS("OSC_PORT", 0, "12000").c_str());
 	p_Settings->tuioHost = panel.getValueS("TUIO_HOST", 0, "localhost");
 	p_Settings->tuioPort = (int) atoi(panel.getValueS("TUIO_PORT", 0, "3333").c_str());
+	p_Settings->sendOscContours = panel.getValueB("SEND_OSC_CONTOURS");
 	
 	//BR UPDATE GUI QUADS HERE
 	// because this returns a pointer to the actual points that get updated,
