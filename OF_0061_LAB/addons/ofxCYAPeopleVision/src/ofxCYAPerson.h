@@ -74,6 +74,7 @@ class ofxCYAPerson
 		ofPoint centroid; //center of mass of the person
 		ofRectangle boundingRect; //enclosing area
 		vector<ofPoint> contour; //shape contour
+		vector<ofPoint> simpleContour; //simplified shape contour
 		ofPoint velocity; //most recent movement of centroid
 		float area; //area as a scalar size
 		

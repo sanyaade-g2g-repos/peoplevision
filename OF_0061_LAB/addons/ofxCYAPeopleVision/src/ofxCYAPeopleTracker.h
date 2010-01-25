@@ -54,13 +54,13 @@
 #include "ofxOpenCv.h"
 #include "CPUImageFilter.h"
 #include "ofxCvOpticalFlowLK.h"
-//#include "ofxCvCoordWarping.h"
 
 //haar setting
 #define CV_HAAR_FIND_MODE CV_HAAR_FIND_BIGGEST_OBJECT
 
 //dependent libraries
 #include "ofxCvHaarTracker.h"
+#include "ofxContourAnalysis.h"
 #include "ofxCYASettings.h"
 #include "ofxCYAGuiManager.h"
 #include "ofxCYATUIOSender.h"
@@ -142,7 +142,8 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 		void trackDarkBlobs();
 		void trackLightBlobs();
 		int getDrawMode();
-
+		ofxContourAnalysis contourAnalysis;
+	
 		ofxCYAPerson* personAtIndex(int i);
 		ofxCYAPerson* getTrackedPerson(int pid);
 		int totalPeople();

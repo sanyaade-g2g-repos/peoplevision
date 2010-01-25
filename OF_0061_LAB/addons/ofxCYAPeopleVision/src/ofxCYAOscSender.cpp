@@ -78,6 +78,12 @@ void ofxCYAOscSender::personEntered ( ofxCYAPerson * p, ofPoint centroid, int ca
 	m.addFloatArg(boundingRect.width);
 	m.addFloatArg(boundingRect.height);
 	
+	//any args after 9 will be contours
+	for (int i=0; i<p->simpleContour.size(); i++){
+		m.addFloatArg(p->simpleContour[i].x);
+		m.addFloatArg(p->simpleContour[i].y);
+	};
+	
 	send(m);
 };
 
@@ -98,6 +104,12 @@ void ofxCYAOscSender::personMoved ( ofxCYAPerson * p, ofPoint centroid, int came
 	m.addFloatArg(boundingRect.width);
 	m.addFloatArg(boundingRect.height);
 	
+	//any args after 9 will be contours
+	for (int i=0; i<p->simpleContour.size(); i++){
+		m.addFloatArg(p->simpleContour[i].x);
+		m.addFloatArg(p->simpleContour[i].y);
+	};
+	
 	send(m);
 };
 
@@ -117,6 +129,12 @@ void ofxCYAOscSender::personUpdated ( ofxCYAPerson * p, ofPoint centroid, int ca
 	m.addFloatArg(boundingRect.y);
 	m.addFloatArg(boundingRect.width);
 	m.addFloatArg(boundingRect.height);
+		
+	//any args after 9 will be contours
+	for (int i=0; i<p->simpleContour.size(); i++){
+		m.addFloatArg(p->simpleContour[i].x);
+		m.addFloatArg(p->simpleContour[i].y);
+	};
 	
 	send(m);
 };
@@ -139,6 +157,12 @@ void ofxCYAOscSender::personWillLeave ( ofxCYAPerson * p, ofPoint centroid, int 
 	m.addFloatArg(boundingRect.y);
 	m.addFloatArg(boundingRect.width);
 	m.addFloatArg(boundingRect.height);
+	
+	//any args after 9 will be contours
+	for (int i=0; i<p->simpleContour.size(); i++){
+		m.addFloatArg(p->simpleContour[i].x);
+		m.addFloatArg(p->simpleContour[i].y);
+	};
 	
 	send(m);
 	
