@@ -64,7 +64,7 @@ package com.lab
 			dispatchEvent(event);
         }
      	private function connectHandler(event:Event):void{	
-     		dispatchEvent(event);			
+     		dispatchEvent(event);
         }               
         private function ioErrorHandler(event:IOErrorEvent):void{
         	dispatchEvent(event);
@@ -93,6 +93,14 @@ package com.lab
 			person.y = oscMessage[8]*stageHeight;
 			person.realWidth = oscMessage[9]*stageWidth;
 			person.realHeight = oscMessage[10]*stageHeight;
+			
+			//get contours
+			for (var i:uint = 11; i<oscMessage.length-11; i+=2){
+				var point:Object = new Object();
+				point.x = oscMessage[i]*stageWidth;
+				point.y = oscMessage[i+1]*stageHeight;
+				person.contours.push( point );
+			}
 			
 			if ( messageAddress == "cya/personEntered/"){
 				personEntered(person);

@@ -57,6 +57,7 @@ public:
 	// communication vars
 	bool sendOsc;
 	bool sendTuio;
+	bool sendOscContours;
 	string oscHost;
 	int oscPort;
 	string tuioHost;

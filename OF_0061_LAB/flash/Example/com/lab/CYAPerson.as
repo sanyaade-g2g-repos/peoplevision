@@ -14,6 +14,7 @@ package com.lab
 		public var realWidth:Number;
 		public var realHeight:Number; 
 		public var dead:Boolean;
+		public var contours:Array;
 		
 		public function CYAPerson( _stageWidth:uint, _stageHeight:uint, _id:uint = 0, _age:uint = 0, _centroid:Object = null, _velocity:Object = null, _x:Number = 0, _y:Number = 0, _width:Number = 0, _height:Number = 0, _dead:Boolean = false )
 		{
@@ -46,6 +47,7 @@ package com.lab
 			realWidth = _width;
 			realHeight = _height;
 			dead = _dead;
+			contours = new Array();
 		}
 				
 		public function update ( _person:CYAPerson )
@@ -56,7 +58,8 @@ package com.lab
 			x 			= _person.x;
 			y 			= _person.y;
 			realWidth	= _person.realWidth;
-			realHeight	= _person.realHeight;	
+			realHeight	= _person.realHeight;
+			contours	= _person.contours;	
 			dispatchEvent ( new CYAEvent(CYAEvent.PERSON_UPDATED, this));
 		}
 	}
