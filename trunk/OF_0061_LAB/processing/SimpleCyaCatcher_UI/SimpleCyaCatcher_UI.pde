@@ -1,68 +1,98 @@
 import cya.*;
 
 CYA cyaReceiver;
-PFont timesBold18;
 
-//vars for status bar
-PImage statusBar;
-PImage numberOfPeople;
-PImage personEnteredNotice;
-PImage personUpdatedNotice;
-PImage personLeftNotice;
+//width of active area ( used to scale bounding boxes )
+float  	activeWidth;
+float  	activeHeight;
+
+UI ui;
+
+//custom people objects
+ArrayList customPeople;
+String	backgrounds[] = new String[20];
+
+
+int 	currentBackground = 0;
 
 void setup(){
 	size(1024,768);
-	cyaReceiver= new CYA(this, 12000);
+	activeWidth = 1024;
+	activeHeight = 700; //to accomadate for status bar
+	for (int i=0; i<20; i++){
+		backgrounds[i] = "backgrounds/background_"+(i+1)+".png";
+	}
 	
-	hint(ENABLE_NATIVE_FONTS);
-	timesBold18 = loadFont("TimesNewRomanPS-BoldItalicMT-18.vlw");
-	textFont(timesBold18, 18);
-	smooth();
-	noStroke();
-	loadImages();
-	drawBackground();
+	//functions for drawing UI elements, etc
+	ui = new UI( this );	
+	customPeople = new ArrayList();
+	
+	//all you need to do to start CYA
+	cyaReceiver= new CYA(this, 12000);
 };
 
 void draw(){
 	cyaReceiver.update();
-	drawBackground();
+	ui.draw();
 	
-	//this should be an event or something more useful... in the future
-	//following the testApp event example would be ideal
-	//we'll need to separate out events into separate messages for that
-	
+	//you can loop through all the people elements in CYA if you choose
+	/*
 	for (int i=0; i<cyaReceiver.people.size(); i++)
 	{
+		//get person
 		CYAPerson person = (CYAPerson) cyaReceiver.people.get(i);
 		
+		//draw rect + centroid scaled by activeWidth + activeHeight
 		fill(120,120,0);
-		rect(person.boundingRect.x*width, person.boundingRect.y*height, person.boundingRect.width*width, person.boundingRect.height*height);
-		
+		rect(person.boundingRect.x*activeWidth, person.boundingRect.y*activeHeight, person.boundingRect.width*activeWidth, person.boundingRect.height*activeHeight);		
 		fill(255,255,255);
-		ellipse(person.centroid.x*width, person.centroid.y*height, 10, 10);
-		text("id: "+person.id+" age: "+person.age, person.boundingRect.x*width, (person.boundingRect.y*height + person.boundingRect.height*height) + 2);	
+		ellipse(person.centroid.x*activeWidth, person.centroid.y*activeHeight, 10, 10);
+		text("id: "+person.id+" age: "+person.age, person.boundingRect.x*activeWidth, (person.boundingRect.y*activeHeight + person.boundingRect.height*activeHeight) + 2);	
 	};
+	*/
+	
+	//loop through custom person objects
+	for (int i=customPeople.size()-1; i>=0; i--){
+		CustomPerson p = (CustomPerson) customPeople.get(i);
+		if (!p.dead) p.draw();
+		else customPeople.remove(i);
+	}
 };
 
 void personEntered( CYAPerson p ){
-	println("ENTERED");
+	CustomPerson person = new CustomPerson(p,activeWidth, activeHeight);
+	person.loadBackground( backgrounds[currentBackground]);
+	
+	currentBackground++;
+	if (currentBackground >= 20) currentBackground = 0;
+	customPeople.add(person);
+	ui.personEntered();
 }
 
 void personUpdated( CYAPerson p ){
-	println("UPDATED");
+	for (int i=0; i<customPeople.size(); i++){
+		CustomPerson lookupPerson = (CustomPerson) customPeople.get(i);
+		if (p.id == lookupPerson.id){
+			lookupPerson.update(p);
+			break;
+		}
+	}
+	
+	ui.personUpdated();
 }
 
 void personLeft( CYAPerson p ){
-	println("LEFT");
+	for (int i=0; i<customPeople.size(); i++){
+		CustomPerson lookupPerson = (CustomPerson) customPeople.get(i);
+		if (p.id == lookupPerson.id){
+			lookupPerson.update(p);
+			break;
+		}
+	}
+	
+	ui.personLeft();
 }
 
-void loadImages(){
-	statusBar = loadImage("bottomBar.png");
-}
 
-void drawBackground(){
-	background(148,129,85);	
-	//image (statusBar, 0, 700);
-}
 
 
