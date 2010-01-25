@@ -224,6 +224,15 @@ void ofxCYAPeopleTracker::trackPeople()
 		//update this person with new blob info
 		p->update(blob, p_Settings->bCentroidDampen);
 
+		//simplify blob for communication
+		contourAnalysis.simplify(p->contour, p->simpleContour, 2.0f);
+		
+		//normalize simple contour
+		for (int i=0; i<p->simpleContour.size(); i++){
+			p->simpleContour[i].x /= width;
+			p->simpleContour[i].y /= height;
+		}
+		
 		//sum optical flow for the person
 		if(p_Settings->bTrackOpticalFlow){
 			opticalFlow.maxVector = p_Settings->maxOpticalFlow;

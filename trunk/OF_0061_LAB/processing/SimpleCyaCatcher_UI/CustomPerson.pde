@@ -5,6 +5,7 @@ class CustomPerson{
  	PVector 	centroid;  
 	PVector 	velocity; 
 	cya.Rectangle 	boundingRect;
+	ArrayList contours;
 	boolean 	dead;
 	
 	//custom vars
@@ -29,6 +30,8 @@ class CustomPerson{
 		activeWidth = _activeWidth;
 		activeHeight = _activeHeight;
 		id = p.id;
+		contours = new ArrayList();
+		
 		timesBold18 = loadFont("TimesNewRomanPS-BoldItalicMT-18.vlw");
 		textFont(timesBold18, 18);
 		centroidImage = loadImage("CenterPoint.png");
@@ -60,6 +63,7 @@ class CustomPerson{
 		boundingRect = p.boundingRect;
 		centroid = p.centroid;
 		velocity = p.velocity;
+		contours = p.contours;
 		dead = p.dead;
 				
 		//update + setmasks
@@ -94,7 +98,9 @@ class CustomPerson{
 	
 	void draw()
 	{
+		tint(255,175);
 		if (backgroundLoaded) image(backgroundImage, boundingRect.x*activeWidth, boundingRect.y*activeHeight, boundingRect.width*activeWidth, boundingRect.height*activeHeight);
+		tint(255);
 		image (hBoundary1, boundingRect.x*activeWidth, boundingRect.y*activeHeight);
 		image (hBoundary2, boundingRect.x*activeWidth, boundingRect.y*activeHeight+ boundingRect.height*activeHeight);
 		image (vBoundary1, boundingRect.x*activeWidth, boundingRect.y*activeHeight-1);
@@ -108,5 +114,15 @@ class CustomPerson{
 		fill(255);
 		text(Integer.toString(id), boundingRect.x*activeWidth+22, boundingRect.y*activeHeight+19);
 		text(Integer.toString(age),boundingRect.x*activeWidth+82, boundingRect.y*activeHeight+19 );
+		
+		noFill();
+		stroke(255,100);
+		beginShape();
+		for (int i=0; i<contours.size(); i++){
+			PVector pt = (PVector) contours.get(i);
+			vertex(pt.x*activeWidth, pt.y*activeHeight);
+		}
+		endShape(CLOSE);
+		fill(255);
 	}
 }
