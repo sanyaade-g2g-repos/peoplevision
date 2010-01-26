@@ -189,7 +189,7 @@ void ofxCYAGuiManager::update(ofEventArgs &e)
 	p_Settings->minBlob = panel.getValueF("MIN_BLOB");
 	p_Settings->maxBlob = panel.getValueF("MAX_BLOB");
 	p_Settings->bLearnBackgroundProgressive = panel.getValueB("RELEARN");
-	p_Settings->fLearnRate = panel.getValueB("RELEARN_BACKGROUND");
+	p_Settings->fLearnRate = panel.getValueF("RELEARN_BACKGROUND");
 	p_Settings->bFindHoles = panel.getValueB("FIND_HOLES");
 	p_Settings->bTrackOpticalFlow = panel.getValueB("SENSE_OPTICAL_FLOW");
 	
