@@ -141,10 +141,14 @@ void ofxCYAPeopleTracker::trackPeople()
 		cout << "Learning Background" << endl;
 		grayBg = grayImageWarped;
 	}
-	else if (p_Settings->bLearnBackgroundProgressive){
+	
+	//progressive relearn background
+	if (p_Settings->bLearnBackgroundProgressive){
+		if (p_Settings->bLearnBackground) floatBgImg = grayBg;
 		floatBgImg.addWeighted( grayImageWarped, p_Settings->fLearnRate * .0001);
-		cvConvertScale( floatBgImg.getCvImage(), grayBg.getCvImage(), 255.0f/65535.0f, 0 );       
-		grayBg.flagImageChanged();			
+		grayBg = floatBgImg;
+		//cvConvertScale( floatBgImg.getCvImage(), grayBg.getCvImage(), 255.0f/65535.0f, 0 );       
+		//grayBg.flagImageChanged();			
 	}
 	
 	//printf("track type %d from (%d,%d,%d)\n", p_Settings->trackType, TRACK_ABSOLUTE, TRACK_DARK, TRACK_LIGHT);
@@ -154,7 +158,7 @@ void ofxCYAPeopleTracker::trackPeople()
 	}
 	else{
 		grayDiff = grayImageWarped;
-		if(p_Settings->trackType == TRACK_LIGHT){
+		if(p_Settings->trackType == TRACK_DARK){
 			//grayDiff = grayBg - grayImageWarped;
 			cvSub(grayBg.getCvImage(), grayDiff.getCvImage(), grayDiff.getCvImage());
 		}
