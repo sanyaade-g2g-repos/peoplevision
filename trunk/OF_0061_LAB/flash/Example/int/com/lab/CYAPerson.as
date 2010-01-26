@@ -10,13 +10,14 @@ package com.lab
 		public var stageWidth:uint;
 		public var stageHeight:uint;
 	 	public var centroid:Object;  
-		public var velocity:Object;
+		public var velocity:Object;  
+		public var opticalFlow:Object;
 		public var realWidth:Number;
 		public var realHeight:Number; 
 		public var dead:Boolean;
 		public var contours:Array;
 		
-		public function CYAPerson( _stageWidth:uint, _stageHeight:uint, _id:uint = 0, _age:uint = 0, _centroid:Object = null, _velocity:Object = null, _x:Number = 0, _y:Number = 0, _width:Number = 0, _height:Number = 0, _dead:Boolean = false )
+		public function CYAPerson( _stageWidth:uint, _stageHeight:uint, _id:uint = 0, _age:uint = 0, _centroid:Object = null, _velocity:Object = null, _x:Number = 0, _y:Number = 0, _width:Number = 0, _height:Number = 0, _opticalFlow:Object = null, _dead:Boolean = false )
 		{
 			super();
 			
@@ -28,18 +29,24 @@ package com.lab
 			
 			if (_centroid == null){
 				centroid = new Object();
-				centroid.x = 0;
-				centroid.y = 0;
+				centroid.x = centroid.y = 0;
 			} else {
 				centroid = _centroid;
 			}
 			
 			if (_velocity == null){
 				velocity = new Object();
-				velocity.x = 0;
-				velocity.y = 0;
+				velocity.x = velocity.y = 0;
 			} else {
 				velocity = _velocity;
+			}
+			
+			if (_opticalFlow == null)
+			{
+				opticalFlow = new Object();
+				opticalFlow.x = opticalFlow.y = 0;
+			} else {
+				opticalFlow = _opticalFlow;
 			}
 			
 			x = _x;
@@ -55,6 +62,7 @@ package com.lab
 			age 		= _person.age;
 			centroid 	= _person.centroid;
 			velocity 	= _person.velocity;
+			opticalFlow = _person.opticalFlow;
 			x 			= _person.x;
 			y 			= _person.y;
 			realWidth	= _person.realWidth;
