@@ -93,9 +93,11 @@ package com.lab
 			person.y = oscMessage[8]*stageHeight;
 			person.realWidth = oscMessage[9]*stageWidth;
 			person.realHeight = oscMessage[10]*stageHeight;
+			person.opticalFlow.x = oscMessage[11]*stageWidth;
+			person.opticalFlow.y = oscMessage[12]*stageHeight;
 			
 			//get contours
-			for (var i:uint = 11; i<oscMessage.length-11; i+=2){
+			for (var i:uint = 13; i<oscMessage.length-12; i+=2){
 				var point:Object = new Object();
 				point.x = oscMessage[i]*stageWidth;
 				point.y = oscMessage[i+1]*stageHeight;
