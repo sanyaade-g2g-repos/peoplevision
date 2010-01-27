@@ -9,7 +9,6 @@
 void ofxCYAPeopleTracker::setup(int w, int h)
 {
 	ofSetDataPathRoot("data/");
-	ofSetLogLevel(OF_LOG_VERBOSE);
 	
 	width  = w;
 	height = h;
@@ -153,7 +152,6 @@ void ofxCYAPeopleTracker::trackPeople()
 	
 	//printf("track type %d from (%d,%d,%d)\n", p_Settings->trackType, TRACK_ABSOLUTE, TRACK_DARK, TRACK_LIGHT);
 	if(p_Settings->trackType == TRACK_ABSOLUTE){
-		cout << "graydiff.." << endl;
 		grayDiff.absDiff(grayBg, grayImageWarped);
 	}
 	else{
@@ -219,7 +217,7 @@ void ofxCYAPeopleTracker::trackPeople()
 		ofxCYAPerson* p = getTrackedPerson(blob.id);
 		//somehow we are not tracking this person, safeguard (shouldn't happen)
 		if(NULL == p){
-			printf("ofxPerson::warning. encountered persistent blob without a person behind them\n");
+			ofLog(OF_LOG_WARNING, "ofxPerson::warning. encountered persistent blob without a person behind them\n");
 			continue;
 		}
 		
@@ -230,7 +228,11 @@ void ofxCYAPeopleTracker::trackPeople()
 
 		//simplify blob for communication
 		contourAnalysis.simplify(p->contour, p->simpleContour, 2.0f);
-		
+		float simplifyAmount = 2.5f;		
+		while (p->simpleContour.size() > 100){
+			contourAnalysis.simplify(p->contour, p->simpleContour, simplifyAmount);
+			simplifyAmount += .5f;
+		}
 		//normalize simple contour
 		for (int i=0; i<p->simpleContour.size(); i++){
 			p->simpleContour[i].x /= width;
@@ -348,7 +350,7 @@ void ofxCYAPeopleTracker::blobOff( int x, int y, int id, int order )
 	ofxCYAPerson* p = getTrackedPerson(id);
 	//ensure we are tracking
 	if(NULL == p){
-		printf("ofxPerson::warning. encountered persistent blob without a person behind them\n");		
+		ofLog(OF_LOG_WARNING, "ofxPerson::warning. encountered persistent blob without a person behind them\n");		
 		return;
 	}
 	

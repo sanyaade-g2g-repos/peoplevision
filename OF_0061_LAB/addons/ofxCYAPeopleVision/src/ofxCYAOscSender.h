@@ -24,16 +24,20 @@
  
  address: cya/person/ + ordered id (i.e. cya/person/0)
  
- argument 1: pid; 
- argument 2: age; 
- argument 3: centroid.x; 
- argument 4: centroid.y; 
- argument 5: velocity.x; 
- argument 6: velocity.y; 
- argument 7: boundingRect.x; 
- argument 8: boundingRect.y; 
- argument 9: boundingRect.width; 
- argument 10: boundingRect.height; 
+ argument 0: pid; 
+ argument 1: age; 
+ argument 2: centroid.x; 
+ argument 3: centroid.y; 
+ argument 4: velocity.x; 
+ argument 5: velocity.y; 
+ argument 6: boundingRect.x; 
+ argument 7: boundingRect.y; 
+ argument 8: boundingRect.width; 
+ argument 9: boundingRect.height; 
+ argument 10: opticalFlowVectorAccumulation.x; 
+ argument 11: opticalFlowVectorAccumulation.y;
+ argument 12+ : contours (if enabled)
+ 
  
  ***********************************************************************/
 
