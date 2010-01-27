@@ -61,6 +61,7 @@ void ofxCYAOscSender::update(){
  SEND
  ***************************************************************/
 
+
 void ofxCYAOscSender::personEntered ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight, bool bSendContours ){
 	ofxOscMessage m;
 	m.setAddress("cya/personEntered/");
@@ -77,6 +78,9 @@ void ofxCYAOscSender::personEntered ( ofxCYAPerson * p, ofPoint centroid, int ca
 	m.addFloatArg(boundingRect.y);
 	m.addFloatArg(boundingRect.width);
 	m.addFloatArg(boundingRect.height);
+	
+	m.addFloatArg(p->opticalFlowVectorAccumulation.x);
+	m.addFloatArg(p->opticalFlowVectorAccumulation.y);
 	
 	if (bSendContours){
 		//any args after 9 will be contours
@@ -106,6 +110,9 @@ void ofxCYAOscSender::personMoved ( ofxCYAPerson * p, ofPoint centroid, int came
 	m.addFloatArg(boundingRect.width);
 	m.addFloatArg(boundingRect.height);
 	
+	m.addFloatArg(p->opticalFlowVectorAccumulation.x);
+	m.addFloatArg(p->opticalFlowVectorAccumulation.y);
+	
 	if (bSendContours){
 		//any args after 9 will be contours
 		for (int i=0; i<p->simpleContour.size(); i++){
@@ -133,7 +140,10 @@ void ofxCYAOscSender::personUpdated ( ofxCYAPerson * p, ofPoint centroid, int ca
 	m.addFloatArg(boundingRect.y);
 	m.addFloatArg(boundingRect.width);
 	m.addFloatArg(boundingRect.height);
-		
+	
+	m.addFloatArg(p->opticalFlowVectorAccumulation.x);
+	m.addFloatArg(p->opticalFlowVectorAccumulation.y);
+	
 	if (bSendContours){
 		//any args after 9 will be contours
 		for (int i=0; i<p->simpleContour.size(); i++){
@@ -164,17 +174,184 @@ void ofxCYAOscSender::personWillLeave ( ofxCYAPerson * p, ofPoint centroid, int 
 	m.addFloatArg(boundingRect.width);
 	m.addFloatArg(boundingRect.height);
 	
+	m.addFloatArg(p->opticalFlowVectorAccumulation.x);
+	m.addFloatArg(p->opticalFlowVectorAccumulation.y);
+	
 	if (bSendContours){
-		//any args after 9 will be contours
+		//any args after 11 will be contours
 		for (int i=0; i<p->simpleContour.size(); i++){
 			m.addFloatArg(p->simpleContour[i].x);
 			m.addFloatArg(p->simpleContour[i].y);
 		};
 	}
 	
-	send(m);
-	
+	send(m);	
 };
+
+/*
+ 
+ BUNDLE SENDING // for when there's a good implementation of bundles in flash + processing
+ 
+ void ofxCYAOscSender::personEntered ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight, bool bSendContours ){
+	 ofxOscBundle bundle;
+	 
+	 ofxOscMessage person;
+	 person.setAddress("cya/personEntered/");
+	 person.addIntArg(p->pid);
+	 person.addIntArg(p->age);
+	 person.addFloatArg(centroid.x);
+	 person.addFloatArg(centroid.y);
+	 person.addFloatArg(p->velocity.x);
+	 person.addFloatArg(p->velocity.y);
+	 ofRectangle boundingRect = p->getBoundingRectNormalized(cameraWidth,cameraHeight);
+	 person.addFloatArg(boundingRect.x);
+	 person.addFloatArg(boundingRect.y);
+	 person.addFloatArg(boundingRect.width);
+	 person.addFloatArg(boundingRect.height);
+	 
+	 bundle.addMessage(person);
+	 
+	 ofxOscMessage contours;
+	 contours.setAddress("cya/personEntered/contours/");
+	 if (bSendContours){
+	 //any args after 9 will be contours
+	 for (int i=0; i<p->simpleContour.size(); i++){
+	 contours.addFloatArg(p->simpleContour[i].x);
+	 contours.addFloatArg(p->simpleContour[i].y);
+	 };
+	 };
+	 bundle.addMessage(contours);
+	 
+	 ofxOscMessage opticalFlow;
+	 opticalFlow.setAddress("cya/personEntered/opticalFlow/");
+	 opticalFlow.addFloatArg(p->opticalFlowVectorAccumulation.x);
+	 opticalFlow.addFloatArg(p->opticalFlowVectorAccumulation.y);
+	 bundle.addMessage(opticalFlow);	
+	 
+	 sendBundle(bundle);
+ };
+ 
+ void ofxCYAOscSender::personMoved ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight, bool bSendContours ){
+	 ofxOscBundle bundle;
+	 
+	 ofxOscMessage person;
+	 person.setAddress("cya/personMoved/");
+	 person.addIntArg(p->pid);
+	 person.addIntArg(p->age);
+	 person.addFloatArg(centroid.x);
+	 person.addFloatArg(centroid.y);
+	 person.addFloatArg(p->velocity.x);
+	 person.addFloatArg(p->velocity.y);
+	 ofRectangle boundingRect = p->getBoundingRectNormalized(cameraWidth,cameraHeight);
+	 person.addFloatArg(boundingRect.x);
+	 person.addFloatArg(boundingRect.y);
+	 person.addFloatArg(boundingRect.width);
+	 person.addFloatArg(boundingRect.height);
+	 
+	 bundle.addMessage(person);
+	 
+	 ofxOscMessage contours;
+	 contours.setAddress("cya/personMoved/contours/");
+	 if (bSendContours){
+	 //any args after 9 will be contours
+	 for (int i=0; i<p->simpleContour.size(); i++){
+	 contours.addFloatArg(p->simpleContour[i].x);
+	 contours.addFloatArg(p->simpleContour[i].y);
+	 };
+	 };
+	 bundle.addMessage(contours);
+	 
+	 ofxOscMessage opticalFlow;
+	 opticalFlow.setAddress("cya/personMoved/opticalFlow/");
+	 opticalFlow.addFloatArg(p->opticalFlowVectorAccumulation.x);
+	 opticalFlow.addFloatArg(p->opticalFlowVectorAccumulation.y);
+	 bundle.addMessage(opticalFlow);	
+	 
+	 sendBundle(bundle);
+ }
+ 
+ 
+ void ofxCYAOscSender::personUpdated ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight, bool bSendContours ){
+	 ofxOscBundle bundle;
+	 
+	 ofxOscMessage person;
+	 person.setAddress("cya/personUpdated/");
+	 person.addIntArg(p->pid);
+	 person.addIntArg(p->age);
+	 person.addFloatArg(centroid.x);
+	 person.addFloatArg(centroid.y);
+	 person.addFloatArg(p->velocity.x);
+	 person.addFloatArg(p->velocity.y);
+	 ofRectangle boundingRect = p->getBoundingRectNormalized(cameraWidth,cameraHeight);
+	 person.addFloatArg(boundingRect.x);
+	 person.addFloatArg(boundingRect.y);
+	 person.addFloatArg(boundingRect.width);
+	 person.addFloatArg(boundingRect.height);
+	 
+	 bundle.addMessage(person);
+	 
+	 ofxOscMessage contours;
+	 contours.setAddress("cya/personUpdated/contours/");
+	 if (bSendContours){
+	 //any args after 9 will be contours
+	 for (int i=0; i<p->simpleContour.size(); i++){
+	 contours.addFloatArg(p->simpleContour[i].x);
+	 contours.addFloatArg(p->simpleContour[i].y);
+	 };
+	 };
+	 bundle.addMessage(contours);
+	 
+	 ofxOscMessage opticalFlow;
+	 opticalFlow.setAddress("cya/personUpdated/opticalFlow/");
+	 opticalFlow.addFloatArg(p->opticalFlowVectorAccumulation.x);
+	 opticalFlow.addFloatArg(p->opticalFlowVectorAccumulation.y);
+	 bundle.addMessage(opticalFlow);	
+	 
+	 sendBundle(bundle);
+ };
+ 
+ void ofxCYAOscSender::personWillLeave ( ofxCYAPerson * p, ofPoint centroid, int cameraWidth, int cameraHeight, bool bSendContours )
+ {
+	 ofxOscBundle bundle;
+	 
+	 ofxOscMessage person;
+	 person.setAddress("cya/personWillLeave/");
+	 person.addIntArg(p->pid);
+	 person.addIntArg(p->age);
+	 person.addFloatArg(centroid.x);
+	 person.addFloatArg(centroid.y);
+	 person.addFloatArg(p->velocity.x);
+	 person.addFloatArg(p->velocity.y);
+	 ofRectangle boundingRect = p->getBoundingRectNormalized(cameraWidth,cameraHeight);
+	 person.addFloatArg(boundingRect.x);
+	 person.addFloatArg(boundingRect.y);
+	 person.addFloatArg(boundingRect.width);
+	 person.addFloatArg(boundingRect.height);
+	 
+	 bundle.addMessage(person);
+	 
+	 ofxOscMessage contours;
+	 contours.setAddress("cya/personWillLeave/contours/");
+	 if (bSendContours){
+		//any args after 9 will be contours
+		for (int i=0; i<p->simpleContour.size(); i++){
+			contours.addFloatArg(p->simpleContour[i].x);
+			contours.addFloatArg(p->simpleContour[i].y);
+		};
+	 };
+	 bundle.addMessage(contours);
+	 
+	 ofxOscMessage opticalFlow;
+	 opticalFlow.setAddress("cya/personUpdated/opticalFlow/");
+	 opticalFlow.addFloatArg(p->opticalFlowVectorAccumulation.x);
+	 opticalFlow.addFloatArg(p->opticalFlowVectorAccumulation.y);
+	 bundle.addMessage(opticalFlow);	
+	 
+	 sendBundle(bundle);
+ };
+ 
+ 
+ */
 
 void ofxCYAOscSender::send ( ofxOscMessage m ){
 	sendMessage(m);

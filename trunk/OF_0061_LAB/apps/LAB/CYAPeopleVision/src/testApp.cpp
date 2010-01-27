@@ -13,7 +13,7 @@ class CYAPersonAttributes {
 
 //--------------------------------------------------------------
 void testApp::setup(){
-	
+	ofSetLogLevel(OF_LOG_WARNING);
 	ofSetFrameRate(60);
 	ofBackground(100, 100, 100);
 	//ofSetDataPathRoot("data/");
@@ -117,20 +117,20 @@ void testApp::personEntered( ofxCYAPerson* newPerson, ofxCYAScene* scene )
 	newPerson->customAttributes = new CYAPersonAttributes();
 	
 	//do something with them
-	printf("person %d of size %f entered!\n", newPerson->pid, newPerson->area);
+	ofLog(OF_LOG_VERBOSE, "person %d of size %f entered!\n", newPerson->pid, newPerson->area);
 }
 
 void testApp::personMoved( ofxCYAPerson* activePerson, ofxCYAScene* scene )
 {
 	
 	//do something with the moving person
-	printf("person %d of moved to (%f,%f)!\n", activePerson->pid, activePerson->boundingRect.x, activePerson->boundingRect.y);
+	ofLog(OF_LOG_VERBOSE, "person %d of moved to (%f,%f)!\n", activePerson->pid, activePerson->boundingRect.x, activePerson->boundingRect.y);
 }
 
 void testApp::personWillLeave( ofxCYAPerson* leavingPerson, ofxCYAScene* scene )
 {
 	//do something to clean up
-	printf("person %d left after being %d frames in the system\n", leavingPerson->pid, leavingPerson->age);
+	ofLog(OF_LOG_VERBOSE, "person %d left after being %d frames in the system\n", leavingPerson->pid, leavingPerson->age);
 }
 
 void testApp::personUpdated( ofxCYAPerson* updatedPerson, ofxCYAScene* scene )
@@ -138,7 +138,7 @@ void testApp::personUpdated( ofxCYAPerson* updatedPerson, ofxCYAScene* scene )
 	CYAPersonAttributes* attrbs = (CYAPersonAttributes*)updatedPerson->customAttributes;
 	attrbs->hasBeard = true;
 	
-	printf("updated %d person\n", updatedPerson->pid);
+	ofLog(OF_LOG_VERBOSE, "updated %d person\n", updatedPerson->pid);
 }
 
 //--------------------------------------------------------------
