@@ -1,0 +1,1478 @@
+# depslib dependency file v1.0
+1264631127 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcyaguimanager.cpp
+	"ofxCYAGuiManager.h"
+	"ofxCYASettings.h"
+
+1264102188 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcyaguimanager.h
+	"ofxControlPanel.h"
+	"ofxCvCoordWarpingGui.h"
+
+1263577751 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\ofxcontrolpanel.h
+	"ofMain.h"
+	"ofxXmlSettings.h"
+	"guiIncludes.h"
+
+1264612673 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\ofmain.h
+	"ofConstants.h"
+	"ofMath.h"
+	"ofUtils.h"
+	"ofTypes.h"
+	"ofSerial.h"
+	"ofArduino.h"
+	"ofTexture.h"
+	"ofTrueTypeFont.h"
+	"ofGraphics.h"
+	"ofImage.h"
+	"ofBaseApp.h"
+	"ofAppRunner.h"
+	"ofSoundStream.h"
+	"ofSoundPlayer.h"
+	"ofVideoGrabber.h"
+	"ofVideoPlayer.h"
+	"ofEvents.h"
+
+1264612667 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\utils\ofconstants.h
+	<TargetConditionals.h>
+	<windows.h>
+	"GLee.h"
+	"glu.h"
+	<unistd.h>
+	"GLee.h"
+	<OpenGL/glu.h>
+	<ApplicationServices/ApplicationServices.h>
+	<unistd.h>
+	"GLee.h"
+	<GL/glu.h>
+	<stdio.h>
+	<stdarg.h>
+	<math.h>
+	<time.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	<vector>
+	<string>
+	<sstream>
+	<iomanip>
+
+1264612661 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\glee\include\glee.h
+	<windows.h>
+	<GL/gl.h>
+	<OpenGL/gl.h>
+	<GL/gl.h>
+	<GL/glx.h>
+	<stddef.h>
+
+1264612985 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\glu\include\glu.h
+	"glu_mangle.h"
+	<GL/gl.h>
+
+1264612667 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\utils\ofmath.h
+	"ofConstants.h"
+
+1264612668 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\utils\ofutils.h
+	"ofConstants.h"
+	<shellapi.h>
+
+1264612668 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\utils\oftypes.h
+	"ofConstants.h"
+
+1264612664 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\communication\ofserial.h
+	"ofConstants.h"
+	<termios.h>
+	<sys/ioctl.h>
+	<getopt.h>
+	<dirent.h>
+	<winbase.h>
+	<tchar.h>
+	<iostream>
+	<string.h>
+	<setupapi.h>
+	<regstr.h>
+	<winioctl.h>
+	<initguid.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<fcntl.h>
+	<errno.h>
+	<ctype.h>
+
+1264612664 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\communication\ofarduino.h
+	<list>
+	<vector>
+	<string>
+	<iostream>
+	"ofEvents.h"
+	"ofSerial.h"
+
+1264612673 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\events\ofevents.h
+	"ofConstants.h"
+	"ofEventUtils.h"
+	"ofxEventUtils.h"
+
+1264612673 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\events\ofeventutils.h
+	"ofConstants.h"
+	"Poco/FIFOEvent.h"
+	"Poco/Delegate.h"
+
+1264612817 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\fifoevent.h
+	"Poco/AbstractEvent.h"
+	"Poco/FIFOStrategy.h"
+	"Poco/AbstractDelegate.h"
+	"Poco/CompareFunctions.h"
+
+1264612776 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\abstractevent.h
+	"Poco/Foundation.h"
+	"Poco/SingletonHolder.h"
+	"Poco/SharedPtr.h"
+	"Poco/ActiveResult.h"
+	"Poco/ActiveMethod.h"
+	"Poco/Mutex.h"
+
+1264612795 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\foundation.h
+	"Poco/Config.h"
+	"Poco/Platform.h"
+	"Poco/Platform_WIN32.h"
+	"Poco/Platform_VMS.h"
+	"Poco/Platform_POSIX.h"
+	"Poco/Bugcheck.h"
+	"Poco/Types.h"
+	<string>
+
+1264612826 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\config.h
+
+1264612779 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\platform.h
+
+1264612770 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\platform_win32.h
+
+1264612880 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\platform_vms.h
+
+1264612809 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\platform_posix.h
+
+1264612810 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\bugcheck.h
+	"Poco/Foundation.h"
+	<string>
+
+1264612796 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\types.h
+	"Poco/Foundation.h"
+
+1264612885 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\singletonholder.h
+	"Poco/Foundation.h"
+	"Poco/Mutex.h"
+
+1264612829 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\mutex.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/ScopedLock.h"
+	"Poco/Mutex_WIN32.h"
+	"Poco/Mutex_POSIX.h"
+
+1264612807 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\exception.h
+	"Poco/Foundation.h"
+	<stdexcept>
+
+1264612884 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\scopedlock.h
+	"Poco/Foundation.h"
+
+1264612788 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\mutex_win32.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/UnWindows.h"
+
+1264612777 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\unwindows.h
+	<windows.h>
+
+1264612822 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\mutex_posix.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	<pthread.h>
+	<errno.h>
+
+1264612829 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\sharedptr.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/Mutex.h"
+	<algorithm>
+
+1264612828 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\activeresult.h
+	"Poco/Foundation.h"
+	"Poco/Mutex.h"
+	"Poco/Event.h"
+	"Poco/RefCountedObject.h"
+	"Poco/Exception.h"
+	<algorithm>
+
+1264612855 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\event.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/Event_WIN32.h"
+	"Poco/Event_POSIX.h"
+
+1264612799 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\event_win32.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	"Poco/UnWindows.h"
+
+1264612784 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\event_posix.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	<pthread.h>
+	<errno.h>
+
+1264612841 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\refcountedobject.h
+	"Poco/Foundation.h"
+	"Poco/Mutex.h"
+
+1264612772 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\activemethod.h
+	"Poco/Foundation.h"
+	"Poco/ActiveResult.h"
+	"Poco/ActiveRunnable.h"
+	"Poco/ActiveStarter.h"
+	"Poco/AutoPtr.h"
+
+1264612769 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\activerunnable.h
+	"Poco/Foundation.h"
+	"Poco/ActiveResult.h"
+	"Poco/Runnable.h"
+	"Poco/RefCountedObject.h"
+	"Poco/AutoPtr.h"
+	"Poco/Exception.h"
+
+1264612812 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\runnable.h
+	"Poco/Foundation.h"
+
+1264612784 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\autoptr.h
+	"Poco/Foundation.h"
+	"Poco/Exception.h"
+	<algorithm>
+
+1264612782 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\activestarter.h
+	"Poco/Foundation.h"
+	"Poco/ThreadPool.h"
+	"Poco/ActiveRunnable.h"
+
+1264612780 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\threadpool.h
+	"Poco/Foundation.h"
+	"Poco/Thread.h"
+	"Poco/Mutex.h"
+	<vector>
+
+1264612808 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\thread.h
+	"Poco/Foundation.h"
+	"Poco/Mutex.h"
+	"Poco/Thread_WIN32.h"
+	"Poco/Thread_POSIX.h"
+
+1264612797 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\thread_win32.h
+	"Poco/Foundation.h"
+	"Poco/Runnable.h"
+	"Poco/UnWindows.h"
+
+1264612821 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\thread_posix.h
+	"Poco/Foundation.h"
+	"Poco/Runnable.h"
+	"Poco/SignalHandler.h"
+	"Poco/Event.h"
+	"Poco/RefCountedObject.h"
+	"Poco/AutoPtr.h"
+	<pthread.h>
+	<sys/select.h>
+	<errno.h>
+
+1264612813 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\signalhandler.h
+	"Poco/Foundation.h"
+	<vector>
+	<setjmp.h>
+
+1264612808 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\fifostrategy.h
+	"Poco/NotificationStrategy.h"
+	<map>
+	<list>
+	<memory>
+
+1264612759 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\notificationstrategy.h
+	"Poco/Foundation.h"
+
+1264612827 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\abstractdelegate.h
+	"Poco/Foundation.h"
+
+1264612798 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\comparefunctions.h
+	"Poco/Foundation.h"
+	<functional>
+
+1264612781 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\delegate.h
+	"Poco/Foundation.h"
+	"Poco/AbstractDelegate.h"
+	"Poco/FunctionDelegate.h"
+	"Poco/Expire.h"
+
+1264612818 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\functiondelegate.h
+	"Poco/Foundation.h"
+	"Poco/AbstractDelegate.h"
+
+1264612841 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\expire.h
+	"Poco/Foundation.h"
+	"Poco/AbstractDelegate.h"
+	"Poco/Timestamp.h"
+
+1264612785 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\poco\include\poco\timestamp.h
+	"Poco/Foundation.h"
+	<ctime>
+
+1264612662 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\graphics\oftexture.h
+	"ofConstants.h"
+	"ofGraphics.h"
+
+1264612662 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\graphics\ofgraphics.h
+	"ofConstants.h"
+	"ofTypes.h"
+
+1264612664 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\graphics\oftruetypefont.h
+	"ofConstants.h"
+	"ofGraphics.h"
+	"ofUtils.h"
+	"ofTypes.h"
+
+1264612662 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\graphics\ofimage.h
+	"ofConstants.h"
+	"ofTexture.h"
+	"ofGraphics.h"
+	"ofAppRunner.h"
+	"FreeImage.h"
+	"ofUtils.h"
+
+1264612669 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\app\ofapprunner.h
+	"ofMain.h"
+	"ofBaseApp.h"
+	"ofAppBaseWindow.h"
+	"ofAppGlutWindow.h"
+
+1264612669 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\app\ofbaseapp.h
+	"ofTypes.h"
+
+1264612670 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\app\ofappbasewindow.h
+	"ofTypes.h"
+
+1264612668 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\app\ofappglutwindow.h
+	"ofConstants.h"
+	"ofAppBaseWindow.h"
+	"glut.h"
+	<GLUT/glut.h>
+	<GL/glut.h>
+
+1264612986 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\glut\include\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1264612985 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\freeimage\include\freeimage.h
+	<wchar.h>
+	<inttypes.h>
+
+1264612666 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\sound\ofsoundstream.h
+	"ofConstants.h"
+	"ofBaseApp.h"
+	"ofEvents.h"
+	"ofMath.h"
+
+1264612666 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\sound\ofsoundplayer.h
+	"ofConstants.h"
+	"fmod.h"
+	"fmod_errors.h"
+
+1264612754 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\fmodex\include\fmod.h
+	"fmod_codec.h"
+	"fmod_dsp.h"
+	"fmod_memoryinfo.h"
+
+1264612755 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\fmodex\include\fmod_codec.h
+
+1264612754 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\fmodex\include\fmod_dsp.h
+
+1264612755 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\fmodex\include\fmod_memoryinfo.h
+
+1264612753 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\fmodex\include\fmod_errors.h
+	"fmod.h"
+
+1264612671 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\video\ofvideograbber.h
+	"ofConstants.h"
+	"ofTexture.h"
+	"ofGraphics.h"
+	"ofTypes.h"
+	"ofQtUtils.h"
+	"videoInput.h"
+	"ofUCUtils.h"
+	"ofGstUtils.h"
+
+1264612672 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\video\ofqtutils.h
+	"ofConstants.h"
+	"ofGraphics.h"
+	<QuickTime/QuickTime.h>
+	<CoreServices/CoreServices.h>
+	<ApplicationServices/ApplicationServices.h>
+	<QTML.h>
+	<FixMath.h>
+	<QuickTimeComponents.h>
+	<TextUtils.h>
+	<MediaHandlers.h>
+
+1264612717 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\qtml.h
+	<MacTypes.h>
+	<MacMemory.h>
+	<MacWindows.h>
+	<OSUtils.h>
+	<Files.h>
+
+1264612682 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\mactypes.h
+	<ConditionalMacros.h>
+
+1264612690 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\conditionalmacros.h
+
+1264612733 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\macmemory.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1264612690 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\mixedmode.h
+	<MacTypes.h>
+
+1264612707 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\macwindows.h
+	<MacTypes.h>
+	<Aliases.h>
+	<AppleEvents.h>
+	<Collections.h>
+	<Drag.h>
+	<Events.h>
+	<Menus.h>
+	<MixedMode.h>
+	<QDOffscreen.h>
+	<Quickdraw.h>
+	<TextCommon.h>
+	<Icons.h>
+	<MacErrors.h>
+
+1264612738 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\aliases.h
+	<MacTypes.h>
+	<AppleTalk.h>
+	<Files.h>
+
+1264612709 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\appletalk.h
+	<MacTypes.h>
+	<OSUtils.h>
+
+1264612739 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\osutils.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<MacMemory.h>
+	<Patches.h>
+	<DateTimeUtils.h>
+	<Endian.h>
+
+1264612740 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\patches.h
+	<MacTypes.h>
+
+1264612723 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\datetimeutils.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+
+1264612681 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\endian.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+
+1264612685 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\files.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<OSUtils.h>
+	<TextCommon.h>
+	<UTCUtils.h>
+	<Finder.h>
+
+1264612752 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\textcommon.h
+	<MacTypes.h>
+
+1264612752 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\utcutils.h
+	<MacTypes.h>
+	<MacErrors.h>
+
+1264612730 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\macerrors.h
+	<ConditionalMacros.h>
+
+1264612683 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\finder.h
+	<MacTypes.h>
+
+1264612714 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\appleevents.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<Notification.h>
+	<Events.h>
+	<AEDataModel.h>
+
+1264612701 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\notification.h
+	<MacTypes.h>
+	<OSUtils.h>
+
+1264612712 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\events.h
+	<OSUtils.h>
+	<Quickdraw.h>
+	<MacTypes.h>
+	<Endian.h>
+
+1264612728 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\quickdraw.h
+	<Components.h>
+	<MacTypes.h>
+	<MixedMode.h>
+	<QuickdrawText.h>
+
+1264612731 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\components.h
+	<MacErrors.h>
+	<MacTypes.h>
+	<MixedMode.h>
+
+1264612698 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\quickdrawtext.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1264612706 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\aedatamodel.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1264612722 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\collections.h
+	<MacTypes.h>
+	<MixedMode.h>
+
+1264612700 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\drag.h
+	<MacTypes.h>
+	<Events.h>
+	<Files.h>
+	<AppleEvents.h>
+	<Quickdraw.h>
+
+1264612701 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\menus.h
+	<MacTypes.h>
+	<Events.h>
+	<Quickdraw.h>
+	<Fonts.h>
+	<TextCommon.h>
+	<Processes.h>
+	<AppleEvents.h>
+	<Collections.h>
+	<MacErrors.h>
+
+1264612752 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\fonts.h
+	<MacTypes.h>
+	<Files.h>
+	<Quickdraw.h>
+	<TextCommon.h>
+	<MacErrors.h>
+
+1264612695 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\processes.h
+	<MacTypes.h>
+	<Events.h>
+	<Files.h>
+
+1264612716 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\qdoffscreen.h
+	<MacErrors.h>
+	<Quickdraw.h>
+
+1264612752 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\icons.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<Files.h>
+	<CodeFragments.h>
+
+1264612705 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\codefragments.h
+	<MacTypes.h>
+	<Files.h>
+
+1264612690 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\fixmath.h
+	<MacTypes.h>
+
+1264612731 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\quicktimecomponents.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<Components.h>
+	<ImageCompression.h>
+	<Movies.h>
+	<Quickdraw.h>
+	<Video.h>
+	<Sound.h>
+	<QuickTimeMusic.h>
+
+1264612734 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\imagecompression.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<QDOffscreen.h>
+	<Components.h>
+	<StandardFile.h>
+
+1264612699 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\standardfile.h
+	<MacTypes.h>
+	<Dialogs.h>
+	<Files.h>
+
+1264612686 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\dialogs.h
+	<MacTypes.h>
+	<MixedMode.h>
+	<Events.h>
+	<MacWindows.h>
+	<TextEdit.h>
+	<Controls.h>
+	<MacErrors.h>
+
+1264612686 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\textedit.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<MixedMode.h>
+
+1264612748 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\controls.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<Menus.h>
+	<TextEdit.h>
+	<Drag.h>
+	<Icons.h>
+	<Collections.h>
+	<MacErrors.h>
+
+1264612733 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\movies.h
+	<Quickdraw.h>
+	<Aliases.h>
+	<Events.h>
+	<Menus.h>
+	<Components.h>
+	<ImageCompression.h>
+
+1264612740 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\video.h
+	<Quickdraw.h>
+
+1264612736 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\sound.h
+	<MacTypes.h>
+	<Dialogs.h>
+	<Components.h>
+	<MixedMode.h>
+	<Movies.h>
+
+1264612712 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\quicktimemusic.h
+	<Components.h>
+	<ImageCompression.h>
+	<Movies.h>
+	<Quickdraw.h>
+	<Video.h>
+	<MacMemory.h>
+	<Sound.h>
+	<Endian.h>
+
+1264612697 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\textutils.h
+	<MacTypes.h>
+	<NumberFormatting.h>
+	<StringCompare.h>
+	<DateTimeUtils.h>
+
+1264612744 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\numberformatting.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+	<IntlResources.h>
+
+1264612699 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\intlresources.h
+	<MacTypes.h>
+
+1264612676 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\stringcompare.h
+	<MacTypes.h>
+	<TextCommon.h>
+	<Script.h>
+
+1264612677 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\script.h
+	<MacTypes.h>
+	<Quickdraw.h>
+	<IntlResources.h>
+	<Events.h>
+
+1264612683 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\quicktime\include\mediahandlers.h
+	<ConditionalMacros.h>
+	<MacTypes.h>
+	<Components.h>
+	<Movies.h>
+	<Sound.h>
+
+1264612986 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\videoinput\include\videoinput.h
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<wchar.h>
+	<windows.h>
+
+1264612671 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\video\ofucutils.h
+	"ofConstants.h"
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<unicap.h>
+	<unistd.h>
+	<string.h>
+	<pthread.h>
+
+1264612671 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\video\ofgstutils.h
+	<gst/gst.h>
+	<pthread.h>
+	"ofConstants.h"
+
+1264612670 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\libs\openframeworks\video\ofvideoplayer.h
+	"ofConstants.h"
+	"ofTexture.h"
+	"ofGstUtils.h"
+	"ofQtUtils.h"
+
+1264612902 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxxmlsettings\src\ofxxmlsettings.h
+	"ofMain.h"
+	<string.h>
+	"tinyxml.h"
+
+1264612901 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxxmlsettings\libs\tinyxml.h
+	<ctype.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<string>
+	<iostream>
+	<sstream>
+	"tinystr.h"
+
+1263501284 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guiincludes.h
+	"guiValue.h"
+	"guiBaseObject.h"
+	"guiColor.h"
+	"simpleColor.h"
+	"guiValue.h"
+	"guiTypePanel.h"
+	"guiTypeText.h"
+	"guiTypeToggle.h"
+	"guiTypeMultiToggle.h"
+	"guiTypeSlider.h"
+	"guiType2DSlider.h"
+	"guiTypeDrawable.h"
+	"guiTypeLogger.h"
+	"guiTypeFileLister.h"
+	"guiTypeCustom.h"
+	"guiCustomImpl.h"
+
+1263512785 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guivalue.h
+
+1263584109 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guibaseobject.h
+	"simpleColor.h"
+	"guiColor.h"
+	"guiValue.h"
+	"guiTextBase.h"
+
+1263501284 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\simplecolor.h
+
+1263501284 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guicolor.h
+	"simpleColor.h"
+
+1263510005 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guitextbase.h
+	"guiColor.h"
+	"simpleColor.h"
+	"guiValue.h"
+
+1263583810 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guitypepanel.h
+	"guiBaseObject.h"
+	"guiColor.h"
+	"simpleColor.h"
+	"guiValue.h"
+
+1263584319 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guitypetext.h
+	"guiBaseObject.h"
+	"guiTypeText.h"
+	"guiColor.h"
+	"simpleColor.h"
+	"guiValue.h"
+
+1263501284 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guitypetoggle.h
+	"guiBaseObject.h"
+	"guiColor.h"
+	"simpleColor.h"
+	"guiValue.h"
+
+1263501284 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guitypemultitoggle.h
+	"guiBaseObject.h"
+	"guiColor.h"
+	"simpleColor.h"
+	"guiValue.h"
+
+1263501284 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guitypeslider.h
+	"guiBaseObject.h"
+	"guiColor.h"
+	"simpleColor.h"
+	"guiValue.h"
+
+1263501284 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guitype2dslider.h
+	"guiBaseObject.h"
+	"guiColor.h"
+	"simpleColor.h"
+	"guiValue.h"
+
+1263501284 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guitypedrawable.h
+	"guiBaseObject.h"
+	"guiColor.h"
+	"simpleColor.h"
+	"guiValue.h"
+
+1263501284 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guitypelogger.h
+	"guiBaseObject.h"
+	"guiColor.h"
+	"simpleColor.h"
+	"guiValue.h"
+	"simpleLogger.h"
+
+1263501284 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\simplelogger.h
+	"ofMain.h"
+	"ofxXmlSettings.h"
+
+1263501284 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guitypefilelister.h
+	"guiBaseObject.h"
+	"guiColor.h"
+	"simpleColor.h"
+	"guiValue.h"
+	"simpleFileLister.h"
+
+1264102188 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\simplefilelister.h
+	"ofMain.h"
+	"ofxDirList.h"
+
+1264612891 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxdirlist\src\ofxdirlist.h
+	"ofMain.h"
+	<stdio.h>
+	<iostream>
+	<string.h>
+	<dirent.h>
+	<windows.h>
+	<tchar.h>
+	<string.h>
+	<assert.h>
+
+1263501284 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guitypecustom.h
+	"guiBaseObject.h"
+	"guiColor.h"
+	"simpleColor.h"
+	"guiValue.h"
+	"guiCustomImpl.h"
+
+1263501284 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\guicustomimpl.h
+
+1264014528 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencvextensions\src\ofxcvcoordwarpinggui.h
+	"ofMain.h"
+	"ofxOpenCv.h"
+	"ofxXmlSettings.h"
+	"ofxMSAInteractiveObject.h"
+
+1263501160 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxopencv.h
+	"ofxCvConstants.h"
+	"ofxCvImage.h"
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+	"ofxCvContourFinder.h"
+
+1263501160 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvconstants.h
+	"cv.h"
+	<vector>
+	"ofMain.h"
+
+1263501163 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\libs\opencv\include\cv.h
+	<chdl.h>
+	"cxcore.h"
+	"cvtypes.h"
+	"cv.hpp"
+	"cvcompat.h"
+
+1263501163 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\libs\opencv\include\cxcore.h
+	"ipl.h"
+	"ipl/ipl.h"
+	"cxtypes.h"
+	"cxerror.h"
+	"cvver.h"
+	"cxcore.hpp"
+
+1263501163 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\libs\opencv\include\cxtypes.h
+	<assert.h>
+	<stdlib.h>
+	<string.h>
+	<float.h>
+	<emmintrin.h>
+	<fastmath.h>
+	<mathimf.h>
+	<math.h>
+	<ipl.h>
+	<ipl/ipl.h>
+
+1263501163 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\libs\opencv\include\cxerror.h
+
+1263501163 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\libs\opencv\include\cvver.h
+
+1263501163 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\libs\opencv\include\cxcore.hpp
+
+1263501163 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\libs\opencv\include\cvtypes.h
+	<assert.h>
+	<stdlib.h>
+
+1263501163 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\libs\opencv\include\cv.hpp
+
+1263501163 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\libs\opencv\include\cvcompat.h
+	<string.h>
+
+1263501160 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvimage.h
+	"ofxCvConstants.h"
+
+1263501160 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvgrayscaleimage.h
+	"ofxCvImage.h"
+	"ofxCvBlob.h"
+
+1263501160 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvblob.h
+	"ofxCvConstants.h"
+
+1263501160 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvcolorimage.h
+	"ofxCvImage.h"
+
+1263501160 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvfloatimage.h
+	"ofxCvImage.h"
+
+1263501160 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvshortimage.h
+	"ofxCvImage.h"
+
+1263501160 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvcontourfinder.h
+	"ofxCvConstants.h"
+	"ofxCvBlob.h"
+	"ofxCvGrayscaleImage.h"
+	<algorithm>
+
+1263500972 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxmsainteractiveobject\src\ofxmsainteractiveobject.h
+	"ofMain.h"
+
+1264461216 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcyasettings.h
+	"ofMain.h"
+	<iostream>
+
+1264528022 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcyaoscsender.cpp
+	"ofxCYAOSCSender.h"
+
+1264527389 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcyaoscsender.h
+	"ofxOSC.h"
+	"ofxCYAPerson.h"
+
+1264612897 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\src\ofxosc.h
+	"ofxOscArg.h"
+	"ofxOscMessage.h"
+	"ofxOscSender.h"
+	"ofxOscReceiver.h"
+
+1264612896 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\src\ofxoscarg.h
+	"ofConstants.h"
+	<string>
+
+1264612897 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\src\ofxoscmessage.h
+	"ofxOscArg.h"
+	<vector>
+	<string>
+
+1264612897 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\src\ofxoscsender.h
+	<string>
+	"OscTypes.h"
+	"OscOutboundPacketStream.h"
+	"ofxOscBundle.h"
+	"ofxOscMessage.h"
+
+1264612895 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\libs\oscpack\include\osc\osctypes.h
+
+1264612895 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\libs\oscpack\include\osc\oscoutboundpacketstream.h
+	"OscTypes.h"
+	"OscException.h"
+
+1264612894 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\libs\oscpack\include\osc\oscexception.h
+	<exception>
+
+1264612896 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\src\ofxoscbundle.h
+	<vector>
+	"ofxOscMessage.h"
+
+1264612898 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\src\ofxoscreceiver.h
+	<deque>
+	"ofMain.h"
+	<windows.h>
+	<pthread.h>
+	"OscTypes.h"
+	"OscPacketListener.h"
+	"UdpSocket.h"
+	"ofxOscMessage.h"
+
+1264612894 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\libs\oscpack\include\osc\oscpacketlistener.h
+	"OscReceivedElements.h"
+	"../ip/PacketListener.h"
+
+1264612894 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\libs\oscpack\include\osc\oscreceivedelements.h
+	"OscTypes.h"
+	"OscException.h"
+
+1264612892 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\libs\oscpack\include\ip\packetlistener.h
+
+1264612893 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\libs\oscpack\include\ip\udpsocket.h
+	"NetworkingUtils.h"
+	"IpEndpointName.h"
+
+1264612892 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\libs\oscpack\include\ip\networkingutils.h
+
+1264612893 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\libs\oscpack\include\ip\ipendpointname.h
+
+1264444602 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcyaperson.h
+	"ofMain.h"
+	"ofxOpenCv.h"
+
+1264522330 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcyapeopletracker.cpp
+	"ofxCYAPeopleTracker.h"
+	"CPUImageFilter.h"
+
+1264444356 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcyapeopletracker.h
+	"ofxCYAPerson.h"
+	"ofxOpenCv.h"
+	"CPUImageFilter.h"
+	"ofxCvOpticalFlowLK.h"
+	"ofxCvHaarTracker.h"
+	"ofxContourAnalysis.h"
+	"ofxCYASettings.h"
+	"ofxCYAGuiManager.h"
+	"ofxCYATUIOSender.h"
+	"ofxCYAOscSender.h"
+	"ofxCvBlobTracker.h"
+	"ofxCYAScene.h"
+
+1260369743 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencvextensions\src\cpuimagefilter.h
+	"ofxCvGrayscaleImage.h"
+
+1264115065 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencvextensions\src\ofxcvopticalflowlk.h
+	"ofMain.h"
+	"ofxCvConstants.h"
+	"ofxCvGrayscaleImage.h"
+
+1263501142 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcvhaartracker\ofxcvhaartracker.h
+	"ofxCvMain.h"
+	"ofxCvHaarFinder.h"
+	"ofxCvHaarTrackerItem.h"
+
+1263501160 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvmain.h
+	"ofxCvConstants.h"
+	"ofxCvImage.h"
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+	"ofxCvContourFinder.h"
+
+1264102188 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcvhaartracker\ofxcvhaarfinder.h
+	"ofMain.h"
+	"ofxOpenCv.h"
+
+1263501142 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcvhaartracker\ofxcvhaartrackeritem.h
+	"ofMain.h"
+
+1264444244 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontouranalysis\ofxcontouranalysis.h
+	"ofMain.h"
+	"polylineSimplify.h"
+	"convexHull.h"
+
+1264444275 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontouranalysis\polylinesimplify.h
+	"ofMain.h"
+
+1264444311 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontouranalysis\convexhull.h
+	"ofMain.h"
+	<algorithm>
+
+1263308514 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcyatuiosender.h
+	"TuioServer.h"
+	"TuioCursor.h"
+	"ofMain.h"
+
+1264620578 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\core\tuioserver.h
+	<pthread.h>
+	<sys/time.h>
+	<windows.h>
+	<iostream>
+	<list>
+	<algorithm>
+	"OscOutboundPacketStream.h"
+	"NetworkingUtils.h"
+	"UdpSocket.h"
+	"TuioObject.h"
+	"TuioCursor.h"
+
+1263501156 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\core\tuioobject.h
+	<math.h>
+	"TuioContainer.h"
+
+1263501156 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\core\tuiocontainer.h
+	<list>
+	<math.h>
+	"TuioPoint.h"
+	<iostream>
+
+1263501156 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\core\tuiopoint.h
+	"TuioTime.h"
+	<iostream>
+
+1263501156 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\core\tuiotime.h
+	<pthread.h>
+	<sys/time.h>
+	<windows.h>
+
+1263501156 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\core\tuiocursor.h
+	<math.h>
+	"TuioContainer.h"
+
+1260369743 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencvextensions\src\ofxcvblobtracker.h
+	<map>
+	<vector>
+	"ofMain.h"
+	"ofxCvTrackedBlob.h"
+	"ofxCvConstants_Track.h"
+
+1260369743 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencvextensions\src\ofxcvtrackedblob.h
+	"ofxOpenCv.h"
+
+1260369743 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencvextensions\src\ofxcvconstants_track.h
+	<iostream>
+	"cv.h"
+	"ofxCvBlob.h"
+	"ofxCvTrackedBlob.h"
+
+1263307097 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcyascene.h
+
+1264115065 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcyaperson.cpp
+	"ofxCYAPerson.h"
+
+1263307097 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcyascene.cpp
+	"ofMain.h"
+	"ofxCYAScene.h"
+
+1264115065 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcyasettings.cpp
+	"ofxCYASettings.h"
+
+1260369742 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcyatuiosender.cpp
+	"ofxCYATUIOSender.h"
+
+1238095000 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontouranalysis\triangle\del_impl.cpp
+	<iostream>
+	"triangle_impl.hpp"
+	"del_interface.hpp"
+	<new>
+
+1238095032 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontouranalysis\triangle\triangle_impl.hpp
+	"dpoint.hpp"
+	<iostream>
+	<algorithm>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<sys/time.h>
+	<float.h>
+	<fpu_control.h>
+	"triangle.h"
+
+1161808948 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontouranalysis\triangle\dpoint.hpp
+	"assert.hpp"
+	<iostream>
+	<valarray>
+	<stdio.h>
+	<limits>
+
+1161806790 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontouranalysis\triangle\assert.hpp
+
+1161807324 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontouranalysis\triangle\triangle.h
+
+1238095046 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontouranalysis\triangle\del_interface.hpp
+	"dpoint.hpp"
+	<vector>
+	<string>
+
+1263918053 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcontrolpanel\ofxcontrolpanel.cpp
+	"ofxControlPanel.h"
+
+1264102188 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcvhaartracker\ofxcvhaarfinder.cpp
+	"ofxCvHaarFinder.h"
+
+1263501142 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcvhaartracker\ofxcvhaartracker.cpp
+	"ofxCvHaarTracker.h"
+
+1263501142 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcvhaartracker\ofxcvhaartrackeritem.cpp
+	"ofMain.h"
+	"ofxCvHaarTrackerItem.h"
+
+1264612891 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxdirlist\src\ofxdirlist.cpp
+	"ofxDirList.h"
+	<algorithm>
+	<string>
+
+1263500972 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxmsainteractiveobject\src\ofxmsainteractiveobject.cpp
+	"ofxMSAInteractiveObject.h"
+	"ofMain.h"
+
+1263395838 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencvextensions\src\cpuimagefilter.cpp
+	"CPUImageFilter.h"
+	"ofxCvColorImage.h"
+	"ofxCvGrayscaleImage.h"
+	"ofxCvFloatImage.h"
+
+1260369743 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencvextensions\src\ofxcvblobtracker.cpp
+	"ofxCvBlobTracker.h"
+
+1263486151 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencvextensions\src\ofxcvcoordwarping.cpp
+	"ofxCvCoordWarping.h"
+
+1263486217 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencvextensions\src\ofxcvcoordwarping.h
+	"ofMain.h"
+	"ofxCvConstants.h"
+	"ofxCvContourFinder.h"
+
+1264014690 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencvextensions\src\ofxcvcoordwarpinggui.cpp
+	"ofxCvCoordWarpingGui.h"
+
+1264115065 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencvextensions\src\ofxcvopticalflowlk.cpp
+	"ofxCvOpticalFlowLK.h"
+
+1263501160 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvcolorimage.cpp
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+
+1263501160 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvcontourfinder.cpp
+	"ofxCvContourFinder.h"
+
+1263501160 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvfloatimage.cpp
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+
+1263501160 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvgrayscaleimage.cpp
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+
+1263501160 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvimage.cpp
+	"ofxCvImage.h"
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvBlob.h"
+
+1263501160 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxopencv\src\ofxcvshortimage.cpp
+	"ofxCvGrayscaleImage.h"
+	"ofxCvColorImage.h"
+	"ofxCvFloatImage.h"
+	"ofxCvShortImage.h"
+
+1264612896 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\src\ofxoscbundle.cpp
+	"ofxOscBundle.h"
+
+1264612895 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\src\ofxoscmessage.cpp
+	"ofxOscMessage.h"
+	<iostream>
+	<assert.h>
+
+1264612898 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\src\ofxoscreceiver.cpp
+	"ofxOscReceiver.h"
+	<pthread.h>
+	<iostream>
+	<assert.h>
+
+1264612897 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\src\ofxoscsender.cpp
+	"ofxOscSender.h"
+	"UdpSocket.h"
+	<assert.h>
+
+1264612906 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxthread\src\ofxthread.cpp
+	"ofxThread.h"
+
+1264612905 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxthread\src\ofxthread.h
+	"ofConstants.h"
+	<process.h>
+	<pthread.h>
+	<semaphore.h>
+
+1264612903 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxnetwork\src\ofxtcpclient.cpp
+	"ofxTCPClient.h"
+	"ofAppRunner.h"
+
+1264612903 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxnetwork\src\ofxtcpclient.h
+	"ofConstants.h"
+	"ofxTCPManager.h"
+
+1264612904 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxnetwork\src\ofxtcpmanager.h
+	"ofConstants.h"
+	<string.h>
+	<wchar.h>
+	<stdio.h>
+	<ctype.h>
+	<netdb.h>
+	<string.h>
+	<fcntl.h>
+	<time.h>
+	<errno.h>
+	<unistd.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<sys/timeb.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<sys/ioctl.h>
+	<sys/signal.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+
+1264612903 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxnetwork\src\ofxtcpmanager.cpp
+	"ofxTCPManager.h"
+	<stdio.h>
+
+1264612903 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxnetwork\src\ofxtcpserver.cpp
+	"ofxTCPServer.h"
+	"ofxTCPClient.h"
+
+1264612904 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxnetwork\src\ofxtcpserver.h
+	"ofConstants.h"
+	"ofxThread.h"
+	"ofxTCPManager.h"
+
+1264612905 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxnetwork\src\ofxudpmanager.cpp
+	"ofxUDPManager.h"
+
+1264612904 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxnetwork\src\ofxudpmanager.h
+	"ofConstants.h"
+	<string.h>
+	<wchar.h>
+	<stdio.h>
+	<ctype.h>
+	<netdb.h>
+	<string.h>
+	<fcntl.h>
+	<errno.h>
+	<unistd.h>
+	<arpa/inet.h>
+	<netinet/in.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<sys/time.h>
+	<sys/ioctl.h>
+	<netinet/tcp.h>
+	<winsock2.h>
+	<ws2tcpip.h>
+
+1263501156 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\tuiotcpxmlserver.cpp
+	"TuioTcpXmlServer.h"
+	"TuioTcpXmlServer.h"
+
+1263501156 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\tuiotcpxmlserver.h
+	"ofMain.h"
+	"TuioCursor.h"
+	"ofxNetwork.h"
+
+1264612904 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxnetwork\src\ofxnetwork.h
+	"ofxThread.h"
+	"ofxTCPClient.h"
+	"ofxTCPManager.h"
+	"ofxTCPServer.h"
+	"ofxUDPManager.h"
+
+1263501156 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\core\tuioclient.cpp
+	"TuioClient.h"
+
+1264620754 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\core\tuioclient.h
+	<pthread.h>
+	<sys/time.h>
+	<windows.h>
+	<iostream>
+	<list>
+	<algorithm>
+	<cstring>
+	"OscReceivedElements.h"
+	"OscPrintReceivedElements.h"
+	"UdpSocket.h"
+	"PacketListener.h"
+	"TuioListener.h"
+	"TuioObject.h"
+	"TuioCursor.h"
+
+1264612894 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxosc\libs\oscpack\include\osc\oscprintreceivedelements.h
+	<iosfwd>
+	"OscReceivedElements.h"
+
+1263501156 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\core\tuiolistener.h
+	"TuioObject.h"
+	"TuioCursor.h"
+
+1263506809 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\core\tuioserver.cpp
+	"TuioServer.h"
+
+1263501156 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\core\tuiotime.cpp
+	"TuioTime.h"
+
+1263501156 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\ofxtuioclient.cpp
+	"ofxTuioClient.h"
+
+1263501156 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\ofxtuioclient.h
+	"ofMain.h"
+	"TuioListener.h"
+	"TuioClient.h"
+	"TuioObject.h"
+	"TuioCursor.h"
+	"TuioPoint.h"
+	<list>
+	<math.h>
+
+1263501156 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\ofxtuioserver.cpp
+	"ofxTuioServer.h"
+
+1263501156 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxtuiowrapper\ofxtuioserver.h
+	"ofMain.h"
+	"TuioServer.h"
+	"TuioCursor.h"
+	<list>
+	<math.h>
+
+1264612902 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxxmlsettings\src\ofxxmlsettings.cpp
+	"ofxXmlSettings.h"
+	<vector>
+	<string>
+	<iostream>
+
+1260369736 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\apps\lab\cyapeoplevision\src\main.cpp
+	"ofMain.h"
+	"testApp.h"
+
+1264442605 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\apps\lab\cyapeoplevision\src\testapp.h
+	"ofMain.h"
+	"ofxCYA.h"
+
+1260369742 c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxcyapeoplevision\src\ofxcya.h
+	"ofxCYAPeopleTracker.h"
+
+1264115068 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\apps\lab\cyapeoplevision\src\testapp.cpp
+	"testApp.h"
+
+1264612901 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxxmlsettings\libs\tinyxml.cpp
+	<ctype.h>
+	<sstream>
+	<iostream>
+	"tinyxml.h"
+
+1264612901 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxxmlsettings\libs\tinyxmlerror.cpp
+	"tinyxml.h"
+
+1264612901 source:c:\documents and settings\administrator\my documents\of_prerelease_v0061_win_cb_fat\addons\ofxxmlsettings\libs\tinyxmlparser.cpp
+	<ctype.h>
+	<stddef.h>
+	"tinyxml.h"
+	<windows.h>
+
