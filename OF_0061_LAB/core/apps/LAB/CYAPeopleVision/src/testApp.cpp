@@ -15,6 +15,7 @@ public:
 void testApp::setup(){
 
 	ofSetFrameRate(60);
+	ofSetLogLevel(OF_LOG_VERBOSE);
 	
 	camWidth = 640;
 	camHeight = 480;
