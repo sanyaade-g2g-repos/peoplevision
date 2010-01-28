@@ -37,7 +37,7 @@ void testApp::setup(){
 	//sdk->setDeviceID("b09d01008bc69e:0");
 
 	ofxIIDCSettings *settings = new ofxIIDCSettings;
-	settings->setXMLFilename(ofToDataPath("settings.xml", true));
+	settings->setXMLFilename("data/settings.xml");
 		
 	bool result = vidGrabber.initGrabber( camWidth, camHeight, BLOB_TRACKER_VIDEO_FORMAT, BLOB_TRACKER_COLOR_FORMAT, 60, true, sdk, settings );
 	
@@ -54,7 +54,8 @@ void testApp::setup(){
 	#endif
 	
 #else
-	vidPlayer.loadMovie("testmovie/testmovie2.mov");
+	ofSetDataPathRoot("data");
+	vidPlayer.loadMovie("data/testmovie/testmovie2.mov");
 	vidPlayer.play();
 #endif
     
@@ -68,7 +69,8 @@ void testApp::setup(){
 	peopleTracker.addSlider("custom INTEGER", &itestValue, 0, ofGetWidth());
 	peopleTracker.addSlider("custom FLOAT", &ftestValue, 0, ofGetHeight());
 	peopleTracker.addToggle("custom BOOL", &btestValue);
-
+	
+	ofSetDataPathRoot("../../../data");
 }
 
 //--------------------------------------------------------------
