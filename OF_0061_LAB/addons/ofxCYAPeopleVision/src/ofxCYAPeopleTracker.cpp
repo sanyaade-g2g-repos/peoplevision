@@ -8,7 +8,6 @@
 #pragma mark Setup
 void ofxCYAPeopleTracker::setup(int w, int h)
 {
-	ofSetDataPathRoot("data/");
 	
 	width  = w;
 	height = h;
@@ -37,18 +36,21 @@ void ofxCYAPeopleTracker::setup(int w, int h)
 		
 	//setup gui quad in manager
 	gui.setupQuadGui( 640, 480 );
+	gui.loadSettings("data/settings/settings.xml");
 	
     persistentTracker.setListener( this );
 }
 
 void ofxCYAPeopleTracker::setHaarXMLFile(string haarFile)
 {
-	haarFile = "haar/" + haarFile;
+	//ofSetDataPathRoot("data/");
+	//haarFile = ofToDataPath("haar/" + haarFile, true);
+	haarFile = "data/haar/" + haarFile, true;
 	//check if haar file has changed
 	if(haarFinder.getHaarFile() != haarFile){
-		cout << "changing haar file to " << haarFile << endl;
-		haarFinder.setup(haarFile);
-		haarTracker.setup(&haarFinder);
+		ofLog(OF_LOG_VERBOSE, "changing haar file to " + haarFile);
+		//haarFinder.setup(haarFile);
+		//haarTracker.setup(&haarFinder);
 	}
 
 }
@@ -262,7 +264,7 @@ void ofxCYAPeopleTracker::trackPeople()
 			
 			grayBabyImage.setROI(roi.x, roi.y, roi.width, roi.height);
 			int numFound = haarFinder.findHaarObjects(grayBabyImage, roi);
-			cout << "found " << numFound << " for this object" << endl;
+			//cout << "found " << numFound << " for this object" << endl;
 			if(numFound > 0) {
 				ofRectangle haarRect = haarFinder.blobs[0].boundingRect;
 				haarRect.x /= TRACKING_SCALE_FACTOR;

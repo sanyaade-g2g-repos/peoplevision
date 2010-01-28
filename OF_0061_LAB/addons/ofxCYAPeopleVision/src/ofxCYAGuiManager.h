@@ -49,6 +49,8 @@ class ofxCYAGuiManager {
 	void addSlider(string name, float* value, float min, float max);
 	void addToggle(string name, bool* value);
 	
+	void loadSettings ( string xml );
+	
 
   protected:
 	//a little goofy way to keep track of custom params. works but i'm open to suggestions

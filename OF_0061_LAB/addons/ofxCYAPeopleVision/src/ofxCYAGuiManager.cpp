@@ -15,7 +15,7 @@ enum{
 };
 
 ofxCYAGuiManager::ofxCYAGuiManager() {
-	ofSetDataPathRoot("data/");
+	//ofSetDataPathRoot("data/");
 	//JG TODO add drawing event
 	ofAddListener(ofEvents.update, this, &ofxCYAGuiManager::update);
 	ofAddListener(ofEvents.draw, this, &ofxCYAGuiManager::draw);
@@ -110,7 +110,9 @@ ofxCYAGuiManager::ofxCYAGuiManager() {
 	//JG TODO: Optionally change config file through the UI
 	//this would be a big help for setting up multiple install sites and having those setting
 	//included in repositories
-	panel.loadSettings(ofToDataPath("settings/settings.xml"));
+	//ofSetDataPathRoot("data");
+	panel.loadSettings("data/settings/settings.xml");
+	//ofSetDataPathRoot("../../../data");
 }
 
 void ofxCYAGuiManager::addSlider(string name, int* value, int min, int max)
@@ -273,7 +275,7 @@ void ofxCYAGuiManager::setupQuadGui ( int cameraWidth, int cameraHeight )
 	p_Settings->quadWarpOriginal[3].set(0, cameraHeight);
 	
 	//BR TO DO: add this into the normal settings file
-	quadGui.readFromFile("guiquad-settings.xml");	
+	quadGui.readFromFile("data/guiquad-settings.xml");	
 	quadGui.width = cameraWidth;
 	quadGui.height = cameraHeight;
 		
@@ -310,6 +312,10 @@ void ofxCYAGuiManager::mouseReleased(ofMouseEventArgs &e)
 {
 	if(enableGui) panel.mouseReleased();
 }
+
+void ofxCYAGuiManager::loadSettings( string xmlFile ){
+	panel.loadSettings(xmlFile);
+};
 
 void ofxCYAGuiManager::keyPressed(ofKeyEventArgs &e)
 {

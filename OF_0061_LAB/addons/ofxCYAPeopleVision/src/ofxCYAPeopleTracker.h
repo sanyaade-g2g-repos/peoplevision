@@ -229,5 +229,6 @@ class ofxCYAPeopleTracker : public ofxCvBlobListener {
 		//gui
 
 		ofxCYAGuiManager gui;
+		bool guiLoaded;
 };
 #endif

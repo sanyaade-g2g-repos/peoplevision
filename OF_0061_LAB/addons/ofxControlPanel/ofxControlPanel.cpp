@@ -443,8 +443,9 @@ void ofxControlPanel::loadSettings(string xmlFile){
     int posLastSlash = settingsDirectory.rfind("/");
     if( posLastSlash > 0) settingsDirectory.erase(settingsDirectory.begin()+ posLastSlash+1, settingsDirectory.end()  );
     else settingsDirectory = "";
-
-    bool loaded = settings.loadFile(currentXmlFile);
+	
+    //bool loaded = settings.loadFile(ofToDataPath(currentXmlFile, true));
+	bool loaded = settings.loadFile(currentXmlFile);
 	if (!loaded) ofLog(OF_LOG_WARNING, "xml load failed!");
     usingXml = true;
 
