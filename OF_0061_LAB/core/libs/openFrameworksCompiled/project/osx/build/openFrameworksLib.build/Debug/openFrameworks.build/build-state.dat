@@ -1,0 +1,3798 @@
+TopenFrameworks
+v7
+r0
+t286407362.861712
+cCheck dependencies
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppGlutWindow.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGlutWindow.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofArduino.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSerial.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofBitmapFont.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofBitmapFont.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofGraphics.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofImage.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTexture.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTexture.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTrueTypeFont.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundPlayer.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundStream.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofMath.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMath.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofUtils.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoGrabber.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoPlayer.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+cLibtool "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../lib/osx//openFrameworksDebug.a" normal i386
+
+N/Developer/SDKs/MacOSX10.5.sdk
+c000000004AB44D2500000000000000EE
+t1253330213
+s238
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.h
+c0000000047BAEC060000000000000476
+t1203432454
+s1142
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/CoreAudio.framework/Headers/AudioHardware.h
+c0000000048649BCC000000000002C0F0
+t1214553036
+s180464
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/CoreServices.framework/Headers/CoreServices.h
+c0000000047BAD4120000000000000400
+t1203426322
+s1024
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/GLUT.framework/Headers/glut.h
+c000000004864C81A000000000000563C
+t1214564378
+s22076
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/OpenGL.framework/Headers/gl.h
+c000000004702C63B0000000000025B59
+t1191364155
+s154457
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/OpenGL.framework/Headers/glu.h
+c000000004702C63B0000000000003F8D
+t1191364155
+s16269
+
+N/Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/QuickTime.framework/Headers/QuickTime.h
+c000000004864C165000000000000067F
+t1214562661
+s1663
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/TargetConditionals.h
+c000000004817F9680000000000002778
+t1209530728
+s10104
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/ctype.h
+c0000000047BA99310000000000002C3A
+t1203411249
+s11322
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/dirent.h
+c0000000047BA993100000000000014E4
+t1203411249
+s5348
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/errno.h
+c0000000047BA993000000000000003EB
+t1203411248
+s1003
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/fcntl.h
+c0000000047BA993000000000000003EA
+t1203411248
+s1002
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/getopt.h
+c0000000047BA99300000000000000CBC
+t1203411248
+s3260
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/inttypes.h
+c0000000047BA993000000000000027D1
+t1203411248
+s10193
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/math.h
+c0000000047BA987000000000000004B7
+t1203411056
+s1207
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/pthread.h
+c0000000047BA9932000000000000380F
+t1203411250
+s14351
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/setjmp.h
+c0000000047BA99300000000000000438
+t1203411248
+s1080
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdio.h
+c0000000047BA99310000000000003D1D
+t1203411249
+s15645
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/stdlib.h
+c0000000047BA99310000000000002A79
+t1203411249
+s10873
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/string.h
+c0000000047BA99320000000000001731
+t1203411250
+s5937
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/ioctl.h
+c0000000047E883CF00000000000011D1
+t1206420431
+s4561
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/select.h
+c0000000047E883D100000000000016A2
+t1206420433
+s5794
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/sys/time.h
+c0000000047E883D20000000000001E18
+t1206420434
+s7704
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/termios.h
+c0000000047BA993000000000000004D4
+t1203411248
+s1236
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/time.h
+c0000000047BA9932000000000000178E
+t1203411250
+s6030
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/unistd.h
+c0000000047BA993200000000000053FF
+t1203411250
+s21503
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/include/wchar.h
+c0000000047BA993200000000000025DA
+t1203411250
+s9690
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/float.h
+c000000004A11EAF10000000000001538
+t1242688241
+s5432
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stdarg.h
+c000000004A11EAF100000000000010DD
+t1242688241
+s4317
+
+N/Developer/SDKs/MacOSX10.5.sdk/usr/lib/gcc/i686-apple-darwin10/4.2.1/include/stddef.h
+c000000004A11EAF10000000000003197
+t1242688241
+s12695
+
+N/System/Library/Frameworks/AGL.framework/AGL
+c000000004A73D9FE0000000000043820
+t1249106430
+s276512
+
+N/System/Library/Frameworks/ApplicationServices.framework/ApplicationServices
+c000000004A12050E0000000000022140
+t1242694926
+s139584
+
+N/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000004B26F1FA00000000004C78A0
+t1260843514
+s5011616
+
+N/System/Library/Frameworks/Carbon.framework/Carbon
+c000000004A7680C1000000000000A5F0
+t1249280193
+s42480
+
+N/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+c000000004AF07A270000000000217030
+t1257273895
+s2191408
+
+N/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+c000000004AD8377E0000000000776F30
+t1255683966
+s7827248
+
+N/System/Library/Frameworks/CoreServices.framework/CoreServices
+c000000004A11F09A0000000000021710
+t1242689690
+s136976
+
+N/System/Library/Frameworks/GLUT.framework/GLUT
+c000000004A12475500000000001A2920
+t1242711893
+s1714464
+
+N/System/Library/Frameworks/OpenGL.framework/OpenGL
+c000000004AF07C310000000000040130
+t1257274417
+s262448
+
+N/System/Library/Frameworks/QuickTime.framework/QuickTime
+c000000004AD8635000000000007836D0
+t1255695184
+s7878352
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/fmodex/include/fmod.h
+c000000004B38DD140000000000028E68
+t1262017812
+s167528
+i"fmod_codec.h"
+i"fmod_dsp.h"
+i"fmod_memoryinfo.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/fmodex/include/fmod_codec.h
+c000000004B38DD14000000000000334A
+t1262017812
+s13130
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/fmodex/include/fmod_dsp.h
+c000000004B38DD14000000000000892F
+t1262017812
+s35119
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/fmodex/include/fmod_memoryinfo.h
+c000000004B38DD140000000000003C95
+t1262017812
+s15509
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/freetype/include/freetype2/freetype/config/ftheader.h
+c000000004B38DD140000000000005B39
+t1262017812
+s23353
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/freetype/include/freetype2/freetype/freetype.h
+c000000004B38DD140000000000032885
+t1262017812
+s206981
+i<ft2build.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/freetype/include/freetype2/freetype/ftglyph.h
+c000000004B38DD140000000000008DCF
+t1262017812
+s36303
+i<ft2build.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/freetype/include/freetype2/freetype/ftoutln.h
+c000000004B38DD140000000000007B3C
+t1262017812
+s31548
+i<ft2build.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/freetype/include/freetype2/freetype/fttrigon.h
+c000000004B38DD1400000000000020FB
+t1262017812
+s8443
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/freetype/include/ft2build.h
+c000000004B38DD140000000000000F32
+t1262017812
+s3890
+i<freetype/config/ftheader.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/app/ofAppBaseWindow.h
+c000000004B38DD160000000000000446
+t1262017814
+s1094
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/app/ofAppGlutWindow.h
+c000000004B38DD16000000000000066C
+t1262017814
+s1644
+i"ofConstants.h"
+i"ofAppBaseWindow.h"
+i"glut.h"
+i<GLUT/glut.h>
+i<GL/glut.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/app/ofAppRunner.h
+c000000004B38DD16000000000000050D
+t1262017814
+s1293
+i"ofMain.h"
+i"ofBaseApp.h"
+i"ofAppBaseWindow.h"
+i"ofAppGlutWindow.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/app/ofBaseApp.h
+c000000004B38DD160000000000000375
+t1262017814
+s885
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/communication/ofArduino.h
+c000000004B38DD160000000000003D3C
+t1262017814
+s15676
+i<list>
+i<vector>
+i<string>
+i<iostream>
+i"ofEvents.h"
+i"ofSerial.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/communication/ofSerial.h
+c000000004B38DD160000000000000D2E
+t1262017814
+s3374
+i"ofConstants.h"
+i<termios.h>
+i<sys/ioctl.h>
+i<getopt.h>
+i<dirent.h>
+i<winbase.h>
+i<tchar.h>
+i<iostream>
+i<string.h>
+i<setupapi.h>
+i<regstr.h>
+i<winioctl.h>
+i<initguid.h>
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<fcntl.h>
+i<errno.h>
+i<ctype.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/events/ofEventUtils.h
+c000000004B38DD160000000000000A8A
+t1262017814
+s2698
+i"ofConstants.h"
+i"Poco/FIFOEvent.h"
+i"Poco/Delegate.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/graphics/ofBitmapFont.h
+c000000004B38DD16000000000000018C
+t1262017814
+s396
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/graphics/ofGraphics.h
+c000000004B38DD160000000000000B73
+t1262017814
+s2931
+i"ofConstants.h"
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/graphics/ofImage.h
+c000000004B38DD160000000000000C9F
+t1262017814
+s3231
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGraphics.h"
+i"ofAppRunner.h"
+i"FreeImage.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/graphics/ofTexture.h
+c000000004B38DD160000000000000B5A
+t1262017814
+s2906
+i"ofConstants.h"
+i"ofGraphics.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/graphics/ofTrueTypeFont.h
+c000000004B38DD16000000000000087A
+t1262017814
+s2170
+i"ofConstants.h"
+i"ofGraphics.h"
+i"ofUtils.h"
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/sound/ofSoundPlayer.h
+c000000004B38DD1600000000000006C3
+t1262017814
+s1731
+i"ofConstants.h"
+i"fmod.h"
+i"fmod_errors.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/sound/ofSoundStream.h
+c000000004B38DD160000000000000254
+t1262017814
+s596
+i"ofConstants.h"
+i"ofBaseApp.h"
+i"ofEvents.h"
+i"ofMath.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/utils/ofConstants.h
+c000000004B38DD160000000000002AA0
+t1262017814
+s10912
+i<TargetConditionals.h>
+i<windows.h>
+i"GLee.h"
+i"glu.h"
+i<unistd.h>
+i"GLee.h"
+i<OpenGL/glu.h>
+i<ApplicationServices/ApplicationServices.h>
+i<unistd.h>
+i"GLee.h"
+i<GL/glu.h>
+i<OpenGLES/ES1/gl.h>
+i<OpenGLES/ES1/glext.h>
+i<stdio.h>
+i<stdarg.h>
+i<math.h>
+i<time.h>
+i<stdlib.h>
+i<string.h>
+i<iostream>
+i<vector>
+i<string>
+i<sstream>
+i<iomanip>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/utils/ofMath.h
+c000000004B38DD1600000000000006DB
+t1262017814
+s1755
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/utils/ofNoise.h
+c000000004B38DD160000000000004F24
+t1262017814
+s20260
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/utils/ofUtils.h
+c000000004B38DD1600000000000005A4
+t1262017814
+s1444
+i"ofConstants.h"
+i<shellapi.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/video/ofGstUtils.h
+c000000004B38DD160000000000000B42
+t1262017814
+s2882
+i<gst/gst.h>
+i<pthread.h>
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/video/ofQtUtils.h
+c000000004B38DD1600000000000006CF
+t1262017814
+s1743
+i"ofConstants.h"
+i"ofGraphics.h"
+i<QuickTime/QuickTime.h>
+i<CoreServices/CoreServices.h>
+i<ApplicationServices/ApplicationServices.h>
+i<QTML.h>
+i<FixMath.h>
+i<QuickTimeComponents.h>
+i<TextUtils.h>
+i<MediaHandlers.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/video/ofUCUtils.h
+c000000004B38DD1600000000000004A7
+t1262017814
+s1191
+i"ofConstants.h"
+i<stdio.h>
+i<stdlib.h>
+i<unistd.h>
+i<unicap.h>
+i<unistd.h>
+i<string.h>
+i<pthread.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/video/ofVideoGrabber.h
+c000000004B38DD160000000000000C9C
+t1262017814
+s3228
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGraphics.h"
+i"ofTypes.h"
+i"ofQtUtils.h"
+i"videoInput.h"
+i"ofUCUtils.h"
+i"ofGstUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworks/video/ofVideoPlayer.h
+c000000004B38DD160000000000000BD3
+t1262017814
+s3027
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGstUtils.h"
+i"ofQtUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../FreeImage/include/FreeImage.h
+c000000004B38DD14000000000000CC1B
+t1262017812
+s52251
+i<wchar.h>
+i<inttypes.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../fmodex/include/fmod.h
+c000000004B38DD140000000000028E68
+t1262017812
+s167528
+i"fmod_codec.h"
+i"fmod_dsp.h"
+i"fmod_memoryinfo.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../fmodex/include/fmod_errors.h
+c000000004B38DD140000000000003408
+t1262017812
+s13320
+i"fmod.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../glee/include/GLee.h
+c000000004B38DD160000000000090A87
+t1262017814
+s592519
+i<windows.h>
+i<GL/gl.h>
+i<OpenGL/gl.h>
+i<GL/gl.h>
+i<GL/glx.h>
+i<stddef.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGlutWindow.cpp
+c000000004B38DD1600000000000045B6
+t1262017814
+s17846
+i"ofAppGlutWindow.h"
+i"ofBaseApp.h"
+i"ofMain.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp
+c000000004B38DD1600000000000017AA
+t1262017814
+s6058
+i"ofAppRunner.h"
+i"ofAppiPhoneWindow.h"
+i"ofAppGlutWindow.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.h
+c000000004B38DD16000000000000050D
+t1262017814
+s1293
+i"ofMain.h"
+i"ofBaseApp.h"
+i"ofAppBaseWindow.h"
+i"ofAppGlutWindow.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp
+c000000004B38DD160000000000004269
+t1262017814
+s17001
+i"ofArduino.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.h
+c000000004B38DD160000000000003D3C
+t1262017814
+s15676
+i<list>
+i<vector>
+i<string>
+i<iostream>
+i"ofEvents.h"
+i"ofSerial.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp
+c000000004B38DD16000000000000478C
+t1262017814
+s18316
+i"ofSerial.h"
+i"ofMain.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.h
+c000000004B38DD160000000000000D2E
+t1262017814
+s3374
+i"ofConstants.h"
+i<termios.h>
+i<sys/ioctl.h>
+i<getopt.h>
+i<dirent.h>
+i<winbase.h>
+i<tchar.h>
+i<iostream>
+i<string.h>
+i<setupapi.h>
+i<regstr.h>
+i<winioctl.h>
+i<initguid.h>
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<fcntl.h>
+i<errno.h>
+i<ctype.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/events/ofEvents.h
+c000000004B38DD1600000000000007AF
+t1262017814
+s1967
+i"ofConstants.h"
+i"ofEventUtils.h"
+i"ofxEventUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofBitmapFont.cpp
+c000000004B38DD160000000000009319
+t1262017814
+s37657
+i"ofBitmapFont.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.cpp
+c000000004B38DD160000000000007585
+t1262017814
+s30085
+i"ofGraphics.h"
+i"ofAppRunner.h"
+i"ofBitmapFont.h"
+i<OpenGL/glu.h>
+i"glu.h"
+i"GL/glu.h"
+i"glu.h"
+i<vector>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.h
+c000000004B38DD160000000000000B73
+t1262017814
+s2931
+i"ofConstants.h"
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.cpp
+c000000004B38DD160000000000003F32
+t1262017814
+s16178
+i"ofImage.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.h
+c000000004B38DD160000000000000C9F
+t1262017814
+s3231
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGraphics.h"
+i"ofAppRunner.h"
+i"FreeImage.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTexture.cpp
+c000000004B38DD160000000000003969
+t1262017814
+s14697
+i"ofTexture.h"
+i"ofUtils.h"
+i"ofAppRunner.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTexture.h
+c000000004B38DD160000000000000B5A
+t1262017814
+s2906
+i"ofConstants.h"
+i"ofGraphics.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.cpp
+c000000004B38DD160000000000006D00
+t1262017814
+s27904
+i"ofTrueTypeFont.h"
+i<ft2build.h>
+i<freetype/freetype.h>
+i<freetype/ftglyph.h>
+i<freetype/ftoutln.h>
+i<freetype/fttrigon.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.h
+c000000004B38DD16000000000000087A
+t1262017814
+s2170
+i"ofConstants.h"
+i"ofGraphics.h"
+i"ofUtils.h"
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/ofMain.h
+c000000004B38DD160000000000000347
+t1262017814
+s839
+i"ofConstants.h"
+i"ofMath.h"
+i"ofUtils.h"
+i"ofTypes.h"
+i"ofSerial.h"
+i"ofArduino.h"
+i"ofTexture.h"
+i"ofTrueTypeFont.h"
+i"ofGraphics.h"
+i"ofImage.h"
+i"ofBaseApp.h"
+i"ofAppRunner.h"
+i"ofSoundStream.h"
+i"ofSoundPlayer.h"
+i"ofVideoGrabber.h"
+i"ofVideoPlayer.h"
+i"ofEvents.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.cpp
+c000000004B38DD160000000000002413
+t1262017814
+s9235
+i"ofSoundPlayer.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.h
+c000000004B38DD1600000000000006C3
+t1262017814
+s1731
+i"ofConstants.h"
+i"fmod.h"
+i"fmod_errors.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.cpp
+c000000004B38DD160000000000001402
+t1262017814
+s5122
+i"ofSoundStream.h"
+i"RtAudio.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.h
+c000000004B38DD160000000000000254
+t1262017814
+s596
+i"ofConstants.h"
+i"ofBaseApp.h"
+i"ofEvents.h"
+i"ofMath.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h
+c000000004B38DD160000000000002AA0
+t1262017814
+s10912
+i<TargetConditionals.h>
+i<windows.h>
+i"GLee.h"
+i"glu.h"
+i<unistd.h>
+i"GLee.h"
+i<OpenGL/glu.h>
+i<ApplicationServices/ApplicationServices.h>
+i<unistd.h>
+i"GLee.h"
+i<GL/glu.h>
+i<OpenGLES/ES1/gl.h>
+i<OpenGLES/ES1/glext.h>
+i<stdio.h>
+i<stdarg.h>
+i<math.h>
+i<time.h>
+i<stdlib.h>
+i<string.h>
+i<iostream>
+i<vector>
+i<string>
+i<sstream>
+i<iomanip>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMath.cpp
+c000000004B38DD1600000000000013C6
+t1262017814
+s5062
+i"ofMath.h"
+i"ofAppRunner.h"
+i"float.h"
+i<sys/time.h>
+i"ofNoise.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMath.h
+c000000004B38DD1600000000000006DB
+t1262017814
+s1755
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofTypes.h
+c000000004B38DD160000000000001991
+t1262017814
+s6545
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.cpp
+c000000004B38DD160000000000002629
+t1262017814
+s9769
+i"ofUtils.h"
+i"ofImage.h"
+i"sys/time.h"
+i<mmsystem.h>
+i<direct.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.h
+c000000004B38DD1600000000000005A4
+t1262017814
+s1444
+i"ofConstants.h"
+i<shellapi.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp
+c000000004B38DD1600000000000024FB
+t1262017814
+s9467
+i"ofQtUtils.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.cpp
+c000000004B38DD160000000000007EA5
+t1262017814
+s32421
+i"ofVideoGrabber.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.h
+c000000004B38DD160000000000000C9C
+t1262017814
+s3228
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGraphics.h"
+i"ofTypes.h"
+i"ofQtUtils.h"
+i"videoInput.h"
+i"ofUCUtils.h"
+i"ofGstUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.cpp
+c000000004B38DD1600000000000065E6
+t1262017814
+s26086
+i"ofVideoPlayer.h"
+i"ofUtils.h"
+i<gst/video/video.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.h
+c000000004B38DD160000000000000BD3
+t1262017814
+s3027
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGstUtils.h"
+i"ofQtUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../rtAudio/include/RtAudio.h
+c000000004B38DD180000000000009B55
+t1262017816
+s39765
+i<string>
+i<vector>
+i"RtError.h"
+i<windows.h>
+i<process.h>
+i<pthread.h>
+i<sys/time.h>
+i<sstream>
+i<CoreAudio/AudioHardware.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../lib/osx//openFrameworksDebug.a
+t1264714104
+s4100784
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppGlutWindow.o
+t1264709943
+s698856
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o
+t1264709943
+s787756
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofArduino.o
+t1264709947
+s697284
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofBitmapFont.o
+t1264709947
+s82024
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofGraphics.o
+t1264709950
+s185736
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofImage.o
+t1264709950
+s104396
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofMath.o
+t1264709956
+s81068
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o
+t1264709958
+s63432
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSerial.o
+t1264709946
+s76688
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundPlayer.o
+t1264709953
+s74564
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundStream.o
+t1264709954
+s446944
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTexture.o
+t1264709952
+s81864
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTrueTypeFont.o
+t1264709952
+s223412
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofUtils.o
+t1264709957
+s154960
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoGrabber.o
+t1264709959
+s116552
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoPlayer.o
+t1264709960
+s114012
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/openFrameworksDebug.LinkFileList
+c000000004B6201770000000000000C9A
+t1264714103
+s3226
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/AbstractDelegate.h
+c000000004B38DD160000000000000B2E
+t1262017814
+s2862
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/AbstractEvent.h
+c000000004B38DD160000000000002C6A
+t1262017814
+s11370
+i"Poco/Foundation.h"
+i"Poco/SingletonHolder.h"
+i"Poco/SharedPtr.h"
+i"Poco/ActiveResult.h"
+i"Poco/ActiveMethod.h"
+i"Poco/Mutex.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/ActiveMethod.h
+c000000004B38DD160000000000001C64
+t1262017814
+s7268
+i"Poco/Foundation.h"
+i"Poco/ActiveResult.h"
+i"Poco/ActiveRunnable.h"
+i"Poco/ActiveStarter.h"
+i"Poco/AutoPtr.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/ActiveResult.h
+c000000004B38DD160000000000002E66
+t1262017814
+s11878
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+i"Poco/Event.h"
+i"Poco/RefCountedObject.h"
+i"Poco/Exception.h"
+i<algorithm>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/ActiveRunnable.h
+c000000004B38DD160000000000001785
+t1262017814
+s6021
+i"Poco/Foundation.h"
+i"Poco/ActiveResult.h"
+i"Poco/Runnable.h"
+i"Poco/RefCountedObject.h"
+i"Poco/AutoPtr.h"
+i"Poco/Exception.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/ActiveStarter.h
+c000000004B38DD160000000000000927
+t1262017814
+s2343
+i"Poco/Foundation.h"
+i"Poco/ThreadPool.h"
+i"Poco/ActiveRunnable.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/AutoPtr.h
+c000000004B38DD160000000000001E0C
+t1262017814
+s7692
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<algorithm>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Bugcheck.h
+c000000004B38DD1600000000000012FE
+t1262017814
+s4862
+i"Poco/Foundation.h"
+i<string>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/CompareFunctions.h
+c000000004B38DD1600000000000007EC
+t1262017814
+s2028
+i"Poco/Foundation.h"
+i<functional>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Config.h
+c000000004B38DD1600000000000008B5
+t1262017814
+s2229
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Delegate.h
+c000000004B38DD160000000000001802
+t1262017814
+s6146
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/FunctionDelegate.h"
+i"Poco/Expire.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Event.h
+c000000004B38DD160000000000000E21
+t1262017814
+s3617
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/Event_WIN32.h"
+i"Poco/Event_POSIX.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Event_POSIX.h
+c000000004B38DD160000000000000A91
+t1262017814
+s2705
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<pthread.h>
+i<errno.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Event_WIN32.h
+c000000004B38DD160000000000000947
+t1262017814
+s2375
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/UnWindows.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Exception.h
+c000000004B38DD1600000000000026AC
+t1262017814
+s9900
+i"Poco/Foundation.h"
+i<stdexcept>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Expire.h
+c000000004B38DD160000000000000CF1
+t1262017814
+s3313
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/Timestamp.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/FIFOEvent.h
+c000000004B38DD160000000000000AD4
+t1262017814
+s2772
+i"Poco/AbstractEvent.h"
+i"Poco/FIFOStrategy.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/CompareFunctions.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/FIFOStrategy.h
+c000000004B38DD1600000000000010F3
+t1262017814
+s4339
+i"Poco/NotificationStrategy.h"
+i<map>
+i<list>
+i<memory>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Foundation.h
+c000000004B38DD160000000000001023
+t1262017814
+s4131
+i"Poco/Config.h"
+i"Poco/Platform.h"
+i"Poco/Platform_WIN32.h"
+i"Poco/Platform_VMS.h"
+i"Poco/Platform_POSIX.h"
+i"Poco/Bugcheck.h"
+i"Poco/Types.h"
+i<string>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/FunctionDelegate.h
+c000000004B38DD1600000000000013CA
+t1262017814
+s5066
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Mutex.h
+c000000004B38DD160000000000001A61
+t1262017814
+s6753
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/ScopedLock.h"
+i"Poco/Mutex_WIN32.h"
+i"Poco/Mutex_POSIX.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Mutex_POSIX.h
+c000000004B38DD160000000000000AC3
+t1262017814
+s2755
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<pthread.h>
+i<errno.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Mutex_WIN32.h
+c000000004B38DD160000000000000A07
+t1262017814
+s2567
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/UnWindows.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/NotificationStrategy.h
+c000000004B38DD160000000000000A37
+t1262017814
+s2615
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Platform.h
+c000000004B38DD160000000000001A3A
+t1262017814
+s6714
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Platform_POSIX.h
+c000000004B38DD160000000000000843
+t1262017814
+s2115
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Platform_VMS.h
+c000000004B38DD160000000000000BAA
+t1262017814
+s2986
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Platform_WIN32.h
+c000000004B38DD160000000000000D4D
+t1262017814
+s3405
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/RefCountedObject.h
+c000000004B38DD160000000000000B10
+t1262017814
+s2832
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Runnable.h
+c000000004B38DD160000000000000861
+t1262017814
+s2145
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/ScopedLock.h
+c000000004B38DD1600000000000008EB
+t1262017814
+s2283
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/SharedPtr.h
+c000000004B38DD1600000000000021DE
+t1262017814
+s8670
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/Mutex.h"
+i<algorithm>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/SignalHandler.h
+c000000004B38DD1600000000000011EB
+t1262017814
+s4587
+i"Poco/Foundation.h"
+i<vector>
+i<setjmp.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/SingletonHolder.h
+c000000004B38DD160000000000000A64
+t1262017814
+s2660
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Thread.h
+c000000004B38DD160000000000001C3A
+t1262017814
+s7226
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+i"Poco/Thread_WIN32.h"
+i"Poco/Thread_POSIX.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/ThreadPool.h
+c000000004B38DD160000000000001849
+t1262017814
+s6217
+i"Poco/Foundation.h"
+i"Poco/Thread.h"
+i"Poco/Mutex.h"
+i<vector>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Thread_POSIX.h
+c000000004B38DD1600000000000012A8
+t1262017814
+s4776
+i"Poco/Foundation.h"
+i"Poco/Runnable.h"
+i"Poco/SignalHandler.h"
+i"Poco/Event.h"
+i"Poco/RefCountedObject.h"
+i"Poco/AutoPtr.h"
+i<pthread.h>
+i<sys/select.h>
+i<errno.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Thread_WIN32.h
+c000000004B38DD16000000000000106C
+t1262017814
+s4204
+i"Poco/Foundation.h"
+i"Poco/Runnable.h"
+i"Poco/UnWindows.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Timestamp.h
+c000000004B38DD1600000000000019A7
+t1262017814
+s6567
+i"Poco/Foundation.h"
+i<ctime>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/Types.h
+c000000004B38DD160000000000001910
+t1262017814
+s6416
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/poco/include/Poco/UnWindows.h
+c000000004B38DD160000000000000FD1
+t1262017814
+s4049
+i<windows.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/rtAudio/include/RtError.h
+c000000004B38DD180000000000000846
+t1262017816
+s2118
+i<exception>
+i<iostream>
+i<string>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/fmodex/include/fmod.h
+c000000004B38DD140000000000028E68
+t1262017812
+s167528
+i"fmod_codec.h"
+i"fmod_dsp.h"
+i"fmod_memoryinfo.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/fmodex/include/fmod_codec.h
+c000000004B38DD14000000000000334A
+t1262017812
+s13130
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/fmodex/include/fmod_dsp.h
+c000000004B38DD14000000000000892F
+t1262017812
+s35119
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/fmodex/include/fmod_memoryinfo.h
+c000000004B38DD140000000000003C95
+t1262017812
+s15509
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/freetype/include/freetype2/freetype/config/ftheader.h
+c000000004B38DD140000000000005B39
+t1262017812
+s23353
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/freetype/include/freetype2/freetype/freetype.h
+c000000004B38DD140000000000032885
+t1262017812
+s206981
+i<ft2build.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/freetype/include/freetype2/freetype/ftglyph.h
+c000000004B38DD140000000000008DCF
+t1262017812
+s36303
+i<ft2build.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/freetype/include/freetype2/freetype/ftoutln.h
+c000000004B38DD140000000000007B3C
+t1262017812
+s31548
+i<ft2build.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/freetype/include/freetype2/freetype/fttrigon.h
+c000000004B38DD1400000000000020FB
+t1262017812
+s8443
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/freetype/include/ft2build.h
+c000000004B38DD140000000000000F32
+t1262017812
+s3890
+i<freetype/config/ftheader.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/app/ofAppBaseWindow.h
+c000000004B38DD160000000000000446
+t1262017814
+s1094
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/app/ofAppGlutWindow.h
+c000000004B38DD16000000000000066C
+t1262017814
+s1644
+i"ofConstants.h"
+i"ofAppBaseWindow.h"
+i"glut.h"
+i<GLUT/glut.h>
+i<GL/glut.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/app/ofAppRunner.h
+c000000004B38DD16000000000000050D
+t1262017814
+s1293
+i"ofMain.h"
+i"ofBaseApp.h"
+i"ofAppBaseWindow.h"
+i"ofAppGlutWindow.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/app/ofBaseApp.h
+c000000004B38DD160000000000000375
+t1262017814
+s885
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/communication/ofArduino.h
+c000000004B38DD160000000000003D3C
+t1262017814
+s15676
+i<list>
+i<vector>
+i<string>
+i<iostream>
+i"ofEvents.h"
+i"ofSerial.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/communication/ofSerial.h
+c000000004B38DD160000000000000D2E
+t1262017814
+s3374
+i"ofConstants.h"
+i<termios.h>
+i<sys/ioctl.h>
+i<getopt.h>
+i<dirent.h>
+i<winbase.h>
+i<tchar.h>
+i<iostream>
+i<string.h>
+i<setupapi.h>
+i<regstr.h>
+i<winioctl.h>
+i<initguid.h>
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<fcntl.h>
+i<errno.h>
+i<ctype.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/events/ofEventUtils.h
+c000000004B38DD160000000000000A8A
+t1262017814
+s2698
+i"ofConstants.h"
+i"Poco/FIFOEvent.h"
+i"Poco/Delegate.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/graphics/ofBitmapFont.h
+c000000004B38DD16000000000000018C
+t1262017814
+s396
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/graphics/ofGraphics.h
+c000000004B38DD160000000000000B73
+t1262017814
+s2931
+i"ofConstants.h"
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/graphics/ofImage.h
+c000000004B38DD160000000000000C9F
+t1262017814
+s3231
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGraphics.h"
+i"ofAppRunner.h"
+i"FreeImage.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/graphics/ofTexture.h
+c000000004B38DD160000000000000B5A
+t1262017814
+s2906
+i"ofConstants.h"
+i"ofGraphics.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/graphics/ofTrueTypeFont.h
+c000000004B38DD16000000000000087A
+t1262017814
+s2170
+i"ofConstants.h"
+i"ofGraphics.h"
+i"ofUtils.h"
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/sound/ofSoundPlayer.h
+c000000004B38DD1600000000000006C3
+t1262017814
+s1731
+i"ofConstants.h"
+i"fmod.h"
+i"fmod_errors.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/sound/ofSoundStream.h
+c000000004B38DD160000000000000254
+t1262017814
+s596
+i"ofConstants.h"
+i"ofBaseApp.h"
+i"ofEvents.h"
+i"ofMath.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/utils/ofConstants.h
+c000000004B38DD160000000000002AA0
+t1262017814
+s10912
+i<TargetConditionals.h>
+i<windows.h>
+i"GLee.h"
+i"glu.h"
+i<unistd.h>
+i"GLee.h"
+i<OpenGL/glu.h>
+i<ApplicationServices/ApplicationServices.h>
+i<unistd.h>
+i"GLee.h"
+i<GL/glu.h>
+i<OpenGLES/ES1/gl.h>
+i<OpenGLES/ES1/glext.h>
+i<stdio.h>
+i<stdarg.h>
+i<math.h>
+i<time.h>
+i<stdlib.h>
+i<string.h>
+i<iostream>
+i<vector>
+i<string>
+i<sstream>
+i<iomanip>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/utils/ofMath.h
+c000000004B38DD1600000000000006DB
+t1262017814
+s1755
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/utils/ofNoise.h
+c000000004B38DD160000000000004F24
+t1262017814
+s20260
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/utils/ofUtils.h
+c000000004B38DD1600000000000005A4
+t1262017814
+s1444
+i"ofConstants.h"
+i<shellapi.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/video/ofGstUtils.h
+c000000004B38DD160000000000000B42
+t1262017814
+s2882
+i<gst/gst.h>
+i<pthread.h>
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/video/ofQtUtils.h
+c000000004B38DD1600000000000006CF
+t1262017814
+s1743
+i"ofConstants.h"
+i"ofGraphics.h"
+i<QuickTime/QuickTime.h>
+i<CoreServices/CoreServices.h>
+i<ApplicationServices/ApplicationServices.h>
+i<QTML.h>
+i<FixMath.h>
+i<QuickTimeComponents.h>
+i<TextUtils.h>
+i<MediaHandlers.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/video/ofUCUtils.h
+c000000004B38DD1600000000000004A7
+t1262017814
+s1191
+i"ofConstants.h"
+i<stdio.h>
+i<stdlib.h>
+i<unistd.h>
+i<unicap.h>
+i<unistd.h>
+i<string.h>
+i<pthread.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/video/ofVideoGrabber.h
+c000000004B38DD160000000000000C9C
+t1262017814
+s3228
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGraphics.h"
+i"ofTypes.h"
+i"ofQtUtils.h"
+i"videoInput.h"
+i"ofUCUtils.h"
+i"ofGstUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworks/video/ofVideoPlayer.h
+c000000004B38DD160000000000000BD3
+t1262017814
+s3027
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGstUtils.h"
+i"ofQtUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../FreeImage/include/FreeImage.h
+c000000004B38DD14000000000000CC1B
+t1262017812
+s52251
+i<wchar.h>
+i<inttypes.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../fmodex/include/fmod.h
+c000000004B38DD140000000000028E68
+t1262017812
+s167528
+i"fmod_codec.h"
+i"fmod_dsp.h"
+i"fmod_memoryinfo.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../fmodex/include/fmod_errors.h
+c000000004B38DD140000000000003408
+t1262017812
+s13320
+i"fmod.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../glee/include/GLee.h
+c000000004B38DD160000000000090A87
+t1262017814
+s592519
+i<windows.h>
+i<GL/gl.h>
+i<OpenGL/gl.h>
+i<GL/gl.h>
+i<GL/glx.h>
+i<stddef.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGlutWindow.cpp
+c000000004B38DD1600000000000045B6
+t1262017814
+s17846
+i"ofAppGlutWindow.h"
+i"ofBaseApp.h"
+i"ofMain.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp
+c000000004B38DD1600000000000017AA
+t1262017814
+s6058
+i"ofAppRunner.h"
+i"ofAppiPhoneWindow.h"
+i"ofAppGlutWindow.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.h
+c000000004B38DD16000000000000050D
+t1262017814
+s1293
+i"ofMain.h"
+i"ofBaseApp.h"
+i"ofAppBaseWindow.h"
+i"ofAppGlutWindow.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp
+c000000004B38DD160000000000004269
+t1262017814
+s17001
+i"ofArduino.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.h
+c000000004B38DD160000000000003D3C
+t1262017814
+s15676
+i<list>
+i<vector>
+i<string>
+i<iostream>
+i"ofEvents.h"
+i"ofSerial.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp
+c000000004B38DD16000000000000478C
+t1262017814
+s18316
+i"ofSerial.h"
+i"ofMain.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.h
+c000000004B38DD160000000000000D2E
+t1262017814
+s3374
+i"ofConstants.h"
+i<termios.h>
+i<sys/ioctl.h>
+i<getopt.h>
+i<dirent.h>
+i<winbase.h>
+i<tchar.h>
+i<iostream>
+i<string.h>
+i<setupapi.h>
+i<regstr.h>
+i<winioctl.h>
+i<initguid.h>
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<fcntl.h>
+i<errno.h>
+i<ctype.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/events/ofEvents.h
+c000000004B38DD1600000000000007AF
+t1262017814
+s1967
+i"ofConstants.h"
+i"ofEventUtils.h"
+i"ofxEventUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofBitmapFont.cpp
+c000000004B38DD160000000000009319
+t1262017814
+s37657
+i"ofBitmapFont.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.cpp
+c000000004B38DD160000000000007585
+t1262017814
+s30085
+i"ofGraphics.h"
+i"ofAppRunner.h"
+i"ofBitmapFont.h"
+i<OpenGL/glu.h>
+i"glu.h"
+i"GL/glu.h"
+i"glu.h"
+i<vector>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.h
+c000000004B38DD160000000000000B73
+t1262017814
+s2931
+i"ofConstants.h"
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.cpp
+c000000004B38DD160000000000003F32
+t1262017814
+s16178
+i"ofImage.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.h
+c000000004B38DD160000000000000C9F
+t1262017814
+s3231
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGraphics.h"
+i"ofAppRunner.h"
+i"FreeImage.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTexture.cpp
+c000000004B38DD160000000000003969
+t1262017814
+s14697
+i"ofTexture.h"
+i"ofUtils.h"
+i"ofAppRunner.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTexture.h
+c000000004B38DD160000000000000B5A
+t1262017814
+s2906
+i"ofConstants.h"
+i"ofGraphics.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.cpp
+c000000004B38DD160000000000006D00
+t1262017814
+s27904
+i"ofTrueTypeFont.h"
+i<ft2build.h>
+i<freetype/freetype.h>
+i<freetype/ftglyph.h>
+i<freetype/ftoutln.h>
+i<freetype/fttrigon.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.h
+c000000004B38DD16000000000000087A
+t1262017814
+s2170
+i"ofConstants.h"
+i"ofGraphics.h"
+i"ofUtils.h"
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/ofMain.h
+c000000004B38DD160000000000000347
+t1262017814
+s839
+i"ofConstants.h"
+i"ofMath.h"
+i"ofUtils.h"
+i"ofTypes.h"
+i"ofSerial.h"
+i"ofArduino.h"
+i"ofTexture.h"
+i"ofTrueTypeFont.h"
+i"ofGraphics.h"
+i"ofImage.h"
+i"ofBaseApp.h"
+i"ofAppRunner.h"
+i"ofSoundStream.h"
+i"ofSoundPlayer.h"
+i"ofVideoGrabber.h"
+i"ofVideoPlayer.h"
+i"ofEvents.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.cpp
+c000000004B38DD160000000000002413
+t1262017814
+s9235
+i"ofSoundPlayer.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.h
+c000000004B38DD1600000000000006C3
+t1262017814
+s1731
+i"ofConstants.h"
+i"fmod.h"
+i"fmod_errors.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.cpp
+c000000004B38DD160000000000001402
+t1262017814
+s5122
+i"ofSoundStream.h"
+i"RtAudio.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.h
+c000000004B38DD160000000000000254
+t1262017814
+s596
+i"ofConstants.h"
+i"ofBaseApp.h"
+i"ofEvents.h"
+i"ofMath.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h
+c000000004B38DD160000000000002AA0
+t1262017814
+s10912
+i<TargetConditionals.h>
+i<windows.h>
+i"GLee.h"
+i"glu.h"
+i<unistd.h>
+i"GLee.h"
+i<OpenGL/glu.h>
+i<ApplicationServices/ApplicationServices.h>
+i<unistd.h>
+i"GLee.h"
+i<GL/glu.h>
+i<OpenGLES/ES1/gl.h>
+i<OpenGLES/ES1/glext.h>
+i<stdio.h>
+i<stdarg.h>
+i<math.h>
+i<time.h>
+i<stdlib.h>
+i<string.h>
+i<iostream>
+i<vector>
+i<string>
+i<sstream>
+i<iomanip>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMath.cpp
+c000000004B38DD1600000000000013C6
+t1262017814
+s5062
+i"ofMath.h"
+i"ofAppRunner.h"
+i"float.h"
+i<sys/time.h>
+i"ofNoise.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMath.h
+c000000004B38DD1600000000000006DB
+t1262017814
+s1755
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofTypes.h
+c000000004B38DD160000000000001991
+t1262017814
+s6545
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.cpp
+c000000004B38DD160000000000002629
+t1262017814
+s9769
+i"ofUtils.h"
+i"ofImage.h"
+i"sys/time.h"
+i<mmsystem.h>
+i<direct.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.h
+c000000004B38DD1600000000000005A4
+t1262017814
+s1444
+i"ofConstants.h"
+i<shellapi.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp
+c000000004B38DD1600000000000024FB
+t1262017814
+s9467
+i"ofQtUtils.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.cpp
+c000000004B38DD160000000000007EA5
+t1262017814
+s32421
+i"ofVideoGrabber.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.h
+c000000004B38DD160000000000000C9C
+t1262017814
+s3228
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGraphics.h"
+i"ofTypes.h"
+i"ofQtUtils.h"
+i"videoInput.h"
+i"ofUCUtils.h"
+i"ofGstUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.cpp
+c000000004B38DD1600000000000065E6
+t1262017814
+s26086
+i"ofVideoPlayer.h"
+i"ofUtils.h"
+i<gst/video/video.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.h
+c000000004B38DD160000000000000BD3
+t1262017814
+s3027
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGstUtils.h"
+i"ofQtUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../rtAudio/include/RtAudio.h
+c000000004B38DD180000000000009B55
+t1262017816
+s39765
+i<string>
+i<vector>
+i"RtError.h"
+i<windows.h>
+i<process.h>
+i<pthread.h>
+i<sys/time.h>
+i<sstream>
+i<CoreAudio/AudioHardware.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx//openFrameworksDebug.a
+t1264709960
+s4100784
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppGlutWindow.o
+t1264709943
+s698856
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o
+t1264709943
+s787756
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofArduino.o
+t1264709947
+s697284
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofBitmapFont.o
+t1264709947
+s82024
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofGraphics.o
+t1264709950
+s185736
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofImage.o
+t1264709950
+s104396
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofMath.o
+t1264709956
+s81068
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o
+t1264709958
+s63432
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSerial.o
+t1264709946
+s76688
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundPlayer.o
+t1264709953
+s74564
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundStream.o
+t1264709954
+s446944
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTexture.o
+t1264709952
+s81864
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTrueTypeFont.o
+t1264709952
+s223412
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofUtils.o
+t1264709957
+s154960
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoGrabber.o
+t1264709959
+s116552
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoPlayer.o
+t1264709960
+s114012
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/openFrameworksDebug.LinkFileList
+c000000004B61F12C0000000000000C4A
+t1264709932
+s3146
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/AbstractDelegate.h
+c000000004B38DD160000000000000B2E
+t1262017814
+s2862
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/AbstractEvent.h
+c000000004B38DD160000000000002C6A
+t1262017814
+s11370
+i"Poco/Foundation.h"
+i"Poco/SingletonHolder.h"
+i"Poco/SharedPtr.h"
+i"Poco/ActiveResult.h"
+i"Poco/ActiveMethod.h"
+i"Poco/Mutex.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/ActiveMethod.h
+c000000004B38DD160000000000001C64
+t1262017814
+s7268
+i"Poco/Foundation.h"
+i"Poco/ActiveResult.h"
+i"Poco/ActiveRunnable.h"
+i"Poco/ActiveStarter.h"
+i"Poco/AutoPtr.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/ActiveResult.h
+c000000004B38DD160000000000002E66
+t1262017814
+s11878
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+i"Poco/Event.h"
+i"Poco/RefCountedObject.h"
+i"Poco/Exception.h"
+i<algorithm>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/ActiveRunnable.h
+c000000004B38DD160000000000001785
+t1262017814
+s6021
+i"Poco/Foundation.h"
+i"Poco/ActiveResult.h"
+i"Poco/Runnable.h"
+i"Poco/RefCountedObject.h"
+i"Poco/AutoPtr.h"
+i"Poco/Exception.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/ActiveStarter.h
+c000000004B38DD160000000000000927
+t1262017814
+s2343
+i"Poco/Foundation.h"
+i"Poco/ThreadPool.h"
+i"Poco/ActiveRunnable.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/AutoPtr.h
+c000000004B38DD160000000000001E0C
+t1262017814
+s7692
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<algorithm>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Bugcheck.h
+c000000004B38DD1600000000000012FE
+t1262017814
+s4862
+i"Poco/Foundation.h"
+i<string>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/CompareFunctions.h
+c000000004B38DD1600000000000007EC
+t1262017814
+s2028
+i"Poco/Foundation.h"
+i<functional>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Config.h
+c000000004B38DD1600000000000008B5
+t1262017814
+s2229
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Delegate.h
+c000000004B38DD160000000000001802
+t1262017814
+s6146
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/FunctionDelegate.h"
+i"Poco/Expire.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Event.h
+c000000004B38DD160000000000000E21
+t1262017814
+s3617
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/Event_WIN32.h"
+i"Poco/Event_POSIX.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Event_POSIX.h
+c000000004B38DD160000000000000A91
+t1262017814
+s2705
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<pthread.h>
+i<errno.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Event_WIN32.h
+c000000004B38DD160000000000000947
+t1262017814
+s2375
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/UnWindows.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Exception.h
+c000000004B38DD1600000000000026AC
+t1262017814
+s9900
+i"Poco/Foundation.h"
+i<stdexcept>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Expire.h
+c000000004B38DD160000000000000CF1
+t1262017814
+s3313
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/Timestamp.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/FIFOEvent.h
+c000000004B38DD160000000000000AD4
+t1262017814
+s2772
+i"Poco/AbstractEvent.h"
+i"Poco/FIFOStrategy.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/CompareFunctions.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/FIFOStrategy.h
+c000000004B38DD1600000000000010F3
+t1262017814
+s4339
+i"Poco/NotificationStrategy.h"
+i<map>
+i<list>
+i<memory>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Foundation.h
+c000000004B38DD160000000000001023
+t1262017814
+s4131
+i"Poco/Config.h"
+i"Poco/Platform.h"
+i"Poco/Platform_WIN32.h"
+i"Poco/Platform_VMS.h"
+i"Poco/Platform_POSIX.h"
+i"Poco/Bugcheck.h"
+i"Poco/Types.h"
+i<string>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/FunctionDelegate.h
+c000000004B38DD1600000000000013CA
+t1262017814
+s5066
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Mutex.h
+c000000004B38DD160000000000001A61
+t1262017814
+s6753
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/ScopedLock.h"
+i"Poco/Mutex_WIN32.h"
+i"Poco/Mutex_POSIX.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Mutex_POSIX.h
+c000000004B38DD160000000000000AC3
+t1262017814
+s2755
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<pthread.h>
+i<errno.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Mutex_WIN32.h
+c000000004B38DD160000000000000A07
+t1262017814
+s2567
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/UnWindows.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/NotificationStrategy.h
+c000000004B38DD160000000000000A37
+t1262017814
+s2615
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Platform.h
+c000000004B38DD160000000000001A3A
+t1262017814
+s6714
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Platform_POSIX.h
+c000000004B38DD160000000000000843
+t1262017814
+s2115
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Platform_VMS.h
+c000000004B38DD160000000000000BAA
+t1262017814
+s2986
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Platform_WIN32.h
+c000000004B38DD160000000000000D4D
+t1262017814
+s3405
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/RefCountedObject.h
+c000000004B38DD160000000000000B10
+t1262017814
+s2832
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Runnable.h
+c000000004B38DD160000000000000861
+t1262017814
+s2145
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/ScopedLock.h
+c000000004B38DD1600000000000008EB
+t1262017814
+s2283
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/SharedPtr.h
+c000000004B38DD1600000000000021DE
+t1262017814
+s8670
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/Mutex.h"
+i<algorithm>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/SignalHandler.h
+c000000004B38DD1600000000000011EB
+t1262017814
+s4587
+i"Poco/Foundation.h"
+i<vector>
+i<setjmp.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/SingletonHolder.h
+c000000004B38DD160000000000000A64
+t1262017814
+s2660
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Thread.h
+c000000004B38DD160000000000001C3A
+t1262017814
+s7226
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+i"Poco/Thread_WIN32.h"
+i"Poco/Thread_POSIX.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/ThreadPool.h
+c000000004B38DD160000000000001849
+t1262017814
+s6217
+i"Poco/Foundation.h"
+i"Poco/Thread.h"
+i"Poco/Mutex.h"
+i<vector>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Thread_POSIX.h
+c000000004B38DD1600000000000012A8
+t1262017814
+s4776
+i"Poco/Foundation.h"
+i"Poco/Runnable.h"
+i"Poco/SignalHandler.h"
+i"Poco/Event.h"
+i"Poco/RefCountedObject.h"
+i"Poco/AutoPtr.h"
+i<pthread.h>
+i<sys/select.h>
+i<errno.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Thread_WIN32.h
+c000000004B38DD16000000000000106C
+t1262017814
+s4204
+i"Poco/Foundation.h"
+i"Poco/Runnable.h"
+i"Poco/UnWindows.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Timestamp.h
+c000000004B38DD1600000000000019A7
+t1262017814
+s6567
+i"Poco/Foundation.h"
+i<ctime>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/Types.h
+c000000004B38DD160000000000001910
+t1262017814
+s6416
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/poco/include/Poco/UnWindows.h
+c000000004B38DD160000000000000FD1
+t1262017814
+s4049
+i<windows.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/rtAudio/include/RtError.h
+c000000004B38DD180000000000000846
+t1262017816
+s2118
+i<exception>
+i<iostream>
+i<string>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/fmodex/include/fmod.h
+c000000004B38DD140000000000028E68
+t1262017812
+s167528
+i"fmod_codec.h"
+i"fmod_dsp.h"
+i"fmod_memoryinfo.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/fmodex/include/fmod_codec.h
+c000000004B38DD14000000000000334A
+t1262017812
+s13130
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/fmodex/include/fmod_dsp.h
+c000000004B38DD14000000000000892F
+t1262017812
+s35119
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/fmodex/include/fmod_memoryinfo.h
+c000000004B38DD140000000000003C95
+t1262017812
+s15509
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/freetype/include/freetype2/freetype/config/ftheader.h
+c000000004B38DD140000000000005B39
+t1262017812
+s23353
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/freetype/include/freetype2/freetype/freetype.h
+c000000004B38DD140000000000032885
+t1262017812
+s206981
+i<ft2build.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/freetype/include/freetype2/freetype/ftglyph.h
+c000000004B38DD140000000000008DCF
+t1262017812
+s36303
+i<ft2build.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/freetype/include/freetype2/freetype/ftoutln.h
+c000000004B38DD140000000000007B3C
+t1262017812
+s31548
+i<ft2build.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/freetype/include/freetype2/freetype/fttrigon.h
+c000000004B38DD1400000000000020FB
+t1262017812
+s8443
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/freetype/include/ft2build.h
+c000000004B38DD140000000000000F32
+t1262017812
+s3890
+i<freetype/config/ftheader.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/app/ofAppBaseWindow.h
+c000000004B38DD160000000000000446
+t1262017814
+s1094
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/app/ofAppGlutWindow.h
+c000000004B38DD16000000000000066C
+t1262017814
+s1644
+i"ofConstants.h"
+i"ofAppBaseWindow.h"
+i"glut.h"
+i<GLUT/glut.h>
+i<GL/glut.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/app/ofAppRunner.h
+c000000004B38DD16000000000000050D
+t1262017814
+s1293
+i"ofMain.h"
+i"ofBaseApp.h"
+i"ofAppBaseWindow.h"
+i"ofAppGlutWindow.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/app/ofBaseApp.h
+c000000004B38DD160000000000000375
+t1262017814
+s885
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/communication/ofArduino.h
+c000000004B38DD160000000000003D3C
+t1262017814
+s15676
+i<list>
+i<vector>
+i<string>
+i<iostream>
+i"ofEvents.h"
+i"ofSerial.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/communication/ofSerial.h
+c000000004B38DD160000000000000D2E
+t1262017814
+s3374
+i"ofConstants.h"
+i<termios.h>
+i<sys/ioctl.h>
+i<getopt.h>
+i<dirent.h>
+i<winbase.h>
+i<tchar.h>
+i<iostream>
+i<string.h>
+i<setupapi.h>
+i<regstr.h>
+i<winioctl.h>
+i<initguid.h>
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<fcntl.h>
+i<errno.h>
+i<ctype.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/events/ofEventUtils.h
+c000000004B38DD160000000000000A8A
+t1262017814
+s2698
+i"ofConstants.h"
+i"Poco/FIFOEvent.h"
+i"Poco/Delegate.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/graphics/ofBitmapFont.h
+c000000004B38DD16000000000000018C
+t1262017814
+s396
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/graphics/ofGraphics.h
+c000000004B38DD160000000000000B73
+t1262017814
+s2931
+i"ofConstants.h"
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/graphics/ofImage.h
+c000000004B38DD160000000000000C9F
+t1262017814
+s3231
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGraphics.h"
+i"ofAppRunner.h"
+i"FreeImage.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/graphics/ofTexture.h
+c000000004B38DD160000000000000B5A
+t1262017814
+s2906
+i"ofConstants.h"
+i"ofGraphics.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/graphics/ofTrueTypeFont.h
+c000000004B38DD16000000000000087A
+t1262017814
+s2170
+i"ofConstants.h"
+i"ofGraphics.h"
+i"ofUtils.h"
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/sound/ofSoundPlayer.h
+c000000004B38DD1600000000000006C3
+t1262017814
+s1731
+i"ofConstants.h"
+i"fmod.h"
+i"fmod_errors.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/sound/ofSoundStream.h
+c000000004B38DD160000000000000254
+t1262017814
+s596
+i"ofConstants.h"
+i"ofBaseApp.h"
+i"ofEvents.h"
+i"ofMath.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/utils/ofConstants.h
+c000000004B38DD160000000000002AA0
+t1262017814
+s10912
+i<TargetConditionals.h>
+i<windows.h>
+i"GLee.h"
+i"glu.h"
+i<unistd.h>
+i"GLee.h"
+i<OpenGL/glu.h>
+i<ApplicationServices/ApplicationServices.h>
+i<unistd.h>
+i"GLee.h"
+i<GL/glu.h>
+i<OpenGLES/ES1/gl.h>
+i<OpenGLES/ES1/glext.h>
+i<stdio.h>
+i<stdarg.h>
+i<math.h>
+i<time.h>
+i<stdlib.h>
+i<string.h>
+i<iostream>
+i<vector>
+i<string>
+i<sstream>
+i<iomanip>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/utils/ofMath.h
+c000000004B38DD1600000000000006DB
+t1262017814
+s1755
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/utils/ofNoise.h
+c000000004B38DD160000000000004F24
+t1262017814
+s20260
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/utils/ofUtils.h
+c000000004B38DD1600000000000005A4
+t1262017814
+s1444
+i"ofConstants.h"
+i<shellapi.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/video/ofGstUtils.h
+c000000004B38DD160000000000000B42
+t1262017814
+s2882
+i<gst/gst.h>
+i<pthread.h>
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/video/ofQtUtils.h
+c000000004B38DD1600000000000006CF
+t1262017814
+s1743
+i"ofConstants.h"
+i"ofGraphics.h"
+i<QuickTime/QuickTime.h>
+i<CoreServices/CoreServices.h>
+i<ApplicationServices/ApplicationServices.h>
+i<QTML.h>
+i<FixMath.h>
+i<QuickTimeComponents.h>
+i<TextUtils.h>
+i<MediaHandlers.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/video/ofUCUtils.h
+c000000004B38DD1600000000000004A7
+t1262017814
+s1191
+i"ofConstants.h"
+i<stdio.h>
+i<stdlib.h>
+i<unistd.h>
+i<unicap.h>
+i<unistd.h>
+i<string.h>
+i<pthread.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/video/ofVideoGrabber.h
+c000000004B38DD160000000000000C9C
+t1262017814
+s3228
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGraphics.h"
+i"ofTypes.h"
+i"ofQtUtils.h"
+i"videoInput.h"
+i"ofUCUtils.h"
+i"ofGstUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworks/video/ofVideoPlayer.h
+c000000004B38DD160000000000000BD3
+t1262017814
+s3027
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGstUtils.h"
+i"ofQtUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../FreeImage/include/FreeImage.h
+c000000004B38DD14000000000000CC1B
+t1262017812
+s52251
+i<wchar.h>
+i<inttypes.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../fmodex/include/fmod.h
+c000000004B38DD140000000000028E68
+t1262017812
+s167528
+i"fmod_codec.h"
+i"fmod_dsp.h"
+i"fmod_memoryinfo.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../fmodex/include/fmod_errors.h
+c000000004B38DD140000000000003408
+t1262017812
+s13320
+i"fmod.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../glee/include/GLee.h
+c000000004B38DD160000000000090A87
+t1262017814
+s592519
+i<windows.h>
+i<GL/gl.h>
+i<OpenGL/gl.h>
+i<GL/gl.h>
+i<GL/glx.h>
+i<stddef.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGlutWindow.cpp
+c000000004B38DD1600000000000045B6
+t1262017814
+s17846
+i"ofAppGlutWindow.h"
+i"ofBaseApp.h"
+i"ofMain.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp
+c000000004B38DD1600000000000017AA
+t1262017814
+s6058
+i"ofAppRunner.h"
+i"ofAppiPhoneWindow.h"
+i"ofAppGlutWindow.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.h
+c000000004B38DD16000000000000050D
+t1262017814
+s1293
+i"ofMain.h"
+i"ofBaseApp.h"
+i"ofAppBaseWindow.h"
+i"ofAppGlutWindow.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp
+c000000004B38DD160000000000004269
+t1262017814
+s17001
+i"ofArduino.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.h
+c000000004B38DD160000000000003D3C
+t1262017814
+s15676
+i<list>
+i<vector>
+i<string>
+i<iostream>
+i"ofEvents.h"
+i"ofSerial.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp
+c000000004B38DD16000000000000478C
+t1262017814
+s18316
+i"ofSerial.h"
+i"ofMain.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.h
+c000000004B38DD160000000000000D2E
+t1262017814
+s3374
+i"ofConstants.h"
+i<termios.h>
+i<sys/ioctl.h>
+i<getopt.h>
+i<dirent.h>
+i<winbase.h>
+i<tchar.h>
+i<iostream>
+i<string.h>
+i<setupapi.h>
+i<regstr.h>
+i<winioctl.h>
+i<initguid.h>
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<fcntl.h>
+i<errno.h>
+i<ctype.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/events/ofEvents.h
+c000000004B38DD1600000000000007AF
+t1262017814
+s1967
+i"ofConstants.h"
+i"ofEventUtils.h"
+i"ofxEventUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofBitmapFont.cpp
+c000000004B38DD160000000000009319
+t1262017814
+s37657
+i"ofBitmapFont.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.cpp
+c000000004B38DD160000000000007585
+t1262017814
+s30085
+i"ofGraphics.h"
+i"ofAppRunner.h"
+i"ofBitmapFont.h"
+i<OpenGL/glu.h>
+i"glu.h"
+i"GL/glu.h"
+i"glu.h"
+i<vector>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.h
+c000000004B38DD160000000000000B73
+t1262017814
+s2931
+i"ofConstants.h"
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.cpp
+c000000004B38DD160000000000003F32
+t1262017814
+s16178
+i"ofImage.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.h
+c000000004B38DD160000000000000C9F
+t1262017814
+s3231
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGraphics.h"
+i"ofAppRunner.h"
+i"FreeImage.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTexture.cpp
+c000000004B38DD160000000000003969
+t1262017814
+s14697
+i"ofTexture.h"
+i"ofUtils.h"
+i"ofAppRunner.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTexture.h
+c000000004B38DD160000000000000B5A
+t1262017814
+s2906
+i"ofConstants.h"
+i"ofGraphics.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.cpp
+c000000004B38DD160000000000006D00
+t1262017814
+s27904
+i"ofTrueTypeFont.h"
+i<ft2build.h>
+i<freetype/freetype.h>
+i<freetype/ftglyph.h>
+i<freetype/ftoutln.h>
+i<freetype/fttrigon.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.h
+c000000004B38DD16000000000000087A
+t1262017814
+s2170
+i"ofConstants.h"
+i"ofGraphics.h"
+i"ofUtils.h"
+i"ofTypes.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/ofMain.h
+c000000004B38DD160000000000000347
+t1262017814
+s839
+i"ofConstants.h"
+i"ofMath.h"
+i"ofUtils.h"
+i"ofTypes.h"
+i"ofSerial.h"
+i"ofArduino.h"
+i"ofTexture.h"
+i"ofTrueTypeFont.h"
+i"ofGraphics.h"
+i"ofImage.h"
+i"ofBaseApp.h"
+i"ofAppRunner.h"
+i"ofSoundStream.h"
+i"ofSoundPlayer.h"
+i"ofVideoGrabber.h"
+i"ofVideoPlayer.h"
+i"ofEvents.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.cpp
+c000000004B38DD160000000000002413
+t1262017814
+s9235
+i"ofSoundPlayer.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.h
+c000000004B38DD1600000000000006C3
+t1262017814
+s1731
+i"ofConstants.h"
+i"fmod.h"
+i"fmod_errors.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.cpp
+c000000004B38DD160000000000001402
+t1262017814
+s5122
+i"ofSoundStream.h"
+i"RtAudio.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.h
+c000000004B38DD160000000000000254
+t1262017814
+s596
+i"ofConstants.h"
+i"ofBaseApp.h"
+i"ofEvents.h"
+i"ofMath.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofConstants.h
+c000000004B38DD160000000000002AA0
+t1262017814
+s10912
+i<TargetConditionals.h>
+i<windows.h>
+i"GLee.h"
+i"glu.h"
+i<unistd.h>
+i"GLee.h"
+i<OpenGL/glu.h>
+i<ApplicationServices/ApplicationServices.h>
+i<unistd.h>
+i"GLee.h"
+i<GL/glu.h>
+i<OpenGLES/ES1/gl.h>
+i<OpenGLES/ES1/glext.h>
+i<stdio.h>
+i<stdarg.h>
+i<math.h>
+i<time.h>
+i<stdlib.h>
+i<string.h>
+i<iostream>
+i<vector>
+i<string>
+i<sstream>
+i<iomanip>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMath.cpp
+c000000004B38DD1600000000000013C6
+t1262017814
+s5062
+i"ofMath.h"
+i"ofAppRunner.h"
+i"float.h"
+i<sys/time.h>
+i"ofNoise.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMath.h
+c000000004B38DD1600000000000006DB
+t1262017814
+s1755
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofTypes.h
+c000000004B38DD160000000000001991
+t1262017814
+s6545
+i"ofConstants.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.cpp
+c000000004B38DD160000000000002629
+t1262017814
+s9769
+i"ofUtils.h"
+i"ofImage.h"
+i"sys/time.h"
+i<mmsystem.h>
+i<direct.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.h
+c000000004B38DD1600000000000005A4
+t1262017814
+s1444
+i"ofConstants.h"
+i<shellapi.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp
+c000000004B38DD1600000000000024FB
+t1262017814
+s9467
+i"ofQtUtils.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.cpp
+c000000004B38DD160000000000007EA5
+t1262017814
+s32421
+i"ofVideoGrabber.h"
+i"ofUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.h
+c000000004B38DD160000000000000C9C
+t1262017814
+s3228
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGraphics.h"
+i"ofTypes.h"
+i"ofQtUtils.h"
+i"videoInput.h"
+i"ofUCUtils.h"
+i"ofGstUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.cpp
+c000000004B38DD1600000000000065E6
+t1262017814
+s26086
+i"ofVideoPlayer.h"
+i"ofUtils.h"
+i<gst/video/video.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.h
+c000000004B38DD160000000000000BD3
+t1262017814
+s3027
+i"ofConstants.h"
+i"ofTexture.h"
+i"ofGstUtils.h"
+i"ofQtUtils.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../rtAudio/include/RtAudio.h
+c000000004B38DD180000000000009B55
+t1262017816
+s39765
+i<string>
+i<vector>
+i"RtError.h"
+i<windows.h>
+i<process.h>
+i<pthread.h>
+i<sys/time.h>
+i<sstream>
+i<CoreAudio/AudioHardware.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../lib/osx//openFrameworksDebug.a
+t1264714562
+s4100784
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppGlutWindow.o
+t1264709943
+s698856
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o
+t1264709943
+s787756
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofArduino.o
+t1264709947
+s697284
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofBitmapFont.o
+t1264709947
+s82024
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofGraphics.o
+t1264709950
+s185736
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofImage.o
+t1264709950
+s104396
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofMath.o
+t1264709956
+s81068
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o
+t1264709958
+s63432
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSerial.o
+t1264709946
+s76688
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundPlayer.o
+t1264709953
+s74564
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundStream.o
+t1264709954
+s446944
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTexture.o
+t1264709952
+s81864
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTrueTypeFont.o
+t1264709952
+s223412
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofUtils.o
+t1264709957
+s154960
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoGrabber.o
+t1264709959
+s116552
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoPlayer.o
+t1264709960
+s114012
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/openFrameworksDebug.LinkFileList
+c000000004B6203420000000000000C9A
+t1264714562
+s3226
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/AbstractDelegate.h
+c000000004B38DD160000000000000B2E
+t1262017814
+s2862
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/AbstractEvent.h
+c000000004B38DD160000000000002C6A
+t1262017814
+s11370
+i"Poco/Foundation.h"
+i"Poco/SingletonHolder.h"
+i"Poco/SharedPtr.h"
+i"Poco/ActiveResult.h"
+i"Poco/ActiveMethod.h"
+i"Poco/Mutex.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/ActiveMethod.h
+c000000004B38DD160000000000001C64
+t1262017814
+s7268
+i"Poco/Foundation.h"
+i"Poco/ActiveResult.h"
+i"Poco/ActiveRunnable.h"
+i"Poco/ActiveStarter.h"
+i"Poco/AutoPtr.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/ActiveResult.h
+c000000004B38DD160000000000002E66
+t1262017814
+s11878
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+i"Poco/Event.h"
+i"Poco/RefCountedObject.h"
+i"Poco/Exception.h"
+i<algorithm>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/ActiveRunnable.h
+c000000004B38DD160000000000001785
+t1262017814
+s6021
+i"Poco/Foundation.h"
+i"Poco/ActiveResult.h"
+i"Poco/Runnable.h"
+i"Poco/RefCountedObject.h"
+i"Poco/AutoPtr.h"
+i"Poco/Exception.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/ActiveStarter.h
+c000000004B38DD160000000000000927
+t1262017814
+s2343
+i"Poco/Foundation.h"
+i"Poco/ThreadPool.h"
+i"Poco/ActiveRunnable.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/AutoPtr.h
+c000000004B38DD160000000000001E0C
+t1262017814
+s7692
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<algorithm>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Bugcheck.h
+c000000004B38DD1600000000000012FE
+t1262017814
+s4862
+i"Poco/Foundation.h"
+i<string>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/CompareFunctions.h
+c000000004B38DD1600000000000007EC
+t1262017814
+s2028
+i"Poco/Foundation.h"
+i<functional>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Config.h
+c000000004B38DD1600000000000008B5
+t1262017814
+s2229
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Delegate.h
+c000000004B38DD160000000000001802
+t1262017814
+s6146
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/FunctionDelegate.h"
+i"Poco/Expire.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Event.h
+c000000004B38DD160000000000000E21
+t1262017814
+s3617
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/Event_WIN32.h"
+i"Poco/Event_POSIX.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Event_POSIX.h
+c000000004B38DD160000000000000A91
+t1262017814
+s2705
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<pthread.h>
+i<errno.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Event_WIN32.h
+c000000004B38DD160000000000000947
+t1262017814
+s2375
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/UnWindows.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Exception.h
+c000000004B38DD1600000000000026AC
+t1262017814
+s9900
+i"Poco/Foundation.h"
+i<stdexcept>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Expire.h
+c000000004B38DD160000000000000CF1
+t1262017814
+s3313
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/Timestamp.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/FIFOEvent.h
+c000000004B38DD160000000000000AD4
+t1262017814
+s2772
+i"Poco/AbstractEvent.h"
+i"Poco/FIFOStrategy.h"
+i"Poco/AbstractDelegate.h"
+i"Poco/CompareFunctions.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/FIFOStrategy.h
+c000000004B38DD1600000000000010F3
+t1262017814
+s4339
+i"Poco/NotificationStrategy.h"
+i<map>
+i<list>
+i<memory>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Foundation.h
+c000000004B38DD160000000000001023
+t1262017814
+s4131
+i"Poco/Config.h"
+i"Poco/Platform.h"
+i"Poco/Platform_WIN32.h"
+i"Poco/Platform_VMS.h"
+i"Poco/Platform_POSIX.h"
+i"Poco/Bugcheck.h"
+i"Poco/Types.h"
+i<string>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/FunctionDelegate.h
+c000000004B38DD1600000000000013CA
+t1262017814
+s5066
+i"Poco/Foundation.h"
+i"Poco/AbstractDelegate.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Mutex.h
+c000000004B38DD160000000000001A61
+t1262017814
+s6753
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/ScopedLock.h"
+i"Poco/Mutex_WIN32.h"
+i"Poco/Mutex_POSIX.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Mutex_POSIX.h
+c000000004B38DD160000000000000AC3
+t1262017814
+s2755
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i<pthread.h>
+i<errno.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Mutex_WIN32.h
+c000000004B38DD160000000000000A07
+t1262017814
+s2567
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/UnWindows.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/NotificationStrategy.h
+c000000004B38DD160000000000000A37
+t1262017814
+s2615
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Platform.h
+c000000004B38DD160000000000001A3A
+t1262017814
+s6714
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Platform_POSIX.h
+c000000004B38DD160000000000000843
+t1262017814
+s2115
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Platform_VMS.h
+c000000004B38DD160000000000000BAA
+t1262017814
+s2986
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Platform_WIN32.h
+c000000004B38DD160000000000000D4D
+t1262017814
+s3405
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/RefCountedObject.h
+c000000004B38DD160000000000000B10
+t1262017814
+s2832
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Runnable.h
+c000000004B38DD160000000000000861
+t1262017814
+s2145
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/ScopedLock.h
+c000000004B38DD1600000000000008EB
+t1262017814
+s2283
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/SharedPtr.h
+c000000004B38DD1600000000000021DE
+t1262017814
+s8670
+i"Poco/Foundation.h"
+i"Poco/Exception.h"
+i"Poco/Mutex.h"
+i<algorithm>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/SignalHandler.h
+c000000004B38DD1600000000000011EB
+t1262017814
+s4587
+i"Poco/Foundation.h"
+i<vector>
+i<setjmp.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/SingletonHolder.h
+c000000004B38DD160000000000000A64
+t1262017814
+s2660
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Thread.h
+c000000004B38DD160000000000001C3A
+t1262017814
+s7226
+i"Poco/Foundation.h"
+i"Poco/Mutex.h"
+i"Poco/Thread_WIN32.h"
+i"Poco/Thread_POSIX.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/ThreadPool.h
+c000000004B38DD160000000000001849
+t1262017814
+s6217
+i"Poco/Foundation.h"
+i"Poco/Thread.h"
+i"Poco/Mutex.h"
+i<vector>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Thread_POSIX.h
+c000000004B38DD1600000000000012A8
+t1262017814
+s4776
+i"Poco/Foundation.h"
+i"Poco/Runnable.h"
+i"Poco/SignalHandler.h"
+i"Poco/Event.h"
+i"Poco/RefCountedObject.h"
+i"Poco/AutoPtr.h"
+i<pthread.h>
+i<sys/select.h>
+i<errno.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Thread_WIN32.h
+c000000004B38DD16000000000000106C
+t1262017814
+s4204
+i"Poco/Foundation.h"
+i"Poco/Runnable.h"
+i"Poco/UnWindows.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Timestamp.h
+c000000004B38DD1600000000000019A7
+t1262017814
+s6567
+i"Poco/Foundation.h"
+i<ctime>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/Types.h
+c000000004B38DD160000000000001910
+t1262017814
+s6416
+i"Poco/Foundation.h"
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/poco/include/Poco/UnWindows.h
+c000000004B38DD160000000000000FD1
+t1262017814
+s4049
+i<windows.h>
+
+N/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/rtAudio/include/RtError.h
+c000000004B38DD180000000000000846
+t1262017816
+s2118
+i<exception>
+i<iostream>
+i<string>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies286407362#286407362#0(0"0(0#1#0"4300885448#0"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppGlutWindow.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGlutWindow.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppGlutWindow.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGlutWindow.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402732.043346
+e286402743.662650
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppGlutWindow.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGlutWindow.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@161"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGlutWindow.cpp286402732#286402743#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#153"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGlutWindow.cpp4300885448#1753"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGlutWindow.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppGlutWindow.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppGlutWindow.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppGlutWindow.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402732.086353
+e286402743.833637
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@157"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp286402732#286402743#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#149"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp4300885448#1745"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofAppRunner.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/app/ofAppRunner.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofArduino.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofArduino.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402743.662787
+e286402747.282847
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofArduino.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@165"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp286402743#286402747#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#157"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp4300885448#1751"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofArduino.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofArduino.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofArduino.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofBitmapFont.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofBitmapFont.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofBitmapFont.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofBitmapFont.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402746.188199
+e286402747.599277
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofBitmapFont.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofBitmapFont.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@163"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofBitmapFont.cpp286402746#286402747#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#155"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofBitmapFont.cpp4300885448#1752"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofBitmapFont.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofBitmapFont.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofBitmapFont.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofBitmapFont.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofGraphics.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofGraphics.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402747.282948
+e286402750.387751
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofGraphics.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@161"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.cpp286402747#286402750#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#153"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.cpp4300885448#1748"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofGraphics.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofGraphics.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofGraphics.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofImage.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofImage.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402747.599376
+e286402750.084811
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofImage.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@158"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.cpp286402747#286402750#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#150"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.cpp4300885448#1742"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofImage.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofImage.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofImage.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofMath.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMath.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofMath.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMath.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402753.920860
+e286402756.343765
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofMath.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMath.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@154"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMath.cpp286402753#286402756#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#146"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMath.cpp4300885448#1737"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMath.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofMath.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofMath.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofMath.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402756.343873
+e286402758.324468
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@157"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp286402756#286402758#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#149"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp4300885448#1743"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofQtUtils.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofQtUtils.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSerial.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSerial.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402743.833740
+e286402746.187986
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSerial.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@164"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp286402743#286402746#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#156"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp4300885448#1749"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSerial.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSerial.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/communication/ofSerial.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundPlayer.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundPlayer.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402752.479483
+e286402753.920759
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundPlayer.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@161"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.cpp286402752#286402753#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#153"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.cpp4300885448#1751"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundPlayer.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundPlayer.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundPlayer.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundStream.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundStream.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402752.799819
+e286402754.951712
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundStream.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@161"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.cpp286402752#286402754#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#153"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.cpp4300885448#1751"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundStream.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofSoundStream.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/sound/ofSoundStream.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTexture.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTexture.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTexture.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTexture.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402750.085021
+e286402752.479257
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTexture.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTexture.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@160"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTexture.cpp286402750#286402752#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#152"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTexture.cpp4300885448#1746"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTexture.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTexture.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTexture.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTexture.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTrueTypeFont.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTrueTypeFont.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402750.387853
+e286402752.799710
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTrueTypeFont.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@165"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.cpp286402750#286402752#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#157"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.cpp4300885448#1756"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTrueTypeFont.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofTrueTypeFont.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/graphics/ofTrueTypeFont.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofUtils.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofUtils.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402754.951921
+e286402757.637411
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofUtils.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@155"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.cpp286402754#286402757#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#147"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.cpp4300885448#1739"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofUtils.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofUtils.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/utils/ofUtils.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoGrabber.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoGrabber.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402757.637615
+e286402759.850825
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoGrabber.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@162"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.cpp286402757#286402759#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#154"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.cpp4300885448#1753"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoGrabber.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoGrabber.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoGrabber.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoPlayer.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoPlayer.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+s286402758.324570
+e286402760.407266
+r1
+xCompileC
+xbuild/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoPlayer.o
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.gcc.4_2
+oi686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done
+lSLF07#2@161"Compile /Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.cpp286402758#286402760#0(92"i686-apple-darwin10-gcc-4.2.1: -lpthread: linker input file unused because linking not done0(0#0#153"/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.cpp4300885448#1751"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch i386 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -Os -isysroot /Developer/SDKs/MacOSX10.5.sdk -ftree-vectorize -msse3 -mssse3 -Wno-deprecated-declarations -Wno-invalid-offsetof -mmacosx-version-min=10.5 -gdwarf-2 "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/openFrameworksDebug.hmap" "-F/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx/include" -I../../../../libs/freetype/include -I../../../../libs/freetype/include/freetype2 -I../../../../libs/poco/include "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources/i386" "-I/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/DerivedSources" -D__MACOSX_CORE__ -lpthread -c "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.cpp" -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoPlayer.o"0#
+
+CCompileC build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/ofVideoPlayer.o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../../openFrameworks/video/ofVideoPlayer.cpp" normal i386 c++ com.apple.compilers.gcc.4_2
+r0
+
+CLibtool "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../lib/osx//openFrameworksDebug.a" normal i386
+s286406903.513447
+e286406904.136374
+r1
+xLibtool
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../lib/osx//openFrameworksDebug.a
+xnormal
+xi386
+lSLF07#2@56"Libtool ../../lib/osx//openFrameworksDebug.a normal i386286406903#286406904#0(0"0(0#0#0"7795500255896547328#988"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx"    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/libtool -static -arch_only i386 -syslibroot /Developer/SDKs/MacOSX10.5.sdk "-L/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../lib/osx" -filelist "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/openFrameworksDebug.LinkFileList" -framework AGL -framework ApplicationServices -framework AudioToolbox -framework Carbon -framework CoreAudio -framework CoreFoundation -framework CoreServices -framework GLUT -framework OpenGL -framework QuickTime -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/core/libs/openFrameworksCompiled/project/osx/../../lib/osx//openFrameworksDebug.a"0#
+
+CLibtool "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx//openFrameworksDebug.a" normal i386
+s286402760.407364
+e286402760.571539
+r1
+xLibtool
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx//openFrameworksDebug.a
+xnormal
+xi386
+lSLF07#2@56"Libtool ../../lib/osx//openFrameworksDebug.a normal i386286402760#286402760#0(0"0(0#0#0"4300885448#968"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx"    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/libtool -static -arch_only i386 -syslibroot /Developer/SDKs/MacOSX10.5.sdk "-L/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx" -filelist "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/openFrameworksDebug.LinkFileList" -framework AGL -framework ApplicationServices -framework AudioToolbox -framework Carbon -framework CoreAudio -framework CoreFoundation -framework CoreServices -framework GLUT -framework OpenGL -framework QuickTime -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_JIM/libs/openFrameworksCompiled/project/osx/../../lib/osx//openFrameworksDebug.a"0#
+
+CLibtool "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../lib/osx//openFrameworksDebug.a" normal i386
+s286407362.281174
+e286407362.861650
+r1
+xLibtool
+x/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../lib/osx//openFrameworksDebug.a
+xnormal
+xi386
+lSLF07#2@56"Libtool ../../lib/osx//openFrameworksDebug.a normal i386286407362#286407362#0(0"0(0#0#0"4300885448#988"    cd "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx"    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/libtool -static -arch_only i386 -syslibroot /Developer/SDKs/MacOSX10.5.sdk "-L/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../lib/osx" -filelist "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/build/openFrameworksLib.build/Debug/openFrameworks.build/Objects-normal/i386/openFrameworksDebug.LinkFileList" -framework AGL -framework ApplicationServices -framework AudioToolbox -framework Carbon -framework CoreAudio -framework CoreFoundation -framework CoreServices -framework GLUT -framework OpenGL -framework QuickTime -o "/Users/focus/Documents/XCode Projects/CYAPeopleVision/OF_0061_LAB/core/libs/openFrameworksCompiled/project/osx/../../lib/osx//openFrameworksDebug.a"0#
+
