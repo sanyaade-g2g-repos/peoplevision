@@ -34,6 +34,7 @@ void ofxCYAPeopleTracker::setup(int w, int h)
 	//gui.loadFromXML();	
 	//gui.setDraw(true);	
 		
+	
 	//setup gui quad in manager
 	gui.setupQuadGui( width, height );
 	gui.loadSettings("settings/settings.xml");
@@ -45,11 +46,12 @@ void ofxCYAPeopleTracker::setHaarXMLFile(string haarFile)
 {
 	//ofSetDataPathRoot("data/");
 	//haarFile = ofToDataPath("haar/" + haarFile, true);
-	haarFile = "haar/" + haarFile, true;
+	haarFile = "haar/" + haarFile;
+	
 	//check if haar file has changed
 	if(haarFinder.getHaarFile() != haarFile){
 		ofLog(OF_LOG_VERBOSE, "changing haar file to " + haarFile);
-		//haarFinder.setup(haarFile);
+		haarFinder.setup(haarFile);
 		//haarTracker.setup(&haarFinder);
 	}
 

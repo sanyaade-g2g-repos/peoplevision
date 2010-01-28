@@ -32,7 +32,7 @@ void ofxCvHaarFinder::setup(string haarFile) {
 
 	this->haarFile = haarFile;
 
-	//haarFile = ofToDataPath(haarFile);
+	haarFile = ofToDataPath(haarFile);
 	cascade = (CvHaarClassifierCascade*) cvLoad(haarFile.c_str(), 0, 0, 0);
 
 	#ifdef HAAR_HACK
